@@ -2709,7 +2709,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   {
     id: 'bhuthanatha-pancharatnam',
     titleTelugu: 'భూతనాథ పంచరత్నం (లోకవీరం మహాపూజ్యం)',
-    titleEnglish: 'Bhuthanatha Pancharatnam',
+    titleEnglish: 'Bhoothanatha Pancharatnam',
     subtitle: 'భూతనాథ పంచ రత్నం, నమస్కార శ్లోకం (13 శ్లోకాలు)',
     icon: 'Crown',
     durationMinutes: 6,

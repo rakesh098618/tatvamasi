@@ -18,9 +18,10 @@ import {
 interface PoojaCardProps {
   item: PoojaCategory;
   onPress: () => void;
+  lang?: 'te' | 'en';
 }
 
-export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
+export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress, lang = 'te' }) => {
   const renderIcon = () => {
     const iconProps = { size: 24, color: COLORS.gold };
     switch (item.icon) {
@@ -35,6 +36,8 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
     }
   };
 
+  const isEnglish = lang === 'en';
+
   return (
     <TouchableOpacity 
       style={[styles.card, item.featured && styles.featuredCard]} 
@@ -46,17 +49,21 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
       </View>
       <View style={styles.textContainer}>
         <View style={styles.headerRow}>
-          <Text style={styles.titleTelugu}>{item.titleTelugu}</Text>
+          <Text style={styles.titleTelugu}>
+            {isEnglish ? item.titleEnglish : item.titleTelugu}
+          </Text>
           {item.featured && (
             <View style={styles.badge}>
-              <Text style={styles.badgeText}>ముఖ్యమైనది</Text>
+              <Text style={styles.badgeText}>{isEnglish ? 'Featured' : 'ముఖ్యమైనది'}</Text>
             </View>
           )}
         </View>
         <Text style={styles.subtitle}>{item.subtitle}</Text>
         <View style={styles.metaRow}>
           <Clock size={12} color={COLORS.textMuted} />
-          <Text style={styles.durationText}>~{item.durationMinutes} నిమిషాలు</Text>
+          <Text style={styles.durationText}>
+            {isEnglish ? `~${item.durationMinutes} mins` : `~${item.durationMinutes} నిమిషాలు`}
+          </Text>
         </View>
       </View>
       <ChevronRight size={20} color={COLORS.gold} />
