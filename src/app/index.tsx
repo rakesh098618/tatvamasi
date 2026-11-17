@@ -41,10 +41,10 @@ export default function WelcomeSplashScreen() {
           <Flame size={16} color={COLORS.flameOrange} />
         </View>
 
-        {/* 1. Guru Swami Divya Aseessulatho Header (Exact as reference image) */}
+        {/* 1. Lord Ayyappa Swami Divya Aseessulatho Header */}
         <View style={styles.blessingHeader}>
           <Text style={styles.blessingTitle}>
-            శ్రీ శ్రీ శ్రీ ఆడేపు బ్రహ్మం గురు స్వామి వారి దివ్య
+            శ్రీ అయ్యప్ప స్వామి వారి దివ్య
           </Text>
           <Text style={styles.blessingSubtitle}>
             ఆశీస్సులతో
@@ -62,11 +62,11 @@ export default function WelcomeSplashScreen() {
           </View>
         </View>
 
-        {/* 3. Sacred Quote: "మనసు మంచిది అయితే ముక్తి ఇచ్చేవాడు అయ్యప్ప" */}
+        {/* 3. Sacred Quote */}
         <View style={styles.quoteCard}>
           <Sparkles size={16} color={COLORS.gold} />
           <Text style={styles.quoteText}>
-            "మనసు మంచిది అయితే ముక్తి ఇచ్చేవాడు అయ్యప్ప"
+            "నిర్మలమైన మనస్సుతో శరణువేడితే ముక్తిని ప్రసాదించే కలియుగ ప్రత్యక్ష దైవం శ్రీ అయ్యప్ప"
           </Text>
           <Sparkles size={16} color={COLORS.gold} />
         </View>
