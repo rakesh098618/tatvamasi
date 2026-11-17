@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+.npm/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Android build outputs & caches
+android/app/build/
+android/build/
+android/.gradle/
+android/app/.cxx/
+android/.cxx/
+android/local.properties
+*.apk
+*.aab
+
+# Temporary scripts & scratch
+scratch/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
