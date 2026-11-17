@@ -3,9 +3,9 @@ import {
   View, 
   Text, 
   StyleSheet, 
-  FlatList, 
-  SafeAreaView 
+  FlatList 
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Header } from '../../components/Header';
 import { PoojaCard } from '../../components/PoojaCard';
@@ -50,7 +50,7 @@ export default function AshtottaramScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
         title="సర్వదేవతా అష్టోత్తరాలు" 
         subtitle="108 దివ్య నామావళులు & శరణు ఘోష" 

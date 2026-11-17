@@ -27,7 +27,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 1. GURU VANDANAM
   {
     id: 'guru-vandanam',
-    titleTelugu: '1. గురు వందనం',
+    titleTelugu: 'గురు వందనం',
     titleEnglish: 'Guru Vandanam',
     subtitle: 'దీక్షా గురువుల ఆరాధన, ప్రార్థన & ఆశీర్వాదం',
     icon: 'Sparkles',
@@ -63,7 +63,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 2. GANAPATHI POOJA
   {
     id: 'ganapathi-pooja',
-    titleTelugu: '2. గణపతి పూజ',
+    titleTelugu: 'గణపతి పూజ',
     titleEnglish: 'Ganapathi Pooja',
     subtitle: 'దీపారాధన, వినాయక ధ్యానం, అంగపూజ & 108 అష్టోత్తరం',
     icon: 'Sun',
@@ -714,7 +714,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 3. SUBRAMANYA SWAMI POOJA
   {
     id: 'subrahmanya-pooja',
-    titleTelugu: '3. సుబ్రహ్మణ్య స్వామి పూజ',
+    titleTelugu: 'సుబ్రహ్మణ్య స్వామి పూజ',
     titleEnglish: 'Subrahmanya Swamy Pooja',
     subtitle: 'షణ్ముఖ ధ్యానం, అంగపూజ & 108 అష్టోత్తర శత నామావళి',
     icon: 'Flame',
@@ -1366,7 +1366,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 4. AYYAPPA POOJA VIDHANAM (Shodashopachara)
   {
     id: 'ayyappa-pooja',
-    titleTelugu: '4. అయ్యప్ప నిత్య పూజా విధానం',
+    titleTelugu: 'అయ్యప్ప నిత్య పూజా విధానం',
     titleEnglish: 'Ayyappa Nitya Pooja',
     subtitle: 'షోడశోపచార పూజ (16 దివ్య పూజా విధానాలు)',
     icon: 'Crown',
@@ -1476,7 +1476,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 5. AYYAPPA ANGA POOJA
   {
     id: 'anga-pooja',
-    titleTelugu: '5. అయ్యప్ప అంగ పూజ',
+    titleTelugu: 'అయ్యప్ప అంగ పూజ',
     titleEnglish: 'Ayyappa Anga Pooja',
     subtitle: 'స్వామి దివ్య 18 అంగముల పవిత్ర పుష్పార్చన',
     icon: 'Sparkles',
@@ -1590,7 +1590,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 6. SHARANU GOSHA (108 Complete)
   {
     id: 'sharanu-gosha',
-    titleTelugu: '6. 108 శరణు ఘోష',
+    titleTelugu: '108 శరణు ఘోష',
     titleEnglish: '108 Sharanu Gosha',
     subtitle: 'స్వామియే శరణం అయ్యప్ప - సంపూర్ణ 108 శరణు నామాలు',
     icon: 'HeartHandshake',
@@ -2149,7 +2149,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 7. AYYAPPA ASHTOTTARAM (108 Complete)
   {
     id: 'ashtottaram',
-    titleTelugu: '7. అయ్యప్ప అష్టోత్తర శత నామావళి',
+    titleTelugu: 'అయ్యప్ప అష్టోత్తర శత నామావళి',
     titleEnglish: 'Ayyappa Ashtottaram',
     subtitle: 'శ్రీ అయ్యప్ప స్వామి వారి 108 దివ్య నామావళి పుష్పార్చన',
     icon: 'BookOpen',
@@ -2708,7 +2708,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
     // 8. BHUTHANATHA PANCHARATNAM
   {
     id: 'bhuthanatha-pancharatnam',
-    titleTelugu: '8. భూతనాథ పంచరత్నం (లోకవీరం మహాపూజ్యం)',
+    titleTelugu: 'భూతనాథ పంచరత్నం (లోకవీరం మహాపూజ్యం)',
     titleEnglish: 'Bhuthanatha Pancharatnam',
     subtitle: 'భూతనాథ పంచ రత్నం, నమస్కార శ్లోకం (13 శ్లోకాలు)',
     icon: 'Crown',
@@ -2779,7 +2779,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 9. MANGALA HARATHI
   {
     id: 'mangala-harathi',
-    titleTelugu: '9. మంగళ హారతి',
+    titleTelugu: 'మంగళ హారతి',
     titleEnglish: 'Mangala Harathi',
     subtitle: 'శ్రీ అయ్యప్ప స్వామి దివ్య కర్పూర నీరాజనం',
     icon: 'Flame',
@@ -2807,7 +2807,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 10. MANTRAPUSHPAM
   {
     id: 'mantrapushpam',
-    titleTelugu: '10. మంత్రపుష్పం',
+    titleTelugu: 'మంత్రపుష్పం',
     titleEnglish: 'Mantrapushpam',
     subtitle: 'వేదోక్త దివ్య మంత్రపుష్ప సమర్పణ',
     icon: 'Sparkles',
@@ -2835,7 +2835,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 11. ATMA PRADAKSHINA
   {
     id: 'atma-pradakshina',
-    titleTelugu: '11. ఆత్మ ప్రదక్షిణ నమస్కారం',
+    titleTelugu: 'ఆత్మ ప్రదక్షిణ నమస్కారం',
     titleEnglish: 'Atma Pradakshina',
     subtitle: 'సమస్త పాప నివారణ ప్రదక్షిణ శ్లోకం',
     icon: 'RotateCcw',
@@ -2863,7 +2863,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
     // 12. KSHAMAPANA MANTRAM
   {
     id: 'kshamapana-mantram',
-    titleTelugu: '12. క్షమాపణ మంత్రం (పూజా సమాప్తి)',
+    titleTelugu: 'క్షమాపణ మంత్రం (పూజా సమాప్తి)',
     titleEnglish: 'Kshamapana Mantram',
     subtitle: 'పూజా లోప నివారణ క్షమా ప్రార్థన & అయ్యప్ప ప్రత్యేక శరణు వేడుకోలు',
     icon: 'HeartHandshake',
@@ -2929,7 +2929,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 13. HARIVARASANAM
   {
     id: 'harivarasanam',
-    titleTelugu: '13. హరివరాసనం (విశ్వమోహనం)',
+    titleTelugu: 'హరివరాసనం (విశ్వమోహనం)',
     titleEnglish: 'Harivarasanam',
     subtitle: 'శబరిమల రాత్రి నిద్ర పూజ & మంగళ హారతి గీతం',
     icon: 'Music',
@@ -2988,7 +2988,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 14. PADI PAATALU
   {
     id: 'padi-paatalu',
-    titleTelugu: '14. పదునెట్టాంపడి (18 మెట్ల పాటలు)',
+    titleTelugu: 'పదునెట్టాంపడి (18 మెట్ల పాటలు)',
     titleEnglish: 'Padinettampadi Songs',
     subtitle: 'శబరిమల పవిత్ర 18 మెట్ల దివ్య ప్రాశస్త్యం & పాటలు',
     icon: 'Music',
@@ -3016,7 +3016,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 15. LAKSHMI ASHTOTTARAM (108 Complete)
   {
     id: 'lakshmi-ashtottaram',
-    titleTelugu: '15. శ్రీ మహాలక్ష్మి అష్టోత్తర శత నామావళి',
+    titleTelugu: 'శ్రీ మహాలక్ష్మి అష్టోత్తర శత నామావళి',
     titleEnglish: 'Sri Mahalakshmi Ashtottaram',
     subtitle: 'అష్టలక్ష్మీ స్వరూపిణి శ్రీ లక్ష్మీదేవి 108 దివ్య నామావళి',
     icon: 'Sparkles',
@@ -3575,7 +3575,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 16. MAHALAKSHMI ASHTAKAM
   {
     id: 'mahalakshmi-ashtakam',
-    titleTelugu: '16. శ్రీ మహాలక్ష్మి అష్టకం',
+    titleTelugu: 'శ్రీ మహాలక్ష్మి అష్టకం',
     titleEnglish: 'Sri Mahalakshmi Ashtakam',
     subtitle: '"నమస్తేస్తు మహామాయే..." సంపూర్ణ అష్టక స్తోత్రం',
     icon: 'Crown',
@@ -3643,7 +3643,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 17. MALIKAPURATHAMMA POOJA
   {
     id: 'malikapurathamma-pooja',
-    titleTelugu: '17. మాళికాపురత్తమ్మ దేవి పూజ',
+    titleTelugu: 'మాళికాపురత్తమ్మ దేవి పూజ',
     titleEnglish: 'Malikapurathamma Pooja',
     subtitle: 'శబరిమల మంజమ్మ దేవి ధ్యానం, అష్టోత్తరం & స్తుతి',
     icon: 'Sparkles',
@@ -3671,7 +3671,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 18. AMMAVARI HARATHI
   {
     id: 'ammavari-harathi',
-    titleTelugu: '18. అమ్మవారి మంగళ హారతులు',
+    titleTelugu: 'అమ్మవారి మంగళ హారతులు',
     titleEnglish: 'Ammavari Mangala Harathi',
     subtitle: 'శ్రీ లక్ష్మీదేవి & దుర్గా భవాని దివ్య మంగళ హారతులు',
     icon: 'Flame',
@@ -3699,7 +3699,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 19. KANAKADHARA STOTRAM
   {
     id: 'kanakadhara-stotram',
-    titleTelugu: '19. శ్రీ కనకధారా స్తోత్రం',
+    titleTelugu: 'శ్రీ కనకధారా స్తోత్రం',
     titleEnglish: 'Sri Kanakadhara Stotram',
     subtitle: 'శ్రీ ఆదిశంకరాచార్య విరచిత స్వర్ణవృష్టి దివ్య స్తోత్రం',
     icon: 'Sparkles',
@@ -3732,7 +3732,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 20. DURGA ASHTOTTARAM (108 Complete)
   {
     id: 'durga-ashtottaram',
-    titleTelugu: '20. శ్రీ దుర్గా అష్టోత్తర శత నామావళి',
+    titleTelugu: 'శ్రీ దుర్గా అష్టోత్తర శత నామావళి',
     titleEnglish: 'Sri Durga Ashtottaram',
     subtitle: 'దుర్గతి నాశిని శ్రీ దుర్గాదేవి 108 దివ్య నామావళి',
     icon: 'ShieldCheck',
@@ -4291,7 +4291,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 21. SARASWATI ASHTOTTARAM (108 Complete)
   {
     id: 'saraswati-ashtottaram',
-    titleTelugu: '21. శ్రీ సరస్వతీ అష్టోత్తర శత నామావళి',
+    titleTelugu: 'శ్రీ సరస్వతీ అష్టోత్తర శత నామావళి',
     titleEnglish: 'Sri Saraswati Ashtottaram',
     subtitle: 'విద్యాబుద్ధి ప్రదాయిని శ్రీ సరస్వతీ దేవి 108 దివ్య నామావళి',
     icon: 'BookOpen',
@@ -4850,7 +4850,7 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
   // 22. SHIVA ASHTOTTARAM (108 Complete)
   {
     id: 'shiva-ashtottaram',
-    titleTelugu: '22. శ్రీ శివ అష్టోత్తర శత నామావళి',
+    titleTelugu: 'శ్రీ శివ అష్టోత్తర శత నామావళి',
     titleEnglish: 'Sri Shiva Ashtottaram',
     subtitle: 'పరమశివుని 108 దివ్య లింగార్చన నామావళి',
     icon: 'Sun',

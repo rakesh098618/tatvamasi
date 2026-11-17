@@ -4,9 +4,9 @@ import {
   Text, 
   StyleSheet, 
   ScrollView, 
-  TouchableOpacity, 
-  SafeAreaView 
+  TouchableOpacity 
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, Stack, router } from 'expo-router';
 import { POOJA_CATEGORIES } from '../../data/poojaData';
 import { COLORS } from '../../constants/theme';
@@ -67,7 +67,7 @@ export default function PoojaDetailScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['bottom', 'left', 'right']}>
       <Stack.Screen 
         options={{ 
           title: pooja.titleTelugu,

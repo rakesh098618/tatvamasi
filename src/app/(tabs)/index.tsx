@@ -6,9 +6,9 @@ import {
   FlatList, 
   TextInput, 
   TouchableOpacity, 
-  SafeAreaView,
   Modal
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { POOJA_CATEGORIES } from '../../data/poojaData';
 import { PoojaCard } from '../../components/PoojaCard';
@@ -142,7 +142,7 @@ export default function HomeScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
         title="తత్త్వమసి" 
         subtitle="శ్రీ అయ్యప్ప నిత్య పూజా విధానం"

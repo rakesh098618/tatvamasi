@@ -23,7 +23,7 @@ export default function GuruScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container} edges={['top']}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
         title="శ్రీ గురుస్వామి సన్నిధి" 
         subtitle="దీక్షా గురువుల మార్గదర్శనం & నియమాలు"

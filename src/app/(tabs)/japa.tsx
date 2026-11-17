@@ -4,9 +4,9 @@ import {
   Text, 
   StyleSheet, 
   TouchableOpacity, 
-  SafeAreaView, 
   ScrollView 
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Header } from '../../components/Header';
 import { COLORS } from '../../constants/theme';
 import { RotateCcw, ChevronLeft, ChevronRight, CheckCircle2, Sparkles, Volume2 } from 'lucide-react-native';
@@ -49,7 +49,7 @@ export default function JapaCounterScreen() {
   const progressPercentage = Math.min(100, Math.round((count / totalTarget) * 108));
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
         title="108 శరణు ఘోష కౌంటర్" 
         subtitle="డిజిటల్ జపమాల & నామస్మరణ"

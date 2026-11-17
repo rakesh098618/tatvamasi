@@ -1,10 +1,15 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { Tabs } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { COLORS } from '../../constants/theme';
-import { Sparkles, HeartHandshake, Music, UserCheck, Flame } from 'lucide-react-native';
+import { Sparkles, HeartHandshake, UserCheck, Flame } from 'lucide-react-native';
 
 export default function TabLayout() {
+  const insets = useSafeAreaInsets();
+  const bottomPadding = insets.bottom > 0 ? insets.bottom : (Platform.OS === 'android' ? 10 : 8);
+  const tabHeight = 58 + bottomPadding;
+
   return (
     <Tabs
       screenOptions={{
@@ -13,8 +18,8 @@ export default function TabLayout() {
           backgroundColor: COLORS.surface,
           borderTopColor: COLORS.surfaceBorder,
           borderTopWidth: 1,
-          height: Platform.OS === 'android' ? 70 : 64,
-          paddingBottom: Platform.OS === 'android' ? 12 : 8,
+          height: tabHeight,
+          paddingBottom: bottomPadding,
           paddingTop: 6,
         },
         tabBarActiveTintColor: COLORS.textGold,
