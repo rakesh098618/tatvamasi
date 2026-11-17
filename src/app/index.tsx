@@ -7,7 +7,8 @@ import {
   ScrollView, 
   SafeAreaView,
   Image,
-  Animated
+  Animated,
+  useWindowDimensions
 } from 'react-native';
 import { router } from 'expo-router';
 import { COLORS } from '../constants/theme';
@@ -16,6 +17,7 @@ import { GURU_SWAMI_DETAILS } from '../data/poojaData';
 
 export default function WelcomeSplashScreen() {
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const { height: screenHeight } = useWindowDimensions();
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
@@ -29,83 +31,92 @@ export default function WelcomeSplashScreen() {
     router.replace('/(tabs)');
   };
 
+  // Adjust Ayyappa image height adaptively based on screen height for perfect spacing
+  const ayyappaHeight = screenHeight < 680 ? 190 : screenHeight < 800 ? 215 : 240;
+
   return (
     <SafeAreaView style={styles.container}>
       <Animated.View style={[{ flex: 1, width: '100%' }, { opacity: fadeAnim }]}>
-        <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-        
-        {/* Top Sacred Sharanam Badge */}
-        <View style={styles.topBadge}>
-          <Flame size={16} color={COLORS.flameOrange} />
-          <Text style={styles.topBadgeText}>స్వామియే శరణం అయ్యప్ప</Text>
-          <Flame size={16} color={COLORS.flameOrange} />
-        </View>
-
-        {/* 1. Lord Ayyappa Swami Divya Aseessulatho Header */}
-        <View style={styles.blessingHeader}>
-          <Text style={styles.blessingTitle}>
-            శ్రీ అయ్యప్ప స్వామి వారి దివ్య
-          </Text>
-          <Text style={styles.blessingSubtitle}>
-            ఆశీస్సులతో
-          </Text>
-        </View>
-
-        {/* 2. Lord Ayyappa Swami Divine Picture */}
-        <View style={styles.ayyappaCard}>
-          <View style={styles.ayyappaImageFrame}>
-            <Image 
-              source={require('../../assets/ayyappa_swami_master.png')} 
-              style={styles.ayyappaImage}
-              resizeMode="contain"
-            />
-          </View>
-        </View>
-
-        {/* 3. Sacred Quote */}
-        <View style={styles.quoteCard}>
-          <Sparkles size={16} color={COLORS.gold} />
-          <Text style={styles.quoteText}>
-            "నిర్మలమైన మనస్సుతో శరణువేడితే ముక్తిని ప్రసాదించే కలియుగ ప్రత్యక్ష దైవం శ్రీ అయ్యప్ప"
-          </Text>
-          <Sparkles size={16} color={COLORS.gold} />
-        </View>
-
-        {/* 4. Guru Swami Section: Photo, Name & Address */}
-        <View style={styles.guruSection}>
-          <View style={styles.guruPhotoFrame}>
-            <Image 
-              source={require('../../assets/guruswami.png')} 
-              style={styles.guruPhoto}
-              resizeMode="cover"
-            />
-          </View>
-          <Text style={styles.guruName}>{GURU_SWAMI_DETAILS.name}</Text>
-          <View style={styles.locationRow}>
-            <MapPin size={15} color={COLORS.gold} />
-            <Text style={styles.guruAddress}>{GURU_SWAMI_DETAILS.location}</Text>
-          </View>
-        </View>
-
-        {/* 5. Enter App Button */}
-        <TouchableOpacity 
-          style={styles.enterButton} 
-          onPress={handleEnterApp}
-          activeOpacity={0.85}
+        <ScrollView 
+          contentContainerStyle={styles.scrollContent} 
+          showsVerticalScrollIndicator={false}
+          bounces={false}
         >
-          <Text style={styles.enterButtonText}>పూజా మందిరంలోనికి ప్రవేశించండి</Text>
-          <ChevronRight size={22} color="#FFF" />
-        </TouchableOpacity>
+          {/* 1. Top Sacred Sharanam Badge */}
+          <View style={styles.topBadge}>
+            <Flame size={14} color={COLORS.flameOrange} />
+            <Text style={styles.topBadgeText}>స్వామియే శరణం అయ్యప్ప</Text>
+            <Flame size={14} color={COLORS.flameOrange} />
+          </View>
 
-        {/* Footnote */}
-        <Text style={styles.footerText}>
-          శ్రీ ధర్మశాస్తా కటాక్ష సిద్ధిరస్తు • సర్వం అయ్యప్పార్పణమస్తు
-        </Text>
+          {/* 2. Blessing Header */}
+          <View style={styles.blessingHeader}>
+            <Text style={styles.blessingTitle}>
+              శ్రీ శ్రీ శ్రీ ఆడేపు బ్రహ్మం గురు స్వామి వారి దివ్య ఆశీస్సులతో
+            </Text>
+          </View>
 
-      </ScrollView>
-    </Animated.View>
-  </SafeAreaView>
-);
+          {/* 3. Lord Ayyappa Swami Divine Picture */}
+          <View style={styles.ayyappaCard}>
+            <View style={[styles.ayyappaImageFrame, { height: ayyappaHeight }]}>
+              <Image 
+                source={require('../../assets/ayyappa_swami_master.png')} 
+                style={styles.ayyappaImage}
+                resizeMode="contain"
+              />
+            </View>
+          </View>
+
+          {/* 4. Sacred Quote */}
+          <View style={styles.quoteCard}>
+            <Sparkles size={14} color={COLORS.gold} />
+            <Text style={styles.quoteText}>
+              "మనసు మంచిది అయితే ముక్తి ఇచ్చేవాడు అయ్యప్ప"
+            </Text>
+            <Sparkles size={14} color={COLORS.gold} />
+          </View>
+
+          {/* 5. Guru Swami Section: Horizontal Compact Card with Photo, Name & Address */}
+          <View style={styles.guruSection}>
+            <View style={styles.guruPhotoFrame}>
+              <Image 
+                source={require('../../assets/guruswami.png')} 
+                style={styles.guruPhoto}
+                resizeMode="cover"
+              />
+            </View>
+            <View style={styles.guruInfoCol}>
+              <Text style={styles.guruName} numberOfLines={1}>
+                {GURU_SWAMI_DETAILS.name}
+              </Text>
+              <View style={styles.locationRow}>
+                <MapPin size={13} color={COLORS.gold} />
+                <Text style={styles.guruAddress} numberOfLines={1}>
+                  {GURU_SWAMI_DETAILS.location || 'రాంనగర్, హైదరాబాద్'}
+                </Text>
+              </View>
+            </View>
+          </View>
+
+          {/* 6. Enter App Button */}
+          <TouchableOpacity 
+            style={styles.enterButton} 
+            onPress={handleEnterApp}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.enterButtonText}>పూజా మందిరంలోనికి ప్రవేశించండి</Text>
+            <ChevronRight size={20} color="#FFF" />
+          </TouchableOpacity>
+
+          {/* 7. Footnote */}
+          <Text style={styles.footerText}>
+            శ్రీ ధర్మశాస్తా కటాక్ష సిద్ధిరస్తు • సర్వం అయ్యప్పార్పణమస్తు
+          </Text>
+
+        </ScrollView>
+      </Animated.View>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -114,66 +125,59 @@ const styles = StyleSheet.create({
     backgroundColor: '#0F0B06', // Deep sacred temple bronze-black
   },
   scrollContent: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 36,
+    paddingHorizontal: 16,
+    paddingTop: 10,
+    paddingBottom: 16,
     alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '100%',
   },
   topBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 6,
     backgroundColor: 'rgba(249, 115, 22, 0.15)',
-    paddingHorizontal: 16,
-    paddingVertical: 6,
+    paddingHorizontal: 14,
+    paddingVertical: 5,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: 'rgba(249, 115, 22, 0.35)',
-    marginBottom: 16,
+    marginBottom: 8,
   },
   topBadgeText: {
     color: COLORS.primaryLight,
     fontWeight: '700',
-    fontSize: 13,
+    fontSize: 12,
     letterSpacing: 0.5,
   },
   blessingHeader: {
     alignItems: 'center',
-    marginBottom: 16,
-    paddingHorizontal: 10,
+    marginBottom: 8,
+    paddingHorizontal: 8,
   },
   blessingTitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: 'bold',
     color: '#FFE29A',
     textAlign: 'center',
-    lineHeight: 28,
-  },
-  blessingSubtitle: {
-    fontSize: 20,
-    fontWeight: '900',
-    color: COLORS.goldLight,
-    textAlign: 'center',
-    marginTop: 2,
-    letterSpacing: 1,
+    lineHeight: 20,
   },
   ayyappaCard: {
     width: '100%',
-    borderRadius: 20,
-    borderWidth: 2,
+    borderRadius: 16,
+    borderWidth: 1.5,
     borderColor: COLORS.gold,
     overflow: 'hidden',
     backgroundColor: '#000',
     shadowColor: COLORS.gold,
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.45,
-    shadowRadius: 12,
-    elevation: 10,
-    marginBottom: 14,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 8,
+    marginBottom: 10,
   },
   ayyappaImageFrame: {
     width: '100%',
-    height: 380,
     backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
@@ -186,113 +190,99 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
+    gap: 6,
     backgroundColor: '#1E1408',
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 14,
+    paddingVertical: 7,
+    paddingHorizontal: 12,
+    borderRadius: 10,
     borderWidth: 1,
     borderColor: 'rgba(212, 175, 55, 0.4)',
     width: '100%',
-    marginBottom: 18,
-    shadowColor: COLORS.gold,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 6,
-    elevation: 4,
+    marginBottom: 10,
+    elevation: 2,
   },
   quoteText: {
     color: COLORS.goldLight,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'center',
     flexShrink: 1,
-    lineHeight: 22,
   },
   guruSection: {
+    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#181108',
     width: '100%',
-    borderRadius: 18,
-    paddingVertical: 16,
-    paddingHorizontal: 16,
-    borderWidth: 1.5,
+    borderRadius: 14,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderWidth: 1.2,
     borderColor: COLORS.goldDark,
-    marginBottom: 20,
-    shadowColor: COLORS.gold,
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 6,
+    marginBottom: 12,
+    elevation: 4,
+    gap: 12,
   },
   guruPhotoFrame: {
-    width: 140,
-    height: 165,
-    borderRadius: 14,
-    borderWidth: 2.5,
+    width: 54,
+    height: 54,
+    borderRadius: 27,
+    borderWidth: 2,
     borderColor: COLORS.gold,
     overflow: 'hidden',
     backgroundColor: '#0A0704',
-    marginBottom: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.5,
-    shadowRadius: 6,
-    elevation: 6,
   },
   guruPhoto: {
     width: '100%',
     height: '100%',
   },
+  guruInfoCol: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   guruName: {
-    fontSize: 20,
+    fontSize: 14,
     fontWeight: 'bold',
     color: '#FFE29A',
-    textAlign: 'center',
-    marginBottom: 6,
-    letterSpacing: 0.5,
+    marginBottom: 3,
   },
   locationRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
+    gap: 4,
     backgroundColor: 'rgba(212, 175, 55, 0.12)',
-    paddingVertical: 4,
-    paddingHorizontal: 12,
-    borderRadius: 12,
+    paddingVertical: 2,
+    paddingHorizontal: 8,
+    borderRadius: 8,
+    alignSelf: 'flex-start',
   },
   guruAddress: {
-    fontSize: 14,
+    fontSize: 12,
     color: COLORS.textPrimary,
     fontWeight: '600',
   },
   enterButton: {
     backgroundColor: COLORS.primaryDark,
-    borderRadius: 16,
-    paddingVertical: 16,
-    paddingHorizontal: 24,
+    borderRadius: 12,
+    paddingVertical: 13,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 10,
+    gap: 8,
     width: '100%',
-    shadowColor: COLORS.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    elevation: 6,
-    borderWidth: 1.5,
+    borderWidth: 1.2,
     borderColor: COLORS.gold,
-    marginBottom: 16,
+    marginBottom: 8,
+    elevation: 4,
   },
   enterButtonText: {
     color: '#FFF',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
     letterSpacing: 0.5,
   },
   footerText: {
-    fontSize: 12,
+    fontSize: 11,
     color: COLORS.textMuted,
     textAlign: 'center',
   },

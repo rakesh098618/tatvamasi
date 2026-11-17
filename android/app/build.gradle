@@ -104,12 +104,18 @@ android {
 
 
         buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
+        externalNativeBuild {
+            cmake {
+                arguments "-DCMAKE_OBJECT_PATH_MAX=200"
+            }
+        }
     }
     externalNativeBuild {
         cmake {
-            buildStagingDirectory = file("D:/cxx")
+            buildStagingDirectory = file("D:/b")
         }
     }
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')

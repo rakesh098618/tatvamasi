@@ -1,8 +1,9 @@
 import { PoojaCategory, GuruInfo } from '../types';
 
 export const GURU_SWAMI_DETAILS: GuruInfo = {
-  name: 'శ్రీ గురుస్వామి వారి దివ్య సన్నిధి',
+  name: 'శ్రీ శ్రీ శ్రీ ఆడేపు బ్రహ్మం గురుస్వామి',
   title: 'అయ్యప్ప దీక్షా గురువులు & మండల దీక్షా మార్గదర్శకులు',
+  location: 'రాంనగర్, హైదరాబాద్',
   description: 'గురు ముఖతః దీక్షను స్వీకరించి, భక్తి శ్రద్ధలతో 41 రోజుల మండల దీక్షను ఆచరించడం ద్వారా పరమేశ్వరుడైన అయ్యప్ప స్వామి అనుగ్రహం కలుగుతుంది. గురువే దైవం, గురు వాక్యమే వేదం.',
   mantram: 'గురుర్బ్రహ్మ గురుర్విష్ణుః గురుర్దేవో మహేశ్వరః |\nగురుః సాక్షాత్ పరబ్రహ్మ తస్మై శ్రీ గురవే నమః ||',
   teachings: [
@@ -41,13 +42,13 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
           {
             id: 'gv-1',
             telugu: 'గురుర్బ్రహ్మ గురుర్విష్ణుః గురుర్దేవో మహేశ్వరః |\nగురుః సాక్షాత్ పరబ్రహ్మ తస్మై శ్రీ గురవే నమః ||',
-            transliteration: 'Gurur Brahma Gurur Vishnuh Gurur Devo Maheshwarah | Guruh Sakshat Parabrahma Tasmai Shri Gurave Namah ||',
-            meaning: 'గురువే సృష్టికర్తయైన బ్రహ్మ, స్థితికారుడైన విష్ణువు, లయకారుడైన మహేశ్వరుడు. సాక్షాత్తు పరబ్రహ్మ స్వరూపుడైన ఆ శ్రీ గురువునకు నమస్కారములు.'
+            transliteration: 'Gurur Brahma Gurur Vishnuh Gurur Devo Maheshwarah |\nGuruh Sakshat Parabrahma Tasmai Shri Gurave Namah ||',
+            meaning: 'గురువే సృష్టికర్తయైన బ్రహ్మ, స్థితికారుడైన విష్ణువు, లయకారుడైన మహేశ్వరుడు. సాక్షాత్తూ పరబ్రహ్మ స్వరూపుడైన ఆ శ్రీ గురువునకు నమస్కారములు.'
           },
           {
             id: 'gv-2',
             telugu: 'అఖండ మండలాకారం వ్యాప్తం యేన చరాచరమ్ |\nతత్పదం దర్శితం యేన తస్మై శ్రీ గురవే నమః ||',
-            transliteration: 'Akhanda Mandalakaram Vyaptam Yena Characharam | Tatpadam Darshitam Yena Tasmai Shri Gurave Namah ||',
+            transliteration: 'Akhanda Mandalakaram Vyaptam Yena Characharam |\nTatpadam Darshitam Yena Tasmai Shri Gurave Namah ||',
             meaning: 'అనంత విశ్వమంతటా వ్యాపించి ఉన్న ఆ పరమాత్మ తత్త్వాన్ని ఎవరైతే మనకు దర్శింపజేస్తారో, ఆ సద్గురుస్వామి పాదాలకు శరణు.'
           },
           {
@@ -59,21 +60,19 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
       }
     ]
   },
-
   // 2. GANAPATHI POOJA
   {
     id: 'ganapathi-pooja',
     titleTelugu: '2. గణపతి పూజ',
     titleEnglish: 'Ganapathi Pooja',
-    subtitle: 'విఘ్న నివారణార్థం వినాయక షోడశోపచార పూజ',
+    subtitle: 'దీపారాధన, వినాయక ధ్యానం, అంగపూజ & 108 అష్టోత్తరం',
     icon: 'Sun',
-    durationMinutes: 10,
+    durationMinutes: 15,
     featured: true,
     category: 'ayyappa',
     sections: [
       {
         title: 'దీపారాధన & ఆచమనం',
-        description: 'దీపం వెలిగించి, మూడుసార్లు ఆచమనీయం చేయవలెను',
         mantras: [
           {
             id: 'gp-deep',
@@ -95,31 +94,632 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
             id: 'gp-2',
             telugu: 'అగజానన పద్మార్కం గజానన మహర్నిశమ్ |\nఅనేకదంతం భక్తానాం ఏకదంతముపాస్మహే ||',
             transliteration: 'Agajanana Padmarkam Gajanana Maharnisham | Anekadantam Bhaktanam Ekadantam Upasmahe ||'
-          },
-          {
-            id: 'gp-3',
-            telugu: 'ఓం సుముఖాయ నమః | ఓం ఏకదంతాయ నమః | ఓం కపిలాయ నమః | ఓం గజకర్ణకాయ నమః | ఓం లంబోదరాయ నమః | ఓం వికటాయ నమః | ఓం విఘ్నరాజాయ నమః | ఓం గణాధిపాయ నమః ||',
-            transliteration: 'Om Sumukhaya Namah | Om Ekadantaya Namah | Om Kapilaya Namah | Om Gajakarnakaya Namah | Om Lambodaraya Namah | Om Vikataya Namah | Om Vighnarajaya Namah | Om Ganadhipaya Namah ||'
-          },
-          {
-            id: 'gp-4',
-            telugu: 'శ్రీ వరసిద్ధి వినాయక స్వామినే నమః | నానావిధ పరిమళ పత్ర పుష్ప పూజాం సమర్పయామి || ధూపం, దీపం, నైవేద్యం, తాంబూలం సమర్పయామి ||',
-            transliteration: 'Shri Varasiddhi Vinayaka Swamine Namah | Nanavidha Parimala Patra Pushpa Poojam Samarpayami || Dhoopam, Deepam, Naivedyam, Tamboolam Samarpayami ||'
           }
         ]
+      },
+      {
+        title: 'వినాయక అంగపూజ',
+        description: 'పుష్పములతో వినాయకుని దివ్య అంగములను పూజించుట',
+        mantras: [
+          {
+                    "id": "gp-ang-1",
+                    "telugu": "ఓం గణేశాయ నమః - పాదౌ పూజయామి (పాదములు)",
+                    "transliteration": "Om Ganeshay Namah - Padau Poojayami"
+          },
+          {
+                    "id": "gp-ang-2",
+                    "telugu": "ఓం విఘ్నరాజాయ నమః - గుల్ఫౌ పూజయామి (మడమలు)",
+                    "transliteration": "Om Vighnarajaya Namah - Gulphau Poojayami"
+          },
+          {
+                    "id": "gp-ang-3",
+                    "telugu": "ఓం ఆఖువాహనాయ నమః - జానునీ పూజయామి (మోకాళ్ళు)",
+                    "transliteration": "Om Aakhu Vahanaya Namah - Januni Poojayami"
+          },
+          {
+                    "id": "gp-ang-4",
+                    "telugu": "ఓం హేరంబాయ నమః - ఊరూ పూజయామి (తొడలు)",
+                    "transliteration": "Om Herambaya Namah - Ooroo Poojayami"
+          },
+          {
+                    "id": "gp-ang-5",
+                    "telugu": "ఓం లంబోదరాయ నమః - ఉదరం పూజయామి (పొట్ట)",
+                    "transliteration": "Om Lambodaraya Namah - Udaram Poojayami"
+          },
+          {
+                    "id": "gp-ang-6",
+                    "telugu": "ఓం గౌరీసుతాయ నమః - నాభిం పూజయామి (నాభి)",
+                    "transliteration": "Om Gourisutaya Namah - Nabhim Poojayami"
+          },
+          {
+                    "id": "gp-ang-7",
+                    "telugu": "ఓం గణాధిపాయ నమః - హృదయం పూజయామి (వక్షఃస్థలం)",
+                    "transliteration": "Om Ganadhipaya Namah - Hridayam Poojayami"
+          },
+          {
+                    "id": "gp-ang-8",
+                    "telugu": "ఓం స్థూలకంఠాయ నమః - కంఠం పూజయామి (కంఠం)",
+                    "transliteration": "Om Sthulakanthaya Namah - Kantham Poojayami"
+          },
+          {
+                    "id": "gp-ang-9",
+                    "telugu": "ఓం గజవక్త్రాయ నమః - వక్త్రం పూజయామి (ముఖం)",
+                    "transliteration": "Om Gajavaktraya Namah - Vaktram Poojayami"
+          },
+          {
+                    "id": "gp-ang-10",
+                    "telugu": "ఓం విఘ్నహర్త్రే నమః - నేత్రే పూజయామి (కన్నులు)",
+                    "transliteration": "Om Vighnahartre Namah - Netre Poojayami"
+          },
+          {
+                    "id": "gp-ang-11",
+                    "telugu": "ఓం సర్వేశ్వరాయ నమః - శిరః పూజయామి (శిరస్సు)",
+                    "transliteration": "Om Sarveshwaraya Namah - Shirah Poojayami"
+          },
+          {
+                    "id": "gp-ang-12",
+                    "telugu": "ఓం శ్రీ వరసిద్ధి వినాయక స్వామినే నమః - సర్వాణ్యంగాని పూజయామి (సమస్త అంగములు)",
+                    "transliteration": "Om Shri Varasiddhi Vinayaka Swamine Namah - Sarvanyangani Poojayami"
+          }
+]
+      },
+      {
+        title: 'శ్రీ వినాయక అష్టోత్తర శత నామావళి (108)',
+        description: 'ఓం శ్రీ వినాయకాయ నమః - ప్రతి నామానికి పుష్పము లేదా అక్షతలను సమర్పించవలెను',
+        mantras: [
+          {
+                    "id": "gp-ash-1",
+                    "telugu": "1. ఓం గజాననాయ నమః",
+                    "transliteration": "1. Om Gajanana Namah"
+          },
+          {
+                    "id": "gp-ash-2",
+                    "telugu": "2. ఓం గణాధ్యక్షాయ నమః",
+                    "transliteration": "2. Om Ganadhyaksha Namah"
+          },
+          {
+                    "id": "gp-ash-3",
+                    "telugu": "3. ఓం విఘ్నరాజాయ నమః",
+                    "transliteration": "3. Om Vighnaraja Namah"
+          },
+          {
+                    "id": "gp-ash-4",
+                    "telugu": "4. ఓం వినాయకాయ నమః",
+                    "transliteration": "4. Om Vinayaka Namah"
+          },
+          {
+                    "id": "gp-ash-5",
+                    "telugu": "5. ఓం ద్వైమాతురాయ నమః",
+                    "transliteration": "5. Om Dwaimatura Namah"
+          },
+          {
+                    "id": "gp-ash-6",
+                    "telugu": "6. ఓం ద్విముఖాయ నమః",
+                    "transliteration": "6. Om Dvimukha Namah"
+          },
+          {
+                    "id": "gp-ash-7",
+                    "telugu": "7. ఓం ప్రముఖాయ నమః",
+                    "transliteration": "7. Om Pramukha Namah"
+          },
+          {
+                    "id": "gp-ash-8",
+                    "telugu": "8. ఓం సుముఖాయ నమః",
+                    "transliteration": "8. Om Sumukha Namah"
+          },
+          {
+                    "id": "gp-ash-9",
+                    "telugu": "9. ఓం కృతినే నమః",
+                    "transliteration": "9. Om Kritine Namah"
+          },
+          {
+                    "id": "gp-ash-10",
+                    "telugu": "10. ఓం సుప్రదీపాయ నమః",
+                    "transliteration": "10. Om Supradeepa Namah"
+          },
+          {
+                    "id": "gp-ash-11",
+                    "telugu": "11. ఓం సుఖనిధయే నమః",
+                    "transliteration": "11. Om Sukhanidhi Namah"
+          },
+          {
+                    "id": "gp-ash-12",
+                    "telugu": "12. ఓం సురాధ్యక్షాయ నమః",
+                    "transliteration": "12. Om Suradhyaksha Namah"
+          },
+          {
+                    "id": "gp-ash-13",
+                    "telugu": "13. ఓం సురారిఘ్నాయ నమః",
+                    "transliteration": "13. Om Surarighna Namah"
+          },
+          {
+                    "id": "gp-ash-14",
+                    "telugu": "14. ఓం మహాగణపతయే నమః",
+                    "transliteration": "14. Om Mahaganapati Namah"
+          },
+          {
+                    "id": "gp-ash-15",
+                    "telugu": "15. ఓం మాన్యాయ నమః",
+                    "transliteration": "15. Om Manya Namah"
+          },
+          {
+                    "id": "gp-ash-16",
+                    "telugu": "16. ఓం మహాకాలాయ నమః",
+                    "transliteration": "16. Om Mahakala Namah"
+          },
+          {
+                    "id": "gp-ash-17",
+                    "telugu": "17. ఓం మహాబలాయ నమః",
+                    "transliteration": "17. Om Mahabala Namah"
+          },
+          {
+                    "id": "gp-ash-18",
+                    "telugu": "18. ఓం హేరంబాయ నమః",
+                    "transliteration": "18. Om Heramba Namah"
+          },
+          {
+                    "id": "gp-ash-19",
+                    "telugu": "19. ఓం లంబజఠరాయ నమః",
+                    "transliteration": "19. Om Lambajathara Namah"
+          },
+          {
+                    "id": "gp-ash-20",
+                    "telugu": "20. ఓం హ్రస్వగ్రీవాయ నమః",
+                    "transliteration": "20. Om Hraswagreeva Namah"
+          },
+          {
+                    "id": "gp-ash-21",
+                    "telugu": "21. ఓం మహోదరాయ నమః",
+                    "transliteration": "21. Om Mahodara Namah"
+          },
+          {
+                    "id": "gp-ash-22",
+                    "telugu": "22. ఓం మదోత్కటాయ నమః",
+                    "transliteration": "22. Om Madotkata Namah"
+          },
+          {
+                    "id": "gp-ash-23",
+                    "telugu": "23. ఓం మహావీరాయ నమః",
+                    "transliteration": "23. Om Mahaveera Namah"
+          },
+          {
+                    "id": "gp-ash-24",
+                    "telugu": "24. ఓం మంత్రిణే నమః",
+                    "transliteration": "24. Om Mantrine Namah"
+          },
+          {
+                    "id": "gp-ash-25",
+                    "telugu": "25. ఓం మంగళస్వరూపాయ నమః",
+                    "transliteration": "25. Om Mangalaswaroopa Namah"
+          },
+          {
+                    "id": "gp-ash-26",
+                    "telugu": "26. ఓం ప్రమథాయ నమః",
+                    "transliteration": "26. Om Pramatha Namah"
+          },
+          {
+                    "id": "gp-ash-27",
+                    "telugu": "27. ఓం ప్రథమాయ నమః",
+                    "transliteration": "27. Om Prathama Namah"
+          },
+          {
+                    "id": "gp-ash-28",
+                    "telugu": "28. ఓం ప్రాజ్ఞాయ నమః",
+                    "transliteration": "28. Om Prajna Namah"
+          },
+          {
+                    "id": "gp-ash-29",
+                    "telugu": "29. ఓం విఘ్నహర్త్రే నమః",
+                    "transliteration": "29. Om Vighnahartre Namah"
+          },
+          {
+                    "id": "gp-ash-30",
+                    "telugu": "30. ఓం విద్యాధరాయ నమః",
+                    "transliteration": "30. Om Vidyadhara Namah"
+          },
+          {
+                    "id": "gp-ash-31",
+                    "telugu": "31. ఓం విఘ్నకర్త్రే నమః",
+                    "transliteration": "31. Om Vighnakartre Namah"
+          },
+          {
+                    "id": "gp-ash-32",
+                    "telugu": "32. ఓం విశ్వవక్త్రాయ నమః",
+                    "transliteration": "32. Om Vishwavaktra Namah"
+          },
+          {
+                    "id": "gp-ash-33",
+                    "telugu": "33. ఓం శర్వతనయాయ నమః",
+                    "transliteration": "33. Om Sharvatanaya Namah"
+          },
+          {
+                    "id": "gp-ash-34",
+                    "telugu": "34. ఓం శర్వరీప్రియాయ నమః",
+                    "transliteration": "34. Om Sharvareepriya Namah"
+          },
+          {
+                    "id": "gp-ash-35",
+                    "telugu": "35. ఓం సర్వాత్మకాయ నమః",
+                    "transliteration": "35. Om Sarvatmaka Namah"
+          },
+          {
+                    "id": "gp-ash-36",
+                    "telugu": "36. ఓం సృష్టికర్త్రే నమః",
+                    "transliteration": "36. Om Srishtikartre Namah"
+          },
+          {
+                    "id": "gp-ash-37",
+                    "telugu": "37. ఓం దివ్యాయ నమః",
+                    "transliteration": "37. Om Divya Namah"
+          },
+          {
+                    "id": "gp-ash-38",
+                    "telugu": "38. ఓం భక్తానుకూలాయ నమః",
+                    "transliteration": "38. Om Bhaktanukoola Namah"
+          },
+          {
+                    "id": "gp-ash-39",
+                    "telugu": "39. ఓం వికటాయ నమః",
+                    "transliteration": "39. Om Vikata Namah"
+          },
+          {
+                    "id": "gp-ash-40",
+                    "telugu": "40. ఓం కపిలాయ నమః",
+                    "transliteration": "40. Om Kapila Namah"
+          },
+          {
+                    "id": "gp-ash-41",
+                    "telugu": "41. ఓం కపీశ్వరాయ నమః",
+                    "transliteration": "41. Om Kapeeshwara Namah"
+          },
+          {
+                    "id": "gp-ash-42",
+                    "telugu": "42. ఓం దుర్మిత్రాయ నమః",
+                    "transliteration": "42. Om Durmitra Namah"
+          },
+          {
+                    "id": "gp-ash-43",
+                    "telugu": "43. ఓం దుర్జయాగ్ర్యాయ నమః",
+                    "transliteration": "43. Om Durjayagrya Namah"
+          },
+          {
+                    "id": "gp-ash-44",
+                    "telugu": "44. ఓం దృప్తాయ నమః",
+                    "transliteration": "44. Om Dripta Namah"
+          },
+          {
+                    "id": "gp-ash-45",
+                    "telugu": "45. ఓం భీమాయ నమః",
+                    "transliteration": "45. Om Bheema Namah"
+          },
+          {
+                    "id": "gp-ash-46",
+                    "telugu": "46. ఓం భవ్యాయ నమః",
+                    "transliteration": "46. Om Bhavya Namah"
+          },
+          {
+                    "id": "gp-ash-47",
+                    "telugu": "47. ఓం లోకపాలాయ నమః",
+                    "transliteration": "47. Om Lokapala Namah"
+          },
+          {
+                    "id": "gp-ash-48",
+                    "telugu": "48. ఓం శాంతాయ నమః",
+                    "transliteration": "48. Om Shanta Namah"
+          },
+          {
+                    "id": "gp-ash-49",
+                    "telugu": "49. ఓం శుభప్రదాయ నమః",
+                    "transliteration": "49. Om Shubhaprada Namah"
+          },
+          {
+                    "id": "gp-ash-50",
+                    "telugu": "50. ఓం వరదాయ నమః",
+                    "transliteration": "50. Om Varada Namah"
+          },
+          {
+                    "id": "gp-ash-51",
+                    "telugu": "51. ఓం వరేణ్యాయ నమః",
+                    "transliteration": "51. Om Varenya Namah"
+          },
+          {
+                    "id": "gp-ash-52",
+                    "telugu": "52. ఓం కాలాయ నమః",
+                    "transliteration": "52. Om Kala Namah"
+          },
+          {
+                    "id": "gp-ash-53",
+                    "telugu": "53. ఓం కమలాసనాయ నమః",
+                    "transliteration": "53. Om Kamalasana Namah"
+          },
+          {
+                    "id": "gp-ash-54",
+                    "telugu": "54. ఓం రమాప్రియాయ నమః",
+                    "transliteration": "54. Om Ramapriya Namah"
+          },
+          {
+                    "id": "gp-ash-55",
+                    "telugu": "55. ఓం రమానందాయ నమః",
+                    "transliteration": "55. Om Ramananda Namah"
+          },
+          {
+                    "id": "gp-ash-56",
+                    "telugu": "56. ఓం జ్ఞానప్రియాయ నమః",
+                    "transliteration": "56. Om Jnanapriya Namah"
+          },
+          {
+                    "id": "gp-ash-57",
+                    "telugu": "57. ఓం జ్ఞానదాయకాయ నమః",
+                    "transliteration": "57. Om Jnanadayaka Namah"
+          },
+          {
+                    "id": "gp-ash-58",
+                    "telugu": "58. ఓం కాలకల్పాయ నమః",
+                    "transliteration": "58. Om Kalakalpa Namah"
+          },
+          {
+                    "id": "gp-ash-59",
+                    "telugu": "59. ఓం క్షమాయుతాయ నమః",
+                    "transliteration": "59. Om Kshamayuta Namah"
+          },
+          {
+                    "id": "gp-ash-60",
+                    "telugu": "60. ఓం సమాహితాయ నమః",
+                    "transliteration": "60. Om Samahita Namah"
+          },
+          {
+                    "id": "gp-ash-61",
+                    "telugu": "61. ఓం సమగ్రాయ నమః",
+                    "transliteration": "61. Om Samagra Namah"
+          },
+          {
+                    "id": "gp-ash-62",
+                    "telugu": "62. ఓం సుభగాయ నమః",
+                    "transliteration": "62. Om Subhaga Namah"
+          },
+          {
+                    "id": "gp-ash-63",
+                    "telugu": "63. ఓం శుభాయ నమః",
+                    "transliteration": "63. Om Shubha Namah"
+          },
+          {
+                    "id": "gp-ash-64",
+                    "telugu": "64. ఓం తేజస్వినే నమః",
+                    "transliteration": "64. Om Tejaswine Namah"
+          },
+          {
+                    "id": "gp-ash-65",
+                    "telugu": "65. ఓం తుల్యాయ నమః",
+                    "transliteration": "65. Om Tulyaya Namah"
+          },
+          {
+                    "id": "gp-ash-66",
+                    "telugu": "66. ఓం తరుణాయ నమః",
+                    "transliteration": "66. Om Taruna Namah"
+          },
+          {
+                    "id": "gp-ash-67",
+                    "telugu": "67. ఓం శుద్ధాయ నమః",
+                    "transliteration": "67. Om Shuddha Namah"
+          },
+          {
+                    "id": "gp-ash-68",
+                    "telugu": "68. ఓం శివప్రియాయ నమః",
+                    "transliteration": "68. Om Shivapriya Namah"
+          },
+          {
+                    "id": "gp-ash-69",
+                    "telugu": "69. ఓం పాశాంకుశధరాయ నమః",
+                    "transliteration": "69. Om Pashankushadhara Namah"
+          },
+          {
+                    "id": "gp-ash-70",
+                    "telugu": "70. ఓం భవ్యరూపాయ నమః",
+                    "transliteration": "70. Om Bhavyaroopa Namah"
+          },
+          {
+                    "id": "gp-ash-71",
+                    "telugu": "71. ఓం భీమతేజసే నమః",
+                    "transliteration": "71. Om Bheematejase Namah"
+          },
+          {
+                    "id": "gp-ash-72",
+                    "telugu": "72. ఓం కల్పాంతకారిణే నమః",
+                    "transliteration": "72. Om Kalpantakarine Namah"
+          },
+          {
+                    "id": "gp-ash-73",
+                    "telugu": "73. ఓం కామదాయకాయ నమః",
+                    "transliteration": "73. Om Kamadayaka Namah"
+          },
+          {
+                    "id": "gp-ash-74",
+                    "telugu": "74. ఓం కమలాక్షాయ నమః",
+                    "transliteration": "74. Om Kamalaksha Namah"
+          },
+          {
+                    "id": "gp-ash-75",
+                    "telugu": "75. ఓం కర్మసాక్షిణే నమః",
+                    "transliteration": "75. Om Karmasakshine Namah"
+          },
+          {
+                    "id": "gp-ash-76",
+                    "telugu": "76. ఓం అనేకశృంగాయ నమః",
+                    "transliteration": "76. Om Anekashringa Namah"
+          },
+          {
+                    "id": "gp-ash-77",
+                    "telugu": "77. ఓం అక్షోభ్యాయ నమః",
+                    "transliteration": "77. Om Akshobhya Namah"
+          },
+          {
+                    "id": "gp-ash-78",
+                    "telugu": "78. ఓం అనంతాయ నమః",
+                    "transliteration": "78. Om Ananta Namah"
+          },
+          {
+                    "id": "gp-ash-79",
+                    "telugu": "79. ఓం అమితాయ నమః",
+                    "transliteration": "79. Om Amita Namah"
+          },
+          {
+                    "id": "gp-ash-80",
+                    "telugu": "80. ఓం అప్రమేయాయ నమః",
+                    "transliteration": "80. Om Aprameya Namah"
+          },
+          {
+                    "id": "gp-ash-81",
+                    "telugu": "81. ఓం ఆత్మరూపాయ నమః",
+                    "transliteration": "81. Om Aatmaroopa Namah"
+          },
+          {
+                    "id": "gp-ash-82",
+                    "telugu": "82. ఓం ఆదిత్యసన్నిభాయ నమః",
+                    "transliteration": "82. Om Aadityasannibha Namah"
+          },
+          {
+                    "id": "gp-ash-83",
+                    "telugu": "83. ఓం ఇంద్రాదిపూజితాయ నమః",
+                    "transliteration": "83. Om Indradipoojita Namah"
+          },
+          {
+                    "id": "gp-ash-84",
+                    "telugu": "84. ఓం ఈశ్వరసూనవే నమః",
+                    "transliteration": "84. Om Eshwarasoonave Namah"
+          },
+          {
+                    "id": "gp-ash-85",
+                    "telugu": "85. ఓం ఉత్తమాయ నమః",
+                    "transliteration": "85. Om Uttama Namah"
+          },
+          {
+                    "id": "gp-ash-86",
+                    "telugu": "86. ఓం ఉత్కృష్టాయ నమః",
+                    "transliteration": "86. Om Utkrishta Namah"
+          },
+          {
+                    "id": "gp-ash-87",
+                    "telugu": "87. ఓం ఋభుక్షాయ నమః",
+                    "transliteration": "87. Om Ribhuksha Namah"
+          },
+          {
+                    "id": "gp-ash-88",
+                    "telugu": "88. ఓం ఏకదంతాయ నమః",
+                    "transliteration": "88. Om Ekadanta Namah"
+          },
+          {
+                    "id": "gp-ash-89",
+                    "telugu": "89. ఓం ఓంకారరూపిణే నమః",
+                    "transliteration": "89. Om Omkararoopine Namah"
+          },
+          {
+                    "id": "gp-ash-90",
+                    "telugu": "90. ఓం కౌతుకాయ నమః",
+                    "transliteration": "90. Om Kautuka Namah"
+          },
+          {
+                    "id": "gp-ash-91",
+                    "telugu": "91. ఓం గౌరీసుతాయ నమః",
+                    "transliteration": "91. Om Gourisuta Namah"
+          },
+          {
+                    "id": "gp-ash-92",
+                    "telugu": "92. ఓం చతుర్భుజాయ నమః",
+                    "transliteration": "92. Om Chaturbhuja Namah"
+          },
+          {
+                    "id": "gp-ash-93",
+                    "telugu": "93. ఓం ఛత్రధారిణే నమః",
+                    "transliteration": "93. Om Chhatradharine Namah"
+          },
+          {
+                    "id": "gp-ash-94",
+                    "telugu": "94. ఓం జగత్కర్త్రే నమః",
+                    "transliteration": "94. Om Jagatkartre Namah"
+          },
+          {
+                    "id": "gp-ash-95",
+                    "telugu": "95. ఓం జ్ఞానమూర్తయే నమః",
+                    "transliteration": "95. Om Jnanamurtaye Namah"
+          },
+          {
+                    "id": "gp-ash-96",
+                    "telugu": "96. ఓం తత్త్వరూపాయ నమః",
+                    "transliteration": "96. Om Tatwaroopa Namah"
+          },
+          {
+                    "id": "gp-ash-97",
+                    "telugu": "97. ఓం దంష్ట్రాయుతాయ నమః",
+                    "transliteration": "97. Om Damshtrayuta Namah"
+          },
+          {
+                    "id": "gp-ash-98",
+                    "telugu": "98. ఓం ధర్మజ్ఞాయ నమః",
+                    "transliteration": "98. Om Dharmajnya Namah"
+          },
+          {
+                    "id": "gp-ash-99",
+                    "telugu": "99. ఓం నాగాభరణాయ నమః",
+                    "transliteration": "99. Om Nagabharana Namah"
+          },
+          {
+                    "id": "gp-ash-100",
+                    "telugu": "100. ఓం పరశుహస్తాయ నమః",
+                    "transliteration": "100. Om Parashuhasta Namah"
+          },
+          {
+                    "id": "gp-ash-101",
+                    "telugu": "101. ఓం ఫాలనేత్రప్రియాయ నమః",
+                    "transliteration": "101. Om Phalanetrapriya Namah"
+          },
+          {
+                    "id": "gp-ash-102",
+                    "telugu": "102. ఓం బాహులతేయాయ నమః",
+                    "transliteration": "102. Om Bahulateya Namah"
+          },
+          {
+                    "id": "gp-ash-103",
+                    "telugu": "103. ఓం భక్తవత్సలాయ నమః",
+                    "transliteration": "103. Om Bhaktavatsala Namah"
+          },
+          {
+                    "id": "gp-ash-104",
+                    "telugu": "104. ఓం మహేశ్వరప్రియాయ నమః",
+                    "transliteration": "104. Om Maheshwarapriya Namah"
+          },
+          {
+                    "id": "gp-ash-105",
+                    "telugu": "105. ఓం యజ్ఞేశ్వరాయ నమః",
+                    "transliteration": "105. Om Yajneshwara Namah"
+          },
+          {
+                    "id": "gp-ash-106",
+                    "telugu": "106. ఓం లంబోదరాయ నమః",
+                    "transliteration": "106. Om Lambodara Namah"
+          },
+          {
+                    "id": "gp-ash-107",
+                    "telugu": "107. ఓం సర్వసిద్ధిప్రదాయకాయ నమః",
+                    "transliteration": "107. Om Sarvasiddhipradayaka Namah"
+          },
+          {
+                    "id": "gp-ash-108",
+                    "telugu": "108. ఓం శ్రీ వరసిద్ధి వినాయక స్వామినే నమః",
+                    "transliteration": "108. Om Shri Varasiddhi Vinayaka Swamine Namah"
+          }
+]
       }
     ]
   },
-
   // 3. SUBRAMANYA SWAMI POOJA
   {
     id: 'subrahmanya-pooja',
     titleTelugu: '3. సుబ్రహ్మణ్య స్వామి పూజ',
     titleEnglish: 'Subrahmanya Swamy Pooja',
-    subtitle: 'షణ్ముఖుని ఆరాధన, ధ్యానం & మూల మంత్రములు',
+    subtitle: 'షణ్ముఖ ధ్యానం, అంగపూజ & 108 అష్టోత్తర శత నామావళి',
     icon: 'Flame',
-    durationMinutes: 7,
-    featured: false,
+    durationMinutes: 15,
+    featured: true,
     category: 'ayyappa',
     sections: [
       {
@@ -129,170 +729,1424 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
           {
             id: 'sp-1',
             telugu: 'షడాననం చందన లేపితాంగం మహోరసం దివ్యమయూర వాహనమ్ |\nరుద్రస్య సూనుం సురలోకనాథం బ్రహ్మణ్యదేవం శరణం ప్రపద్యే ||',
-            transliteration: 'Shadananam Chandana Lepitangam Mahorasam Divya Mayura Vahanam | Rudrasya Soonum Suralokanatham Brahmanyadevam Saranam Prapadye ||',
+            transliteration: 'Shadananam Chandana Lepitangam Mahorasam Divya Mayura Vahanam |\nRudrasya Soonum Suralokanatham Brahmanyadevam Saranam Prapadye ||',
             meaning: 'ఆరు ముఖములు కలవాడు, సుగంధ చందనము అలదిన దేహము కలవాడు, మయూర వాహనుడు, శివ కుమారుడైన శ్రీ సుబ్రహ్మణ్య స్వామిని శరణు వేడుతున్నాను.'
           },
           {
             id: 'sp-2',
             telugu: 'ఓం శరవణభవాయ నమః | ఓం కార్తికేయాయ నమః | ఓం స్కందాయ నమః | ఓం గుహాయ నమః | ఓం శక్తిధరాయ నమః ||',
             transliteration: 'Om Saravanabhavaya Namah | Om Kartikeyaya Namah | Om Skandaya Namah | Om Guhaya Namah | Om Shaktidharaya Namah ||'
-          },
-          {
-            id: 'sp-3',
-            telugu: 'శ్రీ సుబ్రహ్మణ్య స్వామినే నమః | ధ్యాన, ఆవాహన, సర్వోపచార పూజాం సమర్పయామి ||',
-            transliteration: 'Shri Subrahmanya Swamine Namah | Dhyana, Aavahana, Sarvopachara Poojam Samarpayami ||'
-          }
-        ]
-      }
-    ]
-  },
-
-  // 4. AYYAPPA NITYA POOJA (SHODASHOPACHARA)
-  {
-    id: 'ayyappa-pooja',
-    titleTelugu: '4. అయ్యప్ప నిత్య పూజా విధానం',
-    titleEnglish: 'Ayyappa Nitya Pooja',
-    subtitle: 'ఆవాహన, ఆసన, పాద్య, స్నాన, షోడశోపచార నిత్య పూజ',
-    icon: 'Crown',
-    durationMinutes: 18,
-    featured: true,
-    category: 'ayyappa',
-    sections: [
-      {
-        title: 'అయ్యప్ప మూల ధ్యానం',
-        mantras: [
-          {
-            id: 'ap-dhyan',
-            telugu: 'ధ్యాయేత్ కోమల గాత్రం మోహనరూపం హరిహరాత్మజమ్ |\nహరిద్వర్ణ ధరం దేవం శాస్తారం ప్రణమామ్యహమ్ ||\nత్రినేత్రం చతుర్భుజం శాంతం సర్వాభరణ భూషితమ్ |\nయోగాసన సమారూఢం అయ్యప్పం ప్రణమామ్యహమ్ ||',
-            transliteration: 'Dhyayet Komala Gatram Mohana Roopam Hariharatmajam | Haridvarna Dharam Devam Shastaram Pranamamyaham || Trinetram Chaturbhujam Shantam Sarvabharana Bhooshitam | Yogasana Samaarudham Ayyappam Pranamamyaham ||',
-            meaning: 'కోమల శరీర కాంతి కలవాడు, మోహన రూపుడు, హరిహర పుత్రుడు, సమస్త ఆభరణ విభూషితుడు, యోగాసనంలో కూర్చున్న శ్రీ అయ్యప్ప స్వామికి ప్రణామములు.'
           }
         ]
       },
       {
-        title: 'షోడశోపచార పూజ',
-        description: 'స్వామివారికి భక్తితో సమర్పించవలసిన 16 ఉపచారములు',
+        title: 'సుబ్రహ్మణ్య స్వామి అంగపూజ',
+        description: 'పుష్పములతో సుబ్రహ్మణ్యుని దివ్య అంగములను పూజించుట',
         mantras: [
-          { id: 'sh-1', telugu: 'ఓం శ్రీ హరిహరపుత్రాయ నమః - ధ్యాయామి', transliteration: 'Om Shri Hariharaputraya Namah - Dhyayami' },
-          { id: 'sh-2', telugu: 'ఓం శ్రీ మణికంఠాయ నమః - ఆవాహయామి', transliteration: 'Om Shri Manikantaya Namah - Aavahayami' },
-          { id: 'sh-3', telugu: 'ఓం శ్రీ ధర్మశాస్త్రే నమః - రత్న సింహాసనం సమర్పయామి', transliteration: 'Om Shri Dharmashastre Namah - Ratna Simhasanam Samarpayami' },
-          { id: 'sh-4', telugu: 'ఓం శ్రీ శబరీగిరీశాయ నమః - పాద్యం సమర్పయామి (పాదములను కడుగుట)', transliteration: 'Om Shri Sabarigireeshaya Namah - Padyam Samarpayami' },
-          { id: 'sh-5', telugu: 'ఓం శ్రీ లోకపూజ్యాయ నమః - అర్ఘ్యం సమర్పయామి (చేతులు కడుగుట)', transliteration: 'Om Shri Lokapoojyaya Namah - Arghyam Samarpayami' },
-          { id: 'sh-6', telugu: 'ఓం శ్రీ పరమాత్మనే నమః - ఆచమనీయం సమర్పయామి', transliteration: 'Om Shri Paramatmane Namah - Aachamaneeyam Samarpayami' },
-          { id: 'sh-7', telugu: 'ఓం శ్రీ పులివాహనాయ నమః - శుద్ధోదక స్నానం సమర్పయామి', transliteration: 'Om Shri Pulivahanaya Namah - Shuddhodaka Snanam Samarpayami' },
-          { id: 'sh-8', telugu: 'ఓం శ్రీ మహాశాస్త్రే నమః - వస్త్ర యుగ్మం సమర్పయామి', transliteration: 'Om Shri Mahashastre Namah - Vastra Yugmam Samarpayami' },
-          { id: 'sh-9', telugu: 'ఓం శ్రీ మోహినీసుతాయ నమః - యజ్ఞోపవీతం సమర్పయామి', transliteration: 'Om Shri Mohinisutaya Namah - Yajnopaveetam Samarpayami' },
-          { id: 'sh-10', telugu: 'ఓం శ్రీ చందనప్రియాయ నమః - దివ్య శ్రీగంధం సమర్పయామి', transliteration: 'Om Shri Chandanapriyaya Namah - Divya Shrigandham Samarpayami' },
-          { id: 'sh-11', telugu: 'ఓం శ్రీ పుష్పప్రియాయ నమః - నానావిధ పరిమళ పత్ర పుష్పాణి సమర్పయామి', transliteration: 'Om Shri Pushpapriyaya Namah - Pushpani Samarpayami' },
-          { id: 'sh-12', telugu: 'ఓం శ్రీ ధూపప్రియాయ నమః - దశాంగం గుగ్గులోపేతం ధూపం సమర్పయామి', transliteration: 'Om Shri Dhoopapriyaya Namah - Dhoopam Samarpayami' },
-          { id: 'sh-13', telugu: 'ఓం శ్రీ దీపప్రియాయ నమః - సాక్షాత్ ప్రత్యక్ష దీపం సమర్పయామి', transliteration: 'Om Shri Deepapriyaya Namah - Deepam Samarpayami' },
-          { id: 'sh-14', telugu: 'ఓం శ్రీ నైవేద్యప్రియాయ నమః - మహానైవేద్యం (పాలు, పండ్లు, బెల్లం) సమర్పయామి', transliteration: 'Om Shri Naivedyapriyaya Namah - Maha Naivedyam Samarpayami' },
-          { id: 'sh-15', telugu: 'ఓం శ్రీ తాంబూలప్రియాయ నమః - తాంబూలం సమర్పయామి', transliteration: 'Om Shri Tamboolapriyaya Namah - Tamboolam Samarpayami' },
-          { id: 'sh-16', telugu: 'ఓం శ్రీ ఆనందచిత్తాయ నమః - ఆనంద కర్పూర నీరాజనం సమర్పయామి', transliteration: 'Om Shri Anandachittaya Namah - Neerajanam Samarpayami' }
-        ]
-      }
-    ]
-  },
-
-  // 5. AYYAPPA ANGA POOJA
-  {
-    id: 'anga-pooja',
-    titleTelugu: '5. అయ్యప్ప అంగ పూజ',
-    titleEnglish: 'Ayyappa Anga Pooja',
-    subtitle: 'స్వామివారి ప్రతి దివ్య అంగానికి పుష్పార్చన',
-    icon: 'Sparkle',
-    durationMinutes: 8,
-    featured: true,
-    category: 'ayyappa',
-    sections: [
+          {
+                    "id": "sp-ang-1",
+                    "telugu": "ఓం స్కందాయ నమః - పాదౌ పూజయామి (పాదములు)",
+                    "transliteration": "Om Skandaya Namah - Padau Poojayami"
+          },
+          {
+                    "id": "sp-ang-2",
+                    "telugu": "ఓం కుమారాయ నమః - గుల్ఫౌ పూజయామి (మడమలు)",
+                    "transliteration": "Om Kumaraya Namah - Gulphau Poojayami"
+          },
+          {
+                    "id": "sp-ang-3",
+                    "telugu": "ఓం శక్తిధరాయ నమః - జానునీ పూజయామి (మోకాళ్ళు)",
+                    "transliteration": "Om Shaktidharaya Namah - Januni Poojayami"
+          },
+          {
+                    "id": "sp-ang-4",
+                    "telugu": "ఓం శరవణభవాయ నమః - ఊరూ పూజయామి (తొడలు)",
+                    "transliteration": "Om Saravanabhavaya Namah - Ooroo Poojayami"
+          },
+          {
+                    "id": "sp-ang-5",
+                    "telugu": "ఓం గుహాయ నమః - కటిం పూజయామి (నడుము)",
+                    "transliteration": "Om Guhaya Namah - Katim Poojayami"
+          },
+          {
+                    "id": "sp-ang-6",
+                    "telugu": "ఓం దేవసేనాపతయే నమః - నాభిం పూజయామి (నాభి)",
+                    "transliteration": "Om Devasenapataye Namah - Nabhim Poojayami"
+          },
+          {
+                    "id": "sp-ang-7",
+                    "telugu": "ఓం మహాసేనాయ నమః - ఉదరం పూజయామి (ఉదరము)",
+                    "transliteration": "Om Mahasenaya Namah - Udaram Poojayami"
+          },
+          {
+                    "id": "sp-ang-8",
+                    "telugu": "ఓం కార్తికేయాయ నమః - హృదయం పూజయామి (హృదయము)",
+                    "transliteration": "Om Kartikeyaya Namah - Hridayam Poojayami"
+          },
+          {
+                    "id": "sp-ang-9",
+                    "telugu": "ఓం షణ్ముఖాయ నమః - కంఠం పూజయామి (కంఠము)",
+                    "transliteration": "Om Shanmukhaya Namah - Kantham Poojayami"
+          },
+          {
+                    "id": "sp-ang-10",
+                    "telugu": "ఓం శివపుత్రాయ నమః - బాహూన్ పూజయామి (భుజములు)",
+                    "transliteration": "Om Shivaputraya Namah - Bahoon Poojayami"
+          },
+          {
+                    "id": "sp-ang-11",
+                    "telugu": "ఓం ద్విషణ్ణేత్రాయ నమః - నేత్రే పూజయామి (కన్నులు)",
+                    "transliteration": "Om Dwishannetraya Namah - Netre Poojayami"
+          },
+          {
+                    "id": "sp-ang-12",
+                    "telugu": "ఓం శరజన్మనే నమః - లలాటం పూజయామి (నుదురు)",
+                    "transliteration": "Om Sharajanmane Namah - Lalatam Poojayami"
+          },
+          {
+                    "id": "sp-ang-13",
+                    "telugu": "ఓం శిఖివాహనాయ నమః - శిరః పూజయామి (శిరస్సు)",
+                    "transliteration": "Om Shikhivahanaya Namah - Shirah Poojayami"
+          },
+          {
+                    "id": "sp-ang-14",
+                    "telugu": "ఓం శ్రీ వల్లీదేవసేనా సమేత శ్రీ సుబ్రహ్మణ్యేశ్వర స్వామినే నమః - సర్వాణ్యంగాని పూజయామి",
+                    "transliteration": "Om Shri Valli Devasena Sameta Shri Subrahmanyeshwara Swamine Namah - Sarvanyangani Poojayami"
+          }
+]
+      },
       {
-        title: 'అంగ పూజా విధానం',
-        description: 'పువ్వులు లేదా అక్షతలను చేతిలోకి తీసుకుని స్వామి అంగములను పూజించుట',
+        title: 'శ్రీ సుబ్రహ్మణ్య అష్టోత్తర శత నామావళి (108)',
+        description: 'ఓం శ్రీ సుబ్రహ్మణ్యాయ నమః - ప్రతి నామానికి పుష్పము సమర్పించవలెను',
         mantras: [
-          { id: 'ang-1', telugu: 'ఓం స్వామినే నమః - పాదౌ పూజయామి (పాదములు)', transliteration: 'Om Swamine Namah - Padau Poojayami' },
-          { id: 'ang-2', telugu: 'ఓం మహాశాస్త్రే నమః - గుల్ఫౌ పూజయామి (మడమలు)', transliteration: 'Om Mahashastre Namah - Gulphau Poojayami' },
-          { id: 'ang-3', telugu: 'ఓం శబరీగిరీశాయ నమః - జానునీ పూజయామి (మోకాళ్ళు)', transliteration: 'Om Sabarigireeshaya Namah - Januni Poojayami' },
-          { id: 'ang-4', telugu: 'ఓం హరిహరపుత్రాయ నమః - ఊరూ పూజయామి (తొడలు)', transliteration: 'Om Hariharaputraya Namah - Ooroo Poojayami' },
-          { id: 'ang-5', telugu: 'ఓం మణికంఠాయ నమః - కటిం పూజయామి (నడుము)', transliteration: 'Om Manikantaya Namah - Katim Poojayami' },
-          { id: 'ang-6', telugu: 'ఓం పరమాత్మనే నమః - నాభిం పూజయామి (బొడ్డు/నాభి)', transliteration: 'Om Paramatmane Namah - Nabhim Poojayami' },
-          { id: 'ang-7', telugu: 'ఓం లోకపూజ్యాయ నమః - ఉదరం పూజయామి (పొట్ట)', transliteration: 'Om Lokapoojyaya Namah - Udaram Poojayami' },
-          { id: 'ang-8', telugu: 'ఓం ధర్మశాస్త్రే నమః - హృదయం పూజయామి (వక్షఃస్థలం)', transliteration: 'Om Dharmashastre Namah - Hridayam Poojayami' },
-          { id: 'ang-9', telugu: 'ఓం కారుణ్యసింధవే నమః - బాహూన్ పూజయామి (చేతులు)', transliteration: 'Om Karunyasindhave Namah - Bahun Poojayami' },
-          { id: 'ang-10', telugu: 'ఓం వీరమణిగ్రీవాయ నమః - కంఠం పూజయామి (మెడ)', transliteration: 'Om Veeramanigreevaya Namah - Kantham Poojayami' },
-          { id: 'ang-11', telugu: 'ఓం విశ్వరూపాయ నమః - ముఖం పూజయామి (ముఖారవిందం)', transliteration: 'Om Vishwaroopaya Namah - Mukham Poojayami' },
-          { id: 'ang-12', telugu: 'ఓం సర్వజ్ఞాయ నమః - నేత్రౌ పూజయామి (కన్నులు)', transliteration: 'Om Sarvajnaya Namah - Netrau Poojayami' },
-          { id: 'ang-13', telugu: 'ఓం సర్వేశ్వరాయ నమః - శిరః పూజయామి (శిరస్సు)', transliteration: 'Om Sarveshwaraya Namah - Shirah Poojayami' },
-          { id: 'ang-14', telugu: 'ఓం శ్రీ అయ్యప్ప స్వామినే నమః - సర్వాణ్యంగాని పూజయామి (సమస్త శరీరము)', transliteration: 'Om Shri Ayyappa Swamine Namah - Sarvanyangani Poojayami' }
-        ]
+          {
+                    "id": "sp-ash-1",
+                    "telugu": "1. ఓం స్కందాయ నమః",
+                    "transliteration": "1. Om Skanda Namah"
+          },
+          {
+                    "id": "sp-ash-2",
+                    "telugu": "2. ఓం గుహాయ నమః",
+                    "transliteration": "2. Om Guha Namah"
+          },
+          {
+                    "id": "sp-ash-3",
+                    "telugu": "3. ఓం షణ్ముఖాయ నమః",
+                    "transliteration": "3. Om Shanmukha Namah"
+          },
+          {
+                    "id": "sp-ash-4",
+                    "telugu": "4. ఓం ఫాలనేత్రసుతాయ నమః",
+                    "transliteration": "4. Om Phalanetrasuta Namah"
+          },
+          {
+                    "id": "sp-ash-5",
+                    "telugu": "5. ఓం ప్రభవే నమః",
+                    "transliteration": "5. Om Prabhave Namah"
+          },
+          {
+                    "id": "sp-ash-6",
+                    "telugu": "6. ఓం పింగళాయ నమః",
+                    "transliteration": "6. Om Pingala Namah"
+          },
+          {
+                    "id": "sp-ash-7",
+                    "telugu": "7. ఓం కృత్తికాసూనవే నమః",
+                    "transliteration": "7. Om Krittikasoonave Namah"
+          },
+          {
+                    "id": "sp-ash-8",
+                    "telugu": "8. ఓం శిఖివాహనాయ నమః",
+                    "transliteration": "8. Om Shikhivahana Namah"
+          },
+          {
+                    "id": "sp-ash-9",
+                    "telugu": "9. ఓం ద్విషణ్ణేత్రాయ నమః",
+                    "transliteration": "9. Om Dwishannetra Namah"
+          },
+          {
+                    "id": "sp-ash-10",
+                    "telugu": "10. ఓం శక్తిధరాయ నమః",
+                    "transliteration": "10. Om Shaktidhara Namah"
+          },
+          {
+                    "id": "sp-ash-11",
+                    "telugu": "11. ఓం పిశితాశప్రభంజనాయ నమః",
+                    "transliteration": "11. Om Pishitashaprabhanjana Namah"
+          },
+          {
+                    "id": "sp-ash-12",
+                    "telugu": "12. ఓం తారకాసురసంహర్త్రే నమః",
+                    "transliteration": "12. Om Tarakasurasamhartre Namah"
+          },
+          {
+                    "id": "sp-ash-13",
+                    "telugu": "13. ఓం రక్షోబలవిమర్దనాయ నమః",
+                    "transliteration": "13. Om Rakshobalavimardana Namah"
+          },
+          {
+                    "id": "sp-ash-14",
+                    "telugu": "14. ఓం మత్తాయ నమః",
+                    "transliteration": "14. Om Matta Namah"
+          },
+          {
+                    "id": "sp-ash-15",
+                    "telugu": "15. ఓం ప్రమత్తాయ నమః",
+                    "transliteration": "15. Om Pramatta Namah"
+          },
+          {
+                    "id": "sp-ash-16",
+                    "telugu": "16. ఓం ఉన్మత్తాయ నమః",
+                    "transliteration": "16. Om Unmatta Namah"
+          },
+          {
+                    "id": "sp-ash-17",
+                    "telugu": "17. ఓం సురసైన్యసురక్షకాయ నమః",
+                    "transliteration": "17. Om Surasainyasurakshaka Namah"
+          },
+          {
+                    "id": "sp-ash-18",
+                    "telugu": "18. ఓం దేవసేనాపతయే నమః",
+                    "transliteration": "18. Om Devasenapataye Namah"
+          },
+          {
+                    "id": "sp-ash-19",
+                    "telugu": "19. ఓం ప్రాజ్ఞాయ నమః",
+                    "transliteration": "19. Om Prajna Namah"
+          },
+          {
+                    "id": "sp-ash-20",
+                    "telugu": "20. ఓం కృపాళవే నమః",
+                    "transliteration": "20. Om Kripalave Namah"
+          },
+          {
+                    "id": "sp-ash-21",
+                    "telugu": "21. ఓం భక్తవత్సలాయ నమః",
+                    "transliteration": "21. Om Bhaktavatsala Namah"
+          },
+          {
+                    "id": "sp-ash-22",
+                    "telugu": "22. ఓం ఉమాసుతాయ నమః",
+                    "transliteration": "22. Om Umasuta Namah"
+          },
+          {
+                    "id": "sp-ash-23",
+                    "telugu": "23. ఓం కుమారాయ నమః",
+                    "transliteration": "23. Om Kumara Namah"
+          },
+          {
+                    "id": "sp-ash-24",
+                    "telugu": "24. ఓం క్రౌంచదారణాయ నమః",
+                    "transliteration": "24. Om Krounchadarana Namah"
+          },
+          {
+                    "id": "sp-ash-25",
+                    "telugu": "25. ఓం సేనాన్యే నమః",
+                    "transliteration": "25. Om Senanye Namah"
+          },
+          {
+                    "id": "sp-ash-26",
+                    "telugu": "26. ఓం అగ్నిజన్మనే నమః",
+                    "transliteration": "26. Om Agnijanmane Namah"
+          },
+          {
+                    "id": "sp-ash-27",
+                    "telugu": "27. ఓం చేకితానాయ నమః",
+                    "transliteration": "27. Om Chekitana Namah"
+          },
+          {
+                    "id": "sp-ash-28",
+                    "telugu": "28. ఓం శివప్రభవే నమః",
+                    "transliteration": "28. Om Shivaprabhave Namah"
+          },
+          {
+                    "id": "sp-ash-29",
+                    "telugu": "29. ఓం శరవణభవాయ నమః",
+                    "transliteration": "29. Om Saravanabhava Namah"
+          },
+          {
+                    "id": "sp-ash-30",
+                    "telugu": "30. ఓం శాంతాయ నమః",
+                    "transliteration": "30. Om Shanta Namah"
+          },
+          {
+                    "id": "sp-ash-31",
+                    "telugu": "31. ఓం శక్తిహస్తాయ నమః",
+                    "transliteration": "31. Om Shaktihasta Namah"
+          },
+          {
+                    "id": "sp-ash-32",
+                    "telugu": "32. ఓం గంగాసుతాయ నమః",
+                    "transliteration": "32. Om Gangasuta Namah"
+          },
+          {
+                    "id": "sp-ash-33",
+                    "telugu": "33. ఓం శరజన్మనే నమః",
+                    "transliteration": "33. Om Sharajanmane Namah"
+          },
+          {
+                    "id": "sp-ash-34",
+                    "telugu": "34. ఓం జితకామాయ నమః",
+                    "transliteration": "34. Om Jitakama Namah"
+          },
+          {
+                    "id": "sp-ash-35",
+                    "telugu": "35. ఓం అమోఘాయ నమః",
+                    "transliteration": "35. Om Amogha Namah"
+          },
+          {
+                    "id": "sp-ash-36",
+                    "telugu": "36. ఓం అమృతాయ నమః",
+                    "transliteration": "36. Om Amrita Namah"
+          },
+          {
+                    "id": "sp-ash-37",
+                    "telugu": "37. ఓం వరదాయ నమః",
+                    "transliteration": "37. Om Varada Namah"
+          },
+          {
+                    "id": "sp-ash-38",
+                    "telugu": "38. ఓం పుత్రదాయకాయ నమః",
+                    "transliteration": "38. Om Putradayaka Namah"
+          },
+          {
+                    "id": "sp-ash-39",
+                    "telugu": "39. ఓం శూరపద్మవిమర్దనాయ నమః",
+                    "transliteration": "39. Om Shoorapadmavimardana Namah"
+          },
+          {
+                    "id": "sp-ash-40",
+                    "telugu": "40. ఓం శ్రీమతే నమః",
+                    "transliteration": "40. Om Shrimate Namah"
+          },
+          {
+                    "id": "sp-ash-41",
+                    "telugu": "41. ఓం సుబ్రహ్మణ్యాయ నమః",
+                    "transliteration": "41. Om Subrahmanya Namah"
+          },
+          {
+                    "id": "sp-ash-42",
+                    "telugu": "42. ఓం గుహప్రియాయ నమః",
+                    "transliteration": "42. Om Guhapriya Namah"
+          },
+          {
+                    "id": "sp-ash-43",
+                    "telugu": "43. ఓం బ్రహ్మణ్యాయ నమః",
+                    "transliteration": "43. Om Brahmanya Namah"
+          },
+          {
+                    "id": "sp-ash-44",
+                    "telugu": "44. ఓం విష్ణుభాగినేయాయ నమః",
+                    "transliteration": "44. Om Vishnubhagineya Namah"
+          },
+          {
+                    "id": "sp-ash-45",
+                    "telugu": "45. ఓం ఇంద్రసుతాపతయే నమః",
+                    "transliteration": "45. Om Indrasutapataye Namah"
+          },
+          {
+                    "id": "sp-ash-46",
+                    "telugu": "46. ఓం వల్లీకల్యాణసుందరాయ నమః",
+                    "transliteration": "46. Om Valli Kalyanasundara Namah"
+          },
+          {
+                    "id": "sp-ash-47",
+                    "telugu": "47. ఓం కార్తికేయాయ నమః",
+                    "transliteration": "47. Om Kartikeya Namah"
+          },
+          {
+                    "id": "sp-ash-48",
+                    "telugu": "48. ఓం భక్తమోక్షదాయ నమః",
+                    "transliteration": "48. Om Bhaktamokshada Namah"
+          },
+          {
+                    "id": "sp-ash-49",
+                    "telugu": "49. ఓం అనంతాయ నమః",
+                    "transliteration": "49. Om Ananta Namah"
+          },
+          {
+                    "id": "sp-ash-50",
+                    "telugu": "50. ఓం అక్షోభ్యాయ నమః",
+                    "transliteration": "50. Om Akshobhya Namah"
+          },
+          {
+                    "id": "sp-ash-51",
+                    "telugu": "51. ఓం గజారూఢాయ నమః",
+                    "transliteration": "51. Om Gajaroodha Namah"
+          },
+          {
+                    "id": "sp-ash-52",
+                    "telugu": "52. ఓం మయూరవాహనాయ నమః",
+                    "transliteration": "52. Om Mayuravahana Namah"
+          },
+          {
+                    "id": "sp-ash-53",
+                    "telugu": "53. ఓం నానాశాస్త్రార్థతత్త్వజ్ఞాయ నమః",
+                    "transliteration": "53. Om Nanashastrarthatatwajnya Namah"
+          },
+          {
+                    "id": "sp-ash-54",
+                    "telugu": "54. ఓం వేదవేదాంగపారగాయ నమః",
+                    "transliteration": "54. Om Vedavedangaparaga Namah"
+          },
+          {
+                    "id": "sp-ash-55",
+                    "telugu": "55. ఓం పుణ్యకీర్తయే నమః",
+                    "transliteration": "55. Om Punyakirtaye Namah"
+          },
+          {
+                    "id": "sp-ash-56",
+                    "telugu": "56. ఓం మహాసేనాయ నమః",
+                    "transliteration": "56. Om Mahasena Namah"
+          },
+          {
+                    "id": "sp-ash-57",
+                    "telugu": "57. ఓం దీనబంధవే నమః",
+                    "transliteration": "57. Om Deenabandhave Namah"
+          },
+          {
+                    "id": "sp-ash-58",
+                    "telugu": "58. ఓం మనోహరాయ నమః",
+                    "transliteration": "58. Om Manohara Namah"
+          },
+          {
+                    "id": "sp-ash-59",
+                    "telugu": "59. ఓం మహాబలాయ నమః",
+                    "transliteration": "59. Om Mahabala Namah"
+          },
+          {
+                    "id": "sp-ash-60",
+                    "telugu": "60. ఓం మహాభాగ్యాయ నమః",
+                    "transliteration": "60. Om Mahabhagya Namah"
+          },
+          {
+                    "id": "sp-ash-61",
+                    "telugu": "61. ఓం మహాబుద్ధయే నమః",
+                    "transliteration": "61. Om Mahabuddhaye Namah"
+          },
+          {
+                    "id": "sp-ash-62",
+                    "telugu": "62. ఓం సురవందితాయ నమః",
+                    "transliteration": "62. Om Suravandita Namah"
+          },
+          {
+                    "id": "sp-ash-63",
+                    "telugu": "63. ఓం తేజస్వినే నమః",
+                    "transliteration": "63. Om Tejaswine Namah"
+          },
+          {
+                    "id": "sp-ash-64",
+                    "telugu": "64. ఓం మంగళప్రదాయ నమః",
+                    "transliteration": "64. Om Mangalaprada Namah"
+          },
+          {
+                    "id": "sp-ash-65",
+                    "telugu": "65. ఓం దండధరాయ నమః",
+                    "transliteration": "65. Om Dandadhara Namah"
+          },
+          {
+                    "id": "sp-ash-66",
+                    "telugu": "66. ఓం శూలహస్తాయ నమః",
+                    "transliteration": "66. Om Shoolahasta Namah"
+          },
+          {
+                    "id": "sp-ash-67",
+                    "telugu": "67. ఓం సర్వశత్రువినాశనాయ నమః",
+                    "transliteration": "67. Om Sarvashatruvinashana Namah"
+          },
+          {
+                    "id": "sp-ash-68",
+                    "telugu": "68. ఓం అనఘాయ నమః",
+                    "transliteration": "68. Om Anagha Namah"
+          },
+          {
+                    "id": "sp-ash-69",
+                    "telugu": "69. ఓం జ్ఞానశక్తయే నమః",
+                    "transliteration": "69. Om Jnanashaktaye Namah"
+          },
+          {
+                    "id": "sp-ash-70",
+                    "telugu": "70. ఓం ఇచ్ఛాశక్తయే నమః",
+                    "transliteration": "70. Om Ichhashaktaye Namah"
+          },
+          {
+                    "id": "sp-ash-71",
+                    "telugu": "71. ఓం క్రియాశక్తయే నమః",
+                    "transliteration": "71. Om Kriyashaktaye Namah"
+          },
+          {
+                    "id": "sp-ash-72",
+                    "telugu": "72. ఓం మహాదేవప్రియాయ నమః",
+                    "transliteration": "72. Om Mahadevapriya Namah"
+          },
+          {
+                    "id": "sp-ash-73",
+                    "telugu": "73. ఓం విభూతిధరాయ నమః",
+                    "transliteration": "73. Om Vibhootidhara Namah"
+          },
+          {
+                    "id": "sp-ash-74",
+                    "telugu": "74. ఓం రుద్రాక్షమాలాధరాయ నమః",
+                    "transliteration": "74. Om Rudrakshamaladhara Namah"
+          },
+          {
+                    "id": "sp-ash-75",
+                    "telugu": "75. ఓం సురసేనానాయకాయ నమః",
+                    "transliteration": "75. Om Surasenananyaka Namah"
+          },
+          {
+                    "id": "sp-ash-76",
+                    "telugu": "76. ఓం తారకారిణే నమః",
+                    "transliteration": "76. Om Tarakarine Namah"
+          },
+          {
+                    "id": "sp-ash-77",
+                    "telugu": "77. ఓం అభయప్రదాయ నమః",
+                    "transliteration": "77. Om Abhayaprada Namah"
+          },
+          {
+                    "id": "sp-ash-78",
+                    "telugu": "78. ఓం విజయప్రదాయ నమః",
+                    "transliteration": "78. Om Vijayaprada Namah"
+          },
+          {
+                    "id": "sp-ash-79",
+                    "telugu": "79. ఓం సర్వరోగహరాయ నమః",
+                    "transliteration": "79. Om Sarvarogahara Namah"
+          },
+          {
+                    "id": "sp-ash-80",
+                    "telugu": "80. ఓం సర్వాభీష్టప్రదాయకాయ నమః",
+                    "transliteration": "80. Om Sarvabhishtapradayaka Namah"
+          },
+          {
+                    "id": "sp-ash-81",
+                    "telugu": "81. ఓం ద్విషడ్భుజాయ నమః",
+                    "transliteration": "81. Om Dwishadbhuja Namah"
+          },
+          {
+                    "id": "sp-ash-82",
+                    "telugu": "82. ఓం దివ్యరూపాయ నమః",
+                    "transliteration": "82. Om Divyaroopa Namah"
+          },
+          {
+                    "id": "sp-ash-83",
+                    "telugu": "83. ఓం ఆదిత్యతేజసే నమః",
+                    "transliteration": "83. Om Aadityatejase Namah"
+          },
+          {
+                    "id": "sp-ash-84",
+                    "telugu": "84. ఓం కౌమారాయ నమః",
+                    "transliteration": "84. Om Koumara Namah"
+          },
+          {
+                    "id": "sp-ash-85",
+                    "telugu": "85. ఓం యోగీశ్వరాయ నమః",
+                    "transliteration": "85. Om Yogeeshwara Namah"
+          },
+          {
+                    "id": "sp-ash-86",
+                    "telugu": "86. ఓం పరమహంసాయ నమః",
+                    "transliteration": "86. Om Paramahamsa Namah"
+          },
+          {
+                    "id": "sp-ash-87",
+                    "telugu": "87. ఓం భక్తపోషకాయ నమః",
+                    "transliteration": "87. Om Bhaktaposhaka Namah"
+          },
+          {
+                    "id": "sp-ash-88",
+                    "telugu": "88. ఓం కారుణ్యసాగరాయ నమః",
+                    "transliteration": "88. Om Karunyasagara Namah"
+          },
+          {
+                    "id": "sp-ash-89",
+                    "telugu": "89. ఓం పరబ్రహ్మరూపాయ నమః",
+                    "transliteration": "89. Om Parabrahmaroopa Namah"
+          },
+          {
+                    "id": "sp-ash-90",
+                    "telugu": "90. ఓం నిర్మలాయ నమః",
+                    "transliteration": "90. Om Nirmala Namah"
+          },
+          {
+                    "id": "sp-ash-91",
+                    "telugu": "91. ఓం నిష్కళంకాయ నమః",
+                    "transliteration": "91. Om Nishkalanka Namah"
+          },
+          {
+                    "id": "sp-ash-92",
+                    "telugu": "92. ఓం నిత్యాయ నమః",
+                    "transliteration": "92. Om Nitya Namah"
+          },
+          {
+                    "id": "sp-ash-93",
+                    "telugu": "93. ఓం సత్యసంధాయ నమః",
+                    "transliteration": "93. Om Satyasandha Namah"
+          },
+          {
+                    "id": "sp-ash-94",
+                    "telugu": "94. ఓం శరణాగతరక్షకాయ నమః",
+                    "transliteration": "94. Om Saranagatarakshaka Namah"
+          },
+          {
+                    "id": "sp-ash-95",
+                    "telugu": "95. ఓం ద్వాదశాక్షాయ నమః",
+                    "transliteration": "95. Om Dwadashaksha Namah"
+          },
+          {
+                    "id": "sp-ash-96",
+                    "telugu": "96. ఓం ద్వాదశబాహవే నమః",
+                    "transliteration": "96. Om Dwadashabahave Namah"
+          },
+          {
+                    "id": "sp-ash-97",
+                    "telugu": "97. ఓం శరవణసముద్భవాయ నమః",
+                    "transliteration": "97. Om Saravanasamudbhava Namah"
+          },
+          {
+                    "id": "sp-ash-98",
+                    "telugu": "98. ఓం దేవదేవాయ నమః",
+                    "transliteration": "98. Om Devadeva Namah"
+          },
+          {
+                    "id": "sp-ash-99",
+                    "telugu": "99. ఓం సర్వలోకపూజితాయ నమః",
+                    "transliteration": "99. Om Sarvalokapoojita Namah"
+          },
+          {
+                    "id": "sp-ash-100",
+                    "telugu": "100. ఓం వరప్రదాయ నమః",
+                    "transliteration": "100. Om Varaprada Namah"
+          },
+          {
+                    "id": "sp-ash-101",
+                    "telugu": "101. ఓం జ్ఞానపండితాయ నమః",
+                    "transliteration": "101. Om Jnanapandita Namah"
+          },
+          {
+                    "id": "sp-ash-102",
+                    "telugu": "102. ఓం కలియుగవరదాయ నమః",
+                    "transliteration": "102. Om Kaliyugavarada Namah"
+          },
+          {
+                    "id": "sp-ash-103",
+                    "telugu": "103. ఓం సురలోకరక్షకాయ నమః",
+                    "transliteration": "103. Om Suralokarakshaka Namah"
+          },
+          {
+                    "id": "sp-ash-104",
+                    "telugu": "104. ఓం శ్రీమంగళమూర్తయే నమః",
+                    "transliteration": "104. Om Shrimangalamurtaye Namah"
+          },
+          {
+                    "id": "sp-ash-105",
+                    "telugu": "105. ఓం భక్తసంరక్షకాయ నమః",
+                    "transliteration": "105. Om Bhaktasamrakshaka Namah"
+          },
+          {
+                    "id": "sp-ash-106",
+                    "telugu": "106. ఓం శ్రీవల్లీదేవసేనా సమేత శ్రీ సుబ్రహ్మణ్యేశ్వర స్వామినే నమః",
+                    "transliteration": "106. Om Shri Valli Devasena Sameta Shri Subrahmanyeshwara Swamine Namah"
+          },
+          {
+                    "id": "sp-ash-107",
+                    "telugu": "107. ఓం స్వామినాథాయ నమః",
+                    "transliteration": "107. Om Swaminatha Namah"
+          },
+          {
+                    "id": "sp-ash-108",
+                    "telugu": "108. ఓం శ్రీ సుబ్రహ్మణ్య స్వామినే నమః",
+                    "transliteration": "108. Om Shri Subrahmanya Swamine Namah"
+          }
+]
       }
     ]
   },
-
-  // 6. 108 SHARANU GOSHA
+  // 4. AYYAPPA POOJA VIDHANAM (Shodashopachara)
   {
-    id: 'sharanu-gosha',
-    titleTelugu: '6. 108 శరణు ఘోష',
-    titleEnglish: '108 Sharanu Gosha',
-    subtitle: 'స్వామియే శరణం అయ్యప్ప - పవిత్ర శరణు ఘోషావళి',
-    icon: 'HeartHandshake',
+    id: 'ayyappa-pooja',
+    titleTelugu: '4. అయ్యప్ప నిత్య పూజా విధానం',
+    titleEnglish: 'Ayyappa Nitya Pooja',
+    subtitle: 'షోడశోపచార పూజ (16 దివ్య పూజా విధానాలు)',
+    icon: 'Crown',
     durationMinutes: 15,
     featured: true,
     category: 'ayyappa',
     sections: [
       {
-        title: 'శరణు ఘోషావళి',
-        description: 'ప్రతి శరణు పఠించిన తర్వాత "స్వామియే శరణం అయ్యప్ప" అని గంభీరంగా పలుకవలెను',
+        title: 'అయ్యప్ప ధ్యాన శ్లోకం',
         mantras: [
-          { id: 'sg-1', telugu: '1. స్వామియే శరణం అయ్యప్ప', transliteration: 'Swamiye Saranam Ayyappa' },
-          { id: 'sg-2', telugu: '2. హరిహర సుతనే శరణం అయ్యప్ప', transliteration: 'Harihara Suthane Saranam Ayyappa' },
-          { id: 'sg-3', telugu: '3. కన్నిమూల గణపతి భగవానే శరణం అయ్యప్ప', transliteration: 'Kannimoola Ganapathi Bhagawane Saranam Ayyappa' },
-          { id: 'sg-4', telugu: '4. శక్తి వడివేలన్ సోదరనే శరణం అయ్యప్ప', transliteration: 'Shakthi Vadivelan Sodharane Saranam Ayyappa' },
-          { id: 'sg-5', telugu: '5. మాళికాపురత్తు మంజమ్మ దేవి లోకమాతావే శరణం అయ్యప్ప', transliteration: 'Malikapurathu Manjamma Devi Lokamathave Saranam Ayyappa' },
-          { id: 'sg-6', telugu: '6. వవర స్వామియే శరణం అయ్యప్ప', transliteration: 'Vavaru Swamiye Saranam Ayyappa' },
-          { id: 'sg-7', telugu: '7. కరుప్పన్న స్వామియే శరణం అయ్యప్ప', transliteration: 'Karuppanna Swamiye Saranam Ayyappa' },
-          { id: 'sg-8', telugu: '8. పెరియ కడుత్త స్వామియే శరణం అయ్యప్ప', transliteration: 'Periya Kadutha Swamiye Saranam Ayyappa' },
-          { id: 'sg-9', telugu: '9. సిరియ కడుత్త స్వామియే శరణం అయ్యప్ప', transliteration: 'Siriya Kadutha Swamiye Saranam Ayyappa' },
-          { id: 'sg-10', telugu: '10. వనదేవతా మారే శరణం అయ్యప్ప', transliteration: 'Vanadevatha Mare Saranam Ayyappa' },
-          { id: 'sg-11', telugu: '11. దుర్గా భగవతియే శరణం అయ్యప్ప', transliteration: 'Durga Bhagavathiye Saranam Ayyappa' },
-          { id: 'sg-12', telugu: '12. అచ్చన్ కోవిల్ అరసే శరణం అయ్యప్ప', transliteration: 'Achankovil Arase Saranam Ayyappa' },
-          { id: 'sg-13', telugu: '13. అనంత రక్షకనే శరణం అయ్యప్ప', transliteration: 'Anantha Rakshakane Saranam Ayyappa' },
-          { id: 'sg-14', telugu: '14. ఆపద్బాంధవనే శరణం అయ్యప్ప', transliteration: 'Aapadbandhavane Saranam Ayyappa' },
-          { id: 'sg-15', telugu: '15. అనాథ రక్షకనే శరణం అయ్యప్ప', transliteration: 'Anatha Rakshakane Saranam Ayyappa' },
-          { id: 'sg-16', telugu: '16. అన్నదాన ప్రభువే శరణం అయ్యప్ప', transliteration: 'Annadana Prabhuve Saranam Ayyappa' },
-          { id: 'sg-17', telugu: '17. అచ్చం తవిర్ప్పవనే శరణం అయ్యప్ప', transliteration: 'Acham Thavirppavane Saranam Ayyappa' },
-          { id: 'sg-18', telugu: '18. అంబలత్తు అరసే శరణం అయ్యప్ప', transliteration: 'Ambalathu Arase Saranam Ayyappa' },
-          { id: 'sg-19', telugu: '19. అభయ ప్రదాయకనే శరణం అయ్యప్ప', transliteration: 'Abhaya Pradayakane Saranam Ayyappa' },
-          { id: 'sg-20', telugu: '20. అహంతై అళిప్పవనే శరణం అయ్యప్ప', transliteration: 'Ahanthai Azippavane Saranam Ayyappa' },
-          { id: 'sg-21', telugu: '21. అష్టసిద్ధి దాయకనే శరణం అయ్యప్ప', transliteration: 'Ashtasiddhi Dayakane Saranam Ayyappa' },
-          { id: 'sg-22', telugu: '22. ఆనంద రూపనే శరణం అయ్యప్ప', transliteration: 'Ananda Roopane Saranam Ayyappa' },
-          { id: 'sg-23', telugu: '23. ఇరుముడి ప్రియనే శరణం అయ్యప్ప', transliteration: 'Irumudi Priyane Saranam Ayyappa' },
-          { id: 'sg-24', telugu: '24. ఇన్నిసై ప్రియనే శరణం అయ్యప్ప', transliteration: 'Innisai Priyane Saranam Ayyappa' },
-          { id: 'sg-25', telugu: '25. ఇల్లర జ్యోతియే శరణం అయ్యప్ప', transliteration: 'Illara Jyothiye Saranam Ayyappa' },
-          { id: 'sg-26', telugu: '26. ఈశ్వరున్ తిరుమగనే శరణం అయ్యప్ప', transliteration: 'Eshwaran Thirumagane Saranam Ayyappa' },
-          { id: 'sg-27', telugu: '27. ఉలగ రక్షకనే శరణం అయ్యప్ప', transliteration: 'Ulaga Rakshakane Saranam Ayyappa' },
-          { id: 'sg-28', telugu: '28. ఎరుమేలి శాస్తావే శరణం అయ్యప్ప', transliteration: 'Erumeli Sasthaave Saranam Ayyappa' },
-          { id: 'sg-29', telugu: '29. ఎంగల్ కులదైవమే శరణం అయ్యప్ప', transliteration: 'Engal Kuladaivame Saranam Ayyappa' },
-          { id: 'sg-30', telugu: '30. కాంతమలై జ్యోతియే శరణం అయ్యప్ప', transliteration: 'Kanthamalai Jyothiye Saranam Ayyappa' },
-          { id: 'sg-31', telugu: '31. పంబానది తీరవాసనే శరణం అయ్యప్ప', transliteration: 'Pamba Nadhi Theeravasane Saranam Ayyappa' },
-          { id: 'sg-32', telugu: '32. పందళ రాజకుమారనే శరణం అయ్యప్ప', transliteration: 'Pandala Rajakumarane Saranam Ayyappa' },
-          { id: 'sg-33', telugu: '33. శబరి పీఠ ప్రియనే శరణం అయ్యప్ప', transliteration: 'Sabari Peetha Priyane Saranam Ayyappa' },
-          { id: 'sg-34', telugu: '34. పదునెట్టాంపడి అధిపతియే శరణం అయ్యప్ప', transliteration: 'Padinettampadi Adhipathiye Saranam Ayyappa' },
-          { id: 'sg-35', telugu: '35. తత్త్వమసి స్వరూపనే శరణం అయ్యప్ప', transliteration: 'Tatvamasi Swaroopane Saranam Ayyappa' },
-          { id: 'sg-36', telugu: '36. మోహిని బాలకనే శరణం అయ్యప్ప', transliteration: 'Mohini Balakane Saranam Ayyappa' },
-          { id: 'sg-37', telugu: '37. విలిపురత్తు వీరనే శరణం అయ్యప్ప', transliteration: 'Vilipurathu Veerane Saranam Ayyappa' },
-          { id: 'sg-38', telugu: '38. ఘోర వనవాసనే శరణం అయ్యప్ప', transliteration: 'Ghora Vanavasane Saranam Ayyappa' },
-          { id: 'sg-39', telugu: '39. పులివాహననే శరణం అయ్యప్ప', transliteration: 'Pulivahanane Saranam Ayyappa' },
-          { id: 'sg-40', telugu: '40. భక్తవత్సలనే శరణం అయ్యప్ప', transliteration: 'Bhaktavatsalane Saranam Ayyappa' },
-          { id: 'sg-41', telugu: '41. మకరజ్యోతి స్వరూపనే శరణం అయ్యప్ప', transliteration: 'Makarajyothi Swaroopane Saranam Ayyappa' },
-          { id: 'sg-42', telugu: '42. కలియుగ వరదనే శరణం అయ్యప్ప', transliteration: 'Kaliyuga Varadane Saranam Ayyappa' },
-          { id: 'sg-43', telugu: '43. ఓంకార స్వరూపనే శరణం అయ్యప్ప', transliteration: 'Omkara Swaroopane Saranam Ayyappa' },
-          { id: 'sg-44', telugu: '44. స్వామియే శరణం అయ్యప్ప', transliteration: 'Swamiye Saranam Ayyappa' }
+          {
+            id: 'ap-dhyan',
+            telugu: 'ధ్యాయేత్ చతుర్భుజం రక్తం పద్మాసన సమన్వితమ్ |\nజ్ఞానముద్రాం చ దండం చ పుష్పబాణం చ బిభ్రతమ్ ||\nకిరీటహారకేయూర రత్నకుండల శోభితమ్ |\nసర్వాలంకార సంయుక్తం శాస్తారం ప్రణమామ్యహమ్ ||',
+            transliteration: 'Dhyayet Chaturbhujam Raktam Padmasana Samanwitam |\nJnanamudram Cha Dandam Cha Pushpabanam Cha Bibhratam ||\nKireetaharakeyura Ratnakundala Shobhitam |\nSarvalankara Samyuktam Shastaram Pranamamyaham ||',
+            meaning: 'జ్ఞానముద్ర, దండము, పుష్పబాణము ధరించినవాడు, రత్న కిరీట కుండలాది ఆభరణములతో ప్రకాశించు శ్రీ ధర్మశాస్తా అయ్యప్ప స్వామిని సదా భక్తితో ధ్యానిస్తున్నాను.'
+          }
         ]
+      },
+      {
+        title: 'షోడశోపచార పూజ (16 ఉపచారములు)',
+        description: 'ప్రతి ఉపచారానికి పుష్పము లేదా అక్షతలను సమర్పించవలెను',
+        mantras: [
+          {
+                    "id": "sh-1",
+                    "telugu": "ఓం శ్రీ హరిహరపుత్రాయ నమః - ధ్యాయామి (ధ్యానం)",
+                    "transliteration": "Om Shri Hariharaputraya Namah - Dhyayami"
+          },
+          {
+                    "id": "sh-2",
+                    "telugu": "ఓం శ్రీ మణికంఠాయ నమః - ఆవాహయామి (ఆవాహన)",
+                    "transliteration": "Om Shri Manikantaya Namah - Aavahayami"
+          },
+          {
+                    "id": "sh-3",
+                    "telugu": "ఓం శ్రీ ధర్మశాస్త్రే నమః - రత్న సింహాసనం సమర్పయామి (ఆసనం)",
+                    "transliteration": "Om Shri Dharmashastre Namah - Ratna Simhasanam Samarpayami"
+          },
+          {
+                    "id": "sh-4",
+                    "telugu": "ఓం శ్రీ శబరీగిరీశాయ నమః - పాద్యం సమర్పయామి (పాదములు కడుగుటకు నీరు)",
+                    "transliteration": "Om Shri Sabarigireeshaya Namah - Padyam Samarpayami"
+          },
+          {
+                    "id": "sh-5",
+                    "telugu": "ఓం శ్రీ లోకపూజ్యాయ నమః - అర్ఘ్యం సమర్పయామి (చేతులు కడుగుటకు జలము)",
+                    "transliteration": "Om Shri Lokapoojyaya Namah - Arghyam Samarpayami"
+          },
+          {
+                    "id": "sh-6",
+                    "telugu": "ఓం శ్రీ పరమాత్మనే నమః - ఆచమనీయం సమర్పయామి (ఆచమనం)",
+                    "transliteration": "Om Shri Paramatmane Namah - Aachamaneeyam Samarpayami"
+          },
+          {
+                    "id": "sh-7",
+                    "telugu": "ఓం శ్రీ పులివాహనాయ నమః - శుద్ధోదక స్నానం సమర్పయామి (స్నానము)",
+                    "transliteration": "Om Shri Pulivahanaya Namah - Shuddhodaka Snanam Samarpayami"
+          },
+          {
+                    "id": "sh-8",
+                    "telugu": "ఓం శ్రీ మహాశాస్త్రే నమః - వస్త్ర యుగ్మం సమర్పయామి (వస్త్రములు)",
+                    "transliteration": "Om Shri Mahashastre Namah - Vastra Yugmam Samarpayami"
+          },
+          {
+                    "id": "sh-9",
+                    "telugu": "ఓం శ్రీ మోహినీసుతాయ నమః - యజ్ఞోపవీతం సమర్పయామి (యజ్ఞోపవీతము)",
+                    "transliteration": "Om Shri Mohinisutaya Namah - Yajnopaveetam Samarpayami"
+          },
+          {
+                    "id": "sh-10",
+                    "telugu": "ఓం శ్రీ చందనప్రియాయ నమః - దివ్య శ్రీగంధం సమర్పయామి (గంధము)",
+                    "transliteration": "Om Shri Chandanapriyaya Namah - Divya Shrigandham Samarpayami"
+          },
+          {
+                    "id": "sh-11",
+                    "telugu": "ఓం శ్రీ పుష్పప్రియాయ నమః - నానావిధ పరిమళ పత్ర పుష్పాణి సమర్పయామి (పుష్పములు)",
+                    "transliteration": "Om Shri Pushpapriyaya Namah - Pushpani Samarpayami"
+          },
+          {
+                    "id": "sh-12",
+                    "telugu": "ఓం శ్రీ ధూపప్రియాయ నమః - దశాంగం గుగ్గులోపేతం ధూపం సమర్పయామి (ధూపము)",
+                    "transliteration": "Om Shri Dhoopapriyaya Namah - Dhoopam Samarpayami"
+          },
+          {
+                    "id": "sh-13",
+                    "telugu": "ఓం శ్రీ దీపప్రియాయ నమః - సాక్షాత్ ప్రత్యక్ష దీపం దర్శయామి (దీపము)",
+                    "transliteration": "Om Shri Deepapriyaya Namah - Deepam Samarpayami"
+          },
+          {
+                    "id": "sh-14",
+                    "telugu": "ఓం శ్రీ నైవేద్యప్రియాయ నమః - మహానైవేద్యం (పాలు, పండ్లు, బెల్లం) సమర్పయామి (నైవేద్యము)",
+                    "transliteration": "Om Shri Naivedyapriyaya Namah - Maha Naivedyam Samarpayami"
+          },
+          {
+                    "id": "sh-15",
+                    "telugu": "ఓం శ్రీ తాంబూలప్రియాయ నమః - తాంబూలం సమర్పయామి (తాంబూలము)",
+                    "transliteration": "Om Shri Tamboolapriyaya Namah - Tamboolam Samarpayami"
+          },
+          {
+                    "id": "sh-16",
+                    "telugu": "ఓం శ్రీ ఆనందచిత్తాయ నమః - ఆనంద కర్పూర నీరాజనం సమర్పయామి (నీరాజనము)",
+                    "transliteration": "Om Shri Anandachittaya Namah - Neerajanam Samarpayami"
+          }
+]
       }
     ]
   },
-
-  // 7. AYYAPPA ASHTOTTARAM
+  // 5. AYYAPPA ANGA POOJA
+  {
+    id: 'anga-pooja',
+    titleTelugu: '5. అయ్యప్ప అంగ పూజ',
+    titleEnglish: 'Ayyappa Anga Pooja',
+    subtitle: 'స్వామి దివ్య 18 అంగముల పవిత్ర పుష్పార్చన',
+    icon: 'Sparkles',
+    durationMinutes: 8,
+    featured: false,
+    category: 'ayyappa',
+    sections: [
+      {
+        title: 'శ్రీ ధర్మశాస్తా అంగ పూజ',
+        description: 'పాదాల నుండి శిరస్సు వరకు పుష్పములతో అయ్యప్ప స్వామి దివ్య శరీరమును పూజించుట',
+        mantras: [
+          {
+                    "id": "ang-1",
+                    "telugu": "ఓం స్వామినే నమః - పాదౌ పూజయామి (పాదములు)",
+                    "transliteration": "Om Swamine Namah - Padau Poojayami"
+          },
+          {
+                    "id": "ang-2",
+                    "telugu": "ఓం మహాశాస్త్రే నమః - గుల్ఫౌ పూజయామి (మడమలు)",
+                    "transliteration": "Om Mahashastre Namah - Gulphau Poojayami"
+          },
+          {
+                    "id": "ang-3",
+                    "telugu": "ఓం వీరమణికంఠాయ నమః - జానునీ పూజయామి (మోకాళ్ళు)",
+                    "transliteration": "Om Veeramanikantaya Namah - Januni Poojayami"
+          },
+          {
+                    "id": "ang-4",
+                    "telugu": "ఓం మోహినీపుత్రాయ నమః - ఊరూ పూజయామి (తొడలు)",
+                    "transliteration": "Om Mohiniputraya Namah - Ooroo Poojayami"
+          },
+          {
+                    "id": "ang-5",
+                    "telugu": "ఓం ధర్మశాస్త్రే నమః - కటిం పూజయామి (నడుము)",
+                    "transliteration": "Om Dharmashastre Namah - Katim Poojayami"
+          },
+          {
+                    "id": "ang-6",
+                    "telugu": "ఓం పంబాతీరవాసాయ నమః - నాభిం పూజయామి (నాభి)",
+                    "transliteration": "Om Pambateeravasaya Namah - Nabhim Poojayami"
+          },
+          {
+                    "id": "ang-7",
+                    "telugu": "ఓం భూతనాథాయ నమః - ఉదరం పూజయామి (ఉదరము)",
+                    "transliteration": "Om Bhootanathaya Namah - Udaram Poojayami"
+          },
+          {
+                    "id": "ang-8",
+                    "telugu": "ఓం హరిహరపుత్రాయ నమః - హృదయం పూజయామి (వక్షఃస్థలము)",
+                    "transliteration": "Om Hariharaputraya Namah - Hridayam Poojayami"
+          },
+          {
+                    "id": "ang-9",
+                    "telugu": "ఓం తులసీమాలాధరాయ నమః - స్తనౌ పూజయామి (వక్షోజములు)",
+                    "transliteration": "Om Tulasimaladharaya Namah - Stanau Poojayami"
+          },
+          {
+                    "id": "ang-10",
+                    "telugu": "ఓం పరమపురుషాయ నమః - కంఠం పూజయామి (కంఠము)",
+                    "transliteration": "Om Paramapurushaya Namah - Kantham Poojayami"
+          },
+          {
+                    "id": "ang-11",
+                    "telugu": "ఓం బాణహస్తాయ నమః - భుజౌ పూజయామి (భుజములు)",
+                    "transliteration": "Om Banahastaya Namah - Bhujau Poojayami"
+          },
+          {
+                    "id": "ang-12",
+                    "telugu": "ఓం ధనుర్ధరాయ నమః - హస్తౌ పూజయామి (చేతులు)",
+                    "transliteration": "Om Dhanurdharaya Namah - Hastau Poojayami"
+          },
+          {
+                    "id": "ang-13",
+                    "telugu": "ఓం మధురభాషిణే నమః - ముఖం పూజయామి (ముఖము)",
+                    "transliteration": "Om Madhurabhashine Namah - Mukham Poojayami"
+          },
+          {
+                    "id": "ang-14",
+                    "telugu": "ఓం దివ్యతేజసే నమః - నాసికాం పూజయామి (నాసిక/ముక్కు)",
+                    "transliteration": "Om Divyatejase Namah - Nasikam Poojayami"
+          },
+          {
+                    "id": "ang-15",
+                    "telugu": "ఓం సూర్యప్రభాయ నమః - నేత్రే పూజయామి (నేత్రములు)",
+                    "transliteration": "Om Suryaprabhaya Namah - Netre Poojayami"
+          },
+          {
+                    "id": "ang-16",
+                    "telugu": "ఓం సర్వజ్ఞాయ నమః - కర్ణౌ పూజయామి (చెవులు)",
+                    "transliteration": "Om Sarvajnyaya Namah - Karnau Poojayami"
+          },
+          {
+                    "id": "ang-17",
+                    "telugu": "ఓం రత్నకిరీటధారిణే నమః - లలాటం పూజయామి (లలాటము/నుదురు)",
+                    "transliteration": "Om Ratnakireetadharine Namah - Lalatam Poojayami"
+          },
+          {
+                    "id": "ang-18",
+                    "telugu": "ఓం శబరీగిరీశాయ నమః - శిరః పూజయామి (శిరస్సు)",
+                    "transliteration": "Om Sabarigireeshaya Namah - Shirah Poojayami"
+          },
+          {
+                    "id": "ang-19",
+                    "telugu": "ఓం శ్రీ పూర్ణా పుష్కలా సమేత శ్రీ హరిహరపుత్ర స్వామినే నమః - సర్వాణ్యంగాని పూజయామి",
+                    "transliteration": "Om Shri Poorna Pushkala Sameta Shri Hariharaputra Swamine Namah - Sarvanyangani Poojayami"
+          }
+]
+      }
+    ]
+  },
+  // 6. SHARANU GOSHA (108 Complete)
+  {
+    id: 'sharanu-gosha',
+    titleTelugu: '6. 108 శరణు ఘోష',
+    titleEnglish: '108 Sharanu Gosha',
+    subtitle: 'స్వామియే శరణం అయ్యప్ప - సంపూర్ణ 108 శరణు నామాలు',
+    icon: 'HeartHandshake',
+    durationMinutes: 10,
+    featured: true,
+    category: 'ayyappa',
+    sections: [
+      {
+        title: 'సంపూర్ణ 108 శరణు ఘోష',
+        description: 'భక్తి ప్రపత్తులతో శరణు ఘోషించినచో స్వామి అనుగ్రహం తప్పక లభించును',
+        mantras: [
+          {
+                    "id": "sg-1",
+                    "telugu": "1. స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "1. స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-2",
+                    "telugu": "2. హరిహర సుతనే శరణం అయ్యప్ప",
+                    "transliteration": "2. హరిహర సుతనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-3",
+                    "telugu": "3. కన్నిమూల గణపతి భగవానే శరణం అయ్యప్ప",
+                    "transliteration": "3. కన్నిమూల గణపతి భగవానే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-4",
+                    "telugu": "4. శక్తి వడివేలన్ సోదరనే శరణం అయ్యప్ప",
+                    "transliteration": "4. శక్తి వడివేలన్ సోదరనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-5",
+                    "telugu": "5. మాళికాపురత్తు మంజమ్మ దేవియే శరణం అయ్యప్ప",
+                    "transliteration": "5. మాళికాపురత్తు మంజమ్మ దేవియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-6",
+                    "telugu": "6. వావరు స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "6. వావరు స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-7",
+                    "telugu": "7. కడుత్త స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "7. కడుత్త స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-8",
+                    "telugu": "8. పెరియ కడుత్త స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "8. పెరియ కడుత్త స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-9",
+                    "telugu": "9. సిరియ కడుత్త స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "9. సిరియ కడుత్త స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-10",
+                    "telugu": "10. పంబానది తీర విహారియే శరణం అయ్యప్ప",
+                    "transliteration": "10. పంబానది తీర విహారియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-11",
+                    "telugu": "11. పందళ రాజకుమారనే శరణం అయ్యప్ప",
+                    "transliteration": "11. పందళ రాజకుమారనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-12",
+                    "telugu": "12. పులివాహననే శరణం అయ్యప్ప",
+                    "transliteration": "12. పులివాహననే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-13",
+                    "telugu": "13. విల్లిన్ వీరనే శరణం అయ్యప్ప",
+                    "transliteration": "13. విల్లిన్ వీరనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-14",
+                    "telugu": "14. వీరమణికంఠనే శరణం అయ్యప్ప",
+                    "transliteration": "14. వీరమణికంఠనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-15",
+                    "telugu": "15. శబరీగిరీశనే శరణం అయ్యప్ప",
+                    "transliteration": "15. శబరీగిరీశనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-16",
+                    "telugu": "16. ఇరుముడి ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "16. ఇరుముడి ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-17",
+                    "telugu": "17. అభిషేక ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "17. అభిషేక ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-18",
+                    "telugu": "18. నేతి అభిషేక ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "18. నేతి అభిషేక ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-19",
+                    "telugu": "19. భస్మ అభిషేక ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "19. భస్మ అభిషేక ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-20",
+                    "telugu": "20. చందన ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "20. చందన ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-21",
+                    "telugu": "21. పుష్ప ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "21. పుష్ప ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-22",
+                    "telugu": "22. పన్నీరు అభిషేక ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "22. పన్నీరు అభిషేక ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-23",
+                    "telugu": "23. కర్పూర ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "23. కర్పూర ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-24",
+                    "telugu": "24. జ్యోతి స్వరూపనే శరణం అయ్యప్ప",
+                    "transliteration": "24. జ్యోతి స్వరూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-25",
+                    "telugu": "25. మకర జ్యోతియే శరణం అయ్యప్ప",
+                    "transliteration": "25. మకర జ్యోతియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-26",
+                    "telugu": "26. కాంతమలై వాసనే శరణం అయ్యప్ప",
+                    "transliteration": "26. కాంతమలై వాసనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-27",
+                    "telugu": "27. పదునెట్టాంబడి ఒడయోనే శరణం అయ్యప్ప",
+                    "transliteration": "27. పదునెట్టాంబడి ఒడయోనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-28",
+                    "telugu": "28. ఆనంద జ్యోతియే శరణం అయ్యప్ప",
+                    "transliteration": "28. ఆనంద జ్యోతియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-29",
+                    "telugu": "29. మోహినీ సుతనే శరణం అయ్యప్ప",
+                    "transliteration": "29. మోహినీ సుతనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-30",
+                    "telugu": "30. పరమేశ్వర పుత్రనే శరణం అయ్యప్ప",
+                    "transliteration": "30. పరమేశ్వర పుత్రనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-31",
+                    "telugu": "31. భూతనాథనే శరణం అయ్యప్ప",
+                    "transliteration": "31. భూతనాథనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-32",
+                    "telugu": "32. లోక రక్షకనే శరణం అయ్యప్ప",
+                    "transliteration": "32. లోక రక్షకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-33",
+                    "telugu": "33. ఆపద్బాంధవనే శరణం అయ్యప్ప",
+                    "transliteration": "33. ఆపద్బాంధవనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-34",
+                    "telugu": "34. అనాథ రక్షకనే శరణం అయ్యప్ప",
+                    "transliteration": "34. అనాథ రక్షకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-35",
+                    "telugu": "35. భక్త వత్సలనే శరణం అయ్యప్ప",
+                    "transliteration": "35. భక్త వత్సలనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-36",
+                    "telugu": "36. శాస్తావే శరణం అయ్యప్ప",
+                    "transliteration": "36. శాస్తావే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-37",
+                    "telugu": "37. ధర్మ శాస్తావే శరణం అయ్యప్ప",
+                    "transliteration": "37. ధర్మ శాస్తావే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-38",
+                    "telugu": "38. మహా శాస్తావే శరణం అయ్యప్ప",
+                    "transliteration": "38. మహా శాస్తావే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-39",
+                    "telugu": "39. కులత్తూపుళై బాలకనే శరణం అయ్యప్ప",
+                    "transliteration": "39. కులత్తూపుళై బాలకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-40",
+                    "telugu": "40. ఆర్యంగావు అయ్యనే శరణం అయ్యప్ప",
+                    "transliteration": "40. ఆర్యంగావు అయ్యనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-41",
+                    "telugu": "41. అచ్చన్ కోవిల్ అరసే శరణం అయ్యప్ప",
+                    "transliteration": "41. అచ్చన్ కోవిల్ అరసే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-42",
+                    "telugu": "42. ఎరుమేలి శాస్తావే శరణం అయ్యప్ప",
+                    "transliteration": "42. ఎరుమేలి శాస్తావే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-43",
+                    "telugu": "43. వావరు తోళనే శరణం అయ్యప్ప",
+                    "transliteration": "43. వావరు తోళనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-44",
+                    "telugu": "44. పేటతుళ్ళల్ నాథనే శరణం అయ్యప్ప",
+                    "transliteration": "44. పేటతుళ్ళల్ నాథనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-45",
+                    "telugu": "45. కొట్టేపడి కావలనే శరణం అయ్యప్ప",
+                    "transliteration": "45. కొట్టేపడి కావలనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-46",
+                    "telugu": "46. కాళైకట్టి ఆశ్రమం ఒడయోనే శరణం అయ్యప్ప",
+                    "transliteration": "46. కాళైకట్టి ఆశ్రమం ఒడయోనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-47",
+                    "telugu": "47. అళుదా నదియే శరణం అయ్యప్ప",
+                    "transliteration": "47. అళుదా నదియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-48",
+                    "telugu": "48. అళుదా మేడే శరణం అయ్యప్ప",
+                    "transliteration": "48. అళుదా మేడే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-49",
+                    "telugu": "49. కల్లురుండ్ర కుళం ఒడయోనే శరణం అయ్యప్ప",
+                    "transliteration": "49. కల్లురుండ్ర కుళం ఒడయోనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-50",
+                    "telugu": "50. ఇంచిప్పారకోట్టైయే శరణం అయ్యప్ప",
+                    "transliteration": "50. ఇంచిప్పారకోట్టైయే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-51",
+                    "telugu": "51. కరిమల వాసనే శరణం అయ్యప్ప",
+                    "transliteration": "51. కరిమల వాసనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-52",
+                    "telugu": "52. కరిమల ఏట్రమే శరణం అయ్యప్ప",
+                    "transliteration": "52. కరిమల ఏట్రమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-53",
+                    "telugu": "53. కరిమల ఎరక్కమే శరణం అయ్యప్ప",
+                    "transliteration": "53. కరిమల ఎరక్కమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-54",
+                    "telugu": "54. పెరియానవట్టమే శరణం అయ్యప్ప",
+                    "transliteration": "54. పెరియానవట్టమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-55",
+                    "telugu": "55. సిరియానవట్టమే శరణం అయ్యప్ప",
+                    "transliteration": "55. సిరియానవట్టమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-56",
+                    "telugu": "56. పంబానది విహారియే శరణం అయ్యప్ప",
+                    "transliteration": "56. పంబానది విహారియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-57",
+                    "telugu": "57. పంబై విళక్కే శరణం అయ్యప్ప",
+                    "transliteration": "57. పంబై విళక్కే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-58",
+                    "telugu": "58. పంబై సద్యయే శరణం అయ్యప్ప",
+                    "transliteration": "58. పంబై సద్యయే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-59",
+                    "telugu": "59. నీలిమలై ఏట్రమే శరణం అయ్యప్ప",
+                    "transliteration": "59. నీలిమలై ఏట్రమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-60",
+                    "telugu": "60. అప్పాచిమేడే శరణం అయ్యప్ప",
+                    "transliteration": "60. అప్పాచిమేడే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-61",
+                    "telugu": "61. ఇప్పాచికుళమే శరణం అయ్యప్ప",
+                    "transliteration": "61. ఇప్పాచికుళమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-62",
+                    "telugu": "62. శబరి పీఠమే శరణం అయ్యప్ప",
+                    "transliteration": "62. శబరి పీఠమే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-63",
+                    "telugu": "63. శరంగుత్తి ఆలే శరణం అయ్యప్ప",
+                    "transliteration": "63. శరంగుత్తి ఆలే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-64",
+                    "telugu": "64. పదునెట్టాంబడియే శరణం అయ్యప్ప",
+                    "transliteration": "64. పదునెట్టాంబడియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-65",
+                    "telugu": "65. తంగ అంగి ఒడయోనే శరణం అయ్యప్ప",
+                    "transliteration": "65. తంగ అంగి ఒడయోనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-66",
+                    "telugu": "66. మణికంఠ స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "66. మణికంఠ స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-67",
+                    "telugu": "67. ఓంకార రూపనే శరణం అయ్యప్ప",
+                    "transliteration": "67. ఓంకార రూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-68",
+                    "telugu": "68. ప్రణవ స్వరూపనే శరణం అయ్యప్ప",
+                    "transliteration": "68. ప్రణవ స్వరూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-69",
+                    "telugu": "69. సచ్చిదానందనే శరణం అయ్యప్ప",
+                    "transliteration": "69. సచ్చిదానందనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-70",
+                    "telugu": "70. సత్య స్వరూపనే శరణం అయ్యప్ప",
+                    "transliteration": "70. సత్య స్వరూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-71",
+                    "telugu": "71. శాంతి దాతావే శరణం అయ్యప్ప",
+                    "transliteration": "71. శాంతి దాతావే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-72",
+                    "telugu": "72. ముక్తి ప్రదాతావే శరణం అయ్యప్ప",
+                    "transliteration": "72. ముక్తి ప్రదాతావే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-73",
+                    "telugu": "73. కలియుగ వరదనే శరణం అయ్యప్ప",
+                    "transliteration": "73. కలియుగ వరదనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-74",
+                    "telugu": "74. సర్వ విఘ్న నివారకనే శరణం అయ్యప్ప",
+                    "transliteration": "74. సర్వ విఘ్న నివారకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-75",
+                    "telugu": "75. భయ నివారకనే శరణం అయ్యప్ప",
+                    "transliteration": "75. భయ నివారకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-76",
+                    "telugu": "76. రోగ హరనే శరణం అయ్యప్ప",
+                    "transliteration": "76. రోగ హరనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-77",
+                    "telugu": "77. పాప వినాశకనే శరణం అయ్యప్ప",
+                    "transliteration": "77. పాప వినాశకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-78",
+                    "telugu": "78. శత్రు సంహారకనే శరణం అయ్యప్ప",
+                    "transliteration": "78. శత్రు సంహారకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-79",
+                    "telugu": "79. సర్వార్థ సాధకనే శరణం అయ్యప్ప",
+                    "transliteration": "79. సర్వార్థ సాధకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-80",
+                    "telugu": "80. సుగుణ నిలయనే శరణం అయ్యప్ప",
+                    "transliteration": "80. సుగుణ నిలయనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-81",
+                    "telugu": "81. కరుణా సాగరనే శరణం అయ్యప్ప",
+                    "transliteration": "81. కరుణా సాగరనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-82",
+                    "telugu": "82. జ్ఞాన స్వరూపనే శరణం అయ్యప్ప",
+                    "transliteration": "82. జ్ఞాన స్వరూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-83",
+                    "telugu": "83. వేద నిలయనే శరణం అయ్యప్ప",
+                    "transliteration": "83. వేద నిలయనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-84",
+                    "telugu": "84. నాద బిందు స్వరూపనే శరణం అయ్యప్ప",
+                    "transliteration": "84. నాద బిందు స్వరూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-85",
+                    "telugu": "85. యోగ పట్టధరనే శరణం అయ్యప్ప",
+                    "transliteration": "85. యోగ పట్టధరనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-86",
+                    "telugu": "86. చిన్ముద్రాలంకృతనే శరణం అయ్యప్ప",
+                    "transliteration": "86. చిన్ముద్రాలంకృతనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-87",
+                    "telugu": "87. రుద్రాక్షధారియే శరణం అయ్యప్ప",
+                    "transliteration": "87. రుద్రాక్షధారియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-88",
+                    "telugu": "88. తులసీమాలాలంకృతనే శరణం అయ్యప్ప",
+                    "transliteration": "88. తులసీమాలాలంకృతనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-89",
+                    "telugu": "89. నీలాంబరధారియే శరణం అయ్యప్ప",
+                    "transliteration": "89. నీలాంబరధారియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-90",
+                    "telugu": "90. కాషాయ వస్త్రధారియే శరణం అయ్యప్ప",
+                    "transliteration": "90. కాషాయ వస్త్రధారియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-91",
+                    "telugu": "91. వ్రత రక్షకనే శరణం అయ్యప్ప",
+                    "transliteration": "91. వ్రత రక్షకనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-92",
+                    "telugu": "92. మండల దీక్షా ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "92. మండల దీక్షా ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-93",
+                    "telugu": "93. శరణు ఘోష ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "93. శరణు ఘోష ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-94",
+                    "telugu": "94. హరివరాసన ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "94. హరివరాసన ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-95",
+                    "telugu": "95. పల్లెకట్టు ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "95. పల్లెకట్టు ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-96",
+                    "telugu": "96. కర్పూర ఆరతి ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "96. కర్పూర ఆరతి ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-97",
+                    "telugu": "97. నైవేద్య ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "97. నైవేద్య ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-98",
+                    "telugu": "98. అరవణ పాయస ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "98. అరవణ పాయస ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-99",
+                    "telugu": "99. అప్పం ప్రియనే శరణం అయ్యప్ప",
+                    "transliteration": "99. అప్పం ప్రియనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-100",
+                    "telugu": "100. తిరువాభరణ భూషితనే శరణం అయ్యప్ప",
+                    "transliteration": "100. తిరువాభరణ భూషితనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-101",
+                    "telugu": "101. శబరిమలై వాసనే శరణం అయ్యప్ప",
+                    "transliteration": "101. శబరిమలై వాసనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-102",
+                    "telugu": "102. తత్త్వమసి స్వరూపనే శరణం అయ్యప్ప",
+                    "transliteration": "102. తత్త్వమసి స్వరూపనే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-103",
+                    "telugu": "103. అయ్యప్ప స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "103. అయ్యప్ప స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-104",
+                    "telugu": "104. స్వామి పాదం శరణం అయ్యప్ప",
+                    "transliteration": "104. స్వామి పాదం శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-105",
+                    "telugu": "105. దేవన్ పాదం శరణం అయ్యప్ప",
+                    "transliteration": "105. దేవన్ పాదం శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-106",
+                    "telugu": "106. స్వామియే శరణం అయ్యప్ప",
+                    "transliteration": "106. స్వామియే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-107",
+                    "telugu": "107. భగవానే శరణం అయ్యప్ప",
+                    "transliteration": "107. భగవానే శరణం అయ్యప్ప"
+          },
+          {
+                    "id": "sg-108",
+                    "telugu": "108. శ్రీ పూర్ణా పుష్కలాంబ సమేత హరిహరపుత్ర శ్రీ ధర్మశాస్తావే శరణం అయ్యప్ప",
+                    "transliteration": "108. శ్రీ పూర్ణా పుష్కలాంబ సమేత హరిహరపుత్ర శ్రీ ధర్మశాస్తావే శరణం అయ్యప్ప"
+          }
+]
+      }
+    ]
+  },
+  // 7. AYYAPPA ASHTOTTARAM (108 Complete)
   {
     id: 'ashtottaram',
     titleTelugu: '7. అయ్యప్ప అష్టోత్తర శత నామావళి',
@@ -304,36 +2158,554 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
     category: 'ayyappa',
     sections: [
       {
-        title: 'శ్రీ అయ్యప్ప అష్టోత్తర శత నామావళి',
+        title: 'శ్రీ అయ్యప్ప అష్టోత్తర శత నామావళి (108)',
         description: 'ఓం శ్రీ స్వామినే నమః - ప్రతి నామానికి పుష్పము లేదా అక్షతలు సమర్పించవలెను',
         mantras: [
-          { id: 'as-1', telugu: 'ఓం మహాశాస్త్రే నమః', transliteration: 'Om Mahashastre Namah' },
-          { id: 'as-2', telugu: 'ఓం విశ్వశాస్త్రే నమః', transliteration: 'Om Vishwashastre Namah' },
-          { id: 'as-3', telugu: 'ఓం లోకశాస్త్రే నమః', transliteration: 'Om Lokashastre Namah' },
-          { id: 'as-4', telugu: 'ఓం ధర్మశాస్త్రే నమః', transliteration: 'Om Dharmashastre Namah' },
-          { id: 'as-5', telugu: 'ఓం వేదశాస్త్రే నమః', transliteration: 'Om Vedashastre Namah' },
-          { id: 'as-6', telugu: 'ఓం కాలశాస్త్రే నమః', transliteration: 'Om Kalashastre Namah' },
-          { id: 'as-7', telugu: 'ఓం గజాధిపాయ నమః', transliteration: 'Om Gajadhipaya Namah' },
-          { id: 'as-8', telugu: 'ఓం అంగారకాయ నమః', transliteration: 'Om Angarakaya Namah' },
-          { id: 'as-9', telugu: 'ఓం అమృతేశాయ నమః', transliteration: 'Om Amriteshaya Namah' },
-          { id: 'as-10', telugu: 'ఓం సూర్యతేజసే నమః', transliteration: 'Om Suryatejase Namah' },
-          { id: 'as-11', telugu: 'ఓం సురేశ్వరాయ నమః', transliteration: 'Om Sureshwaraya Namah' },
-          { id: 'as-12', telugu: 'ఓం జగద్గురవే నమః', transliteration: 'Om Jagadgurave Namah' },
-          { id: 'as-13', telugu: 'ఓం సర్వలోకహితాయ నమః', transliteration: 'Om Sarvalokahitaya Namah' },
-          { id: 'as-14', telugu: 'ఓం తత్త్వమసి స్వరూపాయ నమః', transliteration: 'Om Tatvamasi Swaroopaya Namah' },
-          { id: 'as-15', telugu: 'ఓం మణికంఠాయ నమః', transliteration: 'Om Manikantaya Namah' },
-          { id: 'as-16', telugu: 'ఓం మోహినీపుత్రాయ నమః', transliteration: 'Om Mohiniputraya Namah' },
-          { id: 'as-17', telugu: 'ఓం శాంతాయ నమః', transliteration: 'Om Shantaya Namah' },
-          { id: 'as-18', telugu: 'ఓం వరదాయ నమః', transliteration: 'Om Varadaya Namah' },
-          { id: 'as-19', telugu: 'ఓం భక్తవత్సలాయ నమః', transliteration: 'Om Bhaktavatsalaya Namah' },
-          { id: 'as-20', telugu: 'ఓం శబరీగిరీశాయ నమః', transliteration: 'Om Sabarigireeshaya Namah' },
-          { id: 'as-21', telugu: 'ఓం స్వామినే నమః', transliteration: 'Om Swamine Namah' }
-        ]
+          {
+                    "id": "as-1",
+                    "telugu": "1. ఓం మహాశాస్త్రే నమః",
+                    "transliteration": "1. Om Mahashastre Namah"
+          },
+          {
+                    "id": "as-2",
+                    "telugu": "2. ఓం విశ్వశాస్త్రే నమః",
+                    "transliteration": "2. Om Vishwashastre Namah"
+          },
+          {
+                    "id": "as-3",
+                    "telugu": "3. ఓం లోకశాస్త్రే నమః",
+                    "transliteration": "3. Om Lokashastre Namah"
+          },
+          {
+                    "id": "as-4",
+                    "telugu": "4. ఓం ధర్మశాస్త్రే నమః",
+                    "transliteration": "4. Om Dharmashastre Namah"
+          },
+          {
+                    "id": "as-5",
+                    "telugu": "5. ఓం వేదశాస్త్రే నమః",
+                    "transliteration": "5. Om Vedashastre Namah"
+          },
+          {
+                    "id": "as-6",
+                    "telugu": "6. ఓం కాలశాస్త్రే నమః",
+                    "transliteration": "6. Om Kalashastre Namah"
+          },
+          {
+                    "id": "as-7",
+                    "telugu": "7. ఓం గజాధిపాయ నమః",
+                    "transliteration": "7. Om Gajadhipaya Namah"
+          },
+          {
+                    "id": "as-8",
+                    "telugu": "8. ఓం అంగారకాయ నమః",
+                    "transliteration": "8. Om Angarakaya Namah"
+          },
+          {
+                    "id": "as-9",
+                    "telugu": "9. ఓం అమృతేశాయ నమః",
+                    "transliteration": "9. Om Amriteshaya Namah"
+          },
+          {
+                    "id": "as-10",
+                    "telugu": "10. ఓం సూర్యతేజసే నమః",
+                    "transliteration": "10. Om Suryatejase Namah"
+          },
+          {
+                    "id": "as-11",
+                    "telugu": "11. ఓం సురేశ్వరాయ నమః",
+                    "transliteration": "11. Om Sureshwaraya Namah"
+          },
+          {
+                    "id": "as-12",
+                    "telugu": "12. ఓం జగద్గురవే నమః",
+                    "transliteration": "12. Om Jagadgurave Namah"
+          },
+          {
+                    "id": "as-13",
+                    "telugu": "13. ఓం సర్వలోకహితాయ నమః",
+                    "transliteration": "13. Om Sarvalokahitaya Namah"
+          },
+          {
+                    "id": "as-14",
+                    "telugu": "14. ఓం తత్త్వమసి స్వరూపాయ నమః",
+                    "transliteration": "14. Om Tatwamasi Swaroopaya Namah"
+          },
+          {
+                    "id": "as-15",
+                    "telugu": "15. ఓం మణికంఠాయ నమః",
+                    "transliteration": "15. Om Manikantaya Namah"
+          },
+          {
+                    "id": "as-16",
+                    "telugu": "16. ఓం మోహినీపుత్రాయ నమః",
+                    "transliteration": "16. Om Mohiniputraya Namah"
+          },
+          {
+                    "id": "as-17",
+                    "telugu": "17. ఓం శాంతాయ నమః",
+                    "transliteration": "17. Om Shantaya Namah"
+          },
+          {
+                    "id": "as-18",
+                    "telugu": "18. ఓం వరదాయ నమః",
+                    "transliteration": "18. Om Varadaya Namah"
+          },
+          {
+                    "id": "as-19",
+                    "telugu": "19. ఓం భక్తవత్సలాయ నమః",
+                    "transliteration": "19. Om Bhaktavatsalaya Namah"
+          },
+          {
+                    "id": "as-20",
+                    "telugu": "20. ఓం శబరీగిరీశాయ నమః",
+                    "transliteration": "20. Om Sabarigireeshaya Namah"
+          },
+          {
+                    "id": "as-21",
+                    "telugu": "21. ఓం ఈశపుత్రాయ నమః",
+                    "transliteration": "21. Om Eeshaputraya Namah"
+          },
+          {
+                    "id": "as-22",
+                    "telugu": "22. ఓం ఇడావాసాయ నమః",
+                    "transliteration": "22. Om Idavasaya Namah"
+          },
+          {
+                    "id": "as-23",
+                    "telugu": "23. ఓం హరిహరపుత్రాయ నమః",
+                    "transliteration": "23. Om Hariharaputraya Namah"
+          },
+          {
+                    "id": "as-24",
+                    "telugu": "24. ఓం హరిద్రాచలవాసాయ నమః",
+                    "transliteration": "24. Om Haridrachalavasaya Namah"
+          },
+          {
+                    "id": "as-25",
+                    "telugu": "25. ఓం సింహవాహనాయ నమః",
+                    "transliteration": "25. Om Simhavahanaya Namah"
+          },
+          {
+                    "id": "as-26",
+                    "telugu": "26. ఓం వ్యాఘ్రవాహనాయ నమః",
+                    "transliteration": "26. Om Vyaghravahanaya Namah"
+          },
+          {
+                    "id": "as-27",
+                    "telugu": "27. ఓం మాయాధరాయ నమః",
+                    "transliteration": "27. Om Mayadharaya Namah"
+          },
+          {
+                    "id": "as-28",
+                    "telugu": "28. ఓం ముక్తిదాయకాయ నమః",
+                    "transliteration": "28. Om Muktidayakaya Namah"
+          },
+          {
+                    "id": "as-29",
+                    "telugu": "29. ఓం మునిసేవితాయ నమః",
+                    "transliteration": "29. Om Munisevitaya Namah"
+          },
+          {
+                    "id": "as-30",
+                    "telugu": "30. ఓం మదనమోహనాయ నమః",
+                    "transliteration": "30. Om Madanamohanaya Namah"
+          },
+          {
+                    "id": "as-31",
+                    "telugu": "31. ఓం దేవరాజస్తుతాయ నమః",
+                    "transliteration": "31. Om Devarajastutaya Namah"
+          },
+          {
+                    "id": "as-32",
+                    "telugu": "32. ఓం దివ్యతేజసే నమః",
+                    "transliteration": "32. Om Divyatejase Namah"
+          },
+          {
+                    "id": "as-33",
+                    "telugu": "33. ఓం కలియుగవరదాయ నమః",
+                    "transliteration": "33. Om Kaliyugavaradaya Namah"
+          },
+          {
+                    "id": "as-34",
+                    "telugu": "34. ఓం కళ్యాణప్రదాయకాయ నమః",
+                    "transliteration": "34. Om Kalyanapradayakaya Namah"
+          },
+          {
+                    "id": "as-35",
+                    "telugu": "35. ఓం కామితార్థప్రదాయకాయ నమః",
+                    "transliteration": "35. Om Kamitarthapradayakaya Namah"
+          },
+          {
+                    "id": "as-36",
+                    "telugu": "36. ఓం కార్తికేయసహోదరాయ నమః",
+                    "transliteration": "36. Om Kartikeyasahodaraya Namah"
+          },
+          {
+                    "id": "as-37",
+                    "telugu": "37. ఓం గణపతిప్రియాయ నమః",
+                    "transliteration": "37. Om Ganapatipriyaya Namah"
+          },
+          {
+                    "id": "as-38",
+                    "telugu": "38. ఓం గజముఖానుజాయ నమః",
+                    "transliteration": "38. Om Gajamukhanujaya Namah"
+          },
+          {
+                    "id": "as-39",
+                    "telugu": "39. ఓం గుహప్రియాయ నమః",
+                    "transliteration": "39. Om Guhapriyaya Namah"
+          },
+          {
+                    "id": "as-40",
+                    "telugu": "40. ఓం గిరివాసాయ నమః",
+                    "transliteration": "40. Om Girivasaya Namah"
+          },
+          {
+                    "id": "as-41",
+                    "telugu": "41. ఓం భూతనాథాయ నమః",
+                    "transliteration": "41. Om Bhootanathaya Namah"
+          },
+          {
+                    "id": "as-42",
+                    "telugu": "42. ఓం భూతపతయే నమః",
+                    "transliteration": "42. Om Bhootapataye Namah"
+          },
+          {
+                    "id": "as-43",
+                    "telugu": "43. ఓం భవనాశనాయ నమః",
+                    "transliteration": "43. Om Bhavanashanaya Namah"
+          },
+          {
+                    "id": "as-44",
+                    "telugu": "44. ఓం భస్మధారిణే నమః",
+                    "transliteration": "44. Om Bhasmadharine Namah"
+          },
+          {
+                    "id": "as-45",
+                    "telugu": "45. ఓం భక్తపరాయణాయ నమః",
+                    "transliteration": "45. Om Bhaktaparayanaya Namah"
+          },
+          {
+                    "id": "as-46",
+                    "telugu": "46. ఓం యోగాధీశాయ నమః",
+                    "transliteration": "46. Om Yogadhishaya Namah"
+          },
+          {
+                    "id": "as-47",
+                    "telugu": "47. ఓం యోగపట్టధరాయ నమః",
+                    "transliteration": "47. Om Yogapattadharaya Namah"
+          },
+          {
+                    "id": "as-48",
+                    "telugu": "48. ఓం రుద్రాక్షధారిణే నమః",
+                    "transliteration": "48. Om Rudrakshadharine Namah"
+          },
+          {
+                    "id": "as-49",
+                    "telugu": "49. ఓం తులసీమాలాధరాయ నమః",
+                    "transliteration": "49. Om Tulasimaladharaya Namah"
+          },
+          {
+                    "id": "as-50",
+                    "telugu": "50. ఓం విష్ణురూపాయ నమః",
+                    "transliteration": "50. Om Vishnuroopaya Namah"
+          },
+          {
+                    "id": "as-51",
+                    "telugu": "51. ఓం శివరూపాయ నమః",
+                    "transliteration": "51. Om Shivaroopaya Namah"
+          },
+          {
+                    "id": "as-52",
+                    "telugu": "52. ఓం ఓంకారస్వరూపాయ నమః",
+                    "transliteration": "52. Om Omkaraswaroopaya Namah"
+          },
+          {
+                    "id": "as-53",
+                    "telugu": "53. ఓం పరబ్రహ్మణే నమః",
+                    "transliteration": "53. Om Parabrahmane Namah"
+          },
+          {
+                    "id": "as-54",
+                    "telugu": "54. ఓం పరమపురుషాయ నమః",
+                    "transliteration": "54. Om Paramapurushaya Namah"
+          },
+          {
+                    "id": "as-55",
+                    "telugu": "55. ఓం పావనాయ నమః",
+                    "transliteration": "55. Om Pavanaya Namah"
+          },
+          {
+                    "id": "as-56",
+                    "telugu": "56. ఓం పంబాతీరవాసాయ నమః",
+                    "transliteration": "56. Om Pambateeravasaya Namah"
+          },
+          {
+                    "id": "as-57",
+                    "telugu": "57. ఓం పందళరాజకుమారాయ నమః",
+                    "transliteration": "57. Om Pandalarajakumaraya Namah"
+          },
+          {
+                    "id": "as-58",
+                    "telugu": "58. ఓం పులివాహనాయ నమః",
+                    "transliteration": "58. Om Pulivahanaya Namah"
+          },
+          {
+                    "id": "as-59",
+                    "telugu": "59. ఓం పదునెట్టాంబడివాసాయ నమః",
+                    "transliteration": "59. Om Padunettambadivasaya Namah"
+          },
+          {
+                    "id": "as-60",
+                    "telugu": "60. ఓం సచ్చిదానందాయ నమః",
+                    "transliteration": "60. Om Sachidanandaya Namah"
+          },
+          {
+                    "id": "as-61",
+                    "telugu": "61. ఓం సత్యస్వరూపాయ నమః",
+                    "transliteration": "61. Om Satyaswaroopaya Namah"
+          },
+          {
+                    "id": "as-62",
+                    "telugu": "62. ఓం నిత్యతృప్తాయ నమః",
+                    "transliteration": "62. Om Nityatriptaya Namah"
+          },
+          {
+                    "id": "as-63",
+                    "telugu": "63. ఓం నిరంజనాయ నమః",
+                    "transliteration": "63. Om Niranjanaya Namah"
+          },
+          {
+                    "id": "as-64",
+                    "telugu": "64. ఓం నిర్గుణాయ నమః",
+                    "transliteration": "64. Om Nirgunaya Namah"
+          },
+          {
+                    "id": "as-65",
+                    "telugu": "65. ఓం నిర్మలాయ నమః",
+                    "transliteration": "65. Om Nirmalaya Namah"
+          },
+          {
+                    "id": "as-66",
+                    "telugu": "66. ఓం తేజోమయాయ నమః",
+                    "transliteration": "66. Om Tejomayaya Namah"
+          },
+          {
+                    "id": "as-67",
+                    "telugu": "67. ఓం ద్యుతిమతే నమః",
+                    "transliteration": "67. Om Dyutimate Namah"
+          },
+          {
+                    "id": "as-68",
+                    "telugu": "68. ఓం విద్యావతే నమః",
+                    "transliteration": "68. Om Vidyavate Namah"
+          },
+          {
+                    "id": "as-69",
+                    "telugu": "69. ఓం సర్వజ్ఞాయ నమః",
+                    "transliteration": "69. Om Sarvajnyaya Namah"
+          },
+          {
+                    "id": "as-70",
+                    "telugu": "70. ఓం సర్వశక్తిమతే నమః",
+                    "transliteration": "70. Om Sarvashaktimate Namah"
+          },
+          {
+                    "id": "as-71",
+                    "telugu": "71. ఓం అనాథరక్షకాయ నమః",
+                    "transliteration": "71. Om Anatharakshakaya Namah"
+          },
+          {
+                    "id": "as-72",
+                    "telugu": "72. ఓం ఆపద్బాంధవాయ నమః",
+                    "transliteration": "72. Om Aapadbandhavaya Namah"
+          },
+          {
+                    "id": "as-73",
+                    "telugu": "73. ఓం ఆనందరూపాయ నమః",
+                    "transliteration": "73. Om Aanandaroopaya Namah"
+          },
+          {
+                    "id": "as-74",
+                    "telugu": "74. ఓం ఇరుముడిప్రియాయ నమః",
+                    "transliteration": "74. Om Irumudipriyaya Namah"
+          },
+          {
+                    "id": "as-75",
+                    "telugu": "75. ఓం అమితవిక్రమాయ నమః",
+                    "transliteration": "75. Om Amitavikramaya Namah"
+          },
+          {
+                    "id": "as-76",
+                    "telugu": "76. ఓం దండధరాయ నమః",
+                    "transliteration": "76. Om Dandadharaya Namah"
+          },
+          {
+                    "id": "as-77",
+                    "telugu": "77. ఓం ధనుర్ధరాయ నమః",
+                    "transliteration": "77. Om Dhanurdharaya Namah"
+          },
+          {
+                    "id": "as-78",
+                    "telugu": "78. ఓం బాణహస్తాయ నమః",
+                    "transliteration": "78. Om Banahastaya Namah"
+          },
+          {
+                    "id": "as-79",
+                    "telugu": "79. ఓం సర్వవ్యాపినే నమః",
+                    "transliteration": "79. Om Sarvavyapine Namah"
+          },
+          {
+                    "id": "as-80",
+                    "telugu": "80. ఓం లోకపూజ్యాయ నమః",
+                    "transliteration": "80. Om Lokapoojyaya Namah"
+          },
+          {
+                    "id": "as-81",
+                    "telugu": "81. ఓం శరణాగతరక్షకాయ నమః",
+                    "transliteration": "81. Om Saranagatarakshaka Namah"
+          },
+          {
+                    "id": "as-82",
+                    "telugu": "82. ఓం శ్రీమంగళప్రదాయ నమః",
+                    "transliteration": "82. Om Shrimangalapradaya Namah"
+          },
+          {
+                    "id": "as-83",
+                    "telugu": "83. ఓం చందనప్రియాయ నమః",
+                    "transliteration": "83. Om Chandanapriyaya Namah"
+          },
+          {
+                    "id": "as-84",
+                    "telugu": "84. ఓం విభూతిభూషితాయ నమః",
+                    "transliteration": "84. Om Vibhootibhooshitaya Namah"
+          },
+          {
+                    "id": "as-85",
+                    "telugu": "85. ఓం కమలాక్షాయ నమః",
+                    "transliteration": "85. Om Kamalakshaya Namah"
+          },
+          {
+                    "id": "as-86",
+                    "telugu": "86. ఓం కారుణ్యసింధవే నమః",
+                    "transliteration": "86. Om Karunyasindhave Namah"
+          },
+          {
+                    "id": "as-87",
+                    "telugu": "87. ఓం కృతజ్ఞాయ నమః",
+                    "transliteration": "87. Om Kritajnyaya Namah"
+          },
+          {
+                    "id": "as-88",
+                    "telugu": "88. ఓం సుగుణాయ నమః",
+                    "transliteration": "88. Om Sugunaya Namah"
+          },
+          {
+                    "id": "as-89",
+                    "telugu": "89. ఓం సుందరాయ నమః",
+                    "transliteration": "89. Om Sundaraya Namah"
+          },
+          {
+                    "id": "as-90",
+                    "telugu": "90. ఓం సుముఖాయ నమః",
+                    "transliteration": "90. Om Sumukhaya Namah"
+          },
+          {
+                    "id": "as-91",
+                    "telugu": "91. ఓం వీరమణికంఠాయ నమః",
+                    "transliteration": "91. Om Veeramanikantaya Namah"
+          },
+          {
+                    "id": "as-92",
+                    "telugu": "92. ఓం వైద్యనాథాయ నమః",
+                    "transliteration": "92. Om Vaidyanathaya Namah"
+          },
+          {
+                    "id": "as-93",
+                    "telugu": "93. ఓం వనదేవతాసేవితాయ నమః",
+                    "transliteration": "93. Om Vanadevatasevitaya Namah"
+          },
+          {
+                    "id": "as-94",
+                    "telugu": "94. ఓం శబరీపీఠప్రియాయ నమః",
+                    "transliteration": "94. Om Sabaripeethapriyaya Namah"
+          },
+          {
+                    "id": "as-95",
+                    "telugu": "95. ఓం మకరజ్యోతిస్వరూపాయ నమః",
+                    "transliteration": "95. Om Makarajyotiswaroopaya Namah"
+          },
+          {
+                    "id": "as-96",
+                    "telugu": "96. ఓం ఆర్యకేరళేశ్వరాయ నమః",
+                    "transliteration": "96. Om Aaryakeraleshwaraya Namah"
+          },
+          {
+                    "id": "as-97",
+                    "telugu": "97. ఓం ఉలగరక్షకాయ నమః",
+                    "transliteration": "97. Om Ulagarakshakaya Namah"
+          },
+          {
+                    "id": "as-98",
+                    "telugu": "98. ఓం ఎంగళ్ కులదైవమే నమః",
+                    "transliteration": "98. Om Engal Kuladaivame Namah"
+          },
+          {
+                    "id": "as-99",
+                    "telugu": "99. ఓం స్వామినే నమః",
+                    "transliteration": "99. Om Swamine Namah"
+          },
+          {
+                    "id": "as-100",
+                    "telugu": "100. ఓం హరిహరసుతాయ నమః",
+                    "transliteration": "100. Om Hariharasutaya Namah"
+          },
+          {
+                    "id": "as-101",
+                    "telugu": "101. ఓం అయ్యప్పాయ నమః",
+                    "transliteration": "101. Om Ayyappaya Namah"
+          },
+          {
+                    "id": "as-102",
+                    "telugu": "102. ఓం ధర్మపాలకాయ నమః",
+                    "transliteration": "102. Om Dharmapalakaya Namah"
+          },
+          {
+                    "id": "as-103",
+                    "telugu": "103. ఓం సమస్తభక్తపాలకాయ నమః",
+                    "transliteration": "103. Om Samastabhaktapalakaya Namah"
+          },
+          {
+                    "id": "as-104",
+                    "telugu": "104. ఓం నిత్యానందాయ నమః",
+                    "transliteration": "104. Om Nityanandaya Namah"
+          },
+          {
+                    "id": "as-105",
+                    "telugu": "105. ఓం దివ్యరూపాయ నమః",
+                    "transliteration": "105. Om Divyaroopaya Namah"
+          },
+          {
+                    "id": "as-106",
+                    "telugu": "106. ఓం భక్తసంరక్షకాయ నమః",
+                    "transliteration": "106. Om Bhaktasamrakshakaya Namah"
+          },
+          {
+                    "id": "as-107",
+                    "telugu": "107. ఓం సర్వాభీష్టప్రదాయకాయ నమః",
+                    "transliteration": "107. Om Sarvabhishtapradayakaya Namah"
+          },
+          {
+                    "id": "as-108",
+                    "telugu": "108. ఓం శ్రీ పూర్ణా పుష్కలా సమేత శ్రీ హరిహరపుత్ర శ్రీ ధర్మశాస్త్రే నమః",
+                    "transliteration": "108. Om Shri Poorna Pushkala Sameta Shri Hariharaputra Shri Dharmashastre Namah"
+          }
+]
       }
     ]
   },
-
-  // 8. BHUTHANATHA PANCHARATNAM
+    // 8. BHUTHANATHA PANCHARATNAM
   {
     id: 'bhuthanatha-pancharatnam',
     titleTelugu: '8. భూతనాథ పంచరత్నం (లోకవీరం మహాపూజ్యం)',
@@ -404,50 +2776,42 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
       }
     ]
   },
-
   // 9. MANGALA HARATHI
   {
     id: 'mangala-harathi',
     titleTelugu: '9. మంగళ హారతి',
     titleEnglish: 'Mangala Harathi',
-    subtitle: 'స్వామివారికి కర్పూర మంగళ హారతి & నీరాజనం',
+    subtitle: 'శ్రీ అయ్యప్ప స్వామి దివ్య కర్పూర నీరాజనం',
     icon: 'Flame',
-    durationMinutes: 7,
-    featured: true,
+    durationMinutes: 4,
+    featured: false,
     category: 'ayyappa',
     sections: [
       {
-        title: 'మంగళ హారతి స్తుతి',
+        title: 'స్వామి మంగళ హారతి',
         mantras: [
           {
             id: 'mh-1',
-            telugu: 'ఆర్యవంశ సుజాతాయ సచ్చిదానంద మూర్తయే |\nసర్వలోక శరణ్యాయ శ్రీ అయ్యప్పాయ మంగళమ్ ||',
-            transliteration: 'Aryavamsa Sujataya Satchidananda Moorthaye | Sarvaloka Sharanyaya Shri Ayyappaya Mangalam ||',
-            meaning: 'ఉత్తమ ఆర్యవంశంలో అవతరించినవాడు, సచ్చిదానంద స్వరూపుడు, లోకములకు శరణ్యుడైన అయ్యప్ప స్వామికి మంగళం.'
+            telugu: 'జయ మంగళం నిత్య శుభ మంగళం |\nశబరీగిరీశాయ శుభ మంగళం ||\nహరిహర సుతాయ ఆనంద మంగళం |\nమణికంఠ స్వామినే దివ్య మంగళం ||',
+            transliteration: 'Jaya Mangalam Nitya Shubha Mangalam |\nSabarigireeshaya Shubha Mangalam ||\nHarihara Sutaya Aananda Mangalam |\nManikanta Swamine Divya Mangalam ||'
           },
           {
             id: 'mh-2',
-            telugu: 'మణికంఠాయ మహాతేజః శాస్త్రే శబరివాసినే |\nహరిహరపుత్రాయ భక్తానాం పాలకాయాస్తు మంగళమ్ ||',
-            transliteration: 'Manikantaya Mahatejah Shastre Sabarivasine | Hariharaputraya Bhaktanam Palakayastu Mangalam ||'
-          },
-          {
-            id: 'mh-3',
             telugu: 'కర్పూర గౌరం కరుణావతారం సంసారసారం భుజగేంద్రహారమ్ |\nసదావసంతం హృదయారవిందే భవం భవానీసహితం నమామి ||',
-            transliteration: 'Karpura Gauram Karunavataram Samsarasaram Bhujagendraharam | Sadavasantam Hridayaravinde Bhavam Bhavanisahitam Namami ||'
+            transliteration: 'Karpura Gauram Karunavataram Sansarasaram Bhujagendrahāram |\nSada Vasantam Hridayaravinde Bhavam Bhavani Sahitam Namami ||'
           }
         ]
       }
     ]
   },
-
   // 10. MANTRAPUSHPAM
   {
     id: 'mantrapushpam',
     titleTelugu: '10. మంత్రపుష్పం',
     titleEnglish: 'Mantrapushpam',
-    subtitle: 'వేదోక్త మంత్రపుష్ప సమర్పణ',
-    icon: 'BookOpen',
-    durationMinutes: 6,
+    subtitle: 'వేదోక్త దివ్య మంత్రపుష్ప సమర్పణ',
+    icon: 'Sparkles',
+    durationMinutes: 5,
     featured: false,
     category: 'ayyappa',
     sections: [
@@ -456,228 +2820,759 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
         mantras: [
           {
             id: 'mp-1',
-            telugu: 'ఓం యోఽపాం పుష్పం వేద పుష్పవాన్ ప్రజావాన్ పశుమాన్ భవతి |\nచంద్రమా వా అపాం పుష్పమ్ పుష్పవాన్ ప్రజావాన్ పశుమాన్ భవతి |\nయ ఏవం వేద ||',
-            transliteration: 'Om Yopam Pushpam Veda Pushpavan Prajavan Pashuman Bhavati | Chandrama Va Apam Pushpam Pushpavan Prajavan Pashuman Bhavati | Ya Evam Veda ||'
+            telugu: 'యోఽపాం పుష్పం వేద | పుష్పవాన్ ప్రజావాన్ పశుమాన్ భవతి |\nచంద్రమా వా అపాం పుష్పమ్ | పుష్పవాన్ ప్రజావాన్ పశుమాన్ భవతి |\nయ ఏవం వేద | యోఽపామాయతనం వేద | ఆయతనవాన్ భవతి ||',
+            transliteration: 'Yopaam Pushpam Veda | Pushpavan Prajavan Pashuman Bhavati |\nChandrama Va Apaam Pushpam | Pushpavan Prajavan Pashuman Bhavati |\nYa Evam Veda | Yopamayatanam Veda | Aayatanavan Bhavati ||'
           },
           {
             id: 'mp-2',
-            telugu: 'ఓం రాజాధిరాజాయ ప్రసహ్యసాహినే నమో వయం వైశ్రవణాయ కుర్మహే |\nస మే కామాన్ కామకామాయ మహ్యం కామేశ్వరో వైశ్రవణో దదాతు |\nకుబేరాయ వైశ్రవణాయ మహారాజాయ నమః ||',
-            transliteration: 'Om Rajadhirajaya Prasahyasahine Namo Vayam Vaishravanaya Kurmahe | Sa Me Kaman Kamakamaya Mahyam Kameshwaro Vaishravano Dadatu | Kuberaya Vaishravanaya Maharajaya Namah ||'
-          },
-          {
-            id: 'mp-3',
-            telugu: 'శ్రీ హరిహరపుత్ర అయ్యప్ప స్వామినే నమః | సువర్ణ దివ్య మంత్రపుష్పం సమర్పయామి ||',
-            transliteration: 'Shri Hariharaputra Ayyappa Swamine Namah | Suvarna Divya Mantrapushpam Samarpayami ||'
+            telugu: 'ఓం రాజాధిరాజాయ ప్రసహ్యసాహినే | నమో వయం వైశ్రవణాయ కుర్మహే |\nస మే కామాన్ కామకామాయ మహ్యం | కామేశ్వరో వైశ్రవణో దధాతు |\nకుబేరాయ వైశ్రవణాయ | మహారాజాయ నమః ||',
+            transliteration: 'Om Rajadhirajaya Prasahyasahine | Namo Vayam Vaishravanaya Kurmahe |\nSa Me Kaman Kamakamaya Mahyam | Kameshwaro Vaishravano Dadhatu |\nKuberaya Vaishravanaya | Maharajaya Namah ||'
           }
         ]
       }
     ]
   },
-
   // 11. ATMA PRADAKSHINA
   {
     id: 'atma-pradakshina',
     titleTelugu: '11. ఆత్మ ప్రదక్షిణ నమస్కారం',
     titleEnglish: 'Atma Pradakshina',
-    subtitle: 'సమస్త పాప నివారణార్థం ఆత్మ ప్రదక్షిణ శ్లోకములు',
+    subtitle: 'సమస్త పాప నివారణ ప్రదక్షిణ శ్లోకం',
     icon: 'RotateCcw',
-    durationMinutes: 4,
+    durationMinutes: 3,
     featured: false,
     category: 'ayyappa',
     sections: [
       {
-        title: 'ఆత్మ ప్రదక్షిణ శ్లోకం',
-        description: 'నిలబడి కుడివైపునకు మూడుసార్లు తిరుగుతూ ప్రదక్షిణ చేయవలెను',
+        title: 'ప్రదక్షిణ మంత్రం',
         mantras: [
           {
-            id: 'ap-rad-1',
-            telugu: 'యానికానిచ పాపాని జన్మాంతరకృతాని చ |\nతాని తాని ప్రణశ్యంతి ప్రదక్షిణ పదే పదే ||',
-            transliteration: 'Yani Kanicha Papani Janmantarakritani Cha | Tani Tani Pranashyanti Pradakshina Pade Pade ||',
-            meaning: 'పూర్వ జన్మలలో గాని, ఈ జన్మలో గాని చేసిన సమస్త పాపములు ఈ ప్రదక్షిణము వలన అడుగడుగునా నశించుగాక.'
+            id: 'ap-1',
+            telugu: 'యానికాని చ పాపాని జన్మాంతరకృతాని చ |\nతాని తాని ప్రణశ్యంతి ప్రదక్షిణ పదే పదే ||\nపాపోఽహం పాపకర్మాఽహం పాపాత్మా పాపసంభవః |\nత్రాహి మాం కృపయా దేవ శరణాగతవత్సల ||',
+            transliteration: 'Yanikani Cha Papani Janmantarakritani Cha |\nTani Tani Pranashyanti Pradakshina Pade Pade ||\nPapoham Papakarmaham Papatma Papasambhavah |\nTrahi Mam Kripaya Deva Saranagatavatsala ||'
           },
           {
-            id: 'ap-rad-2',
-            telugu: 'పాపోఽహం పాపకర్మాఽహం పాపాత్మా పాపసంభవః |\nత్రాహి మాం కృపయా దేవ శరణాగతవత్సల ||\nఅన్యథా శరణం నాస్తి త్వమేవ శరణం మమ |\nతస్మాత్కారుణ్య భావేన రక్ష రక్ష శబరీగిరీశ్వర ||',
-            transliteration: 'Papoham Papakarmaham Papatma Papasambhavah | Trahi Mam Kripaya Deva Saranagatavatsala || Anyatha Saranam Nasti Tvameva Saranam Mama | Tasmaatkarunya Bhavena Raksha Raksha Sabarigireeshwara ||',
-            meaning: 'స్వామీ! నాకు నీవు తప్ప వేరే శరణు లేదు. నీ కారుణ్యంతో నన్ను రక్షించు శబరీగిరీశా!'
+            id: 'ap-2',
+            telugu: 'అన్యథా శరణం నాస్తి త్వమేవ శరణం మమ |\nతస్మాత్కారుణ్య భావేన రక్ష రక్ష శబరీగిరీశ్వర ||',
+            transliteration: 'Anyatha Saranam Nasti Tvameva Saranam Mama |\nTasmad Karunya Bhavena Raksha Raksha Sabarigireeshwara ||'
           }
         ]
       }
     ]
   },
-
-  // 12. KSHAMAPANA MANTRAM
+    // 12. KSHAMAPANA MANTRAM
   {
     id: 'kshamapana-mantram',
     titleTelugu: '12. క్షమాపణ మంత్రం (పూజా సమాప్తి)',
     titleEnglish: 'Kshamapana Mantram',
-    subtitle: 'తెలిసి తెలియక చేసిన దోషముల మన్నింపు ప్రార్థన',
-    icon: 'ShieldCheck',
+    subtitle: 'పూజా లోప నివారణ క్షమా ప్రార్థన & అయ్యప్ప ప్రత్యేక శరణు వేడుకోలు',
+    icon: 'HeartHandshake',
     durationMinutes: 4,
     featured: true,
     category: 'ayyappa',
     sections: [
       {
-        title: 'క్షమాపణ ప్రార్థన',
+        title: 'శ్రీ అయ్యప్ప విశేష క్షమాపణ ప్రార్థన (అత్యంత పవిత్రమైనది)',
+        description: 'పూజ చివరలో స్వామి సన్నిధిలో భక్తితో సమర్పించవలసిన దివ్య క్షమా ప్రార్థన',
+        mantras: [
+          {
+            id: 'km-ayyappa-special',
+            telugu: 'జ్ఞానము తోనూ అజ్ఞానముతో ను మేము తెలిసీ తెలియక చేసిన సకల తప్పులను క్షమించి కాపాడవలెను.\n\nసత్య మగు అష్టాదశ సోపానములపై చిన్ముద్ర దారిగా అమరి యుండి సమస్త భూమండలాన్ని ఏకఛత్రాధిపత్యంగా పరిపాలించు ఓం శ్రీ హరిహరసుతుడు ఆనంద చిత్తుడైన అయ్యా.....\n\nఅయ్యప్ప స్వామి మీ దివ్య పాదారవిందములే మాకు శరణం శరణం శరణం అయ్యప్ప.\n\nస్వామియే శరణం అయ్యప్ప ......'
+          }
+        ]
+      },
+      {
+        title: 'శ్రీ అయ్యప్ప నమస్కార మంత్రములు',
+        description: 'శాస్తార ప్రణామ శ్లోకములు',
+        mantras: [
+          {
+            id: 'km-namaskara-1',
+            telugu: 'లోకవీరం మహాపూజ్యం సర్వరక్షాకరం విభుమ్ |\nమనోహరం సురారాధ్యం శాస్తారం ప్రణమామ్యహమ్ || 1 ||\nస్వామియే శరణం అయ్యప్ప'
+          },
+          {
+            id: 'km-namaskara-2',
+            telugu: 'విప్రపూజ్యం విశ్వవంద్యం విష్ణుశంభ్వోః ప్రియం సుతమ్ |\nప్రక్షిప్తభక్తలోకార్తిం శాస్తారం ప్రణమామ్యహమ్ || 2 ||\nస్వామియే శరణం అయ్యప్ప'
+          },
+          {
+            id: 'km-namaskara-3',
+            telugu: 'మత్తమాతంగగమనం కారుణ్యామృతపూరితమ్ |\nసర్వవిఘ్నహరం దేవం శాస్తారం ప్రణమామ్యహమ్ || 3 ||\nస్వామియే శరణం అయ్యప్ప'
+          },
+          {
+            id: 'km-namaskara-4',
+            telugu: 'అస్మత్ కులేశ్వరం దేవం అస్మచ్ఛత్రువినాశనమ్ |\nఅస్మదిష్టప్రదాతారం శాస్తారం ప్రణమామ్యహమ్ || 4 ||\nస్వామియే శరణం అయ్యప్ప'
+          },
+          {
+            id: 'km-namaskara-5',
+            telugu: 'పాండ్యేశవంశతిలకం కేరళే కేళివిగ్రహమ్ |\nఆర్తత్రాణపరం దేవం శాస్తారం ప్రణమామ్యహమ్ || 5 ||\nస్వామియే శరణం అయ్యప్ప'
+          }
+        ]
+      },
+      {
+        title: 'సర్వదేవతా క్షమాపణ మంత్రములు',
         mantras: [
           {
             id: 'km-1',
-            telugu: 'అపరాధ సహస్రాణి క్రియంతేఽహర్నిశం మయా |\nదాసోఽయమితి మాం మత్వా క్షమస్వ పరమేశ్వర ||',
-            transliteration: 'Aparadha Sahasrani Kriyanteharnisham Maya | Dasoyamiti Mam Matwa Kshamaswa Parameshwara ||',
-            meaning: 'స్వామీ, రాత్రింబవళ్ళు నాచేత వేలాది అపరాధములు జరుగుతుంటాయి. నన్ను నీ దాసునిగా భావించి క్షమించు.'
+            telugu: 'అపరాధ సహస్రాణి క్రియంతేఽహర్నిశం మయా |\nదాసోఽయమితి మాం మత్వా క్షమస్వ శబరీగిరీశ్వర ||'
           },
           {
             id: 'km-2',
-            telugu: 'కరచరణ కృతం వా కాయజం కర్మజం వా |\nశ్రవణ నయనజం వా మానసం వాపరాధమ్ |\nవిహితమవిహితం వా సర్వమేతత్ క్షమస్వ |\nజయ జయ కరుణాబ్ధే శ్రీ శబరీగిరీశ్వర ||\nస్వామియే శరణం అయ్యప్ప!',
-            transliteration: 'Karacharana Kritam Va Kayajam Karmajam Va | Sravana Nayanajam Va Manasam Vaparadham | Vihitamavihitam Va Sarvametat Kshamaswa | Jaya Jaya Karunabdhe Shri Sabarigireeshwara || Swamiye Saranam Ayyappa!'
+            telugu: 'కరచరణ కృతం వా కాయజం కర్మజం వా |\nశ్రవణ నయనజం వా మానసం వాఽపరాధమ్ |\nవిహితమవిహితం వా సర్వమేతత్ క్షమస్వ |\nజయ జయ కరుణాబ్ధే శ్రీ శబరీగిరీశ్వర ||'
+          },
+          {
+            id: 'km-3',
+            telugu: 'కాయేన వాచా మనసేంద్రియైర్వా బుద్ధ్యాత్మనా వా ప్రకృతేః స్వభావాత్ |\nకరోమి యద్యత్ సకలం పరస్మై నారాయణాయేతి సమర్పయామి ||'
           }
         ]
       }
     ]
   },
-
   // 13. HARIVARASANAM
   {
     id: 'harivarasanam',
     titleTelugu: '13. హరివరాసనం (విశ్వమోహనం)',
     titleEnglish: 'Harivarasanam',
-    subtitle: 'సన్నిధానం రాత్రి నిద్రోత్సవ గీతం - అత్యంత పవిత్ర స్తోత్రం',
+    subtitle: 'శబరిమల రాత్రి నిద్ర పూజ & మంగళ హారతి గీతం',
     icon: 'Music',
-    durationMinutes: 9,
+    durationMinutes: 8,
     featured: true,
     category: 'ayyappa',
     sections: [
       {
-        title: 'హరివరాసన స్తోత్రం (సంపూర్ణ అష్టకం)',
-        description: 'రాత్రి వేళ స్వామికి హారతి అనంతరం పఠించే పరమ పవిత్ర స్తోత్రం',
+        title: 'హరివరాసనం అష్టకం',
+        description: 'శ్రీ అయ్యప్ప స్వామి వారి నిత్య పవళింపు సేవ (లాలీ పాట)',
         mantras: [
           {
             id: 'hv-1',
-            telugu: 'హరివరాసనం విశ్వమోహనం |\nహరిదధీశ్వరం ఆరాధ్యపాదుకమ్ |\nఅరివిమర్దనం నిత్యనర్తనమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 1 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Harivarasanam Viswamohanam | Haridadhiswaram Aaradhyapadukam | Arivimardanam Nityanarthanam | Hariharatmajam Devamasraye || 1 ||',
-            meaning: 'హరితో కూడిన ఆసనము కలవాడు, లోకములను మోహింపజేయువాడు, సకల దిక్కులకు అధీశ్వరుడు, నిత్య నర్తనుడైన హరిహరాత్మజుని ఆశ్రయిస్తున్నాను.'
+            telugu: 'హరివరాసనం విశ్వమోహనం\nహరిదధీశ్వరం ఆరాధ్యపాదుకమ్ |\nఅరివిమర్దనం నిత్యనర్తనమ్\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Harivarasanam Vishwamohanam Haridadheeshwaram Aaradhyapadukam |\nArivimardanam Nityanartanam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-2',
-            telugu: 'శరణకీర్తనం శక్తమానసమ్ |\nభరణలోలుపం నర్తనాలసమ్ |\nఅరుణభాసురం భూతనాయకమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 2 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Saranakeerthanam Sakthamanasam | Bharanalolupam Narthanalasam | Arunabhasuram Bhoothanayakam | Hariharatmajam Devamasraye || 2 ||'
+            telugu: 'శరణకీర్తనం శక్తమానసం\nభరణలోలుపం నర్తనాలసమ్ |\nఅరుణభాసురం భూతనాయకం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Saranakeertanam Shaktamanasam Bharanalolupam Nartanālasam |\nArunabhasuram Bhootanayakam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-3',
-            telugu: 'కలమృదుస్మితం సుందరాననమ్ |\nకలభకోమలం గాత్రమోహనమ్ |\nకలభకేసరీ వాజివాహనమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 3 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Kalamridusmitham Sundarananam | Kalabhakomalam Gaathramohanam | Kalabhakesaree Vaajivaahanam | Hariharatmajam Devamasraye || 3 ||'
+            telugu: 'ప్రణయసత్యకం ప్రాణనాయకం\nప్రణతకల్పకం సుప్రభాంచితమ్ |\nప్రణవమందిరం కీర్తనప్రియం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Pranayasatyakam Prananayakam Pranatakalpakam Suprabhanchitam |\nPranavamandiram Keertanapriyam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-4',
-            telugu: 'శ్రితజనప్రియం చింతితప్రదమ్ |\nశృతివిభూషణం సాధుజీవనమ్ |\nశృతిమనోహరం గీతలాలసమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 4 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Srithajanapriyam Chinthithapradham | Sruthivibhooshanam Saadhujeevanam | Sruthimanoharam Geethalaalasam | Hariharatmajam Devamasraye || 4 ||'
+            telugu: 'తురగవాహనం సుందరాననం\nవరగదాయుధం వేదవర్ణితమ్ |\nగురుకృపాకరం కీర్తనప్రియం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Turagavahanam Sundarananam Varagadayudham Vedavarnitam |\nGurukripakaram Keertanapriyam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-5',
-            telugu: 'ప్రణవసత్యకం ప్రౌఢకీర్తనమ్ |\nప్రణతపాలకం సుప్రభాంచితమ్ |\nత్రిభువనార్చితం దేవతాత్మకమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 5 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Pranavasatyakam Proudhakeerthanam | Pranatapalakam Suprabhanchitam | Tribhuvanarchitam Devatmakam | Hariharatmajam Devamasraye || 5 ||'
+            telugu: 'త్రిభువనార్చితం దేవతాత్మకం\nత్రినయనప్రభోః దివ్యబాలకమ్ |\nత్రిదశపూజితం చింతిప్రదం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Tribhuvanarchitam Devatatmakam Trinayanaprabhoh Divyabalakam |\nTridashapoojitam Chintipradam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-6',
-            telugu: 'భవభయాపహం భావుకావహమ్ |\nభువనమోహనం భూతిభూషణమ్ |\nధవళవాహనం దివ్యవారణమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 6 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Bhavabhayapaham Bhavukavaham | Bhuvanamohanam Bhootibhooshanam | Dhavalavahanam Divyavaranam | Hariharatmajam Devamasraye || 6 ||'
+            telugu: 'భవభయాపహం భావుకావహం\nభువనమోహనం భూతిభూషణమ్ |\nధవళవాహనం దివ్యవారణం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Bhavabhayapaham Bhavukavaham Bhuwanamohanam Bhootibhooshanam |\nDhavalavahanam Divyavaranam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-7',
-            telugu: 'కలమృదుధ్వనిం సుస్వరస్థితమ్ |\nవిమలపూజితం మోహనావహమ్ |\nత్రిదశవందితం వేదగౌరవమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 7 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Kalamridudhvanim Suswarasthitam | Vimalapoojitam Mohanavaham | Tridashavanditam Vedagauravam | Hariharatmajam Devamasraye || 7 ||'
+            telugu: 'కలమృదుస్మితం సుందరాననం\nకలభకోమలం గాత్రమోహనమ్ |\nకళభకేసరీ కంఠమాలికం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Kalamridusmitam Sundarananam Kalabhakomalam Gatramohanam |\nKalabhakesari Kanthamalikam Hariharatmajam Devamashraye ||'
           },
           {
             id: 'hv-8',
-            telugu: 'త్రిభువనేశ్వరం దేవతాత్మకమ్ |\nనవమణిప్రభం వేదభాషితమ్ |\nవరదహస్తకం దివ్యభూషణమ్ |\nహరిహరాత్మజం దేవమాశ్రయే || 8 ||\n(శరణం అయ్యప్ప స్వామి శరణం అయ్యప్ప)',
-            transliteration: 'Tribhuvaneshwaram Devatmakam | Navamaniprabham Vedabhaashitam | Varadahastakam Divyabhooshanam | Hariharatmajam Devamasraye || 8 ||'
+            telugu: 'శ్రితజనప్రియం చింతితప్రదం\nశృతివిభూషణం సాధుజీవనమ్ |\nశృతిమనోహరం గీతలాలసం\nహరిహరాత్మజం దేవమాశ్రయే ||\n(శరణం అయ్యప్పా స్వామి శరణం అయ్యప్పా)',
+            transliteration: 'Shritajanapriyam Chintitapradam Shrutivibhooshanam Sadhujeevanam |\nShrutimanoharam Geetalalasam Hariharatmajam Devamashraye ||'
           }
         ]
       }
     ]
   },
-
-  // 14. 18 PADI PAATALU
+  // 14. PADI PAATALU
   {
     id: 'padi-paatalu',
     titleTelugu: '14. పదునెట్టాంపడి (18 మెట్ల పాటలు)',
-    titleEnglish: '18 Padi Paatalu',
-    subtitle: 'సన్నిధానం 18 బంగారు మెట్ల ప్రాశస్త్యం & పాటలు',
-    icon: 'Crown',
+    titleEnglish: 'Padinettampadi Songs',
+    subtitle: 'శబరిమల పవిత్ర 18 మెట్ల దివ్య ప్రాశస్త్యం & పాటలు',
+    icon: 'Music',
     durationMinutes: 10,
     featured: false,
     category: 'ayyappa',
     sections: [
       {
-        title: '18 మెట్ల తత్వము & శరణు',
-        description: 'ప్రతి మెట్టు ఒక్కో ఇంద్రియాన్ని, భావాన్ని దాటి మోక్షాన్ని పొందే మార్గాన్ని సూచిస్తుంది',
+        title: 'పదునెట్టాంపడి ప్రాశస్త్యం & మంత్రములు',
         mantras: [
           {
-            id: 'padi-1',
-            telugu: 'ఒకటవ మెట్టు: కంటి ఇంద్రియ నిగ్రహం - స్వామియే శరణం అయ్యప్ప\nరెండవ మెట్టు: చెవుల శ్రవణ నిగ్రహం - స్వామియే శరణం అయ్యప్ప\nమూడవ మెట్టు: జిహ్వ రుచి నిగ్రహం - స్వామియే శరణం అయ్యప్ప\nనాల్గవ మెట్టు: ఘ్రాణ ఇంద్రియ నిగ్రహం - స్వామియే శరణం అయ్యప్ప\nఐదవ మెట్టు: స్పర్శ ఇంద్రియ నిగ్రహం - స్వామియే శరణం అయ్యప్ప',
-            transliteration: 'Padi 1 to 5: Panchendriya Nigraham - Swamiye Saranam Ayyappa'
+            id: 'pp-1',
+            telugu: 'ఒకటవ మెట్టు: కన్నిమూల గణపతి భగవానే శరణం అయ్యప్ప (విఘ్న నివారణ)\nరెండవ మెట్టు: శక్తి వడివేలన్ మురుగన్ భగవానే శరణం అయ్యప్ప (జ్ఞాన ప్రాప్తి)\nమూడవ మెట్టు: శివదేవుని కృపాకటాక్షమే శరణం అయ్యప్ప (మనో నిగ్రహం)\nనాల్గవ మెట్టు: విష్ణు దేవుని రక్షణాకవచమే శరణం అయ్యప్ప (స్థితి రక్షణ)',
+            transliteration: '1st Padi: Ganapathi Saranam | 2nd Padi: Murugan Saranam | 3rd Padi: Shiva Kripa | 4th Padi: Vishnu Kripa'
           },
           {
-            id: 'padi-2',
-            telugu: 'ఆరవ నుండి పదకొండవ మెట్టు (అరిషడ్వర్గాలు): కామ, క్రోధ, లోభ, మోహ, మద, మాత్సర్యాల త్యాగం.\nపన్నెండవ నుండి పద్నాలుగవ మెట్టు (త్రిగుణాలు): సత్త్వ, రజో, తమో గుణాల సమన్వయం.\nపదిహేను & పదిహారవ మెట్టు: విద్యా, అవిద్యల జ్ఞానం.\nపదిహేడవ మెట్టు: అహంకార విసర్జన.\nపద్దెనిమిదవ మెట్టు: ఆత్మ సాక్షాత్కారం - తత్త్వమసి!',
-            transliteration: 'Padi 6 to 18: Arishadvarga, Triguna and Atma Sakshatkaram - Tatvamasi!'
+            id: 'pp-2',
+            telugu: 'ఐదవ మెట్టు నుండి ఎనిమిదవ మెట్టు: కామ, క్రోధ, లోభ, మోహ నివారణా మెట్లు\nతొమ్మిదవ మెట్టు నుండి పన్నెండవ మెట్టు: మద, మాత్సర్య, అహంకార, రాగ నివారణా మెట్లు\nపదమూడవ మెట్టు నుండి పదిహేడవ మెట్టు: పంచేంద్రియ నిగ్రహ దివ్య పవిత్ర మెట్లు\nపదునెనిమిదవ మెట్టు: తత్త్వమసి - సాక్షాత్ అయ్యప్ప దివ్య దర్శనం శరణం అయ్యప్ప!',
+            transliteration: '5-8: Kama Krodha Lobha Moha Jayam | 9-12: Mada Matsarya Jayam | 13-17: Panchendriya Nigraham | 18th Padi: Tatvamasi Sannidhanam!'
           }
         ]
       }
     ]
   },
-
-  // 15. SRI MAHALAKSHMI ASHTOTTARAM (అమ్మవారి అష్టోత్తరం)
+  // 15. LAKSHMI ASHTOTTARAM (108 Complete)
   {
     id: 'lakshmi-ashtottaram',
     titleTelugu: '15. శ్రీ మహాలక్ష్మి అష్టోత్తర శత నామావళి',
     titleEnglish: 'Sri Mahalakshmi Ashtottaram',
-    subtitle: 'అష్టలక్ష్మి స్వరూపిణి శ్రీ లక్ష్మీదేవి 108 దివ్య నామావళి',
+    subtitle: 'అష్టలక్ష్మీ స్వరూపిణి శ్రీ లక్ష్మీదేవి 108 దివ్య నామావళి',
     icon: 'Sparkles',
     durationMinutes: 12,
     featured: true,
     category: 'ammavaru',
     sections: [
       {
-        title: 'శ్రీ లక్ష్మీ అష్టోత్తర శత నామావళి',
-        description: 'కుంకుమార్చన లేదా పుష్పార్చనతో అమ్మవారిని ఆరాధించుట',
+        title: 'శ్రీ మహాలక్ష్మి అష్టోత్తర శత నామావళి (108)',
+        description: 'ఓం శ్రీ మహాలక్ష్మ్యై నమః - సకల ఐశ్వర్య సిద్ధి కొరకు పుష్పార్చన',
         mantras: [
-          { id: 'la-1', telugu: 'ఓం ప్రకృత్యై నమః', transliteration: 'Om Prakrityai Namah' },
-          { id: 'la-2', telugu: 'ఓం వికృత్యై నమః', transliteration: 'Om Vikrityai Namah' },
-          { id: 'la-3', telugu: 'ఓం విద్యాయై నమః', transliteration: 'Om Vidyayai Namah' },
-          { id: 'la-4', telugu: 'ఓం సర్వభూతహితప్రదాయై నమః', transliteration: 'Om Sarvabhootahitapradayai Namah' },
-          { id: 'la-5', telugu: 'ఓం శ్రద్ధాయై నమః', transliteration: 'Om Shraddhayai Namah' },
-          { id: 'la-6', telugu: 'ఓం విభూత్యై నమః', transliteration: 'Om Vibhootyai Namah' },
-          { id: 'la-7', telugu: 'ఓం సురభ్యై నమః', transliteration: 'Om Surabhyai Namah' },
-          { id: 'la-8', telugu: 'ఓం పరమాత్మికాయై నమః', transliteration: 'Om Paramatmikayai Namah' },
-          { id: 'la-9', telugu: 'ఓం వాచే నమః', transliteration: 'Om Vaache Namah' },
-          { id: 'la-10', telugu: 'ఓం పద్మాలయాయై నమః', transliteration: 'Om Padmalayayai Namah' },
-          { id: 'la-11', telugu: 'ఓం పద్మాయై నమః', transliteration: 'Om Padmayai Namah' },
-          { id: 'la-12', telugu: 'ఓం శుచయే నమః', transliteration: 'Om Shuchaye Namah' },
-          { id: 'la-13', telugu: 'ఓం స్వాహాయై నమః', transliteration: 'Om Swahayai Namah' },
-          { id: 'la-14', telugu: 'ఓం స్వధాయై నమః', transliteration: 'Om Swadhayai Namah' },
-          { id: 'la-15', telugu: 'ఓం సుధాయై నమః', transliteration: 'Om Sudhayai Namah' },
-          { id: 'la-16', telugu: 'ఓం ధన్యాయై నమః', transliteration: 'Om Dhanyayai Namah' },
-          { id: 'la-17', telugu: 'ఓం హిరణ్మయై నమః', transliteration: 'Om Hiranmayai Namah' },
-          { id: 'la-18', telugu: 'ఓం లక్ష్మ్యై నమః', transliteration: 'Om Lakshmyai Namah' },
-          { id: 'la-19', telugu: 'ఓం నిత్యపుష్టాయై నమః', transliteration: 'Om Nityapushtayai Namah' },
-          { id: 'la-20', telugu: 'ఓం విభావర్యై నమః', transliteration: 'Om Vibhavaryai Namah' },
-          { id: 'la-21', telugu: 'ఓం అదిత్యై నమః', transliteration: 'Om Adityai Namah' },
-          { id: 'la-22', telugu: 'ఓం దిత్యై నమః', transliteration: 'Om Dityai Namah' },
-          { id: 'la-23', telugu: 'ఓం దీప్తాయై నమః', transliteration: 'Om Deeptayai Namah' },
-          { id: 'la-24', telugu: 'ఓం వసుధాయై నమః', transliteration: 'Om Vasudhayai Namah' },
-          { id: 'la-25', telugu: 'ఓం వసుధారిణ్యై నమః', transliteration: 'Om Vasudharinyai Namah' },
-          { id: 'la-26', telugu: 'ఓం కమలాయై నమః', transliteration: 'Om Kamalayai Namah' },
-          { id: 'la-27', telugu: 'ఓం కాంతాయై నమః', transliteration: 'Om Kantayai Namah' },
-          { id: 'la-28', telugu: 'ఓం కామాక్ష్యై నమః', transliteration: 'Om Kamakshyai Namah' },
-          { id: 'la-29', telugu: 'ఓం క్షీరోదసంభవాయై నమః', transliteration: 'Om Ksheerodasambhavayai Namah' },
-          { id: 'la-30', telugu: 'ఓం శ్రీ మహాలక్ష్మ్యై నమః', transliteration: 'Om Shri Mahalakshmyai Namah' }
-        ]
+          {
+                    "id": "la-ash-1",
+                    "telugu": "1. ఓం ప్రకృత్యై నమః",
+                    "transliteration": "1. Om Prakrityai Namah"
+          },
+          {
+                    "id": "la-ash-2",
+                    "telugu": "2. ఓం వికృత్యై నమః",
+                    "transliteration": "2. Om Vikrityai Namah"
+          },
+          {
+                    "id": "la-ash-3",
+                    "telugu": "3. ఓం విద్యాయై నమః",
+                    "transliteration": "3. Om Vidyayai Namah"
+          },
+          {
+                    "id": "la-ash-4",
+                    "telugu": "4. ఓం సర్వభూతహితప్రదాయై నమః",
+                    "transliteration": "4. Om Sarvabhootahitapradayai Namah"
+          },
+          {
+                    "id": "la-ash-5",
+                    "telugu": "5. ఓం శ్రద్ధాయై నమః",
+                    "transliteration": "5. Om Shraddhayai Namah"
+          },
+          {
+                    "id": "la-ash-6",
+                    "telugu": "6. ఓం విభూత్యై నమః",
+                    "transliteration": "6. Om Vibhootyai Namah"
+          },
+          {
+                    "id": "la-ash-7",
+                    "telugu": "7. ఓం సురభ్యై నమః",
+                    "transliteration": "7. Om Surabhyai Namah"
+          },
+          {
+                    "id": "la-ash-8",
+                    "telugu": "8. ఓం పరమాత్మికాయై నమః",
+                    "transliteration": "8. Om Paramatmikayai Namah"
+          },
+          {
+                    "id": "la-ash-9",
+                    "telugu": "9. ఓం వాచే నమః",
+                    "transliteration": "9. Om Vaache Namah"
+          },
+          {
+                    "id": "la-ash-10",
+                    "telugu": "10. ఓం పద్మాలయాయై నమః",
+                    "transliteration": "10. Om Padmalayayai Namah"
+          },
+          {
+                    "id": "la-ash-11",
+                    "telugu": "11. ఓం పద్మాయై నమః",
+                    "transliteration": "11. Om Padmayai Namah"
+          },
+          {
+                    "id": "la-ash-12",
+                    "telugu": "12. ఓం శుచయే నమః",
+                    "transliteration": "12. Om Shuchaye Namah"
+          },
+          {
+                    "id": "la-ash-13",
+                    "telugu": "13. ఓం స్వాహాయై నమః",
+                    "transliteration": "13. Om Swahayai Namah"
+          },
+          {
+                    "id": "la-ash-14",
+                    "telugu": "14. ఓం స్వధాయై నమః",
+                    "transliteration": "14. Om Swadhayai Namah"
+          },
+          {
+                    "id": "la-ash-15",
+                    "telugu": "15. ఓం సుధాయై నమః",
+                    "transliteration": "15. Om Sudhayai Namah"
+          },
+          {
+                    "id": "la-ash-16",
+                    "telugu": "16. ఓం ధన్యాయై నమః",
+                    "transliteration": "16. Om Dhanyayai Namah"
+          },
+          {
+                    "id": "la-ash-17",
+                    "telugu": "17. ఓం హిరణ్మయై నమః",
+                    "transliteration": "17. Om Hiranmayai Namah"
+          },
+          {
+                    "id": "la-ash-18",
+                    "telugu": "18. ఓం లక్ష్మ్యై నమః",
+                    "transliteration": "18. Om Lakshmyai Namah"
+          },
+          {
+                    "id": "la-ash-19",
+                    "telugu": "19. ఓం నిత్యపుష్టాయై నమః",
+                    "transliteration": "19. Om Nityapushtayai Namah"
+          },
+          {
+                    "id": "la-ash-20",
+                    "telugu": "20. ఓం విభావర్యై నమః",
+                    "transliteration": "20. Om Vibhavaryai Namah"
+          },
+          {
+                    "id": "la-ash-21",
+                    "telugu": "21. ఓం అదిత్యై నమః",
+                    "transliteration": "21. Om Adityai Namah"
+          },
+          {
+                    "id": "la-ash-22",
+                    "telugu": "22. ఓం దిత్యై నమః",
+                    "transliteration": "22. Om Dityai Namah"
+          },
+          {
+                    "id": "la-ash-23",
+                    "telugu": "23. ఓం దీప్తాయై నమః",
+                    "transliteration": "23. Om Deeptayai Namah"
+          },
+          {
+                    "id": "la-ash-24",
+                    "telugu": "24. ఓం వసుధాయై నమః",
+                    "transliteration": "24. Om Vasudhayai Namah"
+          },
+          {
+                    "id": "la-ash-25",
+                    "telugu": "25. ఓం వసుధారిణ్యై నమః",
+                    "transliteration": "25. Om Vasudharinyai Namah"
+          },
+          {
+                    "id": "la-ash-26",
+                    "telugu": "26. ఓం కమలాయై నమః",
+                    "transliteration": "26. Om Kamalayai Namah"
+          },
+          {
+                    "id": "la-ash-27",
+                    "telugu": "27. ఓం కాంతాయై నమః",
+                    "transliteration": "27. Om Kantayai Namah"
+          },
+          {
+                    "id": "la-ash-28",
+                    "telugu": "28. ఓం కామాక్ష్యై నమః",
+                    "transliteration": "28. Om Kamakshyai Namah"
+          },
+          {
+                    "id": "la-ash-29",
+                    "telugu": "29. ఓం క్షీరోదసంభవాయై నమః",
+                    "transliteration": "29. Om Ksheerodasambhavayai Namah"
+          },
+          {
+                    "id": "la-ash-30",
+                    "telugu": "30. ఓం అనుగ్రహప్రదాయై నమః",
+                    "transliteration": "30. Om Anugrahapradayai Namah"
+          },
+          {
+                    "id": "la-ash-31",
+                    "telugu": "31. ఓం బుద్ధయే నమః",
+                    "transliteration": "31. Om Buddhaye Namah"
+          },
+          {
+                    "id": "la-ash-32",
+                    "telugu": "32. ఓం అనఘాయై నమః",
+                    "transliteration": "32. Om Anaghayai Namah"
+          },
+          {
+                    "id": "la-ash-33",
+                    "telugu": "33. ఓం హరివల్లభాయై నమః",
+                    "transliteration": "33. Om Harivallabhayai Namah"
+          },
+          {
+                    "id": "la-ash-34",
+                    "telugu": "34. ఓం అశోకాయై నమః",
+                    "transliteration": "34. Om Ashokayai Namah"
+          },
+          {
+                    "id": "la-ash-35",
+                    "telugu": "35. ఓం అమృతాయై నమః",
+                    "transliteration": "35. Om Amritayai Namah"
+          },
+          {
+                    "id": "la-ash-36",
+                    "telugu": "36. ఓం దీప్తాయై నమః",
+                    "transliteration": "36. Om Deeptayai Namah"
+          },
+          {
+                    "id": "la-ash-37",
+                    "telugu": "37. ఓం లోకశోకవినాశిన్యై నమః",
+                    "transliteration": "37. Om Lokashokavinashinyai Namah"
+          },
+          {
+                    "id": "la-ash-38",
+                    "telugu": "38. ఓం ధర్మనిలయాయై నమః",
+                    "transliteration": "38. Om Dharmanilayayai Namah"
+          },
+          {
+                    "id": "la-ash-39",
+                    "telugu": "39. ఓం కరుణాయై నమః",
+                    "transliteration": "39. Om Karunayai Namah"
+          },
+          {
+                    "id": "la-ash-40",
+                    "telugu": "40. ఓం లోకమాత్రే నమః",
+                    "transliteration": "40. Om Lokamatre Namah"
+          },
+          {
+                    "id": "la-ash-41",
+                    "telugu": "41. ఓం పద్మప్రియాయై నమః",
+                    "transliteration": "41. Om Padmapriyayai Namah"
+          },
+          {
+                    "id": "la-ash-42",
+                    "telugu": "42. ఓం పద్మహస్తాయై నమః",
+                    "transliteration": "42. Om Padmahastayai Namah"
+          },
+          {
+                    "id": "la-ash-43",
+                    "telugu": "43. ఓం పద్మాక్ష్యై నమః",
+                    "transliteration": "43. Om Padmakshyai Namah"
+          },
+          {
+                    "id": "la-ash-44",
+                    "telugu": "44. ఓం పద్మసుందర్యై నమః",
+                    "transliteration": "44. Om Padmasundaryai Namah"
+          },
+          {
+                    "id": "la-ash-45",
+                    "telugu": "45. ఓం పద్మోద్భవాయై నమః",
+                    "transliteration": "45. Om Padmodbhavayai Namah"
+          },
+          {
+                    "id": "la-ash-46",
+                    "telugu": "46. ఓం పద్మముఖ్యై నమః",
+                    "transliteration": "46. Om Padmamukhyai Namah"
+          },
+          {
+                    "id": "la-ash-47",
+                    "telugu": "47. ఓం పద్మనాభప్రియాయై నమః",
+                    "transliteration": "47. Om Padmanabhapriyayai Namah"
+          },
+          {
+                    "id": "la-ash-48",
+                    "telugu": "48. ఓం రమాయై నమః",
+                    "transliteration": "48. Om Ramayai Namah"
+          },
+          {
+                    "id": "la-ash-49",
+                    "telugu": "49. ఓం పద్మమాలాధరాయై నమః",
+                    "transliteration": "49. Om Padmamaladharayai Namah"
+          },
+          {
+                    "id": "la-ash-50",
+                    "telugu": "50. ఓం దేవ్యై నమః",
+                    "transliteration": "50. Om Devyai Namah"
+          },
+          {
+                    "id": "la-ash-51",
+                    "telugu": "51. ఓం పద్మిన్యై నమః",
+                    "transliteration": "51. Om Padminyai Namah"
+          },
+          {
+                    "id": "la-ash-52",
+                    "telugu": "52. ఓం పద్మగంధిన్యై నమః",
+                    "transliteration": "52. Om Padmagandhinyai Namah"
+          },
+          {
+                    "id": "la-ash-53",
+                    "telugu": "53. ఓం పుణ్యగంధాయై నమః",
+                    "transliteration": "53. Om Punyagandhayai Namah"
+          },
+          {
+                    "id": "la-ash-54",
+                    "telugu": "54. ఓం సుప్రసన్నాయై నమః",
+                    "transliteration": "54. Om Suprasannayai Namah"
+          },
+          {
+                    "id": "la-ash-55",
+                    "telugu": "55. ఓం ప్రసాదాభిముఖ్యై నమః",
+                    "transliteration": "55. Om Prasadabhimukhyai Namah"
+          },
+          {
+                    "id": "la-ash-56",
+                    "telugu": "56. ఓం ప్రభాయై నమః",
+                    "transliteration": "56. Om Prabhayai Namah"
+          },
+          {
+                    "id": "la-ash-57",
+                    "telugu": "57. ఓం చంద్రవదనాయై నమః",
+                    "transliteration": "57. Om Chandravadanayai Namah"
+          },
+          {
+                    "id": "la-ash-58",
+                    "telugu": "58. ఓం చంద్రాయై నమః",
+                    "transliteration": "58. Om Chandrayai Namah"
+          },
+          {
+                    "id": "la-ash-59",
+                    "telugu": "59. ఓం చంద్రసహోదర్యై నమః",
+                    "transliteration": "59. Om Chandrasahodaryai Namah"
+          },
+          {
+                    "id": "la-ash-60",
+                    "telugu": "60. ఓం చతుర్భుజాయై నమః",
+                    "transliteration": "60. Om Chaturbhujayai Namah"
+          },
+          {
+                    "id": "la-ash-61",
+                    "telugu": "61. ఓం చంద్రరూపాయై నమః",
+                    "transliteration": "61. Om Chandraroopayai Namah"
+          },
+          {
+                    "id": "la-ash-62",
+                    "telugu": "62. ఓం ఇందిరాయై నమః",
+                    "transliteration": "62. Om Indirayai Namah"
+          },
+          {
+                    "id": "la-ash-63",
+                    "telugu": "63. ఓం ఇందుశీతలాయై నమః",
+                    "transliteration": "63. Om Indusheetalayai Namah"
+          },
+          {
+                    "id": "la-ash-64",
+                    "telugu": "64. ఓం ఆహ్లాదజనన్యై నమః",
+                    "transliteration": "64. Om Aahladajananyai Namah"
+          },
+          {
+                    "id": "la-ash-65",
+                    "telugu": "65. ఓం పుష్ట్యై నమః",
+                    "transliteration": "65. Om Pushtyai Namah"
+          },
+          {
+                    "id": "la-ash-66",
+                    "telugu": "66. ఓం శివాయై నమః",
+                    "transliteration": "66. Om Shivayai Namah"
+          },
+          {
+                    "id": "la-ash-67",
+                    "telugu": "67. ఓం శివకర్యై నమః",
+                    "transliteration": "67. Om Shivakaryai Namah"
+          },
+          {
+                    "id": "la-ash-68",
+                    "telugu": "68. ఓం సత్యై నమః",
+                    "transliteration": "68. Om Satyai Namah"
+          },
+          {
+                    "id": "la-ash-69",
+                    "telugu": "69. ఓం విమలాయై నమః",
+                    "transliteration": "69. Om Vimalayai Namah"
+          },
+          {
+                    "id": "la-ash-70",
+                    "telugu": "70. ఓం విశ్వజనన్యై నమః",
+                    "transliteration": "70. Om Vishwajananyai Namah"
+          },
+          {
+                    "id": "la-ash-71",
+                    "telugu": "71. ఓం తుష్ట్యై నమః",
+                    "transliteration": "71. Om Tushtyai Namah"
+          },
+          {
+                    "id": "la-ash-72",
+                    "telugu": "72. ఓం దారిద్ర్యనాశిన్యై నమః",
+                    "transliteration": "72. Om Daridryanashinyai Namah"
+          },
+          {
+                    "id": "la-ash-73",
+                    "telugu": "73. ఓం ప్రీతిపుష్కరిణ్యై నమః",
+                    "transliteration": "73. Om Preetipushkarinyai Namah"
+          },
+          {
+                    "id": "la-ash-74",
+                    "telugu": "74. ఓం శాంతాయై నమః",
+                    "transliteration": "74. Om Shantayai Namah"
+          },
+          {
+                    "id": "la-ash-75",
+                    "telugu": "75. ఓం శుక్లమాల్యాంబరధరాయై నమః",
+                    "transliteration": "75. Om Shuklamalyambaradharayai Namah"
+          },
+          {
+                    "id": "la-ash-76",
+                    "telugu": "76. ఓం శ్రియై నమః",
+                    "transliteration": "76. Om Shriyai Namah"
+          },
+          {
+                    "id": "la-ash-77",
+                    "telugu": "77. ఓం భాస్కర్యై నమః",
+                    "transliteration": "77. Om Bhaskaryai Namah"
+          },
+          {
+                    "id": "la-ash-78",
+                    "telugu": "78. ఓం బిల్వనిలయాయై నమః",
+                    "transliteration": "78. Om Bilvanilayayai Namah"
+          },
+          {
+                    "id": "la-ash-79",
+                    "telugu": "79. ఓం వరారోహాయై నమః",
+                    "transliteration": "79. Om Vararohayai Namah"
+          },
+          {
+                    "id": "la-ash-80",
+                    "telugu": "80. ఓం యశస్విన్యై నమః",
+                    "transliteration": "80. Om Yashaswinyai Namah"
+          },
+          {
+                    "id": "la-ash-81",
+                    "telugu": "81. ఓం వసుంధరాయై నమః",
+                    "transliteration": "81. Om Vasundharayai Namah"
+          },
+          {
+                    "id": "la-ash-82",
+                    "telugu": "82. ఓం ఉదారాంగాయై నమః",
+                    "transliteration": "82. Om Udarangayai Namah"
+          },
+          {
+                    "id": "la-ash-83",
+                    "telugu": "83. ఓం హరిణ్యై నమః",
+                    "transliteration": "83. Om Harinyai Namah"
+          },
+          {
+                    "id": "la-ash-84",
+                    "telugu": "84. ఓం హేమమాలిన్యై నమః",
+                    "transliteration": "84. Om Hemamalinyai Namah"
+          },
+          {
+                    "id": "la-ash-85",
+                    "telugu": "85. ఓం ధనధాన్యకర్యై నమః",
+                    "transliteration": "85. Om Dhanadhanyakaryai Namah"
+          },
+          {
+                    "id": "la-ash-86",
+                    "telugu": "86. ఓం సిద్ధయే నమః",
+                    "transliteration": "86. Om Siddhaye Namah"
+          },
+          {
+                    "id": "la-ash-87",
+                    "telugu": "87. ఓం స్త్రైణసౌమ్యాయై నమః",
+                    "transliteration": "87. Om Strainasaumyayai Namah"
+          },
+          {
+                    "id": "la-ash-88",
+                    "telugu": "88. ఓం శుభప్రదాయై నమః",
+                    "transliteration": "88. Om Shubhapradayai Namah"
+          },
+          {
+                    "id": "la-ash-89",
+                    "telugu": "89. ఓం నృపవేశ్మగతానందాయై నమః",
+                    "transliteration": "89. Om Nripaveshmagatanandayai Namah"
+          },
+          {
+                    "id": "la-ash-90",
+                    "telugu": "90. ఓం వరలక్ష్మ్యై నమః",
+                    "transliteration": "90. Om Varalakshmyai Namah"
+          },
+          {
+                    "id": "la-ash-91",
+                    "telugu": "91. ఓం వసుప్రదాయై నమః",
+                    "transliteration": "91. Om Vasupradayai Namah"
+          },
+          {
+                    "id": "la-ash-92",
+                    "telugu": "92. ఓం శుభాయై నమః",
+                    "transliteration": "92. Om Shubhayai Namah"
+          },
+          {
+                    "id": "la-ash-93",
+                    "telugu": "93. ఓం హిరణ్యప్రాకారాయై నమః",
+                    "transliteration": "93. Om Hiranyaprakarayai Namah"
+          },
+          {
+                    "id": "la-ash-94",
+                    "telugu": "94. ఓం సముద్రతనయాయై నమః",
+                    "transliteration": "94. Om Samudratanayayai Namah"
+          },
+          {
+                    "id": "la-ash-95",
+                    "telugu": "95. ఓం జయాయై నమః",
+                    "transliteration": "95. Om Jayayai Namah"
+          },
+          {
+                    "id": "la-ash-96",
+                    "telugu": "96. ఓం మంగళాదేవ్యై నమః",
+                    "transliteration": "96. Om Mangaladevyai Namah"
+          },
+          {
+                    "id": "la-ash-97",
+                    "telugu": "97. ఓం విష్ణువక్షఃస్థలస్థితాయై నమః",
+                    "transliteration": "97. Om Vishnuvakshassthalasthitayai Namah"
+          },
+          {
+                    "id": "la-ash-98",
+                    "telugu": "98. ఓం విష్ణుపత్న్యై నమః",
+                    "transliteration": "98. Om Vishnupatnyai Namah"
+          },
+          {
+                    "id": "la-ash-99",
+                    "telugu": "99. ఓం ప్రసన్నాక్ష్యై నమః",
+                    "transliteration": "99. Om Prasannakshyai Namah"
+          },
+          {
+                    "id": "la-ash-100",
+                    "telugu": "100. ఓం నారాయణసమాశ్రితాయై నమః",
+                    "transliteration": "100. Om Narayanasamashritayai Namah"
+          },
+          {
+                    "id": "la-ash-101",
+                    "telugu": "101. ఓం దారిద్ర్యధ్వంసిన్యై నమః",
+                    "transliteration": "101. Om Daridryadhwansinyai Namah"
+          },
+          {
+                    "id": "la-ash-102",
+                    "telugu": "102. ఓం సర్వోపద్రవవారిణ్యై నమః",
+                    "transliteration": "102. Om Sarvopadravavarinyai Namah"
+          },
+          {
+                    "id": "la-ash-103",
+                    "telugu": "103. ఓం నవదుర్గాయై నమః",
+                    "transliteration": "103. Om Navadurgayai Namah"
+          },
+          {
+                    "id": "la-ash-104",
+                    "telugu": "104. ఓం మహాకాళ్యై నమః",
+                    "transliteration": "104. Om Mahakalyai Namah"
+          },
+          {
+                    "id": "la-ash-105",
+                    "telugu": "105. ఓం బ్రహ్మవిష్ణుశివాత్మికాయై నమః",
+                    "transliteration": "105. Om Brahmavishnushivatmikayai Namah"
+          },
+          {
+                    "id": "la-ash-106",
+                    "telugu": "106. ఓం త్రికాలజ్ఞానసంపన్నాయై నమః",
+                    "transliteration": "106. Om Trikalajnanasampannayai Namah"
+          },
+          {
+                    "id": "la-ash-107",
+                    "telugu": "107. ఓం భువనేశ్వర్యై నమః",
+                    "transliteration": "107. Om Bhuwaneshwaryai Namah"
+          },
+          {
+                    "id": "la-ash-108",
+                    "telugu": "108. ఓం శ్రీ మహాలక్ష్మీ స్వామిన్యై నమః",
+                    "transliteration": "108. Om Shri Mahalakshmi Swaminyai Namah"
+          }
+]
       }
     ]
   },
-
-  // 16. SRI MAHALAKSHMI ASHTAKAM
+  // 16. MAHALAKSHMI ASHTAKAM
   {
     id: 'mahalakshmi-ashtakam',
     titleTelugu: '16. శ్రీ మహాలక్ష్మి అష్టకం',
@@ -685,104 +3580,95 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
     subtitle: '"నమస్తేస్తు మహామాయే..." సంపూర్ణ అష్టక స్తోత్రం',
     icon: 'Crown',
     durationMinutes: 8,
-    featured: true,
+    featured: false,
     category: 'ammavaru',
     sections: [
       {
-        title: 'శ్రీ మహాలక్ష్మ్యష్టక స్తోత్రం (సంపూర్ణం)',
-        description: 'నిత్యం సంధ్యా సమయంలో ఈ అష్టకాన్ని పఠించిన వారికి సకల సంపదలు కలుగును',
+        title: 'శ్రీ మహాలక్ష్మ్యష్టకమ్',
+        description: 'ఇంద్రకృత మహాలక్ష్మి అష్టక స్తోత్రం - సర్వపాపహరం & సర్వసిద్ధిప్రదం',
         mantras: [
           {
             id: 'la-ash-1',
-            telugu: 'నమస్తేఽస్తు మహామాయే శ్రీపీఠే సురపూజితే |\nశంఖచక్ర గదాహస్తే మహాలక్ష్మి నమోఽస్తు తే || 1 ||',
-            transliteration: 'Namastestu Mahamaye Shreepeethe Surapoojite | Shankhachakra Gadahaste Mahalakshmi Namostute || 1 ||',
-            meaning: 'మహామాయా స్వరూపిణి, శ్రీపీఠంపై సురలచే పూజింపబడుదానా, శంఖ, చక్ర, గదలను ధరించిన ఓ శ్రీ మహాలక్ష్మీ దేవీ! నీకు నమస్కారములు.'
+            telugu: 'నమస్తేఽస్తు మహామాయే శ్రీపీఠే సురపూజితే |\nశంఖచక్రగదాహస్తే మహాలక్ష్మి నమోఽస్తు తే || 1 ||',
+            transliteration: 'Namastestu Mahamaye Shreepeethe Surapoojite |\nShankhachakragadahaste Mahalakshmi Namostute || 1 ||',
+            meaning: 'శ్రీపీఠమునందు కొలువుతీరి, దేవతలచే పూజింపబడు ఓ మహామాయా స్వరూపిణీ! శంఖ, చక్ర, గదాధారిణి అయిన ఓ శ్రీ మహాలక్ష్మీ దేవీ! నీకు నమస్కారములు.'
           },
           {
             id: 'la-ash-2',
-            telugu: 'నమస్తే గరుడారూఢే కోలాసుర భయంకరి |\nసర్వపాపహరే దేవి మహాలక్ష్మి నమోఽస్తు తే || 2 ||',
-            transliteration: 'Namaste Garudarudhe Kolasura Bhayankari | Sarvapapahare Devi Mahalakshmi Namostute || 2 ||',
-            meaning: 'గరుడ వాహనాన్ని అధిరోహించినదానా, కోలాసురుడికి భయంకరిగా నిలిచినదానా, సమస్త పాపాలను హరించే ఓ మహాలక్ష్మీ దేవీ! నీకు నమస్కారములు.'
+            telugu: 'నమస్తే గరుడారూఢే కోలాసురభయంకరి |\nసర్వపాపహరే దేవి మహాలక్ష్మి నమోఽస్తు తే || 2 ||',
+            transliteration: 'Namaste Garudaroodhe Kolasurabhayankari |\nSarvapapahare Devi Mahalakshmi Namostute || 2 ||',
+            meaning: 'గరుడ వాహనాన్ని అధిరోహించినదానా, కోలాసురుడనే రాక్షసుడిని సంహరించినదానా, సమస్త పాపములను హరించే ఓ మహాలక్ష్మీ దేవీ! నీకు నమస్కారములు.'
           },
           {
             id: 'la-ash-3',
-            telugu: 'సర్వజ్ఞే సర్వవరదే సర్వదుష్ట భయంకరి |\nసర్వదుఃఖహరే దేవి మహాలక్ష్మి నమోఽస్తు తే || 3 ||',
-            transliteration: 'Sarvajne Sarvavarade Sarvadushta Bhayankari | Sarvadukhhahare Devi Mahalakshmi Namostute || 3 ||',
-            meaning: 'సమస్తం తెలిసిన సర్వజ్ఞురాలా, సర్వ వరాలను అనుగ్రహించుదానా, దుష్టులను దండించుదానా, సకల దుఃఖాలను తొలగించే ఓ మహాలక్ష్మీ దేవీ! నీకు ప్రణామములు.'
+            telugu: 'సర్వజ్ఞే సర్వవరదే సర్వదుష్టభయంకరి |\nసర్వదుఃఖహరే దేవి మహాలక్ష్మి నమోఽస్తు తే || 3 ||',
+            transliteration: 'Sarvajne Sarvavarade Sarvadushtabhayankari |\nSarvadukhahare Devi Mahalakshmi Namostute || 3 ||',
+            meaning: 'సర్వమూ తెలిసినదానా, సమస్త వరములను ఇచ్చుదానా, దుష్టులను భయపెట్టుదానా, సమస్త దుఃఖములను నశింపజేయు ఓ మహాలక్ష్మీ! నీకు ప్రణామములు.'
           },
           {
             id: 'la-ash-4',
-            telugu: 'సిద్ధిబుద్ధిప్రదే దేవి భుక్తిముక్తి ప్రదాయిని |\nమంత్రమూర్తే సదా దేవి మహాలక్ష్మి నమోఽస్తు తే || 4 ||',
-            transliteration: 'Siddhibuddhiprade Devi Bhuktimukti Pradayini | Mantramoorte Sada Devi Mahalakshmi Namostute || 4 ||',
-            meaning: 'సిద్ధి, బుద్ధులను, భుక్తి, ముక్తులను ప్రసాదించుదానా, సాక్షాత్తు మంత్ర స్వరూపిణివైన ఓ మహాలక్ష్మీ! నీకు సదా ప్రణామములు.'
+            telugu: 'సిద్ధిబుద్ధిప్రదే దేవి భుక్తిముక్తిప్రదాయిని |\nమంత్రమూర్తే సదా దేవి మహాలక్ష్మి నమోఽస్తు తే || 4 ||',
+            transliteration: 'Siddhi Buddhiprade Devi Bhuktimuktipradayini |\nMantramurte Sada Devi Mahalakshmi Namostute || 4 ||'
           },
           {
             id: 'la-ash-5',
-            telugu: 'ఆద్యంతరహితే దేవి ఆద్యశక్తి మహేశ్వరి |\nయోగజ్ఞే యోగసంభూతే మహాలక్ష్మి నమోఽస్తు తే || 5 ||',
-            transliteration: 'Aadyantarahite Devi Aadyashakti Maheshwari | Yogajne Yogasambhoote Mahalakshmi Namostute || 5 ||',
-            meaning: 'ఆది అంతము లేనిదానా, ఆదిశక్తి స్వరూపిణివైన మహేశ్వరీ, యోగము తెలిసిన ఓ మహాలక్ష్మీ! నీకు నమస్కారములు.'
+            telugu: 'ఆద్యంతరహితే దేవి ఆద్యశక్తి మహేశ్వరి |\nయోగజే యోగసంభూతే మహాలక్ష్మి నమోఽస్తు తే || 5 ||',
+            transliteration: 'Aadyantarahite Devi Aadyashakti Maheshwari |\nYogaje Yogasambhoote Mahalakshmi Namostute || 5 ||'
           },
           {
             id: 'la-ash-6',
-            telugu: 'స్థూలసూక్ష్మ మహారౌద్రే మహాశక్తి మహోదరే |\nమహాపాపహరే దేవి మహాలక్ష్మి నమోఽస్తు తే || 6 ||',
-            transliteration: 'Sthoolasookshma Maharaudre Mahashakti Mahodare | Mahapapahare Devi Mahalakshmi Namostute || 6 ||',
-            meaning: 'స్థూల, సూక్ష్మ రూపములు కలదానా, మహాశక్తిమంతురాలా, మహాపాపాలను నశింపజేయు ఓ మహాలక్ష్మీ! నీకు ప్రణామములు.'
+            telugu: 'స్థూలసూక్ష్మమహారౌద్రే మహాశక్తి మహోదరే |\nమహాపాపహరే దేవి మహాలక్ష్మి నమోఽస్తు తే || 6 ||',
+            transliteration: 'Sthoolasookshmamahaaraudre Mahashakti Mahodare |\nMahapapahare Devi Mahalakshmi Namostute || 6 ||'
           },
           {
             id: 'la-ash-7',
-            telugu: 'పద్మాసనస్థితే దేవి పరబ్రహ్మ స్వరూపిణి |\nపరమేశి జగన్మాతః మహాలక్ష్మి నమోఽస్తు తే || 7 ||',
-            transliteration: 'Padmasanasthite Devi Parabrahma Swaroopini | Parameshi Jaganmatah Mahalakshmi Namostute || 7 ||',
-            meaning: 'కమలాసనమునందు ఆసీనురాలైనదానా, పరబ్రహ్మ స్వరూపిణి, సకల జగన్మాతవైన ఓ మహాలక్ష్మీ! నీకు నమస్కారములు.'
+            telugu: 'పద్మాసనస్థితే దేవి పరబ్రహ్మస్వరూపిణి |\nపరమేశి జగన్మాతః మహాలక్ష్మి నమోఽస్తు తే || 7 ||',
+            transliteration: 'Padmasanasthite Devi Parabrahmaswaroopini |\nParameshi Jaganmatah Mahalakshmi Namostute || 7 ||'
           },
           {
             id: 'la-ash-8',
-            telugu: 'శ్వేతాంబరధరే దేవి నానాలంకార భూషితే |\nజగత్స్థితే జగన్మాతః మహాలక్ష్మి నమోఽస్తు తే || 8 ||',
-            transliteration: 'Shwetambaradhare Devi Nanalankara Bhooshite | Jagatsthite Jaganmatah Mahalakshmi Namostute || 8 ||',
-            meaning: 'శ్వేత వస్త్రములను ధరించినదానా, సమస్త ఆభరణాలచే అలంకరింపబడిన జగన్మాతవైన ఓ మహాలక్ష్మీ! నీకు సదా నమస్కారములు.'
+            telugu: 'శ్వేతాంబరధరే దేవి నానాలంకారభూషితే |\nజగత్స్థితే జగన్మాతః మహాలక్ష్మి నమోఽస్తు తే || 8 ||',
+            transliteration: 'Shwetambaradhare Devi Nanalankarabhooshite |\nJagatsthite Jaganmatah Mahalakshmi Namostute || 8 ||'
           },
           {
             id: 'la-ash-9',
-            telugu: 'ఫలశ్రుతి:\nమహాలక్ష్మ్యష్టకం స్తోత్రం యః పఠేద్భక్తిమాన్నరః |\nసర్వసిద్ధిమవాప్నోతి రాజ్యం ప్రాప్నోతి సర్వదా ||\nఏకకాలే పఠేన్నిత్యం మహాపాపవినాశనమ్ |\nద్వికాలం యః పఠేన్నిత్యం ధనధాన్యసమన్వితః |\nత్రికాలం యః పఠేన్నిత్యం మహాశత్రువినాశనమ్ |\nమహాలక్ష్మీర్భవేన్నిత్యం ప్రసన్నా వరదా శుభా ||',
-            transliteration: 'Phalashruti: Mahalakshmyashtakam Stotram Yah Pathedbhaktiman Narah | Sarvasiddhim Avapnoti Rajyam Prapnoti Sarvada ||',
-            meaning: 'ఈ మహాలక్ష్మ్యష్టకాన్ని భక్తితో పఠించినవారికి సమస్త సిద్ధులు, ధనధాన్యాలు, సంపూర్ణ అమ్మవారి కటాక్షం కలుగును.'
+            telugu: 'మహాలక్ష్మ్యష్టకం స్తోత్రం యః పఠేద్భక్తిమాన్నరః |\nసర్వసిద్ధిమవాప్నోతి రాజ్యం ప్రాప్నోతి సర్వదా ||\nఏకకాలే పఠేన్నిత్యం మహాపాపవినాశనమ్ |\nద్వికాలం యః పఠేన్నిత్యం ధనధాన్యసమన్వితః ||\nత్రికాలం యః పఠేన్నిత్యం మహాశత్రువినాశనమ్ |\nమహాలక్ష్మీర్భవేన్నిత్యం ప్రసన్నా వరదా శుభా ||',
+            transliteration: 'Mahalakshmyashtakam Stotram Yah Pathedbhaktiman Narah | Sarvasiddhim Avapnoti Rajyam Prapnoti Sarvada ||',
+            meaning: 'ఈ మహాలక్ష్మి అష్టకాన్ని నిత్యం భక్తితో పఠించే భక్తులకు సకల సిద్ధులు, ధనధాన్య సమృద్ధి, శత్రు జయం లభించును.'
           }
         ]
       }
     ]
   },
-
-  // 17. MALIKAPURATHAMMA POOJA (శబరిమల అమ్మవారు)
+  // 17. MALIKAPURATHAMMA POOJA
   {
     id: 'malikapurathamma-pooja',
     titleTelugu: '17. మాళికాపురత్తమ్మ దేవి పూజ',
-    titleEnglish: 'Malikapurathamma Devi Pooja',
+    titleEnglish: 'Malikapurathamma Pooja',
     subtitle: 'శబరిమల మంజమ్మ దేవి ధ్యానం, అష్టోత్తరం & స్తుతి',
-    icon: 'Sparkle',
+    icon: 'Sparkles',
     durationMinutes: 7,
-    featured: true,
+    featured: false,
     category: 'ammavaru',
     sections: [
       {
-        title: 'మాళికాపురత్తు మంజమ్మ దేవి ధ్యానం',
-        description: 'అయ్యప్ప స్వామి సన్నిధానం చెంత కొలువై ఉన్న మాతృమూర్తి ఆరాధన',
+        title: 'మాళికాపురత్తమ్మ ధ్యానం & స్తుతి',
         mantras: [
           {
             id: 'ma-1',
-            telugu: 'మాళికాపురత్తు మంజమ్మ దేవి లోకమాతావే శరణం అయ్యప్ప |\nశ్రీ రాజరాజేశ్వరి స్వరూపిణ్యై నమః |\nసర్వమంగళ మాంగల్యే శివే సర్వార్థ సాధికే |\nశరణ్యే త్ర్యంబకే గౌరి నారాయణి నమోఽస్తు తే ||',
-            transliteration: 'Malikapurathu Manjamma Devi Lokamathave Saranam Ayyappa | Shri Rajarajeshwari Swaroopinyai Namah | Sarvamangala Mangalye Shive Sarvartha Sadhike | Sharanye Tryambake Gauri Narayani Namostute ||',
-            meaning: 'సకల లోకములకు మాతృమూర్తియైన మాళికాపురత్తమ్మ దేవికి నమస్కారములు. సమస్త మంగళములను కూర్చు శుభకారిణివైన గౌరీ దేవికి ప్రణామములు.'
+            telugu: 'మాళికాపురత్తమ్మే మహాదేవి శరణం |\nశబరీగిరి వాసిని మంజమ్మే శరణం |\nఅయ్యప్ప సోదరి ఆదిపరాశక్తి |\nభక్తుల బ్రోచే భవభయహారిణి శరణం ||',
+            transliteration: 'Malikapurathamme Mahadevi Saranam |\nSabarigiri Vasini Manjamme Saranam |\nAyyappa Sodari Aadiparashakti |\nBhaktula Broche Bhavabhayaharini Saranam ||'
           },
           {
             id: 'ma-2',
-            telugu: 'ఓం మంగళరూపిణ్యై నమః | ఓం శబరిపీఠవాసిన్యై నమః | ఓం భక్తసౌభాగ్యదాయై నమః | ఓం మంజమ్మ దేవ్యై నమః ||',
-            transliteration: 'Om Mangalaroopinyai Namah | Om Sabaripeethavasinyai Namah | Om Bhaktasaubhagyadayai Namah | Om Manjamma Devyai Namah ||'
+            telugu: 'ఓం శ్రీ మాళికాపురత్తు మంజమ్మ దేవ్యై నమః |\nఓం సర్వమంగళ ప్రదాయిన్యై నమః |\nఓం భక్తసంరక్షణ తత్పరాయై నమః |\nఓం శబరిమల వాసిన్యై నమః ||',
+            transliteration: 'Om Shri Malikapurathu Manjamma Devyai Namah | Om Sarvamangala Pradayinyai Namah ||'
           }
         ]
       }
     ]
   },
-
-  // 18. AMMAVARI MANGALA HARATHI
+  // 18. AMMAVARI HARATHI
   {
     id: 'ammavari-harathi',
     titleTelugu: '18. అమ్మవారి మంగళ హారతులు',
@@ -798,20 +3684,18 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
         mantras: [
           {
             id: 'amh-1',
-            telugu: 'జయ జయ దేవి మహాలక్ష్మి మంగళ హారతి గైకొనుమా |\nకమలవాసిని కరుణామయి మా ఇంట సిరులు నింపుమమ్మా ||\nరత్న ఖచిత కిరీటధారిణి శంఖ చక్ర హస్తములా |\nభక్త జనార్తి నివారిణి మంగళ హారతి గైకొనుమా ||\n|| జయ మంగళం నిత్య శుభ మంగళం ||',
-            transliteration: 'Jaya Jaya Devi Mahalakshmi Mangala Harathi Gaikonuma | Kamalavasini Karunamayi Maa Inta Sirulu Nimpumamma ||'
+            telugu: 'జయ మంగళం జగన్మాతకు మంగళం |\nశ్రీ మహాలక్ష్మి అమ్మవారికి దివ్య మంగళం |\nభక్త రక్షణ భవభయ నాశిని |\nముక్తి ప్రదాయిని మంగళ హారతి ||',
+            transliteration: 'Jaya Mangalam Jaganmataku Mangalam | Shri Mahalakshmi Ammavariki Divya Mangalam ||'
           },
           {
             id: 'amh-2',
-            telugu: 'భాగ్యద లక్ష్మి బారమ్మ నమ్మమ్మ నీ సౌభాగ్యద లక్ష్మి బారమ్మ |\nహెజ్జెయ మేలే హెజ్జెయనిక్కుత గజ్జెయ కాల్గల ధ్వనియను మాడుత |\nభాగ్యద లక్ష్మి బారమ్మ ||',
-            transliteration: 'Bhagyada Lakshmi Baramma Nammamma Nee Saubhagyada Lakshmi Baramma | Hejjeya Mele Hejjeyanikkuta Gajjeya Kaalgala Dhvaniyanu Maduta | Bhagyada Lakshmi Baramma ||',
-            meaning: 'సౌభాగ్యాన్ని ప్రసాదించే ఓ లక్ష్మీ దేవీ, నీ చిరుగజ్జెల సవ్వడులతో మా గృహమునకు విజయము చేయుమమ్మా.'
+            telugu: 'సర్వమంగళ మాంగళ్యే శివే సర్వార్థ సాధికే |\nశరణ్యే త్ర్యంబకే గౌరి నారాయణి నమోఽస్తు తే ||',
+            transliteration: 'Sarvamangala Mangalye Shive Sarvartha Sadhike |\nSharanye Tryambake Gauri Narayani Namostute ||'
           }
         ]
       }
     ]
   },
-
   // 19. KANAKADHARA STOTRAM
   {
     id: 'kanakadhara-stotram',
@@ -820,62 +3704,1705 @@ export const POOJA_CATEGORIES: PoojaCategory[] = [
     subtitle: 'శ్రీ ఆదిశంకరాచార్య విరచిత స్వర్ణవృష్టి దివ్య స్తోత్రం',
     icon: 'Sparkles',
     durationMinutes: 10,
-    featured: true,
+    featured: false,
     category: 'ammavaru',
     sections: [
       {
         title: 'కనకధారా స్తోత్ర శ్లోకములు',
-        description: 'దారిద్ర్య నివారణార్థం శ్రీ మహాలక్ష్మి కటాక్ష సిద్ధి స్తోత్రం',
         mantras: [
           {
             id: 'kd-1',
-            telugu: 'అంగం హరేః పులకభూషణమాశ్రయంతీ\nభృంగాంగనేవ ముకులాభరణం తమాలమ్ |\nఅంగీకృతాఖిల విభూతిరపాంగలీలా\nమాంగళ్యదాస్తు మమ మంగళదేవతాయాః || 1 ||',
-            transliteration: 'Angam Hareh Pulakabhooshanam Aasrayantee Bhringanganeva Mukulabharanam Tamalam | Angeekritaakhila Vibhootir Apaangaleela Maangalyadaastu Mama Mangaladevataayaah || 1 ||',
-            meaning: 'తమాలా వృక్షాన్ని ఆశ్రయించిన భ్రమరం వలె శ్రీహరి వక్షఃస్థలాన్ని ఆశ్రయించి ఉన్న లక్ష్మీదేవి కటాక్షం నాకు సమస్త మంగళములను ప్రసాదించుగాక.'
+            telugu: 'అంగం హరేః పులకభూషణమాశ్రయంతీ\nభృంగాంగనేవ ముకుళాభరణం తమాలమ్ |\nఅంగీకృతాఖిల విభూతిరపాంగలీలా\nమాంగళ్యదాస్తు మమ మంగళదేవతాయాః || 1 ||',
+            transliteration: 'Angam Hareh Pulakabhooshanam Aashrayanti Bhringanganeva Mukulabharanam Tamalam |\nAngeekritakhila Vibhootirapangaleela Mangalyadastu Mama Mangaladevataayah || 1 ||'
           },
           {
             id: 'kd-2',
             telugu: 'ముగ్ధా ముహుర్విదధతీ వదనే మురారేః\nప్రేమత్రపాప్రణిహితాని గతాగతాని |\nమాలా దృశోర్మధుకరీవ మహోత్పలే యా\nసా మే శ్రియం దిశతు సాగరసంభవాయాః || 2 ||',
-            transliteration: 'Mugdha Muhur Vidadhati Vadane Murareh Prematrapapranihitani Gatagatani | Mala Drishor Madhukareeva Mahotpale Ya Sa Me Shriyam Dishatu Sagarasambhavayah || 2 ||',
-            meaning: 'మురారి ముఖారవిందంపై ప్రేమతో, సిగ్గుతో కదలాడే సముద్రరాజ తనయ లక్ష్మీదేవి చూపులు నాకు సకల సంపదలను అనుగ్రహించుగాక.'
+            transliteration: 'Mugdha Muhurvidadhati Vadane Murareh Prematrapapranihitani Gatagatani |\nMala Drishormadhukareeva Mahotpale Ya Sa Me Shriyam Dishatu Sagarasambhavayah || 2 ||'
           },
           {
             id: 'kd-3',
             telugu: 'విశ్వామరేంద్ర పదవిభ్రమ దానదక్షం\nఆనందహేతురధికం మురవిద్విషోఽపి |\nఈషన్నిషీదతు మయి క్షణమీక్షణార్థం\nఇందీవరోదర సహోదరమిందిరాయాః || 3 ||',
-            transliteration: 'Vishwamarendra Pada Vibhrama Danadaksham Ananda Hetur Adhikam Muravidvishopi | Eeshannasheedatu Mayi Kshanameekshanartham Indeevarodara Sahodaram Indirayah || 3 ||',
-            meaning: 'దేవేంద్ర పదవినైనా ఇవ్వగల సామర్థ్యం గల ఇందిరాదేవి కరుణాకటాక్ష వీక్షణం నాపై ప్రసరించుగాక.'
+            transliteration: 'Vishwamarendra Pada Vibhrama Danadaksham Ananda Hetur Adhikam Muravidvishopi |\nEeshannasheedatu Mayi Kshanameekshanartham Indeevarodara Sahodaram Indirayah || 3 ||'
           }
         ]
       }
     ]
   },
-
-  // 20. DURGA ASHTOTTARAM
+  // 20. DURGA ASHTOTTARAM (108 Complete)
   {
     id: 'durga-ashtottaram',
     titleTelugu: '20. శ్రీ దుర్గా అష్టోత్తర శత నామావళి',
     titleEnglish: 'Sri Durga Ashtottaram',
     subtitle: 'దుర్గతి నాశిని శ్రీ దుర్గాదేవి 108 దివ్య నామావళి',
     icon: 'ShieldCheck',
-    durationMinutes: 10,
+    durationMinutes: 12,
     featured: false,
     category: 'ammavaru',
     sections: [
       {
-        title: 'శ్రీ దుర్గాష్టోత్తర శత నామావళి',
-        description: 'సకల శత్రు, రోగ, భయ నివారణకై దుర్గా నామస్మరణ',
+        title: 'శ్రీ దుర్గాష్టోత్తర శత నామావళి (108)',
+        description: 'సకల శత్రు, రోగ, భయ నివారణకై దుర్గా నామస్మరణ పుష్పార్చన',
         mantras: [
-          { id: 'da-1', telugu: 'ఓం దుర్గాయై నమః', transliteration: 'Om Durgayai Namah' },
-          { id: 'da-2', telugu: 'ఓం శివాయై నమః', transliteration: 'Om Shivayai Namah' },
-          { id: 'da-3', telugu: 'ఓం మహాలక్ష్మ్యై నమః', transliteration: 'Om Mahalakshmyai Namah' },
-          { id: 'da-4', telugu: 'ఓం మహావిద్యాయై నమః', transliteration: 'Om Mahavidyayai Namah' },
-          { id: 'da-5', telugu: 'ఓం భవాన్యై నమః', transliteration: 'Om Bhavanyai Namah' },
-          { id: 'da-6', telugu: 'ఓం చండికాయై నమః', transliteration: 'Om Chandikayai Namah' },
-          { id: 'da-7', telugu: 'ఓం కాళ్యై నమః', transliteration: 'Om Kalyai Namah' },
-          { id: 'da-8', telugu: 'ఓం భద్రకాళ్యై నమః', transliteration: 'Om Bhadrakalyai Namah' },
-          { id: 'da-9', telugu: 'ఓం జగన్మాత్రే నమః', transliteration: 'Om Jaganmatre Namah' },
-          { id: 'da-10', telugu: 'ఓం సర్వమంగళాయై నమః', transliteration: 'Om Sarvamangalayai Namah' }
-        ]
+          {
+                    "id": "da-1",
+                    "telugu": "1. ఓం దుర్గాయై నమః",
+                    "transliteration": "1. Om Durgayai Namah"
+          },
+          {
+                    "id": "da-2",
+                    "telugu": "2. ఓం శివాయై నమః",
+                    "transliteration": "2. Om Shivayai Namah"
+          },
+          {
+                    "id": "da-3",
+                    "telugu": "3. ఓం మహాలక్ష్మ్యై నమః",
+                    "transliteration": "3. Om Mahalakshmyai Namah"
+          },
+          {
+                    "id": "da-4",
+                    "telugu": "4. ఓం మహావిద్యాయై నమః",
+                    "transliteration": "4. Om Mahavidyayai Namah"
+          },
+          {
+                    "id": "da-5",
+                    "telugu": "5. ఓం భవాన్యై నమః",
+                    "transliteration": "5. Om Bhavanyai Namah"
+          },
+          {
+                    "id": "da-6",
+                    "telugu": "6. ఓం చండికాయై నమః",
+                    "transliteration": "6. Om Chandikayai Namah"
+          },
+          {
+                    "id": "da-7",
+                    "telugu": "7. ఓం కాళ్యై నమః",
+                    "transliteration": "7. Om Kalyai Namah"
+          },
+          {
+                    "id": "da-8",
+                    "telugu": "8. ఓం భద్రకాళ్యై నమః",
+                    "transliteration": "8. Om Bhadrakalyai Namah"
+          },
+          {
+                    "id": "da-9",
+                    "telugu": "9. ఓం జగన్మాత్రే నమః",
+                    "transliteration": "9. Om Jaganmatre Namah"
+          },
+          {
+                    "id": "da-10",
+                    "telugu": "10. ఓం సర్వమంగళాయై నమః",
+                    "transliteration": "10. Om Sarvamangalayai Namah"
+          },
+          {
+                    "id": "da-11",
+                    "telugu": "11. ఓం కాత్యాయన్యై నమః",
+                    "transliteration": "11. Om Katyayanyai Namah"
+          },
+          {
+                    "id": "da-12",
+                    "telugu": "12. ఓం మహాగాయత్ర్యై నమః",
+                    "transliteration": "12. Om Mahagayatryai Namah"
+          },
+          {
+                    "id": "da-13",
+                    "telugu": "13. ఓం కల్యాణ్యై నమః",
+                    "transliteration": "13. Om Kalyanyai Namah"
+          },
+          {
+                    "id": "da-14",
+                    "telugu": "14. ఓం కమలాక్ష్యై నమః",
+                    "transliteration": "14. Om Kamalakshyai Namah"
+          },
+          {
+                    "id": "da-15",
+                    "telugu": "15. ఓం శాంతాయై నమః",
+                    "transliteration": "15. Om Shantayai Namah"
+          },
+          {
+                    "id": "da-16",
+                    "telugu": "16. ఓం బ్రాహ్మ్యై నమః",
+                    "transliteration": "16. Om Brahmyai Namah"
+          },
+          {
+                    "id": "da-17",
+                    "telugu": "17. ఓం మాహేశ్వర్యై నమః",
+                    "transliteration": "17. Om Maheshwaryai Namah"
+          },
+          {
+                    "id": "da-18",
+                    "telugu": "18. ఓం కౌమార్యై నమః",
+                    "transliteration": "18. Om Koumaryai Namah"
+          },
+          {
+                    "id": "da-19",
+                    "telugu": "19. ఓం వైష్ణవ్యై నమః",
+                    "transliteration": "19. Om Vaishnavyai Namah"
+          },
+          {
+                    "id": "da-20",
+                    "telugu": "20. ఓం వారాహ్యై నమః",
+                    "transliteration": "20. Om Varahyai Namah"
+          },
+          {
+                    "id": "da-21",
+                    "telugu": "21. ఓం మాహేంద్రయై నమః",
+                    "transliteration": "21. Om Mahendryai Namah"
+          },
+          {
+                    "id": "da-22",
+                    "telugu": "22. ఓం చాముండాయై నమః",
+                    "transliteration": "22. Om Chamundayai Namah"
+          },
+          {
+                    "id": "da-23",
+                    "telugu": "23. ఓం అపర్ణాయై నమః",
+                    "transliteration": "23. Om Aparnayai Namah"
+          },
+          {
+                    "id": "da-24",
+                    "telugu": "24. ఓం పాటలాయై నమః",
+                    "transliteration": "24. Om Patalayai Namah"
+          },
+          {
+                    "id": "da-25",
+                    "telugu": "25. ఓం ఉమాయై నమః",
+                    "transliteration": "25. Om Umayai Namah"
+          },
+          {
+                    "id": "da-26",
+                    "telugu": "26. ఓం సర్వజ్ఞాయై నమః",
+                    "transliteration": "26. Om Sarvajnyayai Namah"
+          },
+          {
+                    "id": "da-27",
+                    "telugu": "27. ఓం సర్వలోకేశ్వర్యై నమః",
+                    "transliteration": "27. Om Sarvalokeshwaryai Namah"
+          },
+          {
+                    "id": "da-28",
+                    "telugu": "28. ఓం సర్వశాస్త్రమయ్యై నమః",
+                    "transliteration": "28. Om Sarvashastramayyai Namah"
+          },
+          {
+                    "id": "da-29",
+                    "telugu": "29. ఓం నిత్యానందాయై నమః",
+                    "transliteration": "29. Om Nityanandayai Namah"
+          },
+          {
+                    "id": "da-30",
+                    "telugu": "30. ఓం భక్తవత్సలాయై నమః",
+                    "transliteration": "30. Om Bhaktavatsalayai Namah"
+          },
+          {
+                    "id": "da-31",
+                    "telugu": "31. ఓం కపాలమాలికాయై నమః",
+                    "transliteration": "31. Om Kapalamalikayai Namah"
+          },
+          {
+                    "id": "da-32",
+                    "telugu": "32. ఓం త్రిపురసుందర్యై నమః",
+                    "transliteration": "32. Om Tripurasundaryai Namah"
+          },
+          {
+                    "id": "da-33",
+                    "telugu": "33. ఓం రాజరాజేశ్వర్యై నమః",
+                    "transliteration": "33. Om Rajarajeshwaryai Namah"
+          },
+          {
+                    "id": "da-34",
+                    "telugu": "34. ఓం లలితాయై నమః",
+                    "transliteration": "34. Om Lalitayai Namah"
+          },
+          {
+                    "id": "da-35",
+                    "telugu": "35. ఓం మంగళప్రదాయై నమః",
+                    "transliteration": "35. Om Mangalaprada Namah"
+          },
+          {
+                    "id": "da-36",
+                    "telugu": "36. ఓం సర్వపాపహరాయై నమః",
+                    "transliteration": "36. Om Sarvapapaharayai Namah"
+          },
+          {
+                    "id": "da-37",
+                    "telugu": "37. ఓం సర్వదుఃఖప్రశమన్యై నమః",
+                    "transliteration": "37. Om Sarvadukhaprashamanyai Namah"
+          },
+          {
+                    "id": "da-38",
+                    "telugu": "38. ఓం సర్వశత్రువినాశిన్యై నమః",
+                    "transliteration": "38. Om Sarvashatruvinashinyai Namah"
+          },
+          {
+                    "id": "da-39",
+                    "telugu": "39. ఓం మహిషాసురమర్దిన్యై నమః",
+                    "transliteration": "39. Om Mahishasuramardinyai Namah"
+          },
+          {
+                    "id": "da-40",
+                    "telugu": "40. ఓం శుంభనిశుంభహంత్య్రై నమః",
+                    "transliteration": "40. Om Shumbhanishumbhahantryai Namah"
+          },
+          {
+                    "id": "da-41",
+                    "telugu": "41. ఓం రక్తబీజవధోద్యుక్తాయై నమః",
+                    "transliteration": "41. Om Raktabeejavadhodyuktayai Namah"
+          },
+          {
+                    "id": "da-42",
+                    "telugu": "42. ఓం మధుకైటభఘాతిన్యై నమః",
+                    "transliteration": "42. Om Madhukaitabhaghatinyai Namah"
+          },
+          {
+                    "id": "da-43",
+                    "telugu": "43. ఓం సింహవాహిన్యై నమః",
+                    "transliteration": "43. Om Simhavahinyai Namah"
+          },
+          {
+                    "id": "da-44",
+                    "telugu": "44. ఓం త్రిశూలధారిణ్యై నమః",
+                    "transliteration": "44. Om Trishooladharinyai Namah"
+          },
+          {
+                    "id": "da-45",
+                    "telugu": "45. ఓం ఖడ్గహస్తాయై నమః",
+                    "transliteration": "45. Om Khadgahastayai Namah"
+          },
+          {
+                    "id": "da-46",
+                    "telugu": "46. ఓం చక్రహస్తాయై నమః",
+                    "transliteration": "46. Om Chakrahastayai Namah"
+          },
+          {
+                    "id": "da-47",
+                    "telugu": "47. ఓం గదాధారిణ్యై నమః",
+                    "transliteration": "47. Om Gadadharinyai Namah"
+          },
+          {
+                    "id": "da-48",
+                    "telugu": "48. ఓం ధనుర్బాణధరాయై నమః",
+                    "transliteration": "48. Om Dhanurbanadharayai Namah"
+          },
+          {
+                    "id": "da-49",
+                    "telugu": "49. ఓం వరదాభయహస్తాయై నమః",
+                    "transliteration": "49. Om Varadabhayahastayai Namah"
+          },
+          {
+                    "id": "da-50",
+                    "telugu": "50. ఓం జగద్ధాత్రిణ్యై నమః",
+                    "transliteration": "50. Om Jagaddhatrinyai Namah"
+          },
+          {
+                    "id": "da-51",
+                    "telugu": "51. ఓం పరమేశ్వర్యై నమః",
+                    "transliteration": "51. Om Parameshwaaryai Namah"
+          },
+          {
+                    "id": "da-52",
+                    "telugu": "52. ఓం నిరంజనాయై నమః",
+                    "transliteration": "52. Om Niranjanai Namah"
+          },
+          {
+                    "id": "da-53",
+                    "telugu": "53. ఓం నిష్కళంకాయై నమః",
+                    "transliteration": "53. Om Nishkalankayai Namah"
+          },
+          {
+                    "id": "da-54",
+                    "telugu": "54. ఓం నిత్యాయై నమః",
+                    "transliteration": "54. Om Nityayai Namah"
+          },
+          {
+                    "id": "da-55",
+                    "telugu": "55. ఓం సత్యాయై నమః",
+                    "transliteration": "55. Om Satyai Namah"
+          },
+          {
+                    "id": "da-56",
+                    "telugu": "56. ఓం జ్ఞానగమ్యాయై నమః",
+                    "transliteration": "56. Om Jnanagamyayai Namah"
+          },
+          {
+                    "id": "da-57",
+                    "telugu": "57. ఓం ఆనందరూపిణ్యై నమః",
+                    "transliteration": "57. Om Aanandaroopinyai Namah"
+          },
+          {
+                    "id": "da-58",
+                    "telugu": "58. ఓం ఆదిశక్తయే నమః",
+                    "transliteration": "58. Om Aadishaktaye Namah"
+          },
+          {
+                    "id": "da-59",
+                    "telugu": "59. ఓం పరాశక్తయే నమః",
+                    "transliteration": "59. Om Parashaktaye Namah"
+          },
+          {
+                    "id": "da-60",
+                    "telugu": "60. ఓం మాయాదేవ్యై నమః",
+                    "transliteration": "60. Om Mayadevyai Namah"
+          },
+          {
+                    "id": "da-61",
+                    "telugu": "61. ఓం విష్ణుమాయాయై నమః",
+                    "transliteration": "61. Om Vishnumayayai Namah"
+          },
+          {
+                    "id": "da-62",
+                    "telugu": "62. ఓం చేతనాయై నమః",
+                    "transliteration": "62. Om Chetanayai Namah"
+          },
+          {
+                    "id": "da-63",
+                    "telugu": "63. ఓం బుద్ధిరూపాయై నమః",
+                    "transliteration": "63. Om Buddhiroopayai Namah"
+          },
+          {
+                    "id": "da-64",
+                    "telugu": "64. ఓం ధృతిరూపాయై నమః",
+                    "transliteration": "64. Om Dhritiroopayai Namah"
+          },
+          {
+                    "id": "da-65",
+                    "telugu": "65. ఓం స్మృతిరూపాయై నమః",
+                    "transliteration": "65. Om Smritiroopayai Namah"
+          },
+          {
+                    "id": "da-66",
+                    "telugu": "66. ఓం శ్రద్ధారూపాయై నమః",
+                    "transliteration": "66. Om Shraddharoopayai Namah"
+          },
+          {
+                    "id": "da-67",
+                    "telugu": "67. ఓం కాంతిరూపాయై నమః",
+                    "transliteration": "67. Om Kantiroopayai Namah"
+          },
+          {
+                    "id": "da-68",
+                    "telugu": "68. ఓం శాంతిరూపాయై నమః",
+                    "transliteration": "68. Om Shantiroopayai Namah"
+          },
+          {
+                    "id": "da-69",
+                    "telugu": "69. ఓం తుష్టిరూపాయై నమః",
+                    "transliteration": "69. Om Tushthiroopayai Namah"
+          },
+          {
+                    "id": "da-70",
+                    "telugu": "70. ఓం పుష్టిరూపాయై నమః",
+                    "transliteration": "70. Om Pushtiroopayai Namah"
+          },
+          {
+                    "id": "da-71",
+                    "telugu": "71. ఓం దయారూపాయై నమః",
+                    "transliteration": "71. Om Dayaroopayai Namah"
+          },
+          {
+                    "id": "da-72",
+                    "telugu": "72. ఓం లజ్జారూపాయై నమః",
+                    "transliteration": "72. Om Lajjaroopayai Namah"
+          },
+          {
+                    "id": "da-73",
+                    "telugu": "73. ఓం క్షాంతిరూపాయై నమః",
+                    "transliteration": "73. Om Kshantiroopayai Namah"
+          },
+          {
+                    "id": "da-74",
+                    "telugu": "74. ఓం జాతిరూపాయై నమః",
+                    "transliteration": "74. Om Jaatiroopayai Namah"
+          },
+          {
+                    "id": "da-75",
+                    "telugu": "75. ఓం వ్యాప్తిరూపాయై నమః",
+                    "transliteration": "75. Om Vyaptiroopayai Namah"
+          },
+          {
+                    "id": "da-76",
+                    "telugu": "76. ఓం చేతనాత్మికాయై నమః",
+                    "transliteration": "76. Om Chetanatmikayai Namah"
+          },
+          {
+                    "id": "da-77",
+                    "telugu": "77. ఓం సర్వసౌభాగ్యదాయై నమః",
+                    "transliteration": "77. Om Sarvasoubhagyadayai Namah"
+          },
+          {
+                    "id": "da-78",
+                    "telugu": "78. ఓం ధనధాన్యసమృద్ధిదాయై నమః",
+                    "transliteration": "78. Om Dhanadhanyasamriddhidayai Namah"
+          },
+          {
+                    "id": "da-79",
+                    "telugu": "79. ఓం ఆయురారోగ్యదాయై నమః",
+                    "transliteration": "79. Om Aayurarogyadayai Namah"
+          },
+          {
+                    "id": "da-80",
+                    "telugu": "80. ఓం మోక్షప్రదాయై నమః",
+                    "transliteration": "80. Om Mokshapradayai Namah"
+          },
+          {
+                    "id": "da-81",
+                    "telugu": "81. ఓం ధర్మనిష్ఠాయై నమః",
+                    "transliteration": "81. Om Dharmanishthayai Namah"
+          },
+          {
+                    "id": "da-82",
+                    "telugu": "82. ఓం వేదమాత్రే నమః",
+                    "transliteration": "82. Om Vedamatre Namah"
+          },
+          {
+                    "id": "da-83",
+                    "telugu": "83. ఓం యజ్ఞరూపాయై నమః",
+                    "transliteration": "83. Om Yajnaroopayai Namah"
+          },
+          {
+                    "id": "da-84",
+                    "telugu": "84. ఓం స్వర్గద్వారాయై నమః",
+                    "transliteration": "84. Om Swargadwarayai Namah"
+          },
+          {
+                    "id": "da-85",
+                    "telugu": "85. ఓం అమృతవర్షిణ్యై నమః",
+                    "transliteration": "85. Om Amritavarshinyai Namah"
+          },
+          {
+                    "id": "da-86",
+                    "telugu": "86. ఓం పుణ్యవర్ధన్యై నమః",
+                    "transliteration": "86. Om Punyavardhanyai Namah"
+          },
+          {
+                    "id": "da-87",
+                    "telugu": "87. ఓం శోకనాశిన్యై నమః",
+                    "transliteration": "87. Om Shokanashinyai Namah"
+          },
+          {
+                    "id": "da-88",
+                    "telugu": "88. ఓం తాపత్రయనివారిణ్యై నమః",
+                    "transliteration": "88. Om Tapatrayanivarinyai Namah"
+          },
+          {
+                    "id": "da-89",
+                    "telugu": "89. ఓం సకలమనోరథసిద్ధిదాయై నమః",
+                    "transliteration": "89. Om Sakalamanorithasiddhidayai Namah"
+          },
+          {
+                    "id": "da-90",
+                    "telugu": "90. ఓం అష్టైశ్వర్యప్రదాయిన్యై నమః",
+                    "transliteration": "90. Om Ashtaishwaryapradayinyai Namah"
+          },
+          {
+                    "id": "da-91",
+                    "telugu": "91. ఓం కలికల్మషనాశిన్యై నమః",
+                    "transliteration": "91. Om Kalikalmashanashinyai Namah"
+          },
+          {
+                    "id": "da-92",
+                    "telugu": "92. ఓం భవానీశంకరీప్రియాయై నమః",
+                    "transliteration": "92. Om Bhavaneeshankaripriyayai Namah"
+          },
+          {
+                    "id": "da-93",
+                    "telugu": "93. ఓం పార్వత్యై నమః",
+                    "transliteration": "93. Om Parvatyai Namah"
+          },
+          {
+                    "id": "da-94",
+                    "telugu": "94. ఓం హిమవత్పుత్ర్యై నమః",
+                    "transliteration": "94. Om Himavatputryai Namah"
+          },
+          {
+                    "id": "da-95",
+                    "telugu": "95. ఓం మేనకాత్మజాయై నమః",
+                    "transliteration": "95. Om Menakatmajayai Namah"
+          },
+          {
+                    "id": "da-96",
+                    "telugu": "96. ఓం రుద్రాణ్యై నమః",
+                    "transliteration": "96. Om Rudranyai Namah"
+          },
+          {
+                    "id": "da-97",
+                    "telugu": "97. ఓం శర్వాణ్యై నమః",
+                    "transliteration": "97. Om Sharvanyai Namah"
+          },
+          {
+                    "id": "da-98",
+                    "telugu": "98. ఓం మంగళకారిణ్యై నమః",
+                    "transliteration": "98. Om Mangalakarinyai Namah"
+          },
+          {
+                    "id": "da-99",
+                    "telugu": "99. ఓం సర్వమంగళమాంగళ్యాయై నమః",
+                    "transliteration": "99. Om Sarvamangalamangalyayai Namah"
+          },
+          {
+                    "id": "da-100",
+                    "telugu": "100. ఓం శివే సర్వార్థసాధికాయై నమః",
+                    "transliteration": "100. Om Shive Sarwarthasadhikayai Namah"
+          },
+          {
+                    "id": "da-101",
+                    "telugu": "101. ఓం శరణ్యాయై త్ర్యంబకాయై గౌర్యై నమః",
+                    "transliteration": "101. Om Sharanyayai Tryambakayai Gouryai Namah"
+          },
+          {
+                    "id": "da-102",
+                    "telugu": "102. ఓం నారాయణ్యై నమోఽస్తుతే నమః",
+                    "transliteration": "102. Om Narayanayai Namostute Namah"
+          },
+          {
+                    "id": "da-103",
+                    "telugu": "103. ఓం దుర్గతిప్రశమన్యై నమః",
+                    "transliteration": "103. Om Durgatiprashamanyai Namah"
+          },
+          {
+                    "id": "da-104",
+                    "telugu": "104. ఓం ఆపదుద్ధారిణ్యై నమః",
+                    "transliteration": "104. Om Aapaduddharinyai Namah"
+          },
+          {
+                    "id": "da-105",
+                    "telugu": "105. ఓం సకలభయనాశిన్యై నమః",
+                    "transliteration": "105. Om Sakalabhayanashinyai Namah"
+          },
+          {
+                    "id": "da-106",
+                    "telugu": "106. ఓం జయదుర్గాయై నమః",
+                    "transliteration": "106. Om Jayadurgayai Namah"
+          },
+          {
+                    "id": "da-107",
+                    "telugu": "107. ఓం కనకదుర్గాయై నమః",
+                    "transliteration": "107. Om Kanakadurgayai Namah"
+          },
+          {
+                    "id": "da-108",
+                    "telugu": "108. ఓం శ్రీ దుర్గా పరమేశ్వర్యై నమః నమః",
+                    "transliteration": "108. Om Shri Durga Parameshwaryai Namah Namah"
+          }
+]
+      }
+    ]
+  },
+  // 21. SARASWATI ASHTOTTARAM (108 Complete)
+  {
+    id: 'saraswati-ashtottaram',
+    titleTelugu: '21. శ్రీ సరస్వతీ అష్టోత్తర శత నామావళి',
+    titleEnglish: 'Sri Saraswati Ashtottaram',
+    subtitle: 'విద్యాబుద్ధి ప్రదాయిని శ్రీ సరస్వతీ దేవి 108 దివ్య నామావళి',
+    icon: 'BookOpen',
+    durationMinutes: 12,
+    featured: false,
+    category: 'ammavaru',
+    sections: [
+      {
+        title: 'శ్రీ సరస్వతీ అష్టోత్తర శత నామావళి (108)',
+        description: 'జ్ఞాన, విద్యా, వాక్ సిద్ధి ప్రదాయిని పుష్పార్చన',
+        mantras: [
+          {
+                    "id": "sa-1",
+                    "telugu": "1. ఓం సరస్వత్యై నమః",
+                    "transliteration": "1. Om Saraswatyai Namah"
+          },
+          {
+                    "id": "sa-2",
+                    "telugu": "2. ఓం మహాభద్రాయై నమః",
+                    "transliteration": "2. Om Mahabhadrayai Namah"
+          },
+          {
+                    "id": "sa-3",
+                    "telugu": "3. ఓం మహామాయాయై నమః",
+                    "transliteration": "3. Om Mahamayayai Namah"
+          },
+          {
+                    "id": "sa-4",
+                    "telugu": "4. ఓం వరప్రదాయై నమః",
+                    "transliteration": "4. Om Varapradayai Namah"
+          },
+          {
+                    "id": "sa-5",
+                    "telugu": "5. ఓం శ్రీప్రదాయై నమః",
+                    "transliteration": "5. Om Shripradayai Namah"
+          },
+          {
+                    "id": "sa-6",
+                    "telugu": "6. ఓం పద్మనిలయాయై నమః",
+                    "transliteration": "6. Om Padmanilayayai Namah"
+          },
+          {
+                    "id": "sa-7",
+                    "telugu": "7. ఓం పద్మాక్ష్యై నమః",
+                    "transliteration": "7. Om Padmakshyai Namah"
+          },
+          {
+                    "id": "sa-8",
+                    "telugu": "8. ఓం పద్మవక్త్రాయై నమః",
+                    "transliteration": "8. Om Padmavaktrayai Namah"
+          },
+          {
+                    "id": "sa-9",
+                    "telugu": "9. ఓం శివానుజాయై నమః",
+                    "transliteration": "9. Om Shivanujayai Namah"
+          },
+          {
+                    "id": "sa-10",
+                    "telugu": "10. ఓం పుస్తకభృతే నమః",
+                    "transliteration": "10. Om Pustakabhrite Namah"
+          },
+          {
+                    "id": "sa-11",
+                    "telugu": "11. ఓం జ్ఞానముద్రాయై నమః",
+                    "transliteration": "11. Om Jnanamudrayai Namah"
+          },
+          {
+                    "id": "sa-12",
+                    "telugu": "12. ఓం రమాయై నమః",
+                    "transliteration": "12. Om Ramayai Namah"
+          },
+          {
+                    "id": "sa-13",
+                    "telugu": "13. ఓం కామరూపాయై నమః",
+                    "transliteration": "13. Om Kamarupayai Namah"
+          },
+          {
+                    "id": "sa-14",
+                    "telugu": "14. ఓం మహావిద్యాయై నమః",
+                    "transliteration": "14. Om Mahavidyayai Namah"
+          },
+          {
+                    "id": "sa-15",
+                    "telugu": "15. ఓం మహాభోగాయై నమః",
+                    "transliteration": "15. Om Mahabhogayai Namah"
+          },
+          {
+                    "id": "sa-16",
+                    "telugu": "16. ఓం మహాభుజాయై నమః",
+                    "transliteration": "16. Om Mahabhujayai Namah"
+          },
+          {
+                    "id": "sa-17",
+                    "telugu": "17. ఓం మహాభాగ్యాయై నమః",
+                    "transliteration": "17. Om Mahabhagyayai Namah"
+          },
+          {
+                    "id": "sa-18",
+                    "telugu": "18. ఓం పుష్కరాక్ష్యై నమః",
+                    "transliteration": "18. Om Pushkarakshyai Namah"
+          },
+          {
+                    "id": "sa-19",
+                    "telugu": "19. ఓం హంసవాహనాయై నమః",
+                    "transliteration": "19. Om Hamsavahanayai Namah"
+          },
+          {
+                    "id": "sa-20",
+                    "telugu": "20. ఓం దివ్యాంగాయై నమః",
+                    "transliteration": "20. Om Divyangayai Namah"
+          },
+          {
+                    "id": "sa-21",
+                    "telugu": "21. ఓం సురవందితాయై నమః",
+                    "transliteration": "21. Om Suravanditayai Namah"
+          },
+          {
+                    "id": "sa-22",
+                    "telugu": "22. ఓం కాంతాయై నమః",
+                    "transliteration": "22. Om Kantayai Namah"
+          },
+          {
+                    "id": "sa-23",
+                    "telugu": "23. ఓం భారత్యై నమః",
+                    "transliteration": "23. Om Bharatyai Namah"
+          },
+          {
+                    "id": "sa-24",
+                    "telugu": "24. ఓం వాగ్దేవ్యై నమః",
+                    "transliteration": "24. Om Vagdevyai Namah"
+          },
+          {
+                    "id": "sa-25",
+                    "telugu": "25. ఓం శారదాయై నమః",
+                    "transliteration": "25. Om Sharadayai Namah"
+          },
+          {
+                    "id": "sa-26",
+                    "telugu": "26. ఓం వాణ్యై నమః",
+                    "transliteration": "26. Om Vanyai Namah"
+          },
+          {
+                    "id": "sa-27",
+                    "telugu": "27. ఓం వీణాధారిణ్యై నమః",
+                    "transliteration": "27. Om Veenadharinyai Namah"
+          },
+          {
+                    "id": "sa-28",
+                    "telugu": "28. ఓం శుభదాయై నమః",
+                    "transliteration": "28. Om Shubhadayai Namah"
+          },
+          {
+                    "id": "sa-29",
+                    "telugu": "29. ఓం బ్రాహ్మ్యై నమః",
+                    "transliteration": "29. Om Brahmyai Namah"
+          },
+          {
+                    "id": "sa-30",
+                    "telugu": "30. ఓం బ్రహ్మపత్న్యై నమః",
+                    "transliteration": "30. Om Brahmapatnyai Namah"
+          },
+          {
+                    "id": "sa-31",
+                    "telugu": "31. ఓం విష్ణుప్రియాయై నమః",
+                    "transliteration": "31. Om Vishnupriyayai Namah"
+          },
+          {
+                    "id": "sa-32",
+                    "telugu": "32. ఓం గాయత్ర్యై నమః",
+                    "transliteration": "32. Om Gayatryai Namah"
+          },
+          {
+                    "id": "sa-33",
+                    "telugu": "33. ఓం సావిత్ర్యై నమః",
+                    "transliteration": "33. Om Savitryai Namah"
+          },
+          {
+                    "id": "sa-34",
+                    "telugu": "34. ఓం జ్ఞానరూపాయై నమః",
+                    "transliteration": "34. Om Jnanarupayai Namah"
+          },
+          {
+                    "id": "sa-35",
+                    "telugu": "35. ఓం సర్వదేవనమస్కృతాయై నమః",
+                    "transliteration": "35. Om Sarvadevanamaskritayai Namah"
+          },
+          {
+                    "id": "sa-36",
+                    "telugu": "36. ఓం అక్షరాయై నమః",
+                    "transliteration": "36. Om Aksharayai Namah"
+          },
+          {
+                    "id": "sa-37",
+                    "telugu": "37. ఓం మాతృకాయై నమః",
+                    "transliteration": "37. Om Matrikayai Namah"
+          },
+          {
+                    "id": "sa-38",
+                    "telugu": "38. ఓం శ్రుతిరూపాయై నమః",
+                    "transliteration": "38. Om Shrutirupayai Namah"
+          },
+          {
+                    "id": "sa-39",
+                    "telugu": "39. ఓం స్మృతిరూపాయై నమః",
+                    "transliteration": "39. Om Smritirupayai Namah"
+          },
+          {
+                    "id": "sa-40",
+                    "telugu": "40. ఓం వేదగర్భాయై నమః",
+                    "transliteration": "40. Om Vedagarbhayai Namah"
+          },
+          {
+                    "id": "sa-41",
+                    "telugu": "41. ఓం సుందర్యై నమః",
+                    "transliteration": "41. Om Sundaryai Namah"
+          },
+          {
+                    "id": "sa-42",
+                    "telugu": "42. ఓం విద్యాధర్యై నమః",
+                    "transliteration": "42. Om Vidyadharyai Namah"
+          },
+          {
+                    "id": "sa-43",
+                    "telugu": "43. ఓం మేధాయై నమః",
+                    "transliteration": "43. Om Medhayai Namah"
+          },
+          {
+                    "id": "sa-44",
+                    "telugu": "44. ఓం బుద్ధ్యై నమః",
+                    "transliteration": "44. Om Buddhyai Namah"
+          },
+          {
+                    "id": "sa-45",
+                    "telugu": "45. ఓం ప్రజ్ఞాయై నమః",
+                    "transliteration": "45. Om Prajnyayai Namah"
+          },
+          {
+                    "id": "sa-46",
+                    "telugu": "46. ఓం శాంతాయై నమః",
+                    "transliteration": "46. Om Shantayai Namah"
+          },
+          {
+                    "id": "sa-47",
+                    "telugu": "47. ఓం సౌమ్యాయై నమః",
+                    "transliteration": "47. Om Saumyayai Namah"
+          },
+          {
+                    "id": "sa-48",
+                    "telugu": "48. ఓం వరారోహాయై నమః",
+                    "transliteration": "48. Om Vararohayai Namah"
+          },
+          {
+                    "id": "sa-49",
+                    "telugu": "49. ఓం శ్రుతిధరాయై నమః",
+                    "transliteration": "49. Om Shrutidharayai Namah"
+          },
+          {
+                    "id": "sa-50",
+                    "telugu": "50. ఓం సంగీతశాస్త్రజ్ఞాయై నమః",
+                    "transliteration": "50. Om Sangeetashastrajnyayai Namah"
+          },
+          {
+                    "id": "sa-51",
+                    "telugu": "51. ఓం కళారూపిణ్యై నమః",
+                    "transliteration": "51. Om Kalaroopinyai Namah"
+          },
+          {
+                    "id": "sa-52",
+                    "telugu": "52. ఓం మోక్షదాయై నమః",
+                    "transliteration": "52. Om Mokshadayai Namah"
+          },
+          {
+                    "id": "sa-53",
+                    "telugu": "53. ఓం పాపనాశిన్యై నమః",
+                    "transliteration": "53. Om Papanaashinyai Namah"
+          },
+          {
+                    "id": "sa-54",
+                    "telugu": "54. ఓం శుక్లవస్త్రాయై నమః",
+                    "transliteration": "54. Om Shuklavastrayai Namah"
+          },
+          {
+                    "id": "sa-55",
+                    "telugu": "55. ఓం స్ఫటికమాలాధారిణ్యై నమః",
+                    "transliteration": "55. Om Sphatikamaladharinyai Namah"
+          },
+          {
+                    "id": "sa-56",
+                    "telugu": "56. ఓం పరమానందాయై నమః",
+                    "transliteration": "56. Om Paramanandayai Namah"
+          },
+          {
+                    "id": "sa-57",
+                    "telugu": "57. ఓం సర్వార్థసాధికాయై నమః",
+                    "transliteration": "57. Om Sarwarthasadhikayai Namah"
+          },
+          {
+                    "id": "sa-58",
+                    "telugu": "58. ఓం సకలవిద్యాప్రదాయై నమః",
+                    "transliteration": "58. Om Sakalavidyapradayai Namah"
+          },
+          {
+                    "id": "sa-59",
+                    "telugu": "59. ఓం భక్తవత్సలాయై నమః",
+                    "transliteration": "59. Om Bhaktavatsalayai Namah"
+          },
+          {
+                    "id": "sa-60",
+                    "telugu": "60. ఓం కరుణామయై నమః",
+                    "transliteration": "60. Om Karunamayai Namah"
+          },
+          {
+                    "id": "sa-61",
+                    "telugu": "61. ఓం నిత్యాయై నమః",
+                    "transliteration": "61. Om Nityayai Namah"
+          },
+          {
+                    "id": "sa-62",
+                    "telugu": "62. ఓం నిరంజనాయై నమః",
+                    "transliteration": "62. Om Niranjanayai Namah"
+          },
+          {
+                    "id": "sa-63",
+                    "telugu": "63. ఓం నిష్కళంకాయై నమః",
+                    "transliteration": "63. Om Nishkalankayai Namah"
+          },
+          {
+                    "id": "sa-64",
+                    "telugu": "64. ఓం సర్వలోకపూజితాయై నమః",
+                    "transliteration": "64. Om Sarvalokapoojitayai Namah"
+          },
+          {
+                    "id": "sa-65",
+                    "telugu": "65. ఓం మహాదేవ్యై నమః",
+                    "transliteration": "65. Om Mahadevyai Namah"
+          },
+          {
+                    "id": "sa-66",
+                    "telugu": "66. ఓం విశాలాక్ష్యై నమః",
+                    "transliteration": "66. Om Vishalakshyai Namah"
+          },
+          {
+                    "id": "sa-67",
+                    "telugu": "67. ఓం చంద్రకాంతాయై నమః",
+                    "transliteration": "67. Om Chandrakantayai Namah"
+          },
+          {
+                    "id": "sa-68",
+                    "telugu": "68. ఓం సుధామయై నమః",
+                    "transliteration": "68. Om Sudhamayai Namah"
+          },
+          {
+                    "id": "sa-69",
+                    "telugu": "69. ఓం ఆద్యంతరహితాయై నమః",
+                    "transliteration": "69. Om Aadyantarahitayai Namah"
+          },
+          {
+                    "id": "sa-70",
+                    "telugu": "70. ఓం సర్వజ్ఞానమూర్తయే నమః",
+                    "transliteration": "70. Om Sarvajnanamurtaye Namah"
+          },
+          {
+                    "id": "sa-71",
+                    "telugu": "71. ఓం వేదవేదాంగపారగాయై నమః",
+                    "transliteration": "71. Om Vedavedangaparagayai Namah"
+          },
+          {
+                    "id": "sa-72",
+                    "telugu": "72. ఓం సరస్వతీ దేవియే నమః",
+                    "transliteration": "72. Om Saraswati Deviye Namah"
+          },
+          {
+                    "id": "sa-73",
+                    "telugu": "73. ఓం సాహిత్యప్రియాయై నమః",
+                    "transliteration": "73. Om Sahityapriyayai Namah"
+          },
+          {
+                    "id": "sa-74",
+                    "telugu": "74. ఓం సంగీతరసికాయై నమః",
+                    "transliteration": "74. Om Sangeetarasikayai Namah"
+          },
+          {
+                    "id": "sa-75",
+                    "telugu": "75. ఓం నాదరూపిణ్యై నమః",
+                    "transliteration": "75. Om Naadaroopinyai Namah"
+          },
+          {
+                    "id": "sa-76",
+                    "telugu": "76. ఓం ఓంకారరూపిణ్యై నమః",
+                    "transliteration": "76. Om Omkararoopinyai Namah"
+          },
+          {
+                    "id": "sa-77",
+                    "telugu": "77. ఓం మహామంత్రస్వరూపాయై నమః",
+                    "transliteration": "77. Om Mahamantraswaroopayai Namah"
+          },
+          {
+                    "id": "sa-78",
+                    "telugu": "78. ఓం కలియుగవరదాయై నమః",
+                    "transliteration": "78. Om Kaliyugavaradayai Namah"
+          },
+          {
+                    "id": "sa-79",
+                    "telugu": "79. ఓం అక్షరజ్ఞానప్రదాయై నమః",
+                    "transliteration": "79. Om Aksharajnanapradayai Namah"
+          },
+          {
+                    "id": "sa-80",
+                    "telugu": "80. ఓం మేధాశక్తిప్రదాయై నమః",
+                    "transliteration": "80. Om Medhashaktipradayai Namah"
+          },
+          {
+                    "id": "sa-81",
+                    "telugu": "81. ఓం వాక్ప్రదాయై నమః",
+                    "transliteration": "81. Om Vaakpradayai Namah"
+          },
+          {
+                    "id": "sa-82",
+                    "telugu": "82. ఓం చతుర్వేదస్వరూపాయై నమః",
+                    "transliteration": "82. Om Chaturvedaswaroopayai Namah"
+          },
+          {
+                    "id": "sa-83",
+                    "telugu": "83. ఓం అమృతవాణ్యై నమః",
+                    "transliteration": "83. Om Amritavanyai Namah"
+          },
+          {
+                    "id": "sa-84",
+                    "telugu": "84. ఓం శ్రుతిసంపన్నాయై నమః",
+                    "transliteration": "84. Om Shrutisampannayai Namah"
+          },
+          {
+                    "id": "sa-85",
+                    "telugu": "85. ఓం రత్నసింహాసనస్థితాయై నమః",
+                    "transliteration": "85. Om Ratnasimhasanasthitayai Namah"
+          },
+          {
+                    "id": "sa-86",
+                    "telugu": "86. ఓం శ్రీశైలశారదాయై నమః",
+                    "transliteration": "86. Om Shrishailasharadayai Namah"
+          },
+          {
+                    "id": "sa-87",
+                    "telugu": "87. ఓం శృంగేరీశారదాయై నమః",
+                    "transliteration": "87. Om Shringereeshadaayai Namah"
+          },
+          {
+                    "id": "sa-88",
+                    "telugu": "88. ఓం బాసరజ్ఞానసరస్వత్యై నమః",
+                    "transliteration": "88. Om Basara Jnaana Saraswatyai Namah"
+          },
+          {
+                    "id": "sa-89",
+                    "telugu": "89. ఓం జ్ఞానధాత్రిణ్యై నమః",
+                    "transliteration": "89. Om Jnanadhatrinyai Namah"
+          },
+          {
+                    "id": "sa-90",
+                    "telugu": "90. ఓం మోక్షలక్ష్మ్యై నమః",
+                    "transliteration": "90. Om Mokshalakshmyai Namah"
+          },
+          {
+                    "id": "sa-91",
+                    "telugu": "91. ఓం సమస్తభీతిహరాయై నమః",
+                    "transliteration": "91. Om Samastabheetiharayai Namah"
+          },
+          {
+                    "id": "sa-92",
+                    "telugu": "92. ఓం శుభంకార్యై నమః",
+                    "transliteration": "92. Om Shubhamkaryai Namah"
+          },
+          {
+                    "id": "sa-93",
+                    "telugu": "93. ఓం ధర్మనిలయాయై నమః",
+                    "transliteration": "93. Om Dharmanilayayai Namah"
+          },
+          {
+                    "id": "sa-94",
+                    "telugu": "94. ఓం అభయప్రదాయై నమః",
+                    "transliteration": "94. Om Abhayapradayai Namah"
+          },
+          {
+                    "id": "sa-95",
+                    "telugu": "95. ఓం మంత్రరూపాయై నమః",
+                    "transliteration": "95. Om Mantraroopayai Namah"
+          },
+          {
+                    "id": "sa-96",
+                    "telugu": "96. ఓం తంత్రరూపాయై నమః",
+                    "transliteration": "96. Om Tantraroopayai Namah"
+          },
+          {
+                    "id": "sa-97",
+                    "telugu": "97. ఓం యంత్రపూజితాయై నమః",
+                    "transliteration": "97. Om Yantrapoojitayai Namah"
+          },
+          {
+                    "id": "sa-98",
+                    "telugu": "98. ఓం కమలవాసిన్యై నమః",
+                    "transliteration": "98. Om Kamalavasinyai Namah"
+          },
+          {
+                    "id": "sa-99",
+                    "telugu": "99. ఓం హంసాసనాయై నమః",
+                    "transliteration": "99. Om Hamsasanayai Namah"
+          },
+          {
+                    "id": "sa-100",
+                    "telugu": "100. ఓం దేవమాత్రే నమః",
+                    "transliteration": "100. Om Devamatre Namah"
+          },
+          {
+                    "id": "sa-101",
+                    "telugu": "101. ఓం అఖిలాండేశ్వర్యై నమః",
+                    "transliteration": "101. Om Akhilandeshwaryai Namah"
+          },
+          {
+                    "id": "sa-102",
+                    "telugu": "102. ఓం సర్వమంగళాత్మికాయై నమః",
+                    "transliteration": "102. Om Sarvamangalatmikayai Namah"
+          },
+          {
+                    "id": "sa-103",
+                    "telugu": "103. ఓం పరబ్రహ్మస్వరూపిణ్యై నమః",
+                    "transliteration": "103. Om Parabrahmaswaroopinyai Namah"
+          },
+          {
+                    "id": "sa-104",
+                    "telugu": "104. ఓం నిత్యముక్తాయై నమః",
+                    "transliteration": "104. Om Nityamuktayai Namah"
+          },
+          {
+                    "id": "sa-105",
+                    "telugu": "105. ఓం సర్వలోకనమస్కృతాయై నమః",
+                    "transliteration": "105. Om Sarvalokanamaskritayai Namah"
+          },
+          {
+                    "id": "sa-106",
+                    "telugu": "106. ఓం శ్రీ విద్యాదేవ్యై నమః",
+                    "transliteration": "106. Om Shri Vidyadevyai Namah"
+          },
+          {
+                    "id": "sa-107",
+                    "telugu": "107. ఓం శ్రీ మహాసరస్వతీ దేవ్యై నమః",
+                    "transliteration": "107. Om Shri Mahasaraswati Devyai Namah"
+          },
+          {
+                    "id": "sa-108",
+                    "telugu": "108. ఓం శ్రీ శారదాంబికాయై నమః",
+                    "transliteration": "108. Om Shri Sharadambikayai Namah"
+          }
+]
+      }
+    ]
+  },
+  // 22. SHIVA ASHTOTTARAM (108 Complete)
+  {
+    id: 'shiva-ashtottaram',
+    titleTelugu: '22. శ్రీ శివ అష్టోత్తర శత నామావళి',
+    titleEnglish: 'Sri Shiva Ashtottaram',
+    subtitle: 'పరమశివుని 108 దివ్య లింగార్చన నామావళి',
+    icon: 'Sun',
+    durationMinutes: 12,
+    featured: false,
+    category: 'ayyappa',
+    sections: [
+      {
+        title: 'శ్రీ శివ అష్టోత్తర శత నామావళి (108)',
+        description: 'ఓం నమః శివాయ - బిల్వపత్రార్చన & పుష్పార్చన',
+        mantras: [
+          {
+                    "id": "shiva-1",
+                    "telugu": "1. ఓం శివాయ నమః",
+                    "transliteration": "1. Om Shiva Namah"
+          },
+          {
+                    "id": "shiva-2",
+                    "telugu": "2. ఓం మహేశ్వరాయ నమః",
+                    "transliteration": "2. Om Maheshwara Namah"
+          },
+          {
+                    "id": "shiva-3",
+                    "telugu": "3. ఓం శంభవే నమః",
+                    "transliteration": "3. Om Shambhu Namah"
+          },
+          {
+                    "id": "shiva-4",
+                    "telugu": "4. ఓం పినాకినే నమః",
+                    "transliteration": "4. Om Pinakine Namah"
+          },
+          {
+                    "id": "shiva-5",
+                    "telugu": "5. ఓం శశిశేఖరాయ నమః",
+                    "transliteration": "5. Om Shashishekhara Namah"
+          },
+          {
+                    "id": "shiva-6",
+                    "telugu": "6. ఓం వామదేవాయ నమః",
+                    "transliteration": "6. Om Vamadeva Namah"
+          },
+          {
+                    "id": "shiva-7",
+                    "telugu": "7. ఓం విరూపాక్షాయ నమః",
+                    "transliteration": "7. Om Virupaksha Namah"
+          },
+          {
+                    "id": "shiva-8",
+                    "telugu": "8. ఓం కపర్దినే నమః",
+                    "transliteration": "8. Om Kapardine Namah"
+          },
+          {
+                    "id": "shiva-9",
+                    "telugu": "9. ఓం నీలలోహితాయ నమః",
+                    "transliteration": "9. Om Neelalohita Namah"
+          },
+          {
+                    "id": "shiva-10",
+                    "telugu": "10. ఓం శంకరాయ నమః",
+                    "transliteration": "10. Om Shankara Namah"
+          },
+          {
+                    "id": "shiva-11",
+                    "telugu": "11. ఓం శూలపాణయే నమః",
+                    "transliteration": "11. Om Shulapanaye Namah"
+          },
+          {
+                    "id": "shiva-12",
+                    "telugu": "12. ఓం ఖట్వాంగినే నమః",
+                    "transliteration": "12. Om Khatwangine Namah"
+          },
+          {
+                    "id": "shiva-13",
+                    "telugu": "13. ఓం విష్ణువల్లభాయ నమః",
+                    "transliteration": "13. Om Vishnuvallabha Namah"
+          },
+          {
+                    "id": "shiva-14",
+                    "telugu": "14. ఓం శిపివిష్టాయ నమః",
+                    "transliteration": "14. Om Shipivishta Namah"
+          },
+          {
+                    "id": "shiva-15",
+                    "telugu": "15. ఓం అంబికానాథాయ నమః",
+                    "transliteration": "15. Om Ambikanatha Namah"
+          },
+          {
+                    "id": "shiva-16",
+                    "telugu": "16. ఓం శ్రీకంఠాయ నమః",
+                    "transliteration": "16. Om Shrikantha Namah"
+          },
+          {
+                    "id": "shiva-17",
+                    "telugu": "17. ఓం భక్తవత్సలాయ నమః",
+                    "transliteration": "17. Om Bhaktavatsala Namah"
+          },
+          {
+                    "id": "shiva-18",
+                    "telugu": "18. ఓం భవాయ నమః",
+                    "transliteration": "18. Om Bhava Namah"
+          },
+          {
+                    "id": "shiva-19",
+                    "telugu": "19. ఓం శర్వాయ నమః",
+                    "transliteration": "19. Om Sharva Namah"
+          },
+          {
+                    "id": "shiva-20",
+                    "telugu": "20. ఓం త్రిలోకేశాయ నమః",
+                    "transliteration": "20. Om Trilokesha Namah"
+          },
+          {
+                    "id": "shiva-21",
+                    "telugu": "21. ఓం శితికంఠాయ నమః",
+                    "transliteration": "21. Om Shitikantha Namah"
+          },
+          {
+                    "id": "shiva-22",
+                    "telugu": "22. ఓం శివాప్రియాయ నమః",
+                    "transliteration": "22. Om Shivapriya Namah"
+          },
+          {
+                    "id": "shiva-23",
+                    "telugu": "23. ఓం ఉగ్రాయ నమః",
+                    "transliteration": "23. Om Ugra Namah"
+          },
+          {
+                    "id": "shiva-24",
+                    "telugu": "24. ఓం కపాలినే నమః",
+                    "transliteration": "24. Om Kapaline Namah"
+          },
+          {
+                    "id": "shiva-25",
+                    "telugu": "25. ఓం కామారయే నమః",
+                    "transliteration": "25. Om Kamaraye Namah"
+          },
+          {
+                    "id": "shiva-26",
+                    "telugu": "26. ఓం అంధకాసురసూదనాయ నమః",
+                    "transliteration": "26. Om Andhakasurasoodana Namah"
+          },
+          {
+                    "id": "shiva-27",
+                    "telugu": "27. ఓం గంగాధరాయ నమః",
+                    "transliteration": "27. Om Gangadhara Namah"
+          },
+          {
+                    "id": "shiva-28",
+                    "telugu": "28. ఓం లలాటాక్షాయ నమః",
+                    "transliteration": "28. Om Lalataksha Namah"
+          },
+          {
+                    "id": "shiva-29",
+                    "telugu": "29. ఓం కాలకాలాయ నమః",
+                    "transliteration": "29. Om Kalakala Namah"
+          },
+          {
+                    "id": "shiva-30",
+                    "telugu": "30. ఓం కృపానిధయే నమః",
+                    "transliteration": "30. Om Kripanidhi Namah"
+          },
+          {
+                    "id": "shiva-31",
+                    "telugu": "31. ఓం భీమాయ నమః",
+                    "transliteration": "31. Om Bheema Namah"
+          },
+          {
+                    "id": "shiva-32",
+                    "telugu": "32. ఓం పరశుహస్తాయ నమః",
+                    "transliteration": "32. Om Parashuhasta Namah"
+          },
+          {
+                    "id": "shiva-33",
+                    "telugu": "33. ఓం మృగపాణయే నమః",
+                    "transliteration": "33. Om Mrigapanaye Namah"
+          },
+          {
+                    "id": "shiva-34",
+                    "telugu": "34. ఓం జటాధరాయ నమః",
+                    "transliteration": "34. Om Jatadhara Namah"
+          },
+          {
+                    "id": "shiva-35",
+                    "telugu": "35. ఓం కైలాసవాసినే నమః",
+                    "transliteration": "35. Om Kailasavasine Namah"
+          },
+          {
+                    "id": "shiva-36",
+                    "telugu": "36. ఓం కవచినే నమః",
+                    "transliteration": "36. Om Kavachine Namah"
+          },
+          {
+                    "id": "shiva-37",
+                    "telugu": "37. ఓం కఠోరాయ నమః",
+                    "transliteration": "37. Om Kathora Namah"
+          },
+          {
+                    "id": "shiva-38",
+                    "telugu": "38. ఓం త్రిపురాంతకాయ నమః",
+                    "transliteration": "38. Om Tripurantaka Namah"
+          },
+          {
+                    "id": "shiva-39",
+                    "telugu": "39. ఓం వృషాంకాయ నమః",
+                    "transliteration": "39. Om Vrishanka Namah"
+          },
+          {
+                    "id": "shiva-40",
+                    "telugu": "40. ఓం వృషభారూఢాయ నమః",
+                    "transliteration": "40. Om Vrishabharoodha Namah"
+          },
+          {
+                    "id": "shiva-41",
+                    "telugu": "41. ఓం భస్మోద్ధూళితవిగ్రహాయ నమః",
+                    "transliteration": "41. Om Bhasmoddhoolitavigraha Namah"
+          },
+          {
+                    "id": "shiva-42",
+                    "telugu": "42. ఓం సామప్రియాయ నమః",
+                    "transliteration": "42. Om Samapriya Namah"
+          },
+          {
+                    "id": "shiva-43",
+                    "telugu": "43. ఓం స్వరమయాయ నమః",
+                    "transliteration": "43. Om Swaramaya Namah"
+          },
+          {
+                    "id": "shiva-44",
+                    "telugu": "44. ఓం త్రయీమూర్తయే నమః",
+                    "transliteration": "44. Om Trayeemurtaye Namah"
+          },
+          {
+                    "id": "shiva-45",
+                    "telugu": "45. ఓం అనీశ్వరాయ నమః",
+                    "transliteration": "45. Om Aneeshwara Namah"
+          },
+          {
+                    "id": "shiva-46",
+                    "telugu": "46. ఓం సర్వజ్ఞాయ నమః",
+                    "transliteration": "46. Om Sarvajnya Namah"
+          },
+          {
+                    "id": "shiva-47",
+                    "telugu": "47. ఓం పరమాత్మనే నమః",
+                    "transliteration": "47. Om Paramatmane Namah"
+          },
+          {
+                    "id": "shiva-48",
+                    "telugu": "48. ఓం సోమసూర్యాగ్నిలోచనాయ నమః",
+                    "transliteration": "48. Om Somasooryagnilochana Namah"
+          },
+          {
+                    "id": "shiva-49",
+                    "telugu": "49. ఓం హవిషే నమః",
+                    "transliteration": "49. Om Havishe Namah"
+          },
+          {
+                    "id": "shiva-50",
+                    "telugu": "50. ఓం యజ్ఞమయాయ నమః",
+                    "transliteration": "50. Om Yajnamaya Namah"
+          },
+          {
+                    "id": "shiva-51",
+                    "telugu": "51. ఓం సోమాయ నమః",
+                    "transliteration": "51. Om Soma Namah"
+          },
+          {
+                    "id": "shiva-52",
+                    "telugu": "52. ఓం పంచవక్త్రాయ నమః",
+                    "transliteration": "52. Om Panchavaktra Namah"
+          },
+          {
+                    "id": "shiva-53",
+                    "telugu": "53. ఓం సదాశివాయ నమః",
+                    "transliteration": "53. Om Sadashiva Namah"
+          },
+          {
+                    "id": "shiva-54",
+                    "telugu": "54. ఓం విశ్వేశ్వరాయ నమః",
+                    "transliteration": "54. Om Vishweshwara Namah"
+          },
+          {
+                    "id": "shiva-55",
+                    "telugu": "55. ఓం వీరభద్రాయ నమః",
+                    "transliteration": "55. Om Veerabhadra Namah"
+          },
+          {
+                    "id": "shiva-56",
+                    "telugu": "56. ఓం గణనాథాయ నమః",
+                    "transliteration": "56. Om Gananatha Namah"
+          },
+          {
+                    "id": "shiva-57",
+                    "telugu": "57. ఓం ప్రజాపతయే నమః",
+                    "transliteration": "57. Om Prajapataye Namah"
+          },
+          {
+                    "id": "shiva-58",
+                    "telugu": "58. ఓం హిరణ్యరేతసే నమః",
+                    "transliteration": "58. Om Hiranyaretase Namah"
+          },
+          {
+                    "id": "shiva-59",
+                    "telugu": "59. ఓం దుర్ధర్షాయ నమః",
+                    "transliteration": "59. Om Durdharsha Namah"
+          },
+          {
+                    "id": "shiva-60",
+                    "telugu": "60. ఓం గిరీశాయ నమః",
+                    "transliteration": "60. Om Gireesha Namah"
+          },
+          {
+                    "id": "shiva-61",
+                    "telugu": "61. ఓం గిరిశాయ నమః",
+                    "transliteration": "61. Om Girisha Namah"
+          },
+          {
+                    "id": "shiva-62",
+                    "telugu": "62. ఓం అనఘాయ నమః",
+                    "transliteration": "62. Om Anagha Namah"
+          },
+          {
+                    "id": "shiva-63",
+                    "telugu": "63. ఓం భుజంగభూషణాయ నమః",
+                    "transliteration": "63. Om Bhujangabhooshana Namah"
+          },
+          {
+                    "id": "shiva-64",
+                    "telugu": "64. ఓం భర్గాయ నమః",
+                    "transliteration": "64. Om Bharga Namah"
+          },
+          {
+                    "id": "shiva-65",
+                    "telugu": "65. ఓం గిరిధన్వినే నమః",
+                    "transliteration": "65. Om Giridhanwine Namah"
+          },
+          {
+                    "id": "shiva-66",
+                    "telugu": "66. ఓం గిరిప్రియాయ నమః",
+                    "transliteration": "66. Om Giripriya Namah"
+          },
+          {
+                    "id": "shiva-67",
+                    "telugu": "67. ఓం కృత్తివాససే నమః",
+                    "transliteration": "67. Om Krittivasase Namah"
+          },
+          {
+                    "id": "shiva-68",
+                    "telugu": "68. ఓం పురారాతయే నమః",
+                    "transliteration": "68. Om Purarataye Namah"
+          },
+          {
+                    "id": "shiva-69",
+                    "telugu": "69. ఓం భగవతే నమః",
+                    "transliteration": "69. Om Bhagavate Namah"
+          },
+          {
+                    "id": "shiva-70",
+                    "telugu": "70. ఓం ప్రమథాధిపాయ నమః",
+                    "transliteration": "70. Om Pramathadhipa Namah"
+          },
+          {
+                    "id": "shiva-71",
+                    "telugu": "71. ఓం మృత్యుంజయాయ నమః",
+                    "transliteration": "71. Om Mrityunjaya Namah"
+          },
+          {
+                    "id": "shiva-72",
+                    "telugu": "72. ఓం సూక్ష్మతనవే నమః",
+                    "transliteration": "72. Om Sookshmatanave Namah"
+          },
+          {
+                    "id": "shiva-73",
+                    "telugu": "73. ఓం జగద్వ్యాపినే నమః",
+                    "transliteration": "73. Om Jagadvyapine Namah"
+          },
+          {
+                    "id": "shiva-74",
+                    "telugu": "74. ఓం జగద్గురవే నమః",
+                    "transliteration": "74. Om Jagadgurave Namah"
+          },
+          {
+                    "id": "shiva-75",
+                    "telugu": "75. ఓం వ్యోమకేశాయ నమః",
+                    "transliteration": "75. Om Vyomakesha Namah"
+          },
+          {
+                    "id": "shiva-76",
+                    "telugu": "76. ఓం మహాసేనజనకాయ నమః",
+                    "transliteration": "76. Om Mahasenajanakaya Namah"
+          },
+          {
+                    "id": "shiva-77",
+                    "telugu": "77. ఓం చారువిక్రమాయ నమః",
+                    "transliteration": "77. Om Charuvikrama Namah"
+          },
+          {
+                    "id": "shiva-78",
+                    "telugu": "78. ఓం రుద్రాయ నమః",
+                    "transliteration": "78. Om Rudra Namah"
+          },
+          {
+                    "id": "shiva-79",
+                    "telugu": "79. ఓం భూతపతయే నమః",
+                    "transliteration": "79. Om Bhootapataye Namah"
+          },
+          {
+                    "id": "shiva-80",
+                    "telugu": "80. ఓం స్థాణవే నమః",
+                    "transliteration": "80. Om Sthanave Namah"
+          },
+          {
+                    "id": "shiva-81",
+                    "telugu": "81. ఓం అహిర్భుధ్న్యాయ నమః",
+                    "transliteration": "81. Om Ahirbudhnyaya Namah"
+          },
+          {
+                    "id": "shiva-82",
+                    "telugu": "82. ఓం దిగంబరాయ నమః",
+                    "transliteration": "82. Om Digambara Namah"
+          },
+          {
+                    "id": "shiva-83",
+                    "telugu": "83. ఓం అష్టమూర్తయే నమః",
+                    "transliteration": "83. Om Ashtamurtaye Namah"
+          },
+          {
+                    "id": "shiva-84",
+                    "telugu": "84. ఓం అనేకాత్మనే నమః",
+                    "transliteration": "84. Om Anekatmane Namah"
+          },
+          {
+                    "id": "shiva-85",
+                    "telugu": "85. ఓం సాత్త్వికాయ నమః",
+                    "transliteration": "85. Om Sattwikaya Namah"
+          },
+          {
+                    "id": "shiva-86",
+                    "telugu": "86. ఓం శుద్ధవిగ్రహాయ నమః",
+                    "transliteration": "86. Om Shuddhavigraha Namah"
+          },
+          {
+                    "id": "shiva-87",
+                    "telugu": "87. ఓం శాశ్వతాయ నమః",
+                    "transliteration": "87. Om Shashwata Namah"
+          },
+          {
+                    "id": "shiva-88",
+                    "telugu": "88. ఓం ఖండపరశవే నమః",
+                    "transliteration": "88. Om Khandaparashave Namah"
+          },
+          {
+                    "id": "shiva-89",
+                    "telugu": "89. ఓం అజాయ నమః",
+                    "transliteration": "89. Om Ajaya Namah"
+          },
+          {
+                    "id": "shiva-90",
+                    "telugu": "90. ఓం పాశవిమోచకాయ నమః",
+                    "transliteration": "90. Om Pashavimochaka Namah"
+          },
+          {
+                    "id": "shiva-91",
+                    "telugu": "91. ఓం మృడాయ నమః",
+                    "transliteration": "91. Om Mrida Namah"
+          },
+          {
+                    "id": "shiva-92",
+                    "telugu": "92. ఓం పశుపతయే నమః",
+                    "transliteration": "92. Om Pashupataye Namah"
+          },
+          {
+                    "id": "shiva-93",
+                    "telugu": "93. ఓం దేవాయ నమః",
+                    "transliteration": "93. Om Devaya Namah"
+          },
+          {
+                    "id": "shiva-94",
+                    "telugu": "94. ఓం మహాదేవాయ నమః",
+                    "transliteration": "94. Om Mahadeva Namah"
+          },
+          {
+                    "id": "shiva-95",
+                    "telugu": "95. ఓం అవ్యయాయ నమః",
+                    "transliteration": "95. Om Avyayaya Namah"
+          },
+          {
+                    "id": "shiva-96",
+                    "telugu": "96. ఓం హరయే నమః",
+                    "transliteration": "96. Om Haraye Namah"
+          },
+          {
+                    "id": "shiva-97",
+                    "telugu": "97. ఓం పూషదంతభిదే నమః",
+                    "transliteration": "97. Om Pooshadantabhide Namah"
+          },
+          {
+                    "id": "shiva-98",
+                    "telugu": "98. ఓం అవ్యగ్రాయ నమః",
+                    "transliteration": "98. Om Avyagraya Namah"
+          },
+          {
+                    "id": "shiva-99",
+                    "telugu": "99. ఓం దక్షాధ్వరహరాయ నమః",
+                    "transliteration": "99. Om Dakshadhwarahara Namah"
+          },
+          {
+                    "id": "shiva-100",
+                    "telugu": "100. ఓం హరాయ నమః",
+                    "transliteration": "100. Om Haraya Namah"
+          },
+          {
+                    "id": "shiva-101",
+                    "telugu": "101. ఓం భగనేత్రభిదే నమః",
+                    "transliteration": "101. Om Bhaganetrabhide Namah"
+          },
+          {
+                    "id": "shiva-102",
+                    "telugu": "102. ఓం అవ్యక్తాయ నమః",
+                    "transliteration": "102. Om Avyaktaya Namah"
+          },
+          {
+                    "id": "shiva-103",
+                    "telugu": "103. ఓం సహస్రాక్షాయ నమః",
+                    "transliteration": "103. Om Sahasraksha Namah"
+          },
+          {
+                    "id": "shiva-104",
+                    "telugu": "104. ఓం సహస్రపదే నమః",
+                    "transliteration": "104. Om Sahasrapade Namah"
+          },
+          {
+                    "id": "shiva-105",
+                    "telugu": "105. ఓం అపవర్గప్రదాయ నమః",
+                    "transliteration": "105. Om Apavargaprada Namah"
+          },
+          {
+                    "id": "shiva-106",
+                    "telugu": "106. ఓం అనంతాయ నమః",
+                    "transliteration": "106. Om Ananta Namah"
+          },
+          {
+                    "id": "shiva-107",
+                    "telugu": "107. ఓం తారకాయ నమః",
+                    "transliteration": "107. Om Tarakaya Namah"
+          },
+          {
+                    "id": "shiva-108",
+                    "telugu": "108. ఓం పరమేశ్వరాయ నమః",
+                    "transliteration": "108. Om Parameshwara Namah"
+          }
+]
       }
     ]
   }

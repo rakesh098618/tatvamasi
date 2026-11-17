@@ -5,9 +5,9 @@ import {
   StyleSheet, 
   ScrollView, 
   TouchableOpacity, 
-  SafeAreaView,
   Image 
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Header } from '../../components/Header';
 import { COLORS } from '../../constants/theme';
@@ -23,7 +23,7 @@ export default function GuruScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
       <Header 
         title="శ్రీ గురుస్వామి సన్నిధి" 
         subtitle="దీక్షా గురువుల మార్గదర్శనం & నియమాలు"
@@ -41,17 +41,21 @@ export default function GuruScreen() {
                 resizeMode="cover"
               />
             </View>
-            <View style={styles.activeDot} />
           </View>
 
+          {/* Guru Swami Name */}
           <Text style={styles.guruName}>{GURU_SWAMI_DETAILS.name}</Text>
-          <Text style={styles.guruTitle}>{GURU_SWAMI_DETAILS.title}</Text>
+
+          {/* Location directly under Name */}
           {GURU_SWAMI_DETAILS.location && (
             <View style={styles.locationRow}>
-              <MapPin size={13} color={COLORS.gold} />
+              <MapPin size={14} color={COLORS.gold} />
               <Text style={styles.locationText}>{GURU_SWAMI_DETAILS.location}</Text>
             </View>
           )}
+
+          {/* Guru Title */}
+          <Text style={styles.guruTitle}>{GURU_SWAMI_DETAILS.title}</Text>
 
           <View style={styles.shlokaBox}>
             <Text style={styles.shlokaText}>
@@ -169,27 +173,32 @@ const styles = StyleSheet.create({
   guruName: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: COLORS.textGold,
-    marginBottom: 4,
-    textAlign: 'center',
-  },
-  guruTitle: {
-    fontSize: 13,
-    color: COLORS.textSecondary,
+    color: '#FFE29A',
     marginBottom: 6,
     textAlign: 'center',
+    letterSpacing: 0.5,
   },
   locationRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 4,
-    marginBottom: 14,
+    gap: 6,
+    backgroundColor: 'rgba(212, 175, 55, 0.12)',
+    paddingVertical: 4,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    marginBottom: 10,
   },
   locationText: {
-    fontSize: 12,
+    fontSize: 13,
     color: COLORS.goldLight,
     fontWeight: '600',
+  },
+  guruTitle: {
+    fontSize: 13,
+    color: COLORS.textSecondary,
+    marginBottom: 12,
+    textAlign: 'center',
   },
   shlokaBox: {
     backgroundColor: 'rgba(0,0,0,0.3)',

@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { Tabs } from 'expo-router';
 import { COLORS } from '../../constants/theme';
-import { Sparkles, HeartHandshake, Music, UserCheck } from 'lucide-react-native';
+import { Sparkles, HeartHandshake, Music, UserCheck, Flame } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -46,9 +46,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="bhajans"
         options={{
-          title: 'హరివరాసనం',
+          title: 'అష్టోత్తరాలు',
           tabBarIcon: ({ color, size }) => (
-            <Music color={color} size={size} />
+            <Flame color={color} size={size} />
           ),
         }}
       />
