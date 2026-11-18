@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { 
-  Image, 
-  StyleSheet, 
-  Text, 
-  View, 
-  TouchableOpacity, 
-  useWindowDimensions 
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  useWindowDimensions
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -52,13 +52,13 @@ export default function SplashScreen() {
       <StatusBar style="light" />
       <Stack.Screen options={{ animation: 'none' }} />
 
-      <TouchableOpacity 
-        style={styles.touchArea} 
-        activeOpacity={1} 
+      <TouchableOpacity
+        style={styles.touchArea}
+        activeOpacity={1}
         onPress={handlePressEnter}
       >
         <View style={styles.content}>
-          
+
           {/* 1. Top Sacred Sharanam Badge */}
           <View style={styles.topBadge}>
             <Flame size={12} color={COLORS.flameOrange} />
@@ -126,9 +126,9 @@ export default function SplashScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: '#0F0B06', 
+  container: {
+    flex: 1,
+    backgroundColor: '#0F0B06',
   },
   touchArea: {
     flex: 1,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     fontSize: 11.5,
     letterSpacing: 0.5,
   },
-  heading: { 
+  heading: {
     marginBottom: 10,
     paddingHorizontal: 8,
     justifyContent: 'center',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.3,
   },
   ayyappaCard: { 
-    width: '100%', 
+    width: '100%',
     backgroundColor: '#000',
     borderRadius: 16,
     borderWidth: 1.5,
@@ -192,11 +192,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
-  photo: { 
-    width: '100%', 
-    height: '100%', 
+  photo: {
+    width: '100%',
+    height: '100%',
   },
-  guruSection: { 
+  guruSection: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#1E140A',
@@ -223,12 +223,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     backgroundColor: '#0A0704',
   },
-  guruPhoto: { 
-    width: '100%', 
-    height: '100%', 
+  guruPhoto: {
+    width: '100%',
+    height: '100%',
   },
-  caption: { 
-    flex: 1, 
+  caption: {
+    flex: 1,
     justifyContent: 'center',
   },
   guruName: { 
