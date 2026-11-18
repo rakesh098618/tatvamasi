@@ -28,47 +28,47 @@ export const COLORS = {
 };
 
 export const FONTS = {
-  // Poppins - Premium Modern & Attractive Font Family for English
+  // Urbanist - Premium, Sophisticated & Modern Font Family for English
   heading: Platform.select({
-    ios: 'Poppins-Bold',
-    android: 'Poppins-Bold',
-    default: 'Poppins-Bold',
+    ios: 'Urbanist-Bold',
+    android: 'Urbanist-Bold',
+    default: 'Urbanist-Bold',
   }),
 
   subheading: Platform.select({
-    ios: 'Poppins-SemiBold',
-    android: 'Poppins-SemiBold',
-    default: 'Poppins-SemiBold',
+    ios: 'Urbanist-SemiBold',
+    android: 'Urbanist-SemiBold',
+    default: 'Urbanist-SemiBold',
   }),
 
   medium: Platform.select({
-    ios: 'Poppins-Medium',
-    android: 'Poppins-Medium',
-    default: 'Poppins-Medium',
+    ios: 'Urbanist-Medium',
+    android: 'Urbanist-Medium',
+    default: 'Urbanist-Medium',
   }),
 
   regular: Platform.select({
-    ios: 'Poppins-Regular',
-    android: 'Poppins-Regular',
-    default: 'Poppins-Regular',
+    ios: 'Urbanist-Regular',
+    android: 'Urbanist-Regular',
+    default: 'Urbanist-Regular',
   }),
 
-  // Devotional verses & transliteration in Poppins Medium
+  // Devotional verses & transliteration in Urbanist Medium
   devotionalSerif: Platform.select({
-    ios: 'Poppins-Medium',
-    android: 'Poppins-Medium',
-    default: 'Poppins-Medium',
+    ios: 'Urbanist-Medium',
+    android: 'Urbanist-Medium',
+    default: 'Urbanist-Medium',
   }),
 
   uiMedium: Platform.select({
-    ios: 'Poppins-SemiBold',
-    android: 'Poppins-SemiBold',
-    default: 'Poppins-SemiBold',
+    ios: 'Urbanist-SemiBold',
+    android: 'Urbanist-SemiBold',
+    default: 'Urbanist-SemiBold',
   }),
 
   uiRegular: Platform.select({
-    ios: 'Poppins-Regular',
-    android: 'Poppins-Regular',
-    default: 'Poppins-Regular',
+    ios: 'Urbanist-Regular',
+    android: 'Urbanist-Regular',
+    default: 'Urbanist-Regular',
   }),
 };
