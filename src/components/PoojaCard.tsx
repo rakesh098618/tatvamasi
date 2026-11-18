@@ -26,7 +26,7 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
   const isEnglish = language === 'en';
 
   const renderIcon = () => {
-    const iconProps = { size: 24, color: COLORS.gold };
+    const iconProps = { size: 22, color: COLORS.gold };
     switch (item.icon) {
       case 'Sun': return <Sun {...iconProps} />;
       case 'Flame': return <Flame {...iconProps} />;
@@ -53,7 +53,7 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
       </View>
       <View style={styles.textContainer}>
         <View style={styles.headerRow}>
-          <Text style={styles.titleTelugu}>
+          <Text style={[styles.cardTitle, { letterSpacing: isEnglish ? 0.35 : 0.2 }]}>
             {displayTitle}
           </Text>
           {item.featured && (
@@ -62,7 +62,9 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
             </View>
           )}
         </View>
-        <Text style={styles.subtitle}>{displaySubtitle}</Text>
+        <Text style={[styles.subtitle, { letterSpacing: isEnglish ? 0.25 : 0.1 }]}>
+          {displaySubtitle}
+        </Text>
       </View>
       <ChevronRight size={20} color={COLORS.gold} />
     </TouchableOpacity>
@@ -71,35 +73,35 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: COLORS.surface,
+    backgroundColor: '#1A1209',
     borderRadius: 16,
-    padding: 14,
+    padding: 15,
     marginBottom: 12,
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: COLORS.surfaceBorder,
+    borderWidth: 1.2,
+    borderColor: 'rgba(212, 175, 55, 0.22)',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
+    shadowOpacity: 0.35,
+    shadowRadius: 5,
     elevation: 3,
     overflow: 'hidden',
   },
   featuredCard: {
-    borderColor: COLORS.goldDark,
-    backgroundColor: COLORS.surfaceLight,
+    borderColor: 'rgba(212, 175, 55, 0.55)',
+    backgroundColor: '#24180C',
   },
   iconContainer: {
     width: 44,
     height: 44,
-    borderRadius: 12,
+    borderRadius: 13,
     backgroundColor: 'rgba(212, 175, 55, 0.12)',
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(212, 175, 55, 0.25)',
+    marginRight: 13,
+    borderWidth: 1.2,
+    borderColor: 'rgba(212, 175, 55, 0.32)',
     flexShrink: 0,
   },
   textContainer: {
@@ -112,30 +114,31 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 4,
   },
-  titleTelugu: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: COLORS.textPrimary,
+  cardTitle: {
+    fontSize: 16.5,
+    fontWeight: '700',
+    color: '#FFE29A', // Brilliant sacred temple gold
     flex: 1,
-    letterSpacing: 0.2,
+    lineHeight: 22,
   },
   subtitle: {
     fontSize: 12.5,
-    color: COLORS.textSecondary,
+    color: '#D4C4B2', // Warm readable champagne tone
     lineHeight: 18,
+    marginTop: 1,
   },
   badge: {
-    backgroundColor: 'rgba(212, 175, 55, 0.2)',
+    backgroundColor: 'rgba(249, 115, 22, 0.18)',
     paddingHorizontal: 8,
     paddingVertical: 3,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: COLORS.gold,
+    borderColor: 'rgba(249, 115, 22, 0.45)',
     marginLeft: 8,
   },
   badgeText: {
-    color: COLORS.gold,
-    fontSize: 11,
-    fontWeight: 'bold',
+    color: '#FFB84D',
+    fontSize: 10.5,
+    fontWeight: '700',
   },
 });

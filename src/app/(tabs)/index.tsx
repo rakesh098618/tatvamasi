@@ -15,7 +15,8 @@ import { Sparkles } from 'lucide-react-native';
 import { useLanguage } from '../../context/LanguageContext';
 
 export default function HomeScreen() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const isEnglish = language === 'en';
 
   const handleOpenPooja = (id: string) => {
     router.push({
@@ -28,7 +29,9 @@ export default function HomeScreen() {
     <View style={styles.topSection}>
       <View style={styles.sectionTitleRow}>
         <Sparkles size={16} color={COLORS.gold} />
-        <Text style={styles.sectionTitle}>{t('poojaOrderTitle')}</Text>
+        <Text style={[styles.sectionTitle, { letterSpacing: isEnglish ? 0.35 : 0.2 }]}>
+          {t('poojaOrderTitle')}
+        </Text>
       </View>
     </View>
   );
@@ -77,8 +80,8 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   sectionTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: COLORS.textGold,
+    fontSize: 16.5,
+    fontWeight: '700',
+    color: '#FFE29A',
   },
 });

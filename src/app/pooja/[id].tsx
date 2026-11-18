@@ -109,8 +109,8 @@ export default function PoojaDetailScreen() {
             </View>
           </View>
 
-          <Text style={styles.bannerTitle}>{currentTitle}</Text>
-          <Text style={styles.bannerSubtitle}>{currentSubtitle}</Text>
+          <Text style={[styles.bannerTitle, { letterSpacing: isEnglish ? 0.4 : 0.2 }]}>{currentTitle}</Text>
+          <Text style={[styles.bannerSubtitle, { letterSpacing: isEnglish ? 0.25 : 0.1 }]}>{currentSubtitle}</Text>
         </View>
 
         {bellRung && (
@@ -184,7 +184,7 @@ export default function PoojaDetailScreen() {
 
                       return (
                         <View key={mantra.id || mIndex} style={styles.mantraCard}>
-                          <Text style={[styles.mantraTelugu, { fontSize, lineHeight: fontSize * 1.6 }]}>
+                          <Text style={[styles.mantraTelugu, { fontSize, lineHeight: fontSize * 1.65, letterSpacing: isEnglish ? 0.35 : 0.2 }]}>
                             {displayMainText}
                           </Text>
 
@@ -198,7 +198,7 @@ export default function PoojaDetailScreen() {
                           {meaningText && (
                             <View style={styles.meaningBox}>
                               <Text style={styles.meaningLabel}>{t('meaningLabel')}</Text>
-                              <Text style={[styles.meaningText, { fontSize: Math.max(12, fontSize - 4) }]}>
+                              <Text style={[styles.meaningText, { fontSize: Math.max(12.5, fontSize - 3.5), letterSpacing: isEnglish ? 0.25 : 0.1 }]}>
                                 {meaningText}
                               </Text>
                             </View>
@@ -349,13 +349,13 @@ const styles = StyleSheet.create({
   bannerTitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: COLORS.textGold,
+    color: '#FFE29A',
     marginBottom: 6,
   },
   bannerSubtitle: {
-    fontSize: 13,
-    color: COLORS.textSecondary,
-    lineHeight: 18,
+    fontSize: 13.5,
+    color: '#D4C4B2',
+    lineHeight: 19,
   },
   bellAlert: {
     backgroundColor: '#2A1805',
@@ -394,9 +394,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   sectionTitle: {
-    fontSize: 15,
+    fontSize: 15.5,
     fontWeight: 'bold',
-    color: COLORS.textGold,
+    color: '#FFE29A',
     flex: 1,
   },
   accordionToggleBtn: {
@@ -476,21 +476,24 @@ const styles = StyleSheet.create({
   },
   meaningBox: {
     marginTop: 10,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    padding: 10,
-    borderRadius: 8,
-    borderLeftWidth: 2,
+    backgroundColor: 'rgba(212, 175, 55, 0.08)',
+    padding: 12,
+    borderRadius: 10,
+    borderLeftWidth: 3,
     borderLeftColor: COLORS.gold,
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.2)',
   },
   meaningLabel: {
-    fontSize: 11,
+    fontSize: 11.5,
     fontWeight: '700',
-    color: COLORS.gold,
-    marginBottom: 2,
+    color: '#FFE29A',
+    marginBottom: 4,
+    letterSpacing: 0.3,
   },
   meaningText: {
-    color: COLORS.textSecondary,
-    lineHeight: 18,
+    color: '#DDD0BE',
+    lineHeight: 20,
   },
   navRow: {
     flexDirection: 'row',

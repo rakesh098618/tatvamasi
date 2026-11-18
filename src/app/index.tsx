@@ -12,29 +12,23 @@ import { StatusBar } from 'expo-status-bar';
 import { router, Stack } from 'expo-router';
 import { GURU_SWAMI_DETAILS } from '../data/poojaData';
 import { COLORS } from '../constants/theme';
-import { Flame, MapPin, Sparkles, Globe } from 'lucide-react-native';
-import { useLanguage } from '../context/LanguageContext';
+import { Flame, MapPin, Sparkles } from 'lucide-react-native';
 
 export default function SplashScreen() {
   const [ayyappaLoaded, setAyyappaLoaded] = useState(false);
   const [guruLoaded, setGuruLoaded] = useState(false);
   const { height: screenHeight } = useWindowDimensions();
-  const { language, t, isFirstLaunch, openLanguageModal } = useLanguage();
-  const isEnglish = language === 'en';
 
   // Allow devotees to comfortably view Lord Ayyappa & Guru Swami's divine darshan
   useEffect(() => {
-    if (isFirstLaunch) return; // Do not auto-transition while first-launch language modal is open
-
     const safetyTimer = setTimeout(() => {
       router.replace('/(tabs)');
-    }, 4500);
+    }, 4000);
 
     return () => clearTimeout(safetyTimer);
-  }, [isFirstLaunch]);
+  }, []);
 
   useEffect(() => {
-    if (isFirstLaunch) return;
     if (!ayyappaLoaded || !guruLoaded) return;
 
     // Display darshan for 3.5 seconds before smoothly entering the app
@@ -43,13 +37,9 @@ export default function SplashScreen() {
     }, 3500);
 
     return () => clearTimeout(timer);
-  }, [ayyappaLoaded, guruLoaded, isFirstLaunch]);
+  }, [ayyappaLoaded, guruLoaded]);
 
   const handlePressEnter = () => {
-    if (isFirstLaunch) {
-      openLanguageModal();
-      return;
-    }
     router.replace('/(tabs)');
   };
 
@@ -57,30 +47,10 @@ export default function SplashScreen() {
   // Adaptive height calculated so text and image spacing is tight, balanced, and perfectly proportioned
   const ayyappaHeight = isSmallScreen ? screenHeight * 0.40 : screenHeight * 0.46;
 
-  const guruName = isEnglish 
-    ? (GURU_SWAMI_DETAILS.nameEnglish || GURU_SWAMI_DETAILS.name) 
-    : GURU_SWAMI_DETAILS.name;
-
-  const guruLocation = isEnglish 
-    ? (GURU_SWAMI_DETAILS.locationEnglish || GURU_SWAMI_DETAILS.location) 
-    : GURU_SWAMI_DETAILS.location;
-
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom', 'left', 'right']}>
       <StatusBar style="light" />
       <Stack.Screen options={{ animation: 'none' }} />
-
-      {/* Language Switch Button (Top Right) */}
-      <View style={styles.topBar}>
-        <TouchableOpacity 
-          style={styles.langPill} 
-          onPress={() => openLanguageModal()}
-          activeOpacity={0.8}
-        >
-          <Globe size={13} color={COLORS.gold} />
-          <Text style={styles.langPillText}>{language === 'te' ? 'English' : 'తెలుగు'}</Text>
-        </TouchableOpacity>
-      </View>
 
       <TouchableOpacity
         style={styles.touchArea}
@@ -92,14 +62,14 @@ export default function SplashScreen() {
           {/* 1. Top Sacred Sharanam Badge */}
           <View style={styles.topBadge}>
             <Flame size={12} color={COLORS.flameOrange} />
-            <Text style={styles.topBadgeText}>{t('omSharanam')}</Text>
+            <Text style={styles.topBadgeText}>స్వామియే శరణం అయ్యప్ప</Text>
             <Flame size={12} color={COLORS.flameOrange} />
           </View>
 
           {/* 2. Blessing Header (Directly above Lord Ayyappa) */}
           <View style={styles.heading}>
             <Text style={styles.blessing} adjustsFontSizeToFit numberOfLines={2}>
-              {t('blessingHeader')}
+              శ్రీ అయ్యప్ప స్వామి వారి దివ్య ఆశీస్సులతో
             </Text>
           </View>
 
@@ -112,7 +82,7 @@ export default function SplashScreen() {
               fadeDuration={0}
               onLoad={() => setAyyappaLoaded(true)}
               onError={() => setAyyappaLoaded(true)}
-              accessibilityLabel={t('ayyappa')}
+              accessibilityLabel="శ్రీ అయ్యప్ప స్వామి"
             />
           </View>
 
@@ -126,18 +96,18 @@ export default function SplashScreen() {
                 fadeDuration={0}
                 onLoad={() => setGuruLoaded(true)}
                 onError={() => setGuruLoaded(true)}
-                accessibilityLabel={guruName}
+                accessibilityLabel={GURU_SWAMI_DETAILS.name}
               />
             </View>
             <View style={styles.caption}>
               <Text style={styles.guruName} adjustsFontSizeToFit numberOfLines={1}>
-                {guruName}
+                {GURU_SWAMI_DETAILS.name}
               </Text>
-              {guruLocation && (
+              {GURU_SWAMI_DETAILS.location && (
                 <View style={styles.locationRow}>
                   <MapPin size={12} color={COLORS.gold} />
                   <Text style={styles.location} adjustsFontSizeToFit numberOfLines={1}>
-                    {guruLocation}
+                    {GURU_SWAMI_DETAILS.location}
                   </Text>
                 </View>
               )}
@@ -147,7 +117,7 @@ export default function SplashScreen() {
           {/* 5. Subtitle footer hint */}
           <View style={styles.footerHint}>
             <Sparkles size={11} color={COLORS.gold} />
-            <Text style={styles.footerText}>{t('enterApp')}</Text>
+            <Text style={styles.footerText}>ప్రవేశించుటకు ఎక్కడైనా తాకండి</Text>
             <Sparkles size={11} color={COLORS.gold} />
           </View>
 
@@ -161,30 +131,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0F0B06',
-  },
-  topBar: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    paddingHorizontal: 16,
-    paddingTop: 8,
-    zIndex: 10,
-  },
-  langPill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(212, 175, 55, 0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(212, 175, 55, 0.4)',
-    paddingHorizontal: 12,
-    paddingVertical: 5,
-    borderRadius: 16,
-  },
-  langPillText: {
-    color: COLORS.gold,
-    fontSize: 12,
-    fontWeight: 'bold',
-    letterSpacing: 0.3,
   },
   touchArea: {
     flex: 1,

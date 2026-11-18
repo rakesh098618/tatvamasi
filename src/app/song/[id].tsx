@@ -156,18 +156,18 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   title: { 
-    color: COLORS.textGold, 
-    fontSize: 20, 
+    color: '#FFE29A', 
+    fontSize: 21, 
     lineHeight: 32, 
     fontWeight: '700', 
     textAlign: 'center' 
   },
   card: { 
-    backgroundColor: COLORS.surface, 
+    backgroundColor: '#1A1209', 
     padding: 22, 
     borderRadius: 18, 
     borderWidth: 1.2, 
-    borderColor: COLORS.surfaceBorder,
+    borderColor: 'rgba(212, 175, 55, 0.25)', 
     marginTop: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   teluguOriginalTitle: {
     fontSize: 11,
     fontWeight: '700',
-    color: COLORS.gold,
+    color: '#FFE29A',
     marginBottom: 8,
     textAlign: 'center',
   },
@@ -220,20 +220,20 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   cardHeaderLabel: {
-    color: COLORS.goldLight,
+    color: '#FFE29A',
     fontSize: 13,
     fontWeight: 'bold',
     letterSpacing: 0.5,
   },
   divider: {
     height: 1,
-    backgroundColor: COLORS.surfaceBorder,
+    backgroundColor: 'rgba(212, 175, 55, 0.2)',
     marginBottom: 16,
   },
   lyrics: { 
-    color: COLORS.textPrimary, 
+    color: '#FFF8F0', 
     textAlign: 'center',
-    letterSpacing: 0.3,
+    fontWeight: '600',
   },
   footerBox: {
     marginTop: 24,

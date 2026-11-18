@@ -181,9 +181,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 21,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: COLORS.textGold,
+    color: '#FFE29A',
     letterSpacing: 0.5,
   },
   icon: {
@@ -191,8 +191,9 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 12.5,
-    color: COLORS.textSecondary,
+    color: '#D4C4B2',
     marginTop: 2,
+    letterSpacing: 0.2,
   },
   rightAction: {
     marginLeft: 12,

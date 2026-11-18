@@ -48,11 +48,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         if (storedLang === 'en' || storedLang === 'te') {
           setLanguageState(storedLang);
         }
-
-        if (!hasChosen && !storedLang) {
-          setIsFirstLaunch(true);
-          setShowLanguageModal(true);
-        }
       } catch (e) {
         console.error('Error loading language from AsyncStorage', e);
       } finally {
