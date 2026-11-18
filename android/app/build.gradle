@@ -93,9 +93,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.tatvamasi'
+    namespace 'com.tatvamasi.ayyappapooja'
     defaultConfig {
-        applicationId 'com.anonymous.tatvamasi'
+        applicationId 'com.tatvamasi.ayyappapooja'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

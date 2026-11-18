@@ -6,8 +6,9 @@ import {
   TouchableOpacity,
   Image,
   ActivityIndicator,
+  NativeModules,
+  Linking,
 } from 'react-native';
-import { Audio, AVPlaybackStatus } from 'expo-av';
 import { 
   Play, 
   Pause, 
@@ -15,44 +16,63 @@ import {
   FastForward, 
   Rewind, 
   Volume2, 
-  Sparkles,
-  Flame
+  Flame,
+  ExternalLink,
+  Sparkles
 } from 'lucide-react-native';
 import { COLORS, FONTS } from '../constants/theme';
 import { useLanguage } from '../context/LanguageContext';
+
+const REMOTE_AUDIO_STREAM = 'https://raw.githubusercontent.com/rakesh098618/tatvamasi/main/assets/audio/ayyappa_suprabhatham_yesudas.m4a';
+const OFFICIAL_STREAM_URL = 'https://www.youtube.com/watch?v=tXWpLc7kBKc';
 
 export const AyyappaAudioPlayer: React.FC = () => {
   const { language } = useLanguage();
   const isEnglish = language === 'en';
 
-  const [sound, setSound] = useState<Audio.Sound | null>(null);
+  // Check if native ExponentAV module is available in current build
+  const hasNativeAV = !!NativeModules.ExponentAV;
+
+  const [sound, setSound] = useState<any>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [positionMillis, setPositionMillis] = useState<number>(0);
-  const [durationMillis, setDurationMillis] = useState<number>(2405000); // ~40:05 default
+  const [durationMillis, setDurationMillis] = useState<number>(2405000); // ~40:05
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
-  const soundRef = useRef<Audio.Sound | null>(null);
+  const soundRef = useRef<any>(null);
 
   useEffect(() => {
-    // Configure audio mode for smooth background playback
-    Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
-      staysActiveInBackground: true,
-      playsInSilentModeIOS: true,
-      shouldDuckAndroid: true,
-      playThroughEarpieceAndroid: false,
-    }).catch(err => console.log('Audio mode error:', err));
+    if (!hasNativeAV) return;
+
+    let isMounted = true;
+
+    // Safely configure audio mode if native module is present
+    try {
+      const { Audio } = require('expo-av');
+      Audio.setAudioModeAsync({
+        allowsRecordingIOS: false,
+        staysActiveInBackground: true,
+        playsInSilentModeIOS: true,
+        shouldDuckAndroid: true,
+        playThroughEarpieceAndroid: false,
+      }).catch((err: any) => console.log('Audio mode error:', err));
+    } catch (err) {
+      console.log('expo-av not ready yet:', err);
+    }
 
     return () => {
+      isMounted = false;
       if (soundRef.current) {
-        soundRef.current.unloadAsync().catch(() => {});
+        try {
+          soundRef.current.unloadAsync().catch(() => {});
+        } catch {}
       }
     };
-  }, []);
+  }, [hasNativeAV]);
 
-  const onPlaybackStatusUpdate = (status: AVPlaybackStatus) => {
-    if (status.isLoaded) {
+  const onPlaybackStatusUpdate = (status: any) => {
+    if (status && status.isLoaded) {
       setPositionMillis(status.positionMillis);
       if (status.durationMillis) {
         setDurationMillis(status.durationMillis);
@@ -63,19 +83,20 @@ export const AyyappaAudioPlayer: React.FC = () => {
         setIsPlaying(false);
         setPositionMillis(0);
       }
-    } else if (status.error) {
+    } else if (status && status.error) {
       console.log('Playback status error:', status.error);
     }
   };
 
-  const loadAudio = async (): Promise<Audio.Sound | null> => {
+  const loadAudio = async (): Promise<any> => {
     if (soundRef.current) return soundRef.current;
+    if (!hasNativeAV) return null;
 
     setIsLoading(true);
     try {
-      const audioSource = require('../../assets/audio/ayyappa_suprabhatham_yesudas.m4a');
+      const { Audio } = require('expo-av');
       const { sound: newSound } = await Audio.Sound.createAsync(
-        audioSource,
+        { uri: REMOTE_AUDIO_STREAM },
         { shouldPlay: false, progressUpdateIntervalMillis: 500 },
         onPlaybackStatusUpdate
       );
@@ -92,11 +113,20 @@ export const AyyappaAudioPlayer: React.FC = () => {
   };
 
   const handleTogglePlay = async () => {
+    // If native module is not in the running binary, open official high-quality stream
+    if (!hasNativeAV) {
+      Linking.openURL(OFFICIAL_STREAM_URL).catch(() => {});
+      return;
+    }
+
     try {
       let activeSound = soundRef.current;
       if (!activeSound) {
         activeSound = await loadAudio();
-        if (!activeSound) return;
+        if (!activeSound) {
+          Linking.openURL(OFFICIAL_STREAM_URL).catch(() => {});
+          return;
+        }
       }
 
       if (isPlaying) {
@@ -106,6 +136,7 @@ export const AyyappaAudioPlayer: React.FC = () => {
       }
     } catch (e) {
       console.error('Playback error:', e);
+      Linking.openURL(OFFICIAL_STREAM_URL).catch(() => {});
     }
   };
 
@@ -131,7 +162,6 @@ export const AyyappaAudioPlayer: React.FC = () => {
   const handleProgressBarPress = async (event: any) => {
     if (!soundRef.current || durationMillis <= 0) return;
     const { locationX } = event.nativeEvent;
-    // Assume progress bar width approx 280-320
     const progressBarWidth = 280; 
     const ratio = Math.max(0, Math.min(1, locationX / progressBarWidth));
     const targetPos = ratio * durationMillis;
@@ -256,7 +286,7 @@ export const AyyappaAudioPlayer: React.FC = () => {
           activeOpacity={0.8}
         >
           {isLoading ? (
-            <ActivityIndicator size="small" color="#000" />
+            <ActivityIndicator size="small" color="#180F05" />
           ) : isPlaying ? (
             <Pause size={24} color="#180F05" />
           ) : (

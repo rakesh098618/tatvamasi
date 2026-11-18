@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { safeStorage } from '../utils/safeStorage';
 import { AppLanguage } from '../types';
 import { te } from '../locales/te';
 import { en } from '../locales/en';
@@ -42,14 +42,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     const loadStoredPreferences = async () => {
       try {
-        const storedLang = await AsyncStorage.getItem(LANGUAGE_STORAGE_KEY);
-        const hasChosen = await AsyncStorage.getItem(FIRST_LAUNCH_KEY);
-
+        const storedLang = await safeStorage.getItem(LANGUAGE_STORAGE_KEY);
         if (storedLang === 'en' || storedLang === 'te') {
           setLanguageState(storedLang);
         }
-      } catch (e) {
-        console.error('Error loading language from AsyncStorage', e);
+      } catch {
+        // Fallback silently to default 'te'
       } finally {
         setIsLoaded(true);
       }
@@ -59,13 +57,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, []);
 
   const setLanguage = async (newLang: AppLanguage) => {
+    setLanguageState(newLang);
     try {
-      setLanguageState(newLang);
-      await AsyncStorage.setItem(LANGUAGE_STORAGE_KEY, newLang);
-      await AsyncStorage.setItem(FIRST_LAUNCH_KEY, 'true');
+      await safeStorage.setItem(LANGUAGE_STORAGE_KEY, newLang);
+      await safeStorage.setItem(FIRST_LAUNCH_KEY, 'true');
       setIsFirstLaunch(false);
-    } catch (e) {
-      console.error('Error saving language to AsyncStorage', e);
+    } catch {
+      // In-memory state already updated
     }
   };
 

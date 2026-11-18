@@ -1,4 +1,4 @@
-package com.anonymous.tatvamasi
+package com.tatvamasi.ayyappapooja
 
 import android.app.Application
 import android.content.res.Configuration

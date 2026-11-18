@@ -24,7 +24,8 @@
         "backgroundImage": "./assets/android-icon-background.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.anonymous.tatvamasi"
+      "package": "com.tatvamasi.ayyappapooja",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
