@@ -1,50 +1,21 @@
 import React from 'react';
-import { 
-  View, 
-  Text, 
-  StyleSheet, 
-  FlatList 
-} from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
+import { ChevronRight, Music, Sparkles } from 'lucide-react-native';
 import { Header } from '../../components/Header';
-import { PoojaCard } from '../../components/PoojaCard';
-import { POOJA_CATEGORIES } from '../../data/poojaData';
+import { SONGS } from '../../data/songsData';
 import { COLORS } from '../../constants/theme';
-import { Flame, Sparkles } from 'lucide-react-native';
 
-export default function AshtottaramScreen() {
-  // Sacred 108 Ashtottarams of all gods
-  const ashtottaramOrder = [
-    'ashtottaram',           // 1. అయ్యప్ప అష్టోత్తర శత నామావళి (108)
-    'ganapathi-pooja',       // 2. వినాయక అష్టోత్తర శత నామావళి (108)
-    'subrahmanya-pooja',     // 3. సుబ్రహ్మణ్య స్వామి అష్టోత్తర శత నామావళి (108)
-    'lakshmi-ashtottaram',   // 4. శ్రీ మహాలక్ష్మి అష్టోత్తర శత నామావళి (108)
-    'durga-ashtottaram',     // 5. శ్రీ దుర్గా అష్టోత్తర శత నామావళి (108)
-    'saraswati-ashtottaram', // 6. శ్రీ సరస్వతీ అష్టోత్తర శత నామావళి (108)
-    'shiva-ashtottaram',     // 7. శ్రీ శివ అష్టోత్తర శత నామావళి (108)
-    'sharanu-gosha'          // 8. 108 శరణు ఘోష
-  ];
-
-  const ashtottaramItems = ashtottaramOrder
-    .map(id => POOJA_CATEGORIES.find(cat => cat.id === id))
-    .filter((cat): cat is typeof POOJA_CATEGORIES[0] => cat !== undefined);
-
-  const handleOpenItem = (id: string) => {
-    router.push({
-      pathname: '/pooja/[id]',
-      params: { id }
-    });
-  };
-
+export default function SongsScreen() {
   const renderHeader = () => (
-    <View style={styles.headerBox}>
+    <View style={styles.bannerBox}>
       <View style={styles.bannerRow}>
-        <Flame size={20} color={COLORS.flameOrange} />
-        <Text style={styles.bannerTitle}>సర్వదేవతా 108 అష్టోత్తర శత నామావళులు</Text>
+        <Sparkles size={16} color={COLORS.gold} />
+        <Text style={styles.bannerTitle}>శ్రీ అయ్యప్ప భక్తి గీతాలు & స్తుతులు</Text>
       </View>
       <Text style={styles.bannerDesc}>
-        శ్రీ అయ్యప్ప స్వామి, వినాయకుడు, సుబ్రహ్మణ్య స్వామి, శివుడు మరియు లక్ష్మీ, దుర్గా, సరస్వతీ అమ్మవార్ల సంపూర్ణ 108 దివ్య అష్టోత్తర శత నామావళులు.
+        శబరిమల యాత్రలో, మండల దీక్షా కాలంలో మరియు నిత్య పూజా సమయంలో పాడుకునే పవిత్రమైన భక్తి పాటలు.
       </Text>
     </View>
   );
@@ -52,49 +23,68 @@ export default function AshtottaramScreen() {
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
-        title="సర్వదేవతా అష్టోత్తరాలు" 
-        subtitle="108 దివ్య నామావళులు & శరణు ఘోష" 
+        title="పాటలు" 
+        subtitle={`భక్తి గీతాలు • ${SONGS.length} పాటలు`} 
       />
       <FlatList
-        data={ashtottaramItems}
+        data={SONGS}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => (
-          <PoojaCard item={item} onPress={() => handleOpenItem(item.id)} />
-        )}
+        contentContainerStyle={styles.list}
         ListHeaderComponent={renderHeader}
-        contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.card}
+            activeOpacity={0.8}
+            accessibilityRole="button"
+            accessibilityLabel={item.title}
+            onPress={() => router.push({ pathname: '/song/[id]', params: { id: item.id } })}
+          >
+            <View style={styles.iconContainer}>
+              <Music size={22} color={COLORS.gold} />
+            </View>
+            <View style={styles.info}>
+              <Text style={styles.title} numberOfLines={2}>
+                {item.title}
+              </Text>
+              <Text style={styles.subtitle}>
+                భక్తి గీతం • లిరిక్స్ చదవండి
+              </Text>
+            </View>
+            <ChevronRight size={20} color={COLORS.gold} />
+          </TouchableOpacity>
+        )}
       />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.background 
   },
-  listContent: {
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 24,
+  list: { 
+    paddingHorizontal: 16, 
+    paddingTop: 12,
+    paddingBottom: 32 
   },
-  headerBox: {
+  bannerBox: {
     backgroundColor: COLORS.surface,
     borderRadius: 16,
-    padding: 16,
+    padding: 14,
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
-    marginBottom: 16,
+    marginBottom: 14,
   },
   bannerRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    marginBottom: 8,
+    marginBottom: 6,
   },
   bannerTitle: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
     color: COLORS.textGold,
   },
@@ -102,5 +92,46 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: COLORS.textSecondary,
     lineHeight: 18,
+  },
+  card: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    backgroundColor: COLORS.surface,
+    borderColor: COLORS.surfaceBorder,
+    borderWidth: 1,
+    borderRadius: 16,
+    padding: 14,
+    marginBottom: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  iconContainer: {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: 'rgba(212, 175, 55, 0.12)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.25)',
+    flexShrink: 0,
+  },
+  info: { 
+    flex: 1 
+  },
+  title: { 
+    color: COLORS.textPrimary, 
+    fontSize: 15.5, 
+    lineHeight: 23, 
+    fontWeight: '700' 
+  },
+  subtitle: { 
+    color: COLORS.textMuted, 
+    fontSize: 12, 
+    marginTop: 4 
   },
 });

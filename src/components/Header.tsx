@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { COLORS } from '../constants/theme';
 import { Sparkles } from 'lucide-react-native';
 
@@ -7,36 +7,157 @@ interface HeaderProps {
   title: string;
   subtitle?: string;
   rightAction?: React.ReactNode;
+  showDeities?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ title, subtitle, rightAction }) => {
+export const Header: React.FC<HeaderProps> = ({ 
+  title, 
+  subtitle, 
+  rightAction, 
+  showDeities = true 
+}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.left}>
-        <View style={styles.titleRow}>
-          <Text style={styles.title}>{title}</Text>
-          <Sparkles size={18} color={COLORS.gold} style={styles.icon} />
+      {/* 1. Divine Deities Triad Bar (Left: Vinayakudu, Center: Ayyappa Swami, Right: Subrahmanya Swami) */}
+      {showDeities && (
+        <View style={styles.deityBar}>
+          {/* Left: Vinayakudu */}
+          <View style={styles.deityItem}>
+            <View style={styles.deityCircle}>
+              <Image 
+                source={require('../../assets/deity_ganesha.png')} 
+                style={styles.deityImage}
+                resizeMode="cover"
+              />
+            </View>
+            <Text style={styles.deityLabel}>గణపతి</Text>
+          </View>
+
+          {/* Center / Middle: Lord Ayyappa Swami */}
+          <View style={[styles.deityItem, styles.deityItemCenter]}>
+            <View style={[styles.deityCircle, styles.deityCircleCenter]}>
+              <Image 
+                source={require('../../assets/deity_ayyappa.png')} 
+                style={[styles.deityImage, styles.deityImageCenter]}
+                resizeMode="cover"
+              />
+            </View>
+            <Text style={[styles.deityLabel, styles.deityLabelCenter]}>అయ్యప్ప స్వామి</Text>
+          </View>
+
+          {/* Right: Subrahmanya Swami */}
+          <View style={styles.deityItem}>
+            <View style={styles.deityCircle}>
+              <Image 
+                source={require('../../assets/deity_subrahmanya.png')} 
+                style={styles.deityImage}
+                resizeMode="cover"
+              />
+            </View>
+            <Text style={styles.deityLabel}>సుబ్రహ్మణ్య</Text>
+          </View>
         </View>
-        {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+      )}
+
+      {/* 2. Main Title Row */}
+      <View style={styles.mainRow}>
+        <View style={styles.textContainer}>
+          <View style={styles.titleRow}>
+            <Text style={styles.title}>{title}</Text>
+            <Sparkles size={16} color={COLORS.gold} style={styles.icon} />
+          </View>
+          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+        </View>
+        {rightAction && <View style={styles.rightAction}>{rightAction}</View>}
       </View>
-      {rightAction && <View style={styles.right}>{rightAction}</View>}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 14,
+    paddingHorizontal: 16,
+    paddingTop: 10,
+    paddingBottom: 12,
     backgroundColor: COLORS.background,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.surfaceBorder,
+  },
+  deityBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#181008',
+    borderRadius: 16,
+    paddingVertical: 7,
+    paddingHorizontal: 16,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.28)',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.35,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  deityItem: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 64,
+  },
+  deityItemCenter: {
+    minWidth: 84,
+  },
+  deityCircle: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderWidth: 1.5,
+    borderColor: COLORS.gold,
+    overflow: 'hidden',
+    backgroundColor: '#0F0B06',
+    shadowColor: COLORS.gold,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  deityCircleCenter: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    borderWidth: 2,
+    borderColor: '#FFE29A',
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  deityImage: {
+    width: '100%',
+    height: '100%',
+  },
+  deityImageCenter: {
+    width: '100%',
+    height: '100%',
+  },
+  deityLabel: {
+    fontSize: 10.5,
+    fontWeight: '700',
+    color: COLORS.textSecondary,
+    marginTop: 4,
+    letterSpacing: 0.2,
+  },
+  deityLabelCenter: {
+    fontSize: 11.5,
+    color: '#FFE29A',
+    fontWeight: 'bold',
+  },
+  mainRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  left: {
+  textContainer: {
     flex: 1,
   },
   titleRow: {
@@ -44,21 +165,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 22,
+    fontSize: 21,
     fontWeight: 'bold',
     color: COLORS.textGold,
     letterSpacing: 0.5,
   },
   icon: {
-    marginLeft: 8,
+    marginLeft: 7,
   },
   subtitle: {
-    fontSize: 13,
+    fontSize: 12.5,
     color: COLORS.textSecondary,
-    marginTop: 3,
+    marginTop: 2,
   },
-  right: {
+  rightAction: {
     marginLeft: 12,
   },
 });
-

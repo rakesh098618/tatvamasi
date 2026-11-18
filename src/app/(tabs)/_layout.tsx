@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import { Tabs } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { COLORS } from '../../constants/theme';
-import { Sparkles, HeartHandshake, UserCheck, Flame } from 'lucide-react-native';
+import { Sparkles, HeartHandshake, UserCheck, Music } from 'lucide-react-native';
 
 export default function TabLayout() {
   const insets = useSafeAreaInsets();
@@ -51,9 +51,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="bhajans"
         options={{
-          title: 'అష్టోత్తరాలు',
+          title: 'పాటలు',
           tabBarIcon: ({ color, size }) => (
-            <Flame color={color} size={size} />
+            <Music color={color} size={size} />
           ),
         }}
       />

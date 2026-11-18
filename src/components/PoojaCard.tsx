@@ -11,8 +11,7 @@ import {
   HeartHandshake, 
   BookOpen, 
   Music, 
-  ShieldCheck,
-  Clock
+  ShieldCheck
 } from 'lucide-react-native';
 
 interface PoojaCardProps {
@@ -59,12 +58,6 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress, lang = 'te'
           )}
         </View>
         <Text style={styles.subtitle}>{item.subtitle}</Text>
-        <View style={styles.metaRow}>
-          <Clock size={12} color={COLORS.textMuted} />
-          <Text style={styles.durationText}>
-            {isEnglish ? `~${item.durationMinutes} mins` : `~${item.durationMinutes} నిమిషాలు`}
-          </Text>
-        </View>
       </View>
       <ChevronRight size={20} color={COLORS.gold} />
     </TouchableOpacity>

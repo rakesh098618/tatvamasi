@@ -6,89 +6,89 @@ interface FontSizeControlsProps {
   fontSize: number;
   onIncrease: () => void;
   onDecrease: () => void;
-  onReset: () => void;
+  onReset?: () => void;
+  minSize?: number;
+  maxSize?: number;
 }
 
 export const FontSizeControls: React.FC<FontSizeControlsProps> = ({
   fontSize,
   onIncrease,
   onDecrease,
-  onReset,
+  minSize = 14,
+  maxSize = 30,
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.label}>అక్షరాల పరిమాణం:</Text>
-      <View style={styles.buttonRow}>
-        <TouchableOpacity 
-          style={styles.btn} 
-          onPress={onDecrease}
-          disabled={fontSize <= 14}
-        >
-          <Text style={[styles.btnText, fontSize <= 14 && styles.btnDisabled]}>A -</Text>
-        </TouchableOpacity>
+    <View style={styles.floatingContainer}>
+      <TouchableOpacity 
+        style={styles.btn} 
+        onPress={onDecrease}
+        activeOpacity={0.7}
+        disabled={fontSize <= minSize}
+      >
+        <Text style={[styles.btnText, fontSize <= minSize && styles.btnDisabled]}>A -</Text>
+      </TouchableOpacity>
 
-        <TouchableOpacity style={styles.resetBtn} onPress={onReset}>
-          <Text style={styles.resetText}>{fontSize}px</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity 
-          style={styles.btn} 
-          onPress={onIncrease}
-          disabled={fontSize >= 30}
-        >
-          <Text style={[styles.btnText, fontSize >= 30 && styles.btnDisabled]}>A +</Text>
-        </TouchableOpacity>
+      <View style={styles.indicator}>
+        <Text style={styles.indicatorText}>{fontSize}</Text>
       </View>
+
+      <TouchableOpacity 
+        style={styles.btn} 
+        onPress={onIncrease}
+        activeOpacity={0.7}
+        disabled={fontSize >= maxSize}
+      >
+        <Text style={[styles.btnText, fontSize >= maxSize && styles.btnDisabled]}>A +</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  floatingContainer: {
+    position: 'absolute',
+    right: 16,
+    bottom: 20,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: COLORS.surface,
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 12,
-    marginVertical: 10,
-    borderWidth: 1,
-    borderColor: COLORS.surfaceBorder,
-  },
-  label: {
-    fontSize: 13,
-    color: COLORS.textSecondary,
-    fontWeight: '500',
-  },
-  buttonRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+    backgroundColor: '#1C120A',
+    borderRadius: 22,
+    borderWidth: 1.2,
+    borderColor: COLORS.gold,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.45,
+    shadowRadius: 6,
+    elevation: 8,
+    gap: 4,
+    zIndex: 999,
   },
   btn: {
-    backgroundColor: COLORS.surfaceLight,
-    paddingHorizontal: 12,
+    paddingHorizontal: 10,
     paddingVertical: 6,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: COLORS.goldDark,
+    borderRadius: 14,
+    backgroundColor: 'rgba(212, 175, 55, 0.16)',
   },
   btnText: {
-    color: COLORS.textGold,
+    color: '#FFE29A',
     fontWeight: 'bold',
     fontSize: 13,
   },
   btnDisabled: {
     color: COLORS.textMuted,
   },
-  resetBtn: {
+  indicator: {
     paddingHorizontal: 6,
+    minWidth: 26,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  resetText: {
+  indicatorText: {
     color: COLORS.textPrimary,
-    fontSize: 12,
-    fontWeight: '600',
+    fontSize: 12.5,
+    fontWeight: 'bold',
   },
 });
-

@@ -14,7 +14,6 @@ import { FontSizeControls } from '../../components/FontSizeControls';
 import { 
   Bell, 
   Sparkles, 
-  Clock, 
   ChevronDown, 
   ChevronUp, 
   ChevronLeft, 
@@ -85,30 +84,17 @@ export default function PoojaDetailScreen() {
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         
-        {/* Banner with step badge, subtitle, and time */}
+        {/* Banner with step badge and subtitle */}
         <View style={styles.banner}>
           <View style={styles.bannerHeaderRow}>
             <View style={styles.stepBadge}>
               <Text style={styles.stepBadgeText}>క్రమ సంఖ్య {currentIndex + 1} / {POOJA_CATEGORIES.length}</Text>
-            </View>
-            <View style={styles.metaBadge}>
-              <Clock size={12} color={COLORS.gold} />
-              <Text style={styles.metaBadgeText}>~{pooja.durationMinutes} నిమిషాలు</Text>
             </View>
           </View>
 
           <Text style={styles.bannerTitle}>{pooja.titleTelugu}</Text>
           <Text style={styles.bannerSubtitle}>{pooja.subtitle}</Text>
         </View>
-
-        {/* Font size & display controls */}
-        {/* Font size controls */}
-        <FontSizeControls 
-          fontSize={fontSize}
-          onIncrease={() => setFontSize(prev => Math.min(28, prev + 2))}
-          onDecrease={() => setFontSize(prev => Math.max(14, prev - 2))}
-          onReset={() => setFontSize(18)}
-        />
 
         {bellRung && (
           <View style={styles.bellAlert}>
@@ -229,6 +215,13 @@ export default function PoojaDetailScreen() {
         </View>
 
       </ScrollView>
+
+      {/* Fixed Side Floating Font Size Controls (A- [size] A+) */}
+      <FontSizeControls 
+        fontSize={fontSize}
+        onIncrease={() => setFontSize(prev => Math.min(28, prev + 2))}
+        onDecrease={() => setFontSize(prev => Math.max(14, prev - 2))}
+      />
     </SafeAreaView>
   );
 }

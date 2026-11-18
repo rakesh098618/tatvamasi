@@ -30,9 +30,11 @@ export default function RootLayout() {
         <Stack.Screen 
           name="(tabs)" 
           options={{ 
-            headerShown: false 
+            headerShown: false,
+            animation: 'none',
           }} 
         />
+        <Stack.Screen name="song/[id]" options={{ title: 'పాటలు' }} />
         <Stack.Screen 
           name="pooja/[id]" 
           options={{ 
