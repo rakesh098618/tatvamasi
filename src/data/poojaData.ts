@@ -3,16 +3,28 @@ import { PADI_SONG } from './songsData';
 
 export const GURU_SWAMI_DETAILS: GuruInfo = {
   name: 'శ్రీ శ్రీ శ్రీ ఆడేపు బ్రహ్మం గురుస్వామి',
+  nameEnglish: 'Sri Sri Sri Adepu Brahmam Guruswami',
   title: 'అయ్యప్ప దీక్షా గురువులు & మండల దీక్షా మార్గదర్శకులు',
+  titleEnglish: 'Ayyappa Deeksha Guru & Mandala Deeksha Spiritual Guide',
   location: 'రాంనగర్, హైదరాబాద్',
+  locationEnglish: 'Ramnagar, Hyderabad',
   description: 'గురు ముఖతః దీక్షను స్వీకరించి, భక్తి శ్రద్ధలతో 41 రోజుల మండల దీక్షను ఆచరించడం ద్వారా పరమేశ్వరుడైన అయ్యప్ప స్వామి అనుగ్రహం కలుగుతుంది. గురువే దైవం, గురు వాక్యమే వేదం.',
+  descriptionEnglish: 'By receiving sacred Deeksha through the Guru and observing the 41-day Mandala Deeksha with sincere devotion, one attains the divine grace of Lord Ayyappa Swamy. The Guru is God, and the Guru’s word is sacred truth.',
   mantram: 'గురుర్బ్రహ్మ గురుర్విష్ణుః గురుర్దేవో మహేశ్వరః |\nగురుః సాక్షాత్ పరబ్రహ్మ తస్మై శ్రీ గురవే నమః ||',
+  mantramEnglish: 'Gurur Brahma Gurur Vishnuh Gurur Devo Maheshwarah |\nGuruh Sakshat Parabrahma Tasmai Shri Gurave Namah ||',
   teachings: [
     'తత్త్వమసి - "నీవే ఆ పరబ్రహ్మవు" అనే పరమ సత్యాన్ని అనుభవపూర్వకంగా గ్రహించు.',
     'ప్రతి ప్రాణిని అయ్యప్ప స్వరూపంగా భావించి సాటి భక్తులను "స్వామి" అని పిలువు.',
     'సత్యం, ధర్మం, అహింస, భూతదయ, ఇంద్రియ నిగ్రహం తప్పక పాటించు.',
     'శరణు ఘోషతో మనస్సును సదా పవిత్రంగా, భక్తి భావంతో నింపుకో.',
     'ఇరుముడి మోసేటప్పుడు ఆత్మ సమర్పణ భావంతో స్వామి సన్నిధానాన్ని చేరుకో.'
+  ],
+  teachingsEnglish: [
+    'Tatvamasi - Realize through direct experience the supreme truth that "Thou Art That" (You are that Divine Supreme Self).',
+    'See the divine form of Lord Ayyappa in every living being and respectfully address fellow devotees as "Swami".',
+    'Steadfastly practice truth, righteousness (dharma), non-violence, compassion to all beings, and control of the senses.',
+    'Keep the mind continuously pure and filled with deep devotional surrender through the chanting of Sharanu Ghosha.',
+    'When carrying the sacred Irumudi, approach Lord Ayyappa’s holy Sannidhanam with complete self-surrender.'
   ],
   deekshaRules: [
     'నిత్యం సూర్యోదయానికి ముందు, సూర్యాస్తమయం తర్వాత చన్నీటి స్నానం చేయాలి.',
@@ -21,6 +33,14 @@ export const GURU_SWAMI_DETAILS: GuruInfo = {
     'ఏకభుక్తం (సాత్విక ఆహారం) స్వీకరించాలి. ఉల్లి, వెల్లుల్లి, మద్య, మాంస, ధూమపానాలు నిషిద్ధం.',
     'పాదరక్షలు ధరించరాదు. కేవలం నేలమీద చాపపై మాత్రమే శయనించాలి (భూశయనం).',
     'ఎవరినీ దూషించరాదు, అబద్ధం చెప్పరాదు, క్రోధాన్ని పూర్తిగా జయించాలి.'
+  ],
+  deekshaRulesEnglish: [
+    'Take a cold water bath twice daily, once before sunrise and once after sunset.',
+    'Mandatory prostration at the holy feet of Sri Guruswami and daily performance of Sri Ayyappa Nithya Pooja.',
+    'Wear only black, dark blue, or saffron clothing, along with a sacred Tulasi or Rudraksha mala.',
+    'Eat only once a day (pure satvic food). Onion, garlic, alcohol, non-vegetarian food, and smoking are strictly forbidden.',
+    'Do not wear footwear. Sleep strictly on a simple mat on the floor (Bhoosayanam).',
+    'Do not criticize anyone, do not speak untruth, and completely conquer anger.'
   ]
 };
 

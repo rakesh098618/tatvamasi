@@ -9,20 +9,25 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Header } from '../../components/Header';
 import { COLORS } from '../../constants/theme';
-import { RotateCcw, ChevronLeft, ChevronRight, CheckCircle2, Sparkles, Volume2 } from 'lucide-react-native';
+import { RotateCcw, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react-native';
 import { POOJA_CATEGORIES } from '../../data/poojaData';
+import { useLanguage } from '../../context/LanguageContext';
+import { getMantraDisplay } from '../../locales/poojaTranslations';
 
 export default function JapaCounterScreen() {
   const [count, setCount] = useState(0);
   const [completedRounds, setCompletedRounds] = useState(0);
+  const { language, t } = useLanguage();
+  const isEnglish = language === 'en';
 
   // Get Sharanu Gosha mantras list
   const sharanuData = POOJA_CATEGORIES.find(c => c.id === 'sharanu-gosha');
   const mantras = sharanuData?.sections[0]?.mantras || [];
   const totalTarget = 108;
 
-  const currentMantraIndex = count > 0 ? (count - 1) % mantras.length : 0;
+  const currentMantraIndex = count > 0 ? (count - 1) % (mantras.length || 1) : 0;
   const currentMantra = mantras[currentMantraIndex] || {
+    id: 'sg-default',
     telugu: 'స్వామియే శరణం అయ్యప్ప',
     transliteration: 'Swamiye Saranam Ayyappa'
   };
@@ -46,13 +51,17 @@ export default function JapaCounterScreen() {
     setCount(0);
   };
 
-  const progressPercentage = Math.min(100, Math.round((count / totalTarget) * 108));
+  const progressPercentage = Math.min(100, Math.round((count / totalTarget) * 100));
+
+  const displayMantra = isEnglish 
+    ? getMantraDisplay(currentMantra, true) 
+    : currentMantra.telugu;
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
-        title="108 శరణు ఘోష కౌంటర్" 
-        subtitle="డిజిటల్ జపమాల & నామస్మరణ"
+        title={t('japaTitle')} 
+        subtitle={t('japaSubtitle')}
       />
       
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
@@ -60,13 +69,13 @@ export default function JapaCounterScreen() {
         {/* Rounds Completed Stats */}
         <View style={styles.statsCard}>
           <View style={styles.statBox}>
-            <Text style={styles.statLabel}>పూర్తయిన మాలలు</Text>
+            <Text style={styles.statLabel}>{t('completedMalas')}</Text>
             <Text style={styles.statValue}>{completedRounds}</Text>
           </View>
           <View style={styles.divider} />
           <View style={styles.statBox}>
-            <Text style={styles.statLabel}>లక్ష్యం</Text>
-            <Text style={styles.statValue}>108 సార్లు</Text>
+            <Text style={styles.statLabel}>{t('target')}</Text>
+            <Text style={styles.statValue}>{t('times108')}</Text>
           </View>
         </View>
 
@@ -74,9 +83,12 @@ export default function JapaCounterScreen() {
         <View style={styles.mantraDisplayCard}>
           <View style={styles.mantraBadge}>
             <Sparkles size={14} color={COLORS.gold} />
-            <Text style={styles.mantraBadgeText}>మంత్రం #{count > 0 ? count : 1}</Text>
+            <Text style={styles.mantraBadgeText}>{t('chantNumber')} #{count > 0 ? count : 1}</Text>
           </View>
-          <Text style={styles.mantraTelugu}>{currentMantra.telugu}</Text>
+          <Text style={styles.mantraTelugu}>{displayMantra}</Text>
+          {isEnglish && currentMantra.telugu !== displayMantra && (
+            <Text style={styles.mantraSubline}>{currentMantra.telugu}</Text>
+          )}
         </View>
 
         {/* Big Tap Area for Counting */}
@@ -88,7 +100,7 @@ export default function JapaCounterScreen() {
           <View style={styles.counterInnerBox}>
             <Text style={styles.countNumber}>{count}</Text>
             <Text style={styles.countSubtext}>/ 108</Text>
-            <Text style={styles.tapPrompt}>జపం చేయండి</Text>
+            <Text style={styles.tapPrompt}>{t('tapToChant')}</Text>
           </View>
         </TouchableOpacity>
 
@@ -97,7 +109,9 @@ export default function JapaCounterScreen() {
           <View style={styles.progressBarBackground}>
             <View style={[styles.progressBarFill, { width: `${progressPercentage}%` }]} />
           </View>
-          <Text style={styles.progressLabel}>{count} / 108 పూర్తయింది ({progressPercentage}%)</Text>
+          <Text style={styles.progressLabel}>
+            {count} / 108 {t('completedProgress')} ({progressPercentage}%)
+          </Text>
         </View>
 
         {/* Control Buttons */}
@@ -108,19 +122,21 @@ export default function JapaCounterScreen() {
             disabled={count === 0}
           >
             <ChevronLeft size={20} color={count === 0 ? COLORS.textMuted : COLORS.textGold} />
-            <Text style={[styles.iconBtnText, count === 0 && styles.disabledText]}>-1 వెనుకకు</Text>
+            <Text style={[styles.iconBtnText, count === 0 && styles.disabledText]}>
+              {t('btnPrevious')}
+            </Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.resetBtn} onPress={handleReset}>
             <RotateCcw size={18} color={COLORS.accentRed} />
-            <Text style={styles.resetBtnText}>రీసెట్</Text>
+            <Text style={styles.resetBtnText}>{t('btnReset')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={styles.iconBtn} 
             onPress={handleIncrement}
           >
-            <Text style={styles.iconBtnText}>+1 ముందుకు</Text>
+            <Text style={styles.iconBtnText}>{t('btnNext')}</Text>
             <ChevronRight size={20} color={COLORS.textGold} />
           </TouchableOpacity>
         </View>
@@ -128,7 +144,7 @@ export default function JapaCounterScreen() {
         {/* Tip Box */}
         <View style={styles.tipCard}>
           <Text style={styles.tipText}>
-            💡 చిట్కా: స్క్రీన్ మధ్యలోని బంగారు వృత్తాన్ని స్పర్శిస్తూ "స్వామియే శరణం అయ్యప్ప" అని భక్తితో జపం చేయండి.
+            {t('japaTip')}
           </Text>
         </View>
 
@@ -172,111 +188,111 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   statValue: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: 'bold',
     color: COLORS.textGold,
   },
   mantraDisplayCard: {
     width: '100%',
-    backgroundColor: COLORS.surfaceLight,
+    backgroundColor: '#1E1408',
     borderRadius: 16,
-    padding: 18,
-    borderWidth: 1,
-    borderColor: COLORS.goldDark,
+    padding: 16,
+    borderWidth: 1.5,
+    borderColor: COLORS.gold,
     alignItems: 'center',
-    marginBottom: 24,
+    marginBottom: 20,
+    shadowColor: COLORS.gold,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 4,
   },
   mantraBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
-    backgroundColor: 'rgba(212, 175, 55, 0.15)',
-    paddingHorizontal: 8,
+    gap: 6,
+    backgroundColor: 'rgba(212, 175, 55, 0.2)',
+    paddingHorizontal: 10,
     paddingVertical: 3,
-    borderRadius: 8,
-    marginBottom: 8,
+    borderRadius: 12,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.3)',
   },
   mantraBadgeText: {
-    fontSize: 11,
-    fontWeight: '700',
     color: COLORS.goldLight,
+    fontSize: 12,
+    fontWeight: 'bold',
   },
   mantraTelugu: {
-    fontSize: 19,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: COLORS.textPrimary,
+    color: '#FFF2C6',
     textAlign: 'center',
-    lineHeight: 28,
+    lineHeight: 26,
   },
-  mantraEnglish: {
+  mantraSubline: {
     fontSize: 13,
     color: COLORS.textSecondary,
     textAlign: 'center',
     marginTop: 6,
-    fontStyle: 'italic',
+    opacity: 0.85,
   },
   counterCircle: {
-    width: 210,
-    height: 210,
-    borderRadius: 105,
-    backgroundColor: '#1E1408',
-    borderWidth: 5,
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    backgroundColor: '#181008',
+    borderWidth: 4,
     borderColor: COLORS.gold,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: COLORS.gold,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.45,
-    shadowRadius: 12,
-    elevation: 10,
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 8,
     marginBottom: 20,
   },
   counterInnerBox: {
     alignItems: 'center',
-    justifyContent: 'center',
   },
   countNumber: {
-    fontSize: 62,
+    fontSize: 54,
     fontWeight: 'bold',
     color: COLORS.textGold,
-    textAlign: 'center',
-    includeFontPadding: false,
-    lineHeight: 68,
   },
   countSubtext: {
-    fontSize: 16,
+    fontSize: 14,
     color: COLORS.textMuted,
-    textAlign: 'center',
-    marginTop: 2,
-    fontWeight: '600',
+    marginTop: -4,
   },
   tapPrompt: {
-    fontSize: 13,
-    color: COLORS.goldLight,
+    fontSize: 12,
     fontWeight: 'bold',
-    marginTop: 8,
-    textAlign: 'center',
+    color: COLORS.gold,
+    marginTop: 6,
     letterSpacing: 0.5,
   },
   progressContainer: {
     width: '100%',
-    marginBottom: 20,
     alignItems: 'center',
+    marginBottom: 20,
   },
   progressBarBackground: {
     width: '100%',
-    height: 10,
+    height: 8,
     backgroundColor: COLORS.surface,
-    borderRadius: 5,
+    borderRadius: 4,
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
-    marginBottom: 6,
+    marginBottom: 8,
   },
   progressBarFill: {
     height: '100%',
-    backgroundColor: COLORS.primary,
-    borderRadius: 5,
+    backgroundColor: COLORS.gold,
+    borderRadius: 4,
   },
   progressLabel: {
     fontSize: 12,
@@ -284,25 +300,26 @@ const styles = StyleSheet.create({
   },
   controlRow: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
+    gap: 10,
     marginBottom: 20,
   },
   iconBtn: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     gap: 4,
     backgroundColor: COLORS.surface,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingVertical: 12,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
   },
   iconBtnText: {
     fontSize: 13,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: COLORS.textGold,
   },
   disabledText: {
@@ -311,23 +328,23 @@ const styles = StyleSheet.create({
   resetBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    gap: 6,
     backgroundColor: 'rgba(239, 68, 68, 0.1)',
-    paddingHorizontal: 14,
-    paddingVertical: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: 'rgba(239, 68, 68, 0.3)',
   },
   resetBtnText: {
     fontSize: 13,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: COLORS.accentRed,
   },
   tipCard: {
     backgroundColor: COLORS.surface,
     borderRadius: 12,
-    padding: 12,
+    padding: 14,
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
     width: '100%',
@@ -336,6 +353,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: COLORS.textSecondary,
     lineHeight: 18,
+    textAlign: 'center',
   },
 });
-

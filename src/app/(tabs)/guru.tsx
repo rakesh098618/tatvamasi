@@ -12,9 +12,13 @@ import { router } from 'expo-router';
 import { Header } from '../../components/Header';
 import { COLORS } from '../../constants/theme';
 import { GURU_SWAMI_DETAILS } from '../../data/poojaData';
-import { Sparkles, Shield, HeartHandshake, CheckCircle2, ChevronRight, User, MapPin } from 'lucide-react-native';
+import { Sparkles, Shield, HeartHandshake, CheckCircle2, ChevronRight, MapPin, Globe } from 'lucide-react-native';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function GuruScreen() {
+  const { language, t, openLanguageModal } = useLanguage();
+  const isEnglish = language === 'en';
+
   const handleOpenGuruPooja = () => {
     router.push({
       pathname: '/pooja/[id]',
@@ -22,11 +26,39 @@ export default function GuruScreen() {
     });
   };
 
+  const guruName = isEnglish 
+    ? (GURU_SWAMI_DETAILS.nameEnglish || GURU_SWAMI_DETAILS.name) 
+    : GURU_SWAMI_DETAILS.name;
+
+  const guruTitle = isEnglish 
+    ? (GURU_SWAMI_DETAILS.titleEnglish || GURU_SWAMI_DETAILS.title) 
+    : GURU_SWAMI_DETAILS.title;
+
+  const guruLocation = isEnglish 
+    ? (GURU_SWAMI_DETAILS.locationEnglish || GURU_SWAMI_DETAILS.location) 
+    : GURU_SWAMI_DETAILS.location;
+
+  const guruDesc = isEnglish 
+    ? (GURU_SWAMI_DETAILS.descriptionEnglish || GURU_SWAMI_DETAILS.description) 
+    : GURU_SWAMI_DETAILS.description;
+
+  const guruMantram = isEnglish 
+    ? (GURU_SWAMI_DETAILS.mantramEnglish || GURU_SWAMI_DETAILS.mantram) 
+    : GURU_SWAMI_DETAILS.mantram;
+
+  const deekshaRules = isEnglish 
+    ? (GURU_SWAMI_DETAILS.deekshaRulesEnglish || GURU_SWAMI_DETAILS.deekshaRules) 
+    : GURU_SWAMI_DETAILS.deekshaRules;
+
+  const teachings = isEnglish 
+    ? (GURU_SWAMI_DETAILS.teachingsEnglish || GURU_SWAMI_DETAILS.teachings) 
+    : GURU_SWAMI_DETAILS.teachings;
+
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
-        title="శ్రీ గురుస్వామి సన్నిధి" 
-        subtitle="దీక్షా గురువుల మార్గదర్శనం & నియమాలు"
+        title={t('guruHeaderTitle')} 
+        subtitle={t('guruHeaderSubtitle')}
       />
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
@@ -44,27 +76,27 @@ export default function GuruScreen() {
           </View>
 
           {/* Guru Swami Name */}
-          <Text style={styles.guruName}>{GURU_SWAMI_DETAILS.name}</Text>
+          <Text style={styles.guruName}>{guruName}</Text>
 
           {/* Location directly under Name */}
-          {GURU_SWAMI_DETAILS.location && (
+          {guruLocation && (
             <View style={styles.locationRow}>
               <MapPin size={14} color={COLORS.gold} />
-              <Text style={styles.locationText}>{GURU_SWAMI_DETAILS.location}</Text>
+              <Text style={styles.locationText}>{guruLocation}</Text>
             </View>
           )}
 
           {/* Guru Title */}
-          <Text style={styles.guruTitle}>{GURU_SWAMI_DETAILS.title}</Text>
+          <Text style={styles.guruTitle}>{guruTitle}</Text>
 
           <View style={styles.shlokaBox}>
             <Text style={styles.shlokaText}>
-              {GURU_SWAMI_DETAILS.mantram}
+              {guruMantram}
             </Text>
           </View>
 
           <Text style={styles.guruDescription}>
-            {GURU_SWAMI_DETAILS.description}
+            {guruDesc}
           </Text>
 
           {/* Action button to Guru Pooja */}
@@ -73,7 +105,7 @@ export default function GuruScreen() {
             onPress={handleOpenGuruPooja}
             activeOpacity={0.8}
           >
-            <Text style={styles.guruPoojaBtnText}>గురు వందన పూజ ప్రారంభించండి</Text>
+            <Text style={styles.guruPoojaBtnText}>{t('beginGuruPooja')}</Text>
             <ChevronRight size={18} color="#FFF" />
           </TouchableOpacity>
         </View>
@@ -82,14 +114,14 @@ export default function GuruScreen() {
         <View style={styles.sectionCard}>
           <View style={styles.sectionHeader}>
             <Shield size={20} color={COLORS.gold} />
-            <Text style={styles.sectionTitle}>మండల దీక్షా నియమావళి (41 రోజులు)</Text>
+            <Text style={styles.sectionTitle}>{t('mandalaDeekshaTitle')}</Text>
           </View>
           <Text style={styles.sectionSubtitle}>
-            గురుస్వామి ఆజ్ఞానుసారం ప్రతి స్వామి తప్పక ఆచరించవలసిన పవిత్ర నియమాలు:
+            {t('mandalaDeekshaSubtitle')}
           </Text>
 
           <View style={styles.rulesList}>
-            {GURU_SWAMI_DETAILS.deekshaRules.map((rule, idx) => (
+            {deekshaRules.map((rule, idx) => (
               <View key={idx} style={styles.ruleItem}>
                 <CheckCircle2 size={16} color={COLORS.accentGreen} style={styles.checkIcon} />
                 <Text style={styles.ruleText}>{rule}</Text>
@@ -102,16 +134,38 @@ export default function GuruScreen() {
         <View style={styles.sectionCard}>
           <View style={styles.sectionHeader}>
             <Sparkles size={20} color={COLORS.primaryLight} />
-            <Text style={styles.sectionTitle}>గురు ముఖోపదేశం (సత్య వచనాలు)</Text>
+            <Text style={styles.sectionTitle}>{t('guruTeachingsTitle')}</Text>
           </View>
 
           <View style={styles.rulesList}>
-            {GURU_SWAMI_DETAILS.teachings.map((teaching, idx) => (
+            {teachings.map((teaching, idx) => (
               <View key={idx} style={styles.ruleItem}>
                 <HeartHandshake size={16} color={COLORS.gold} style={styles.checkIcon} />
                 <Text style={styles.ruleText}>{teaching}</Text>
               </View>
             ))}
+          </View>
+        </View>
+
+        {/* Settings & Language Preference Card */}
+        <View style={styles.settingsCard}>
+          <View style={styles.settingsHeader}>
+            <View style={styles.settingsIconBox}>
+              <Globe size={22} color={COLORS.gold} />
+            </View>
+            <View style={styles.settingsInfo}>
+              <Text style={styles.settingsTitle}>{t('settingsTitle')}</Text>
+              <Text style={styles.settingsSubtitle}>
+                {t('languageOption')}: <Text style={styles.settingsLangName}>{language === 'te' ? 'తెలుగు' : 'English'}</Text>
+              </Text>
+            </View>
+            <TouchableOpacity 
+              style={styles.changeLangBtn} 
+              onPress={openLanguageModal}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.changeLangBtnText}>{t('select')}</Text>
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -158,17 +212,6 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 48,
-  },
-  activeDot: {
-    position: 'absolute',
-    bottom: 2,
-    right: 4,
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    backgroundColor: COLORS.accentGreen,
-    borderWidth: 2,
-    borderColor: COLORS.surface,
   },
   guruName: {
     fontSize: 20,
@@ -279,5 +322,58 @@ const styles = StyleSheet.create({
     color: COLORS.textPrimary,
     flex: 1,
     lineHeight: 18,
+  },
+  settingsCard: {
+    backgroundColor: '#181008',
+    borderRadius: 16,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.3)',
+    marginBottom: 20,
+  },
+  settingsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  settingsIconBox: {
+    width: 42,
+    height: 42,
+    borderRadius: 21,
+    backgroundColor: 'rgba(212, 175, 55, 0.12)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.25)',
+    marginRight: 12,
+  },
+  settingsInfo: {
+    flex: 1,
+  },
+  settingsTitle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: COLORS.textGold,
+    marginBottom: 2,
+  },
+  settingsSubtitle: {
+    fontSize: 12,
+    color: COLORS.textSecondary,
+  },
+  settingsLangName: {
+    color: COLORS.gold,
+    fontWeight: 'bold',
+  },
+  changeLangBtn: {
+    backgroundColor: 'rgba(212, 175, 55, 0.18)',
+    paddingVertical: 7,
+    paddingHorizontal: 14,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: COLORS.gold,
+  },
+  changeLangBtnText: {
+    color: COLORS.goldLight,
+    fontWeight: 'bold',
+    fontSize: 12,
   },
 });

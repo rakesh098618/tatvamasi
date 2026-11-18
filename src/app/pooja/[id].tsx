@@ -17,15 +17,27 @@ import {
   ChevronDown, 
   ChevronUp, 
   ChevronLeft, 
-  ChevronRight,
+  ChevronRight, 
   Flame
 } from 'lucide-react-native';
+import { useLanguage } from '../../context/LanguageContext';
+import { 
+  getPoojaTitle, 
+  getPoojaSubtitle, 
+  getSectionTitle, 
+  getSectionDescription, 
+  getMantraMeaning, 
+  getMantraDisplay 
+} from '../../locales/poojaTranslations';
 
 export default function PoojaDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const [fontSize, setFontSize] = useState(18);
   const [bellRung, setBellRung] = useState(false);
   const [collapsedSections, setCollapsedSections] = useState<Record<number, boolean>>({});
+
+  const { language, t } = useLanguage();
+  const isEnglish = language === 'en';
 
   const currentIndex = POOJA_CATEGORIES.findIndex(item => item.id === id);
   const pooja = currentIndex !== -1 ? POOJA_CATEGORIES[currentIndex] : null;
@@ -36,9 +48,9 @@ export default function PoojaDetailScreen() {
   if (!pooja) {
     return (
       <SafeAreaView style={styles.errorContainer}>
-        <Text style={styles.errorText}>పూజా క్రమం కనుగొనబడలేదు.</Text>
+        <Text style={styles.errorText}>{t('poojaNotFound')}</Text>
         <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-          <Text style={styles.backBtnText}>వెనుకకు వెళ్ళండి</Text>
+          <Text style={styles.backBtnText}>{t('goBack')}</Text>
         </TouchableOpacity>
       </SafeAreaView>
     );
@@ -65,11 +77,14 @@ export default function PoojaDetailScreen() {
     });
   };
 
+  const currentTitle = getPoojaTitle(pooja, isEnglish);
+  const currentSubtitle = getPoojaSubtitle(pooja, isEnglish);
+
   return (
     <SafeAreaView style={styles.container} edges={['bottom', 'left', 'right']}>
       <Stack.Screen 
         options={{ 
-          title: pooja.titleTelugu,
+          title: currentTitle,
           headerRight: () => (
             <TouchableOpacity 
               style={[styles.bellBtn, bellRung && styles.bellBtnActive]} 
@@ -88,23 +103,28 @@ export default function PoojaDetailScreen() {
         <View style={styles.banner}>
           <View style={styles.bannerHeaderRow}>
             <View style={styles.stepBadge}>
-              <Text style={styles.stepBadgeText}>క్రమ సంఖ్య {currentIndex + 1} / {POOJA_CATEGORIES.length}</Text>
+              <Text style={styles.stepBadgeText}>
+                {t('stepCounter')} {currentIndex + 1} / {POOJA_CATEGORIES.length}
+              </Text>
             </View>
           </View>
 
-          <Text style={styles.bannerTitle}>{pooja.titleTelugu}</Text>
-          <Text style={styles.bannerSubtitle}>{pooja.subtitle}</Text>
+          <Text style={styles.bannerTitle}>{currentTitle}</Text>
+          <Text style={styles.bannerSubtitle}>{currentSubtitle}</Text>
         </View>
 
         {bellRung && (
           <View style={styles.bellAlert}>
-            <Text style={styles.bellAlertText}>🔔 ఓం స్వామియే శరణం అయ్యప్ప! 🪔</Text>
+            <Text style={styles.bellAlertText}>{t('bellRungAlert')}</Text>
           </View>
         )}
 
         {/* Accordion Pooja Sections */}
         {pooja.sections.map((section, sIndex) => {
           const isCollapsed = collapsedSections[sIndex] || false;
+          const sectionTitle = getSectionTitle(section, isEnglish);
+          const sectionDesc = getSectionDescription(section, isEnglish);
+
           return (
             <View key={sIndex} style={styles.sectionContainer}>
               <TouchableOpacity 
@@ -114,10 +134,12 @@ export default function PoojaDetailScreen() {
               >
                 <View style={styles.sectionHeaderLeft}>
                   <Sparkles size={16} color={COLORS.gold} />
-                  <Text style={styles.sectionTitle}>{section.title}</Text>
+                  <Text style={styles.sectionTitle}>{sectionTitle}</Text>
                 </View>
                 <View style={styles.accordionToggleBtn}>
-                  <Text style={styles.versesCountText}>{section.mantras.length} శ్లోకాలు</Text>
+                  <Text style={styles.versesCountText}>
+                    {section.mantras.length} {t('versesCount')}
+                  </Text>
                   {isCollapsed ? (
                     <ChevronDown size={18} color={COLORS.gold} />
                   ) : (
@@ -128,25 +150,34 @@ export default function PoojaDetailScreen() {
 
               {!isCollapsed && (
                 <View style={styles.sectionBody}>
-                  {section.description && (
-                    <Text style={styles.sectionDescription}>{section.description}</Text>
+                  {sectionDesc && (
+                    <Text style={styles.sectionDescription}>{sectionDesc}</Text>
                   )}
 
                   <View style={styles.mantrasList}>
                     {section.mantras.map((mantra, mIndex) => {
                       const isSpecial = mantra.id === 'km-ayyappa-special';
+                      const meaningText = getMantraMeaning(mantra, isEnglish);
+                      const displayMainText = isEnglish 
+                        ? getMantraDisplay(mantra, true) 
+                        : mantra.telugu;
 
                       if (isSpecial) {
                         return (
                           <View key={mantra.id || mIndex} style={styles.specialCard}>
                             <View style={styles.specialHeader}>
                               <Flame size={18} color={COLORS.flameOrange} />
-                              <Text style={styles.specialBadgeText}>శ్రీ అయ్యప్ప విశేష క్షమాపణ ప్రార్థన</Text>
+                              <Text style={styles.specialBadgeText}>{t('specialPrayerBadge')}</Text>
                               <Flame size={18} color={COLORS.flameOrange} />
                             </View>
                             <Text style={[styles.specialTeluguText, { fontSize: fontSize + 1, lineHeight: (fontSize + 1) * 1.75 }]}>
-                              {mantra.telugu}
+                              {displayMainText}
                             </Text>
+                            {isEnglish && (
+                              <Text style={[styles.mantraTeluguSub, { fontSize: Math.max(13, fontSize - 3), textAlign: 'center', marginTop: 8 }]}>
+                                {mantra.telugu}
+                              </Text>
+                            )}
                           </View>
                         );
                       }
@@ -154,14 +185,21 @@ export default function PoojaDetailScreen() {
                       return (
                         <View key={mantra.id || mIndex} style={styles.mantraCard}>
                           <Text style={[styles.mantraTelugu, { fontSize, lineHeight: fontSize * 1.6 }]}>
-                            {mantra.telugu}
+                            {displayMainText}
                           </Text>
 
-                          {mantra.meaning && (
+                          {/* Show original Telugu script as reverent subtext when in English mode */}
+                          {isEnglish && mantra.telugu !== displayMainText && (
+                            <Text style={[styles.mantraTeluguSub, { fontSize: Math.max(12, fontSize - 4) }]}>
+                              {mantra.telugu}
+                            </Text>
+                          )}
+
+                          {meaningText && (
                             <View style={styles.meaningBox}>
-                              <Text style={styles.meaningLabel}>భావము:</Text>
+                              <Text style={styles.meaningLabel}>{t('meaningLabel')}</Text>
                               <Text style={[styles.meaningText, { fontSize: Math.max(12, fontSize - 4) }]}>
-                                {mantra.meaning}
+                                {meaningText}
                               </Text>
                             </View>
                           )}
@@ -184,8 +222,10 @@ export default function PoojaDetailScreen() {
             >
               <ChevronLeft size={18} color={COLORS.textGold} />
               <View>
-                <Text style={styles.navBtnSub}>మునుపటిది</Text>
-                <Text style={styles.navBtnMain} numberOfLines={1}>{previousPooja.titleTelugu}</Text>
+                <Text style={styles.navBtnSub}>{t('previousPooja')}</Text>
+                <Text style={styles.navBtnMain} numberOfLines={1}>
+                  {getPoojaTitle(previousPooja, isEnglish)}
+                </Text>
               </View>
             </TouchableOpacity>
           ) : (
@@ -198,8 +238,10 @@ export default function PoojaDetailScreen() {
               onPress={() => navigateToPooja(nextPooja.id)}
             >
               <View style={{ alignItems: 'flex-end' }}>
-                <Text style={styles.navBtnSub}>తరువాతి పూజ</Text>
-                <Text style={styles.navBtnMain} numberOfLines={1}>{nextPooja.titleTelugu}</Text>
+                <Text style={styles.navBtnSub}>{t('nextPooja')}</Text>
+                <Text style={styles.navBtnMain} numberOfLines={1}>
+                  {getPoojaTitle(nextPooja, isEnglish)}
+                </Text>
               </View>
               <ChevronRight size={18} color={COLORS.textGold} />
             </TouchableOpacity>
@@ -209,8 +251,7 @@ export default function PoojaDetailScreen() {
         {/* Final Footnote */}
         <View style={styles.footnote}>
           <Text style={styles.footnoteText}>
-            || శ్రీ హరిహరసుత ఆనందచిత్తన్ అయ్యప్ప స్వామినే నమః ||{'\n'}
-            సర్వం అయ్యప్పార్పణమస్తు
+            {t('footnoteBlessing')}
           </Text>
         </View>
 
@@ -232,9 +273,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   scrollContent: {
-    paddingHorizontal: 16,
-    paddingTop: 12,
-    paddingBottom: 40,
+    padding: 16,
+    paddingBottom: 70,
   },
   errorContainer: {
     flex: 1,
@@ -244,27 +284,48 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   errorText: {
-    color: COLORS.textPrimary,
+    color: COLORS.textMuted,
     fontSize: 16,
     marginBottom: 16,
   },
   backBtn: {
-    backgroundColor: COLORS.primaryDark,
-    paddingHorizontal: 16,
     paddingVertical: 10,
-    borderRadius: 10,
+    paddingHorizontal: 20,
+    backgroundColor: COLORS.surface,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: COLORS.gold,
   },
   backBtnText: {
-    color: '#FFF',
+    color: COLORS.gold,
     fontWeight: 'bold',
+  },
+  bellBtn: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: 'rgba(212, 175, 55, 0.15)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.gold,
+    marginRight: 8,
+  },
+  bellBtnActive: {
+    backgroundColor: COLORS.gold,
   },
   banner: {
     backgroundColor: COLORS.surface,
-    padding: 16,
     borderRadius: 16,
+    padding: 16,
+    marginBottom: 16,
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
-    marginBottom: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
   },
   bannerHeaderRow: {
     flexDirection: 'row',
@@ -273,85 +334,50 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   stepBadge: {
-    backgroundColor: COLORS.surfaceLight,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 6,
+    backgroundColor: 'rgba(212, 175, 55, 0.15)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 8,
     borderWidth: 1,
-    borderColor: COLORS.surfaceBorder,
+    borderColor: 'rgba(212, 175, 55, 0.3)',
   },
   stepBadgeText: {
-    color: COLORS.textGold,
     fontSize: 11,
-    fontWeight: '700',
-  },
-  metaBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    backgroundColor: 'rgba(212, 175, 55, 0.1)',
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 6,
-  },
-  metaBadgeText: {
-    color: COLORS.goldLight,
-    fontSize: 11,
-    fontWeight: '600',
+    fontWeight: 'bold',
+    color: COLORS.gold,
   },
   bannerTitle: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     color: COLORS.textGold,
-    marginBottom: 4,
+    marginBottom: 6,
   },
   bannerSubtitle: {
     fontSize: 13,
     color: COLORS.textSecondary,
-  },
-  bellBtn: {
-    padding: 8,
-    borderRadius: 20,
-    backgroundColor: COLORS.surface,
-    borderWidth: 1,
-    borderColor: COLORS.surfaceBorder,
-    marginRight: 6,
-  },
-  bellBtnActive: {
-    backgroundColor: COLORS.primaryDark,
+    lineHeight: 18,
   },
   bellAlert: {
-    backgroundColor: 'rgba(249, 115, 22, 0.2)',
-    padding: 10,
-    borderRadius: 10,
+    backgroundColor: '#2A1805',
     borderWidth: 1,
-    borderColor: COLORS.flameOrange,
+    borderColor: COLORS.gold,
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    marginBottom: 16,
     alignItems: 'center',
-    marginBottom: 12,
   },
   bellAlertText: {
-    color: COLORS.primaryLight,
-    fontWeight: 'bold',
+    color: COLORS.textGold,
     fontSize: 14,
-  },
-  toggleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    alignSelf: 'flex-end',
-    marginBottom: 14,
-    paddingVertical: 4,
-  },
-  toggleText: {
-    fontSize: 12,
-    color: COLORS.textSecondary,
+    fontWeight: 'bold',
   },
   sectionContainer: {
     backgroundColor: COLORS.surface,
     borderRadius: 14,
+    marginBottom: 14,
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
-    marginBottom: 14,
     overflow: 'hidden',
   },
   sectionAccordionHeader: {
@@ -371,6 +397,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
     color: COLORS.textGold,
+    flex: 1,
   },
   accordionToggleBtn: {
     flexDirection: 'row',
@@ -441,11 +468,11 @@ const styles = StyleSheet.create({
     color: COLORS.textPrimary,
     fontWeight: '600',
   },
-  mantraTransliteration: {
-    color: COLORS.goldLight,
-    fontStyle: 'italic',
-    marginTop: 8,
-    lineHeight: 20,
+  mantraTeluguSub: {
+    color: COLORS.textMuted,
+    marginTop: 6,
+    fontStyle: 'normal',
+    opacity: 0.85,
   },
   meaningBox: {
     marginTop: 10,
@@ -464,31 +491,6 @@ const styles = StyleSheet.create({
   meaningText: {
     color: COLORS.textSecondary,
     lineHeight: 18,
-  },
-  completedBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    backgroundColor: COLORS.surface,
-    borderWidth: 1.5,
-    borderColor: COLORS.goldDark,
-    borderRadius: 14,
-    paddingVertical: 14,
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  completedBtnActive: {
-    backgroundColor: COLORS.accentGreen,
-    borderColor: COLORS.accentGreen,
-  },
-  completedBtnText: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: COLORS.textGold,
-  },
-  completedBtnTextActive: {
-    color: '#FFF',
   },
   navRow: {
     flexDirection: 'row',

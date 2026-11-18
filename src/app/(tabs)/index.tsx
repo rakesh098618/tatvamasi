@@ -12,8 +12,11 @@ import { PoojaCard } from '../../components/PoojaCard';
 import { Header } from '../../components/Header';
 import { COLORS } from '../../constants/theme';
 import { Sparkles } from 'lucide-react-native';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function HomeScreen() {
+  const { t } = useLanguage();
+
   const handleOpenPooja = (id: string) => {
     router.push({
       pathname: '/pooja/[id]',
@@ -25,7 +28,7 @@ export default function HomeScreen() {
     <View style={styles.topSection}>
       <View style={styles.sectionTitleRow}>
         <Sparkles size={16} color={COLORS.gold} />
-        <Text style={styles.sectionTitle}>సంపూర్ణ నిత్య పూజా క్రమం</Text>
+        <Text style={styles.sectionTitle}>{t('poojaOrderTitle')}</Text>
       </View>
     </View>
   );
@@ -33,8 +36,8 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       <Header 
-        title="తత్త్వమసి" 
-        subtitle="శ్రీ అయ్యప్ప నిత్య పూజా విధానం"
+        title={t('appName')} 
+        subtitle={t('appSubtitle')}
       />
       <FlatList
         data={POOJA_CATEGORIES}

@@ -13,14 +13,18 @@ import {
   Music, 
   ShieldCheck
 } from 'lucide-react-native';
+import { useLanguage } from '../context/LanguageContext';
+import { getPoojaTitle, getPoojaSubtitle } from '../locales/poojaTranslations';
 
 interface PoojaCardProps {
   item: PoojaCategory;
   onPress: () => void;
-  lang?: 'te' | 'en';
 }
 
-export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress, lang = 'te' }) => {
+export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
+  const { language, t } = useLanguage();
+  const isEnglish = language === 'en';
+
   const renderIcon = () => {
     const iconProps = { size: 24, color: COLORS.gold };
     switch (item.icon) {
@@ -35,7 +39,8 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress, lang = 'te'
     }
   };
 
-  const isEnglish = lang === 'en';
+  const displayTitle = getPoojaTitle(item, isEnglish);
+  const displaySubtitle = getPoojaSubtitle(item, isEnglish);
 
   return (
     <TouchableOpacity 
@@ -49,15 +54,15 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress, lang = 'te'
       <View style={styles.textContainer}>
         <View style={styles.headerRow}>
           <Text style={styles.titleTelugu}>
-            {isEnglish ? item.titleEnglish : item.titleTelugu}
+            {displayTitle}
           </Text>
           {item.featured && (
             <View style={styles.badge}>
-              <Text style={styles.badgeText}>{isEnglish ? 'Featured' : 'ముఖ్యమైనది'}</Text>
+              <Text style={styles.badgeText}>{t('featuredBadge')}</Text>
             </View>
           )}
         </View>
-        <Text style={styles.subtitle}>{item.subtitle}</Text>
+        <Text style={styles.subtitle}>{displaySubtitle}</Text>
       </View>
       <ChevronRight size={20} color={COLORS.gold} />
     </TouchableOpacity>
@@ -100,49 +105,37 @@ const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
     marginRight: 8,
-    minWidth: 0,
   },
   headerRow: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 6,
     marginBottom: 4,
   },
   titleTelugu: {
-    flex: 1,
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: 'bold',
     color: COLORS.textPrimary,
-    lineHeight: 20,
-  },
-  badge: {
-    backgroundColor: COLORS.primaryDark,
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 6,
-    flexShrink: 0,
-    alignSelf: 'flex-start',
-  },
-  badgeText: {
-    color: '#FFF',
-    fontSize: 10,
-    fontWeight: '700',
+    flex: 1,
+    letterSpacing: 0.2,
   },
   subtitle: {
-    fontSize: 12,
+    fontSize: 12.5,
     color: COLORS.textSecondary,
-    marginBottom: 6,
-    lineHeight: 16,
+    lineHeight: 18,
   },
-  metaRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
+  badge: {
+    backgroundColor: 'rgba(212, 175, 55, 0.2)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: COLORS.gold,
+    marginLeft: 8,
   },
-  durationText: {
+  badgeText: {
+    color: COLORS.gold,
     fontSize: 11,
-    color: COLORS.textMuted,
+    fontWeight: 'bold',
   },
 });
-

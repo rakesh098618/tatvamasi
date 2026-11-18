@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { COLORS } from '../constants/theme';
-import { Sparkles } from 'lucide-react-native';
+import { Sparkles, Globe } from 'lucide-react-native';
+import { useLanguage } from '../context/LanguageContext';
 
 interface HeaderProps {
   title: string;
@@ -16,6 +17,8 @@ export const Header: React.FC<HeaderProps> = ({
   rightAction, 
   showDeities = true 
 }) => {
+  const { language, t, openLanguageModal } = useLanguage();
+
   return (
     <View style={styles.container}>
       {/* 1. Divine Deities Triad Bar (Left: Vinayakudu, Center: Ayyappa Swami, Right: Subrahmanya Swami) */}
@@ -30,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
                 resizeMode="cover"
               />
             </View>
-            <Text style={styles.deityLabel}>గణపతి</Text>
+            <Text style={styles.deityLabel}>{t('ganapathi')}</Text>
           </View>
 
           {/* Center / Middle: Lord Ayyappa Swami */}
@@ -42,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
                 resizeMode="cover"
               />
             </View>
-            <Text style={[styles.deityLabel, styles.deityLabelCenter]}>అయ్యప్ప స్వామి</Text>
+            <Text style={[styles.deityLabel, styles.deityLabelCenter]}>{t('ayyappa')}</Text>
           </View>
 
           {/* Right: Subrahmanya Swami */}
@@ -54,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
                 resizeMode="cover"
               />
             </View>
-            <Text style={styles.deityLabel}>సుబ్రహ్మణ్య</Text>
+            <Text style={styles.deityLabel}>{t('subrahmanya')}</Text>
           </View>
         </View>
       )}
@@ -68,7 +71,20 @@ export const Header: React.FC<HeaderProps> = ({
           </View>
           {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
         </View>
-        {rightAction && <View style={styles.rightAction}>{rightAction}</View>}
+
+        {/* Right Action (Custom or Quick Language Switcher) */}
+        {rightAction ? (
+          <View style={styles.rightAction}>{rightAction}</View>
+        ) : (
+          <TouchableOpacity 
+            style={styles.langPill} 
+            onPress={openLanguageModal}
+            activeOpacity={0.7}
+          >
+            <Globe size={13} color={COLORS.gold} />
+            <Text style={styles.langPillText}>{language === 'te' ? 'EN' : 'తెలుగు'}</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
@@ -180,5 +196,23 @@ const styles = StyleSheet.create({
   },
   rightAction: {
     marginLeft: 12,
+  },
+  langPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(212, 175, 55, 0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(212, 175, 55, 0.4)',
+    borderRadius: 14,
+    paddingHorizontal: 9,
+    paddingVertical: 5,
+    gap: 5,
+    marginLeft: 10,
+  },
+  langPillText: {
+    color: COLORS.gold,
+    fontSize: 12,
+    fontWeight: 'bold',
+    letterSpacing: 0.3,
   },
 });
