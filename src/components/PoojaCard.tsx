@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { PoojaCategory } from '../types';
-import { COLORS } from '../constants/theme';
+import { COLORS, FONTS } from '../constants/theme';
 import { 
   ChevronRight, 
   Sparkles, 
@@ -53,7 +53,15 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
       </View>
       <View style={styles.textContainer}>
         <View style={styles.headerRow}>
-          <Text style={[styles.cardTitle, { letterSpacing: isEnglish ? 0.35 : 0.2 }]}>
+          <Text 
+            style={[
+              styles.cardTitle, 
+              { 
+                fontFamily: isEnglish ? FONTS.heading : undefined,
+                letterSpacing: isEnglish ? 0.35 : 0.2 
+              }
+            ]}
+          >
             {displayTitle}
           </Text>
           {item.featured && (
@@ -62,7 +70,15 @@ export const PoojaCard: React.FC<PoojaCardProps> = ({ item, onPress }) => {
             </View>
           )}
         </View>
-        <Text style={[styles.subtitle, { letterSpacing: isEnglish ? 0.25 : 0.1 }]}>
+        <Text 
+          style={[
+            styles.subtitle, 
+            { 
+              fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+              letterSpacing: isEnglish ? 0.25 : 0.1 
+            }
+          ]}
+        >
           {displaySubtitle}
         </Text>
       </View>

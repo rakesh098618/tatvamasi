@@ -10,7 +10,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Header } from '../../components/Header';
-import { COLORS } from '../../constants/theme';
+import { COLORS, FONTS } from '../../constants/theme';
 import { GURU_SWAMI_DETAILS } from '../../data/poojaData';
 import { Sparkles, Shield, HeartHandshake, CheckCircle2, ChevronRight, MapPin, Globe } from 'lucide-react-native';
 import { useLanguage } from '../../context/LanguageContext';
@@ -76,7 +76,17 @@ export default function GuruScreen() {
           </View>
 
           {/* Guru Swami Name */}
-          <Text style={styles.guruName}>{guruName}</Text>
+          <Text 
+            style={[
+              styles.guruName,
+              { 
+                fontFamily: isEnglish ? FONTS.heading : undefined,
+                letterSpacing: isEnglish ? 0.4 : 0.2 
+              }
+            ]}
+          >
+            {guruName}
+          </Text>
 
           {/* Location directly under Name */}
           {guruLocation && (
@@ -87,15 +97,35 @@ export default function GuruScreen() {
           )}
 
           {/* Guru Title */}
-          <Text style={styles.guruTitle}>{guruTitle}</Text>
+          <Text 
+            style={[
+              styles.guruTitle,
+              { fontFamily: isEnglish ? FONTS.devotionalSerif : undefined }
+            ]}
+          >
+            {guruTitle}
+          </Text>
 
           <View style={styles.shlokaBox}>
-            <Text style={styles.shlokaText}>
+            <Text 
+              style={[
+                styles.shlokaText,
+                { fontFamily: isEnglish ? FONTS.devotionalSerif : undefined }
+              ]}
+            >
               {guruMantram}
             </Text>
           </View>
 
-          <Text style={styles.guruDescription}>
+          <Text 
+            style={[
+              styles.guruDescription,
+              { 
+                fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                lineHeight: isEnglish ? 22 : 18 
+              }
+            ]}
+          >
             {guruDesc}
           </Text>
 

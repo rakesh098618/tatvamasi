@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 export const COLORS = {
   // Primary Spiritual Saffron & Gold
   primary: '#FF8C00', // Deep Saffron / Bhagwa
@@ -26,7 +28,47 @@ export const COLORS = {
 };
 
 export const FONTS = {
-  regular: 'System',
-  bold: 'System',
-};
+  // Poppins - Premium Modern & Attractive Font Family for English
+  heading: Platform.select({
+    ios: 'Poppins-Bold',
+    android: 'Poppins-Bold',
+    default: 'Poppins-Bold',
+  }),
 
+  subheading: Platform.select({
+    ios: 'Poppins-SemiBold',
+    android: 'Poppins-SemiBold',
+    default: 'Poppins-SemiBold',
+  }),
+
+  medium: Platform.select({
+    ios: 'Poppins-Medium',
+    android: 'Poppins-Medium',
+    default: 'Poppins-Medium',
+  }),
+
+  regular: Platform.select({
+    ios: 'Poppins-Regular',
+    android: 'Poppins-Regular',
+    default: 'Poppins-Regular',
+  }),
+
+  // Devotional verses & transliteration in Poppins Medium
+  devotionalSerif: Platform.select({
+    ios: 'Poppins-Medium',
+    android: 'Poppins-Medium',
+    default: 'Poppins-Medium',
+  }),
+
+  uiMedium: Platform.select({
+    ios: 'Poppins-SemiBold',
+    android: 'Poppins-SemiBold',
+    default: 'Poppins-SemiBold',
+  }),
+
+  uiRegular: Platform.select({
+    ios: 'Poppins-Regular',
+    android: 'Poppins-Regular',
+    default: 'Poppins-Regular',
+  }),
+};

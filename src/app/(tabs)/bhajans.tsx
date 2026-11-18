@@ -5,7 +5,7 @@ import { router } from 'expo-router';
 import { ChevronRight, Music, Sparkles } from 'lucide-react-native';
 import { Header } from '../../components/Header';
 import { SONGS } from '../../data/songsData';
-import { COLORS } from '../../constants/theme';
+import { COLORS, FONTS } from '../../constants/theme';
 import { useLanguage } from '../../context/LanguageContext';
 
 export default function SongsScreen() {
@@ -50,11 +50,18 @@ export default function SongsScreen() {
                 <Music size={22} color={COLORS.gold} />
               </View>
               <View style={styles.info}>
-                <Text style={styles.title} numberOfLines={2}>
+                <Text 
+                  style={[
+                    styles.title, 
+                    { 
+                      fontFamily: isEnglish ? FONTS.heading : undefined,
+                      letterSpacing: isEnglish ? 0.35 : 0.2,
+                      color: '#FFE29A'
+                    }
+                  ]} 
+                  numberOfLines={2}
+                >
                   {displayTitle}
-                </Text>
-                <Text style={styles.subtitle}>
-                  {t('readLyrics')}
                 </Text>
               </View>
               <ChevronRight size={20} color={COLORS.gold} />
@@ -130,10 +137,10 @@ const styles = StyleSheet.create({
     flex: 1 
   },
   title: { 
-    fontSize: 15, 
+    fontSize: 16, 
     fontWeight: '700', 
-    color: COLORS.textGold, 
-    marginBottom: 3 
+    color: '#FFE29A',
+    lineHeight: 22,
   },
   subtitle: { 
     fontSize: 12, 

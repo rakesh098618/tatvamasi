@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { COLORS } from '../constants/theme';
+import { COLORS, FONTS } from '../constants/theme';
 import { Sparkles, Globe } from 'lucide-react-native';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -66,10 +66,26 @@ export const Header: React.FC<HeaderProps> = ({
       <View style={styles.mainRow}>
         <View style={styles.textContainer}>
           <View style={styles.titleRow}>
-            <Text style={styles.title}>{title}</Text>
+            <Text 
+              style={[
+                styles.title,
+                { fontFamily: language === 'en' ? FONTS.heading : undefined }
+              ]}
+            >
+              {title}
+            </Text>
             <Sparkles size={16} color={COLORS.gold} style={styles.icon} />
           </View>
-          {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+          {subtitle && (
+            <Text 
+              style={[
+                styles.subtitle,
+                { fontFamily: language === 'en' ? FONTS.regular : undefined }
+              ]}
+            >
+              {subtitle}
+            </Text>
+          )}
         </View>
 
         {/* Right Action (Custom or Quick Language Switcher) */}

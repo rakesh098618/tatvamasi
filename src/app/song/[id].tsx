@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { FontSizeControls } from '../../components/FontSizeControls';
-import { COLORS } from '../../constants/theme';
+import { COLORS, FONTS } from '../../constants/theme';
 import { SONGS } from '../../data/songsData';
 import { Music, Flame, BookOpen } from 'lucide-react-native';
 import { useLanguage } from '../../context/LanguageContext';
@@ -53,18 +53,45 @@ export default function SongScreen() {
               <Text style={styles.badgeText}>{t('songBadge')}</Text>
               <Flame size={14} color={COLORS.flameOrange} />
             </View>
-            <Text style={styles.title}>{currentTitle}</Text>
+            <Text 
+              style={[
+                styles.title,
+                { 
+                  fontFamily: isEnglish ? FONTS.heading : undefined,
+                  letterSpacing: isEnglish ? 0.4 : 0.2 
+                }
+              ]}
+            >
+              {currentTitle}
+            </Text>
           </View>
 
           {/* Lyrics Card */}
           <View style={styles.card}>
             <View style={styles.cardHeader}>
               <Music size={16} color={COLORS.gold} />
-              <Text style={styles.cardHeaderLabel}>{t('lyricsHeader')}</Text>
+              <Text 
+                style={[
+                  styles.cardHeaderLabel,
+                  { fontFamily: isEnglish ? FONTS.heading : undefined }
+                ]}
+              >
+                {t('lyricsHeader')}
+              </Text>
               <Music size={16} color={COLORS.gold} />
             </View>
             <View style={styles.divider} />
-            <Text style={[styles.lyrics, { fontSize, lineHeight: fontSize * 1.85 }]}>
+            <Text 
+              style={[
+                styles.lyrics, 
+                { 
+                  fontSize, 
+                  lineHeight: fontSize * 1.85,
+                  fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                  letterSpacing: isEnglish ? 0.35 : 0.2,
+                }
+              ]}
+            >
               {lyricsText}
             </Text>
 
@@ -84,11 +111,28 @@ export default function SongScreen() {
             <View style={styles.meaningCard}>
               <View style={styles.cardHeader}>
                 <BookOpen size={16} color={COLORS.gold} />
-                <Text style={styles.cardHeaderLabel}>{t('meaningHeader')}</Text>
+                <Text 
+                  style={[
+                    styles.cardHeaderLabel,
+                    { fontFamily: isEnglish ? FONTS.heading : undefined }
+                  ]}
+                >
+                  {t('meaningHeader')}
+                </Text>
                 <BookOpen size={16} color={COLORS.gold} />
               </View>
               <View style={styles.divider} />
-              <Text style={[styles.meaningContent, { fontSize: Math.max(13, fontSize - 3), lineHeight: Math.max(20, (fontSize - 3) * 1.7) }]}>
+              <Text 
+                style={[
+                  styles.meaningContent, 
+                  { 
+                    fontSize: Math.max(13, fontSize - 3), 
+                    lineHeight: Math.max(22, (fontSize - 3) * 1.7),
+                    fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                    letterSpacing: isEnglish ? 0.25 : 0.1,
+                  }
+                ]}
+              >
                 {meaningText}
               </Text>
             </View>

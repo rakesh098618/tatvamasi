@@ -24,32 +24,32 @@ export default function RootLayout() {
             },
           }}
         >
-          <Stack.Screen 
-            name="index" 
-            options={{ 
-              headerShown: false 
-            }} 
+          <Stack.Screen
+            name="index"
+            options={{
+              headerShown: false
+            }}
           />
-          <Stack.Screen 
-            name="(tabs)" 
-            options={{ 
+          <Stack.Screen
+            name="(tabs)"
+            options={{
               headerShown: false,
               animation: 'none',
-            }} 
+            }}
           />
-          <Stack.Screen 
-            name="song/[id]" 
-            options={{ 
+          <Stack.Screen
+            name="song/[id]"
+            options={{
               title: 'పాటలు',
               headerBackTitle: 'వెనుకకు',
-            }} 
+            }}
           />
-          <Stack.Screen 
-            name="pooja/[id]" 
-            options={{ 
+          <Stack.Screen
+            name="pooja/[id]"
+            options={{
               title: 'పూజా విధానం',
               headerBackTitle: 'వెనుకకు',
-            }} 
+            }}
           />
         </Stack>
         <LanguageModal />

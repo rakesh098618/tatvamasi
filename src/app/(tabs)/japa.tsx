@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Header } from '../../components/Header';
-import { COLORS } from '../../constants/theme';
+import { COLORS, FONTS } from '../../constants/theme';
 import { RotateCcw, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react-native';
 import { POOJA_CATEGORIES } from '../../data/poojaData';
 import { useLanguage } from '../../context/LanguageContext';
@@ -85,7 +85,17 @@ export default function JapaCounterScreen() {
             <Sparkles size={14} color={COLORS.gold} />
             <Text style={styles.mantraBadgeText}>{t('chantNumber')} #{count > 0 ? count : 1}</Text>
           </View>
-          <Text style={styles.mantraTelugu}>{displayMantra}</Text>
+          <Text 
+            style={[
+              styles.mantraTelugu,
+              { 
+                fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                letterSpacing: isEnglish ? 0.4 : 0.2 
+              }
+            ]}
+          >
+            {displayMantra}
+          </Text>
           {isEnglish && currentMantra.telugu !== displayMantra && (
             <Text style={styles.mantraSubline}>{currentMantra.telugu}</Text>
           )}

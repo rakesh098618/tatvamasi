@@ -9,7 +9,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, Stack, router } from 'expo-router';
 import { POOJA_CATEGORIES } from '../../data/poojaData';
-import { COLORS } from '../../constants/theme';
+import { COLORS, FONTS } from '../../constants/theme';
 import { FontSizeControls } from '../../components/FontSizeControls';
 import { 
   Bell, 
@@ -109,8 +109,28 @@ export default function PoojaDetailScreen() {
             </View>
           </View>
 
-          <Text style={[styles.bannerTitle, { letterSpacing: isEnglish ? 0.4 : 0.2 }]}>{currentTitle}</Text>
-          <Text style={[styles.bannerSubtitle, { letterSpacing: isEnglish ? 0.25 : 0.1 }]}>{currentSubtitle}</Text>
+          <Text 
+            style={[
+              styles.bannerTitle, 
+              { 
+                fontFamily: isEnglish ? FONTS.heading : undefined,
+                letterSpacing: isEnglish ? 0.4 : 0.2 
+              }
+            ]}
+          >
+            {currentTitle}
+          </Text>
+          <Text 
+            style={[
+              styles.bannerSubtitle, 
+              { 
+                fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                letterSpacing: isEnglish ? 0.25 : 0.1 
+              }
+            ]}
+          >
+            {currentSubtitle}
+          </Text>
         </View>
 
         {bellRung && (
@@ -134,7 +154,14 @@ export default function PoojaDetailScreen() {
               >
                 <View style={styles.sectionHeaderLeft}>
                   <Sparkles size={16} color={COLORS.gold} />
-                  <Text style={styles.sectionTitle}>{sectionTitle}</Text>
+                  <Text 
+                    style={[
+                      styles.sectionTitle,
+                      { fontFamily: isEnglish ? FONTS.heading : undefined }
+                    ]}
+                  >
+                    {sectionTitle}
+                  </Text>
                 </View>
                 <View style={styles.accordionToggleBtn}>
                   <Text style={styles.versesCountText}>
@@ -184,7 +211,17 @@ export default function PoojaDetailScreen() {
 
                       return (
                         <View key={mantra.id || mIndex} style={styles.mantraCard}>
-                          <Text style={[styles.mantraTelugu, { fontSize, lineHeight: fontSize * 1.65, letterSpacing: isEnglish ? 0.35 : 0.2 }]}>
+                          <Text 
+                            style={[
+                              styles.mantraTelugu, 
+                              { 
+                                fontSize, 
+                                lineHeight: fontSize * 1.65, 
+                                letterSpacing: isEnglish ? 0.35 : 0.2,
+                                fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                              }
+                            ]}
+                          >
                             {displayMainText}
                           </Text>
 
@@ -197,8 +234,20 @@ export default function PoojaDetailScreen() {
 
                           {meaningText && (
                             <View style={styles.meaningBox}>
-                              <Text style={styles.meaningLabel}>{t('meaningLabel')}</Text>
-                              <Text style={[styles.meaningText, { fontSize: Math.max(12.5, fontSize - 3.5), letterSpacing: isEnglish ? 0.25 : 0.1 }]}>
+                              <Text style={[styles.meaningLabel, { fontFamily: isEnglish ? FONTS.heading : undefined }]}>
+                                {t('meaningLabel')}
+                              </Text>
+                              <Text 
+                                style={[
+                                  styles.meaningText, 
+                                  { 
+                                    fontSize: Math.max(12.5, fontSize - 3.5), 
+                                    letterSpacing: isEnglish ? 0.25 : 0.1,
+                                    fontFamily: isEnglish ? FONTS.devotionalSerif : undefined,
+                                    lineHeight: 22,
+                                  }
+                                ]}
+                              >
                                 {meaningText}
                               </Text>
                             </View>
@@ -223,7 +272,13 @@ export default function PoojaDetailScreen() {
               <ChevronLeft size={18} color={COLORS.textGold} />
               <View>
                 <Text style={styles.navBtnSub}>{t('previousPooja')}</Text>
-                <Text style={styles.navBtnMain} numberOfLines={1}>
+                <Text 
+                  style={[
+                    styles.navBtnMain,
+                    { fontFamily: isEnglish ? FONTS.heading : undefined }
+                  ]} 
+                  numberOfLines={1}
+                >
                   {getPoojaTitle(previousPooja, isEnglish)}
                 </Text>
               </View>
@@ -239,7 +294,13 @@ export default function PoojaDetailScreen() {
             >
               <View style={{ alignItems: 'flex-end' }}>
                 <Text style={styles.navBtnSub}>{t('nextPooja')}</Text>
-                <Text style={styles.navBtnMain} numberOfLines={1}>
+                <Text 
+                  style={[
+                    styles.navBtnMain,
+                    { fontFamily: isEnglish ? FONTS.heading : undefined }
+                  ]} 
+                  numberOfLines={1}
+                >
                   {getPoojaTitle(nextPooja, isEnglish)}
                 </Text>
               </View>
