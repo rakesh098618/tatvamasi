@@ -17,7 +17,7 @@ import { Flame, MapPin, Sparkles } from 'lucide-react-native';
 export default function SplashScreen() {
   const [ayyappaLoaded, setAyyappaLoaded] = useState(false);
   const [guruLoaded, setGuruLoaded] = useState(false);
-  const { height: screenHeight } = useWindowDimensions();
+  const { height: screenHeight, width: screenWidth } = useWindowDimensions();
 
   // Allow devotees to comfortably view Lord Ayyappa & Guru Swami's divine darshan
   useEffect(() => {
@@ -44,8 +44,8 @@ export default function SplashScreen() {
   };
 
   const isSmallScreen = screenHeight < 720;
-  // Adaptive height calculated so text and image spacing is tight, balanced, and perfectly proportioned
-  const ayyappaHeight = isSmallScreen ? screenHeight * 0.40 : screenHeight * 0.46;
+  // Adaptive deity height allowing the divine image to breathe and look majestic
+  const ayyappaMaxHeight = isSmallScreen ? screenHeight * 0.48 : screenHeight * 0.53;
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom', 'left', 'right']}>
@@ -59,22 +59,23 @@ export default function SplashScreen() {
       >
         <View style={styles.content}>
 
-          {/* 1. Top Sacred Sharanam Badge */}
-          <View style={styles.topBadge}>
-            <Flame size={12} color={COLORS.flameOrange} />
-            <Text style={styles.topBadgeText}>స్వామియే శరణం అయ్యప్ప</Text>
-            <Flame size={12} color={COLORS.flameOrange} />
+          {/* 1. Top Section: Sacred Pill Badge & Divine Blessing */}
+          <View style={styles.topSection}>
+            <View style={styles.topBadge}>
+              <Flame size={13} color={COLORS.flameOrange} />
+              <Text style={styles.topBadgeText}>స్వామియే శరణం అయ్యప్ప</Text>
+              <Flame size={13} color={COLORS.flameOrange} />
+            </View>
+
+            <View style={styles.heading}>
+              <Text style={styles.blessing} adjustsFontSizeToFit numberOfLines={2}>
+                శ్రీ అయ్యప్ప స్వామి వారి దివ్య ఆశీస్సులతో
+              </Text>
+            </View>
           </View>
 
-          {/* 2. Blessing Header (Directly above Lord Ayyappa) */}
-          <View style={styles.heading}>
-            <Text style={styles.blessing} adjustsFontSizeToFit numberOfLines={2}>
-              శ్రీ అయ్యప్ప స్వామి వారి దివ్య ఆశీస్సులతో
-            </Text>
-          </View>
-
-          {/* 3. Lord Ayyappa Swami Divine Photo (Centered & Un-stretched) */}
-          <View style={[styles.ayyappaCard, { height: ayyappaHeight }]}>
+          {/* 2. Center Section: Lord Ayyappa Swami Divine Photo (Majestic & Perfectly Proportioned) */}
+          <View style={[styles.ayyappaCard, { maxHeight: ayyappaMaxHeight }]}>
             <Image
               source={require('../../assets/ayyappa_swami_master.png')}
               style={styles.photo}
@@ -86,39 +87,40 @@ export default function SplashScreen() {
             />
           </View>
 
-          {/* 4. Guru Swami Section (Directly below Lord Ayyappa) */}
-          <View style={styles.guruSection}>
-            <View style={styles.guruPhotoFrame}>
-              <Image
-                source={require('../../assets/guruswami.png')}
-                style={styles.guruPhoto}
-                resizeMode="cover"
-                fadeDuration={0}
-                onLoad={() => setGuruLoaded(true)}
-                onError={() => setGuruLoaded(true)}
-                accessibilityLabel={GURU_SWAMI_DETAILS.name}
-              />
+          {/* 3. Bottom Section: Guru Swami Section & Footnote Tap Hint */}
+          <View style={styles.bottomSection}>
+            <View style={styles.guruSection}>
+              <View style={styles.guruPhotoFrame}>
+                <Image
+                  source={require('../../assets/guruswami.png')}
+                  style={styles.guruPhoto}
+                  resizeMode="cover"
+                  fadeDuration={0}
+                  onLoad={() => setGuruLoaded(true)}
+                  onError={() => setGuruLoaded(true)}
+                  accessibilityLabel={GURU_SWAMI_DETAILS.name}
+                />
+              </View>
+              <View style={styles.caption}>
+                <Text style={styles.guruName} numberOfLines={1}>
+                  {GURU_SWAMI_DETAILS.name}
+                </Text>
+                {GURU_SWAMI_DETAILS.location && (
+                  <View style={styles.locationRow}>
+                    <MapPin size={12} color={COLORS.gold} />
+                    <Text style={styles.location} numberOfLines={1}>
+                      {GURU_SWAMI_DETAILS.location}
+                    </Text>
+                  </View>
+                )}
+              </View>
             </View>
-            <View style={styles.caption}>
-              <Text style={styles.guruName} adjustsFontSizeToFit numberOfLines={1}>
-                {GURU_SWAMI_DETAILS.name}
-              </Text>
-              {GURU_SWAMI_DETAILS.location && (
-                <View style={styles.locationRow}>
-                  <MapPin size={12} color={COLORS.gold} />
-                  <Text style={styles.location} adjustsFontSizeToFit numberOfLines={1}>
-                    {GURU_SWAMI_DETAILS.location}
-                  </Text>
-                </View>
-              )}
-            </View>
-          </View>
 
-          {/* 5. Subtitle footer hint */}
-          <View style={styles.footerHint}>
-            <Sparkles size={11} color={COLORS.gold} />
-            <Text style={styles.footerText}>ప్రవేశించుటకు ఎక్కడైనా తాకండి</Text>
-            <Sparkles size={11} color={COLORS.gold} />
+            <View style={styles.footerHint}>
+              <Sparkles size={11} color={COLORS.gold} />
+              <Text style={styles.footerText}>ప్రవేశించుటకు ఎక్కడైనా తాకండి</Text>
+              <Sparkles size={11} color={COLORS.gold} />
+            </View>
           </View>
 
         </View>
@@ -142,79 +144,102 @@ const styles = StyleSheet.create({
     maxWidth: 550,
     alignSelf: 'center',
     paddingHorizontal: 16,
-    paddingVertical: 10,
-    justifyContent: 'center',
+    paddingTop: 14,
+    paddingBottom: 16,
+    justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  topSection: {
+    width: '100%',
+    alignItems: 'center',
+    paddingTop: 4,
   },
   topBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(249, 115, 22, 0.15)',
-    paddingHorizontal: 14,
-    paddingVertical: 4,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: 'rgba(249, 115, 22, 0.35)',
-    marginBottom: 8,
+    gap: 7,
+    backgroundColor: 'rgba(249, 115, 22, 0.16)',
+    paddingHorizontal: 16,
+    paddingVertical: 5,
+    borderRadius: 22,
+    borderWidth: 1.2,
+    borderColor: 'rgba(249, 115, 22, 0.4)',
+    marginBottom: 10,
+    shadowColor: COLORS.flameOrange,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 2,
   },
   topBadgeText: {
-    color: COLORS.primaryLight,
-    fontSize: 12,
+    color: '#FFB84D',
+    fontSize: 12.5,
     fontWeight: '700',
-    letterSpacing: 0.5,
+    letterSpacing: 0.6,
   },
   heading: {
-    marginBottom: 8,
-    paddingHorizontal: 10,
+    paddingHorizontal: 12,
     alignItems: 'center',
   },
   blessing: {
-    fontSize: 16,
+    fontSize: 16.5,
     color: '#FFE29A',
     fontWeight: '700',
     textAlign: 'center',
-    letterSpacing: 0.4,
-    lineHeight: 22,
+    letterSpacing: 0.35,
+    lineHeight: 23,
+    textShadowColor: 'rgba(212, 175, 55, 0.35)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 6,
   },
   ayyappaCard: {
+    flex: 1,
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: 4,
+    marginVertical: 10,
   },
   photo: {
     width: '100%',
     height: '100%',
   },
+  bottomSection: {
+    width: '100%',
+    alignItems: 'center',
+    paddingBottom: 4,
+  },
   guruSection: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(26, 17, 9, 0.85)',
-    paddingVertical: 6,
-    paddingHorizontal: 12,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: 'rgba(212, 175, 55, 0.35)',
-    marginTop: 8,
-    marginBottom: 10,
+    backgroundColor: 'rgba(28, 18, 10, 0.92)',
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    borderRadius: 18,
+    borderWidth: 1.2,
+    borderColor: 'rgba(212, 175, 55, 0.4)',
+    marginBottom: 12,
     maxWidth: 360,
-    width: '90%',
-    shadowColor: '#000',
+    width: '92%',
+    shadowColor: COLORS.gold,
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.4,
-    shadowRadius: 4,
-    elevation: 3,
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 4,
   },
   guruPhotoFrame: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    borderWidth: 1.5,
-    borderColor: COLORS.gold,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    borderWidth: 1.8,
+    borderColor: '#FFE29A',
     overflow: 'hidden',
-    backgroundColor: COLORS.surface,
-    marginRight: 10,
+    backgroundColor: '#0F0B06',
+    marginRight: 12,
+    shadowColor: COLORS.gold,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 3,
   },
   guruPhoto: {
     width: '100%',
@@ -225,11 +250,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   guruName: {
-    fontSize: 13,
-    fontWeight: 'bold',
+    fontSize: 13.5,
+    fontWeight: '700',
     color: '#FFE29A',
     letterSpacing: 0.3,
-    marginBottom: 2,
+    marginBottom: 3,
   },
   locationRow: {
     flexDirection: 'row',
@@ -237,16 +262,15 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   location: {
-    fontSize: 11,
-    color: COLORS.textSecondary,
+    fontSize: 11.5,
+    color: '#D4C4B2',
     fontWeight: '500',
   },
   footerHint: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    marginTop: 4,
-    opacity: 0.8,
+    opacity: 0.85,
   },
   footerText: {
     fontSize: 11.5,
