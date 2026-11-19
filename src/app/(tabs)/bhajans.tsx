@@ -4,7 +4,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { ChevronRight, Music, Sparkles } from 'lucide-react-native';
 import { Header } from '../../components/Header';
-import { AyyappaAudioPlayer } from '../../components/AyyappaAudioPlayer';
 import { SONGS } from '../../data/songsData';
 import { COLORS, FONTS } from '../../constants/theme';
 import { useLanguage } from '../../context/LanguageContext';
@@ -14,19 +13,14 @@ export default function SongsScreen() {
   const isEnglish = language === 'en';
 
   const renderHeader = () => (
-    <View>
-      {/* 40-Min Ayyappa Suprabhatham Audio Player */}
-      <AyyappaAudioPlayer />
-
-      <View style={styles.bannerBox}>
-        <View style={styles.bannerRow}>
-          <Sparkles size={16} color={COLORS.gold} />
-          <Text style={styles.bannerTitle}>{t('songsBannerTitle')}</Text>
-        </View>
-        <Text style={styles.bannerDesc}>
-          {t('songsBannerDesc')}
-        </Text>
+    <View style={styles.bannerBox}>
+      <View style={styles.bannerRow}>
+        <Sparkles size={16} color={COLORS.gold} />
+        <Text style={styles.bannerTitle}>{t('songsBannerTitle')}</Text>
       </View>
+      <Text style={styles.bannerDesc}>
+        {t('songsBannerDesc')}
+      </Text>
     </View>
   );
 
